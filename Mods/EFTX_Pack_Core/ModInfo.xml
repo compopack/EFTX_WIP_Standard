@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="EFTX_Pack_Core" />
+	<DisplayName value="EFT Extraction Pack Core" />
+	<Description value="Adds the Core Mod needed for The other addons to work" />
+	<Author value="BryanDVS,CloserEx,M14,Stallionsden" />
+	<Version value="2.4.2.5" />
+</xml>
