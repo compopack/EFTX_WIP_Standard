@@ -1,0 +1,270 @@
+<EFTX>
+
+
+	<!-- ### Food/Water Debuff Tied To A Certain Value Instead Of Percentage -->
+	<!-- *** Food -->
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry01']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="LTE" value="50"/>
+	</append>
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry02']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="LTE" value="25"/>
+	</append>
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry03']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="LTE" value="12"/>
+	</append>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry01']/requirement[@name='StatComparePercCurrentToMax' and @value='.5']"/>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry02']/requirement[@name='StatComparePercCurrentToMax' and @value='.25']"/>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry03']/requirement[@name='StatComparePercCurrentToMax' and @value='.02']"/>
+	<insertBefore xpath="//buff[@name='buffStatusHungry01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry01']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="GT" value="50"/>
+	</insertBefore>
+	<remove xpath="//buff[@name='buffStatusHungry01']/effect_group/requirement[@name='StatComparePercCurrentToMax' and @value='0.52']"/>
+	<append xpath="//buff[@name='buffStatusHungry02']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry01']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="GT" value="25"/>
+	</append>
+	<remove xpath="//buff[@name='buffStatusHungry02']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry01']/requirement[@name='StatComparePercCurrentToMax' and @value='0.27']"/>
+	<append xpath="//buff[@name='buffStatusHungry03']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry02']">
+		<requirement name="StatCompareCurrent" stat="Food" operation="GT" value="12"/>
+	</append>
+	<remove xpath="//buff[@name='buffStatusHungry03']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusHungry02']/requirement[@name='StatComparePercCurrentToMax' and @value='0.04']"/>
+	
+	<!-- *** Water -->
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty01']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="LTE" value="50"/>
+	</append>
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty02']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="LTE" value="25"/>
+	</append>
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty03']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="LTE" value="12"/>
+	</append>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty01']/requirement[@name='StatComparePercCurrentToMax' and @value='0.5']"/>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty02']/requirement[@name='StatComparePercCurrentToMax' and @value='0.25']"/>
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty03']/requirement[@name='StatComparePercCurrentToMax' and @value='0.02']"/>
+	<insertBefore xpath="//buff[@name='buffStatusThirsty01']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty01']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="GT" value="50"/>
+	</insertBefore>
+	<remove xpath="//buff[@name='buffStatusThirsty01']/effect_group/requirement[@name='StatComparePercCurrentToMax' and @value='0.52']"/>
+	<insertBefore xpath="//buff[@name='buffStatusThirsty02']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty01']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="GT" value="25"/>
+	</insertBefore>
+	<remove xpath="//buff[@name='buffStatusThirsty02']/effect_group/requirement[@name='StatComparePercCurrentToMax' and @value='0.27']"/>
+	<insertBefore xpath="//buff[@name='buffStatusThirsty03']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @buff='buffStatusThirsty02']">
+		<requirement name="StatCompareCurrent" stat="Water" operation="GT" value="12"/>
+	</insertBefore>
+	<remove xpath="//buff[@name='buffStatusThirsty03']/effect_group/requirement[@name='StatComparePercCurrentToMax' and @value='0.04']"/>
+	
+		<!-- ### Eft Buffs -->
+	<insertAfter xpath="/buffs/buff[@name='buffBeer']">
+		<!-- *** Rat Cola, Drinks & Alcoholics-->
+		<buff name="buffEftRatCola" name_key="Rat Cola" description_key="You Run Faster!" icon="iconRatCola" icon_color="0,200,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="$buffRatColaDuration"/>
+			<display_value_format value="time"/>
+            <effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRatColaDuration" operation="add" value="-1"><requirement name="CVarCompare" cvar="$buffRatColaDuration" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffEftRatCola"><requirement name="CVarCompare" cvar="$buffRatColaDuration" operation="LTE" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffEftRatCola"><requirement name="HasBuff" buff="god"/></triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffEftRatCola"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffRatColaDuration"/>
+            </effect_group>
+            <effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
+            </effect_group>
+		</buff>
+		<buff name="buffLiquorPevkoBeer" name_key="buffLiquorPevkoBeer" description_key="buffLiquorPevkoBeerDesc" icon="iconPevkoBeer" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="$buffLiquorPevkoBeerDuration"/>
+			<display_value_format value="time"/>
+			<!-- Duration Counter / remove CVars -->
+            <effect_group>
+				<requirement name="CVarCompare" cvar="$buffLiquorPevkoBeerDuration" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorPevkoBeerDuration" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffLiquorPevkoBeerDuration"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeerStack"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeerRandomLimit"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeer_EntityDamage"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeer_AttacksPerMinute"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeer_StaminaChangeOT"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorPevkoBeer_GeneralDamageResist"/>
+            </effect_group>
+            <effect_group>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLiquorPevkoBeer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorPevkoBeer"><requirement name="HasBuff" buff="god"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorPevkoBeer"><requirement name="CVarCompare" cvar="$buffLiquorPevkoBeerDuration" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorPevkoBeer"><requirement name="HasBuff" buff="buffLiquorVomit"/></triggered_effect>
+				<!-- Add vomit buff, when pevko beer was used more than random(4-6) times. Sets random vomit buff time (10-20m). Resets the stack counter, when pevko beer is lower than one duration. -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorVomitDuration" operation="set" value="randomint(600,1200)"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="GTE" value="@$liquorPevkoBeerRandomLimit"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLiquorVomit"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="GTE" value="@$liquorPevkoBeerRandomLimit"/></triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeerStack" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$liquorPevkoBeerStack" operation="set" value="1"><requirement name="CVarCompare" cvar="$buffLiquorPevkoBeerDuration" operation="LTE" value="180"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeerRandomLimit" operation="set" value="randomint(4,6)"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorPevkoBeerStack" operation="add" value="1"/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.45" fade="2" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.45" fade="2" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.6" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="Equals" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.75" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.9" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorPevkoBeerStack" operation="Equals" value="5"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="4" effect_name="Blur"/>
+				
+				<!-- Stack bonuses on multiple uses -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeer_EntityDamage" operation="set" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeer_AttacksPerMinute" operation="set" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeer_StaminaChangeOT" operation="set" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorPevkoBeer_GeneralDamageResist" operation="set" value=".1"/>
+				
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorPevkoBeer_EntityDamage" operation="add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorPevkoBeer_AttacksPerMinute" operation="add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorPevkoBeer_StaminaChangeOT" operation="add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorPevkoBeer_GeneralDamageResist" operation="add" value=".1"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="@$liquorPevkoBeer_EntityDamage"><requirement name="HoldingItemHasTags" tags="melee"/></passive_effect>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="@$liquorPevkoBeer_AttacksPerMinute"/>
+				<!--passive_effect name="StaminaLoss" operation="base_set" value="-.25"/-->
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="@$liquorPevkoBeer_StaminaChangeOT"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="@$liquorPevkoBeer_GeneralDamageResist"/>
+				
+				<!-- Logvalues -->
+				<!--triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeerRandomLimit"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeerStack"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeer_EntityDamage"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeer_AttacksPerMinute"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeer_StaminaChangeOT"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$liquorPevkoBeer_GeneralDamageResist"/-->
+            </effect_group>
+		</buff>
+		<buff name="buffLiquorVodka" name_key="buffLiquorVodka" description_key="buffLiquorVodka" icon="iconVodka" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="$buffLiquorVodkaDuration"/>
+			<display_value_format value="time"/>
+            <effect_group>
+				<requirement name="CVarCompare" cvar="$buffLiquorVodkaDuration" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorVodkaDuration" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffLiquorVodkaDuration"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorVodkaStack"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorVodkaRandomLimit"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorVodka_EntityDamage"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorVodka_GeneralDamageResist"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorVodka_BuffResist"/>
+            </effect_group>
+            <effect_group>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLiquorVodka"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorVodka"><requirement name="HasBuff" buff="god"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorVodka"><requirement name="CVarCompare" cvar="$buffLiquorVodkaDuration" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorVodka"><requirement name="HasBuff" buff="buffLiquorVomit"/></triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorVomitDuration" operation="set" value="randomint(600,1200)"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="GTE" value="@$liquorVodkaRandomLimit"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLiquorVomit"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="GTE" value="@$liquorVodkaRandomLimit"/></triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorVodkaStack" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$liquorVodkaStack" operation="set" value="1"><requirement name="CVarCompare" cvar="$buffLiquorVodkaDuration" operation="LTE" value="180"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorVodkaRandomLimit" operation="set" value="randomint(3,4)"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorVodkaStack" operation="add" value="1"/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.25" fade="2" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.25" fade="2" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="Equals" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.35" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.4" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.45" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorVodkaStack" operation="Equals" value="5"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="4" effect_name="Blur"/>
+				
+				<!-- Stack bonuses on multiple uses -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorVodka_EntityDamage" operation="set" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorVodka_GeneralDamageResist" operation="set" value=".15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorVodka_BuffResist" operation="set" value=".2"/>
+				
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorVodka_EntityDamage" operation="add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorVodka_GeneralDamageResist" operation="add" value=".15"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorVodka_BuffResist" operation="add" value=".2"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="@$liquorVodka_EntityDamage"><requirement name="HoldingItemHasTags" tags="ranged"/></passive_effect>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="@$liquorVodka_GeneralDamageResist"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="@$liquorVodka_BuffResist" tags="buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch"/> <!-- Buffed from 0.5 | Why was it 0.5? -->
+				<passive_effect name="BuffResistance" operation="base_add" value="@$liquorVodka_BuffResist" tags="buffFatiguedTrigger,buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+            </effect_group>
+		</buff>
+		<buff name="buffLiquorDanJackiel" name_key="buffLiquorDanJackiel" description_key="buffLiquorDanJackiel" icon="iconDanJackiel" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="$buffLiquorDanJackielDuration"/>
+			<display_value_format value="time"/>
+            <effect_group>
+				<requirement name="CVarCompare" cvar="$buffLiquorDanJackielDuration" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorDanJackielDuration" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffLiquorDanJackielDuration"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorDanJackielStack"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorDanJackielRandomLimit"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorDanJackiel_EntityDamage"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorDanJackiel_GeneralDamageResist"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$liquorDanJackiel_BuffResist"/>
+            </effect_group>
+            <effect_group>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLiquorDanJackiel"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorDanJackiel"><requirement name="HasBuff" buff="god"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorDanJackiel"><requirement name="CVarCompare" cvar="$buffLiquorDanJackielDuration" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorDanJackiel"><requirement name="HasBuff" buff="buffLiquorVomit"/></triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorVomitDuration" operation="set" value="randomint(600,1200)"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="GTE" value="@$liquorDanJackielRandomLimit"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLiquorVomit"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="GTE" value="@$liquorDanJackielRandomLimit"/></triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorDanJackielStack" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$liquorDanJackielStack" operation="set" value="1"><requirement name="CVarCompare" cvar="$buffLiquorDanJackielDuration" operation="LTE" value="180"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorDanJackielRandomLimit" operation="set" value="randomint(3,4)"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorDanJackielStack" operation="add" value="1"/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.25" fade="2" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.25" fade="2" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="Equals" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.35" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.4" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.45" fade="3" effect_name="Blur"><requirement name="CVarCompare" cvar="$liquorDanJackielStack" operation="Equals" value="5"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="4" effect_name="Blur"/>
+				
+				<!-- Stack bonuses on multiple uses -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorDanJackiel_EntityDamage" operation="set" value=".15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorDanJackiel_GeneralDamageResist" operation="set" value=".05"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$liquorDanJackiel_BuffResist" operation="set" value=".2"/>
+				
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorDanJackiel_EntityDamage" operation="add" value=".15"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorDanJackiel_GeneralDamageResist" operation="add" value=".05"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$liquorDanJackiel_BuffResist" operation="add" value=".2"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="@$liquorDanJackiel_EntityDamage"><requirement name="HoldingItemHasTags" tags="ranged"/></passive_effect>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="@$liquorDanJackiel_GeneralDamageResist"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="@$liquorDanJackiel_BuffResist" tags="buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch"/> <!-- Buffed from 0.5 | Why was it 0.5? -->
+				<passive_effect name="BuffResistance" operation="base_add" value="@$liquorDanJackiel_BuffResist" tags="buffFatiguedTrigger,buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+            </effect_group>
+		</buff>
+		<buff name="buffLiquorVomit" name_key="buffLiquorVomit" description_key="buffLiquorVomitDesc" icon="iconLiquorBlock" icon_color="128,0,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="$buffLiquorVomitDuration"/>
+			<display_value_format value="time"/>
+            <effect_group>
+				<requirement name="CVarCompare" cvar="$buffLiquorVomitDuration" operation="GTE" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffLiquorVomitDuration" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorVomit"><requirement name="CVarCompare" cvar="$buffLiquorVomitDuration" operation="Equals" value="0"/></triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffLiquorVomitDuration"/>
+            </effect_group>
+            <effect_group>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLiquorVomit"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLiquorVomit"><requirement name="HasBuff" buff="god"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLiquorPevkoBeer"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLiquorVodka"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLiquorDanJackiel"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#vomit" play_in_head="true"/>
+            </effect_group>
+		</buff>
+</insertAfter>
+	
+	
+	
+</EFTX>

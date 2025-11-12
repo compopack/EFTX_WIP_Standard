@@ -1,0 +1,297 @@
+<EFTX>		
+		<insertBefore xpath="//lootgroup[@name='groupCraftingCommon']">
+		<lootgroup name="groupEFTXIngredients">
+			<item name="foodWheatFlour" count="1,2" loot_prob_template="low"/>
+			<item name="foodBread" count="1,2" loot_prob_template="low"/>			
+			<item name="foodSugar" count="1,2" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXFood">
+			<item name="foodBeefstew" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodBeefstew2" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodCannedSaira" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodCondensedMilk" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodHerring" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodPeas" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodOatFlakes" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodMarrowPurree" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodHumpback" count="1,2" loot_prob_template="low"  force_prob="true"/>			
+			<item name="foodAlyonka" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodSlickers" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodBeefJerky" count="1,2" loot_prob_template="low"/>
+			<item name="foodInstantNoodles" count="1,2" loot_prob_template="low"  force_prob="true"/>
+			<item name="foodEmeliaCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodRyeCroutons" count="1,2" loot_prob_template="low"/>
+		</lootgroup>		
+		<lootgroup name="groupEFTXUnhealthyDrink">
+			<item name="drinkTarCola" count="1,2" loot_prob_template="low"/>
+			<item name="drinkRatCola" count="1,2" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXHealthyDrink">
+			<item name="drinkGreenTea" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="drinkApplejuice" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="drinkGrandJuice" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="drinkVitaJuice" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="drinkMilk" count="1,2" loot_prob_template="low"/>
+			<item name="drinkPineappleJuice" count="1,2" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXEnergyDrink">
+			<item name="drinkMaxEnergy" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</lootgroup>
+		<lootgroup name="groupLiquorCabinet" count="1">
+			<item name="drinkKvass" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorDanJackiel" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorVodka" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorMoonshine" count="1,2" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMilitaryFood">
+			<item name="foodMRE" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodArmyCracker" count="1,2" loot_prob_template="low"/>
+			<item name="foodIskra" count="1,2" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMilitaryDrink">
+			<item name="drinkEWR" count="1,2" loot_prob_template="low"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMilitaryConsumables">
+			<item group="groupEFTXMilitaryFood" count="1" loot_prob_template="low"/>
+			<item group="groupEFTXMilitaryDrink" count="1" loot_prob_template="low"/>
+		</lootgroup>						
+		</insertBefore>		
+		<append xpath="//lootgroup[@name='groupChem01']">
+			<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="low"/>
+			<item name="resourceSmokedChimneyDrainCleaner" count="0,1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupScrapCommon']">
+		<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="low"/>
+		<item name="resourceSmokedChimneyDrainCleaner" count="0,2" loot_prob_template="low"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupCraftingUncommon']">
+		<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="low"/>
+		<item name="resourceSmokedChimneyDrainCleaner" count="1,2" loot_prob_template="low"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupFoodTrashCommon']">
+			<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="veryLow"/>			
+		</append>	
+		<append xpath="//lootgroup[@name='groupFoodTrashUncommon']">
+			<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="veryLow"/>
+			<item name="resourceSmokedChimneyDrainCleaner" count="1,2" loot_prob_template="veryLow"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupToilet02']">				
+			<item name="resourceSmokedChimneyDrainCleaner" count="1,2"  loot_prob_template="veryLow"/>
+		</append>			
+		<append xpath="//lootgroup[@name='groupChemistryStationLoot02']">
+			<item name="resourceCanOfWhiteSalt" count="1,2" loot_prob_template="low"/>
+			<item name="resourceSmokedChimneyDrainCleaner" count="0,2" loot_prob_template="medLow"/>
+		</append>
+		<append xpath="//lootgroup[@name='rareFoodDrink']">
+			<item group="groupLiquorCabinet" count="1" loot_prob_template="low"/>
+			<item group="groupEFTXHealthyDrink" count="1"/>
+			<item group="groupEFTXEnergyDrink" count="1"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupFoodCommon']">
+			<item name="foodWheatFlour" count="1,2" loot_prob_template="low"/>
+			<item name="foodBread" count="1,2" loot_prob_template="low"/>
+			<item name="foodOatFlakes" count="1,2" loot_prob_template="low"/>
+			<item name="foodSugar" count="1,2" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>			
+		<append xpath="//lootgroup[@name='groupFoodUncommon']">			
+			<item name="foodCannedSaira" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodCondensedMilk" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHerring" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodPeas" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodMarrowPurree" count="1,2" loot_prob_template="low" force_prob="true"/>			
+			<item name="foodSugar" count="1,2" loot_prob_template="low"/>
+			<item name="foodAlyonka" count="1,2" loot_prob_template="low" force_prob="true"/>			
+			<item name="foodInstantNoodles" count="1,2" loot_prob_template="low"/>			
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupFoodRare']">
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+			<item name="foodEmeliaCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodRyeCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodSlickers" count="1,2" loot_prob_template="low"/>
+			<item name="foodBeefJerky" count="1,2" loot_prob_template="low"/>
+			<item name="foodBeefstew" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodBeefstew2" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHumpback" count="1,2" loot_prob_template="low"/>			
+		</append>
+		<append xpath="//lootgroup[@name='groupDrinksCommon']">
+			<item name="drinkTarCola" count="1,2" loot_prob_template="low"/>
+			<item name="drinkRatCola" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>			
+		</append>
+		<append xpath="//lootgroup[@name='groupDrinksUncommon']">
+			<item name="drinkGreenTea" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="drinkApplejuice" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="drinkGrandJuice" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="drinkVitaJuice" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="drinkMilk" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="drinkPineappleJuice" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low" force_prob="true"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupDrinksRare']">
+			<item group="groupLiquorCabinet" count="1" loot_prob_template="veryLow"/>
+			<item group="groupEFTXHealthyDrink" count="1" loot_prob_template="veryLow"/>
+			<item group="groupEFTXEnergyDrink" count="1" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupLiquorSmall01']">
+			<item name="drinkKvass" count="0,1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorPevkoBeer" count="0,1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorDanJackiel" count="0,1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorVodka" count="0,1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorMoonshine" count="0,1" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="0,1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupLiquorMed01']">
+			<item name="drinkKvass" count="1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorPevkoBeer" count="1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorDanJackiel" count="1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorVodka" count="1" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorMoonshine" count="1" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="0,1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupLiquorPileLarge']">
+			<item name="drinkKvass" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorDanJackiel" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorVodka" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorMoonshine" count="1,2" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="0,1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupDumpsterFood']">
+			<item name="foodBeefstew" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodBeefstew2" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodCannedSaira" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodOatFlakes" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodCondensedMilk" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHerring" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodPeas" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodMarrowPurree" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHumpback" count="1,2" loot_prob_template="low" force_prob="true"/>			
+			<item name="foodAlyonka" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodSlickers" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodBeefJerky" count="1,2" loot_prob_template="low"/>
+			<item name="foodInstantNoodles" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodEmeliaCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodRyeCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupRefrigerator01']">
+			<item name="foodBeefstew" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodBeefstew2" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodCannedSaira" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodCondensedMilk" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHerring" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodPeas" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodMarrowPurree" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodHumpback" count="1,2" loot_prob_template="low" force_prob="true"/>			
+			<item name="foodAlyonka" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodSlickers" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodBeefJerky" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodInstantNoodles" count="1,2" loot_prob_template="low"/>
+			<item name="foodEmeliaCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodRyeCroutons" count="1,2" loot_prob_template="low"/>
+			<item name="foodSausage" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="foodMayo" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>			
+		</append>
+		<append xpath="//lootgroup[@name='groupRefrigerator02']">
+			<item name="drinkTarCola" count="1,2" loot_prob_template="low"/>
+			<item name="drinkRatCola" count="1,2" loot_prob_template="low" force_prob="true"/>			
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>			
+		</append>
+		<append xpath="//lootgroup[@name='groupBeerCooler01']">
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+			<item name="liquorMoonshine" count="1,2" loot_prob_template="extremelyLow"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupSodaFountain01']">
+			<item name="drinkMaxEnergy" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</append>			
+		<append xpath="//lootgroup[@name='groupShamwayShelves02']">
+			<item group="groupEFTXFood" count="1" loot_prob_template="low"/>
+			<item name="foodOatFlakes" count="1,2" loot_prob_template="low"/>
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupShamwayCooler01']">
+			<item group="groupLiquorCabinet" count="1" loot_prob_template="veryLow"/>	
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupLiquorSmall01']">
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupLiquorMed01']">
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="low" force_prob="true"/>
+			<item name="liquorDanJackiel" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupLiquorLarge01']">
+			<item name="liquorPevkoBeer" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="liquorDanJackiel" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="liquorVodka" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupLiquorBonus']">
+			<item group="groupLiquorCabinet" count="1,2" loot_prob_template="veryLow"/>	
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupCupboard02']">
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+			<item name="foodOatFlakes" count="1,2" loot_prob_template="low"/>
+			<item group="groupEFTXFood" count="1" loot_prob_template="veryLow"/>	
+			<item group="groupEFTXIngredients" count="1" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupMilitaryFootlocker01']">
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+			<item group="groupEFTXMilitaryConsumables" count="1" loot_prob_template="low"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupArmyTruck01']">
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+			<item group="groupEFTXMilitaryConsumables" count="1" loot_prob_template="low"/>	
+		</append>
+		
+		<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
+		<append xpath="//lootcontainer[@name='EFTXMilitaryPallet']">
+			<item group="groupEFTXMilitaryFood" count="1" loot_prob_template="low"/>
+			<item group="groupEFTXMilitaryDrink" count="1" loot_prob_template="low"/>	
+		</append>					
+		<append xpath="//lootgroup[@name='skillMagazines']">
+			<item name="schematicsAlcoholics" count="1" loot_prob_template="low"/>
+		</append>
+		</if>
+		</conditional>
+		<append xpath="//lootgroup[@name='groupQuestFood']">
+			<item name="foodBread" count="3"/>
+			<item name="foodBeefstew" count="3"/>
+			<item name="foodBeefstew2" count="3"/>
+			<item name="foodCannedSaira" count="3"/>
+			<item name="foodCondensedMilk" count="3"/>
+			<item name="foodHerring" count="3"/>
+			<item name="foodIskra" count="3"/>
+			<item name="foodPeas" count="3"/>
+			<item name="foodMarrowPurree" count="3"/>
+			<item name="foodMRE" count="3"/>
+			<item name="foodSugar" count="3"/>
+			<item name="foodHumpback" count="3"/>
+			<item name="foodArmyCracker" count="3"/>
+			<item name="foodAlyonka" count="3"/>
+			<item name="foodSlickers" count="3"/>
+			<item name="foodBeefJerky" count="3"/>
+			<item name="foodInstantNoodles" count="3"/>
+			<item name="foodEmeliaCroutons" count="3"/>
+			<item name="foodRyeCroutons" count="3"/>
+			<item name="bundleFoodContainer"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestT2Food']">
+			<item name="bundleFoodContainer"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestT3Food']">
+			<item name="bundleFoodContainer"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestT4Food']">
+			<item name="bundleFoodContainer"/>
+		</append>		
+</EFTX>

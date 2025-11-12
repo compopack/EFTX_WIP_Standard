@@ -1,0 +1,18 @@
+<Extraction>
+<conditional>
+	<if cond="not mod_loaded('FNS_Loot_All_the_Things_Persistent_Containers_Variant')">
+	<append xpath="//block[@name='palletCartonMilitaryCap']">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="EFTXMilitaryPallet"/>
+	</append>
+	<append xpath="//block[@name='palletCartonMilitaryTile']">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="EFTXMilitaryPallet"/>
+	</append>
+	<append xpath="//block[@name='palletCartonMilitaryTileCovered']">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="EFTXMilitaryPallet"/>
+	</append>
+	</if>
+</conditional>
+</Extraction>

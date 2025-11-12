@@ -1,0 +1,1459 @@
+<EFTX>
+<insertAfter xpath="/entitygroups/entitygroup[last()]">
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .05
+		zombieWightFeral, .01
+		zombieJoeBackpacker, .05
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .05
+		zombieWightFeral, .01
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .05
+		zombieWightFeral, .01
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+		zombieSoldierLootGob, .05
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+		zombieSoldierLootGob, .05
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+		zombieSoldierLootGob, .05
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+		zombieSoldierLootGob, .05
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS1']/text()" delim="\n" op="add" >
+		zombieLumberjackAxe, .03
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS50']/text()" delim="\n" op="add" >
+		zombieLumberjackAxe, .02
+		zombieLumberjackFeralAxe, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS100']/text()" delim="\n" op="add" >
+		zombieLumberjackAxe, .01
+		zombieLumberjackFeralAxe, .01
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS200']/text()" delim="\n" op="add" >
+		zombieLumberjackFeralAxe, .02
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS400']/text()" delim="\n" op="add" >
+		zombieLumberjackFeralAxe, .04
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='zombieLumberjackGroupGS800']/text()" delim="\n" op="add" >
+		zombieLumberjackFeralAxe, .08
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesBoss']/text()" delim="\n" op="add" >
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .025
+		zombieDemolitionGiant, .02
+		zombieDemolitionGiant, .02
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesFeral']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .05
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+    </csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .05
+		zombieBikerBomber, .05
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS100']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .07
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS200']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .07
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS400']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .07
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .03
+		zombieDemolitionGiant, .02
+    </csv>
+		<!-- zombieDemolitionRadiated, .1 was in (zombieSoldierGroupGS400)-->
+	<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS800']/text()" delim="\n" op="add" >
+		zombieSoldierLootGob, .07
+		zombieDemolition, .03
+		zombieDemolitionLootGob, .05
+		zombieDemolitionGiant, .02
+    </csv>
+	<!-- *** POI_BIKER_BAR_ZOMBIE_GROUPS -->	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroup']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .05
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02		
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS100']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .05
+		zombieDemolition, .03
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS200']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .07
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS400']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .07
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS800']/text()" delim="\n" op="add" >
+		zombieBikerBomber, .07
+		zombieDemolition, .02
+		zombieDemolitionLootGob, .03
+		zombieDemolitionGiant, .02
+    </csv>
+	
+	
+	<!-- *** POI_SPECIAL_INFECTED_ZOMBIE_GROUPS -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroup']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS1']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS50']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS100']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .01
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS200']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS400']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .02
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS800']/text()" delim="\n" op="add" >
+		zombieMutatedLootGob, .05
+    </csv>
+	<!-- *** SLEEPER_HORDE_STAGES -->
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS1')]/text()" delim="\n" op="add" >
+		zombieBikerBomber, .05
+		zombieWightFeral, .04
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS2')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS3')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .2
+		zombieDemolitionLootGob, .04
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS4')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .4
+		zombieDemolitionLootGob, .08
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS5')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .6
+		zombieDemolitionLootGob, .12
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS6')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS7')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS8')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS9')]/text()" delim="\n" op="add" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .08
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<!-- *** Removegroups (to negate above changes) -->
+    <csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS1']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .05
+		zombieWightFeral, .04
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .1
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS2']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral,  .01
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS5']/text()" delim="\n" op="remove" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .06
+		zombieDemolitionLootGob, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS8']/text()" delim="\n" op="remove" >
+		zombieBikerBomber,  .01
+		zombieWightFeral,  .01
+		zombieDemolition, .08
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS11']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .05
+		zombieWightFeral, .04
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS14']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .05
+		zombieWightFeral, .04
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS18']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .05
+		zombieWightFeral, .04
+		zombieDemolition, .05
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS22']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS27']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .01
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS31']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .02
+		zombieDemolitionLootGob, .04
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS36']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .02
+		zombieDemolitionLootGob, .04
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS41']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .04
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS46']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .02
+		zombieWightFeral, .02
+		zombieDemolition, .04
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS52']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .6
+		zombieDemolitionLootGob, .12
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS58']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .6
+		zombieDemolitionLootGob, .12
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS64']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS70']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS76']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS82']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv> 
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS89']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS96']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieWightFeral
+		zombieDemolition, .8
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	
+	
+<!-- *** FERAL_HORDE_STAGES -->
+	<!-- Bomber Starts At GS30 and DemoLootGob At GS30 -->
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS1')]/text()" delim="\n" op="add" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS2')]/text()" delim="\n" op="add" >
+		zombieBikerBomber, .4
+		zombieDemolitionLootGob, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS3')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .04
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS4')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .08
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS5')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .12
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS6')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS7')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS8')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS9')]/text()" delim="\n" op="add" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+	<!-- *** Removegroups (to negate above changes) -->
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .4
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS4']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS7']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS10']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS13']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS16']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS19']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .2
+		zombieDemolitionLootGob, .01
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS23']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .4
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS27']/text()" delim="\n" op="remove" >
+		zombieBikerBomber, .4
+		zombieDemolitionLootGob, .02
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS31']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .04
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS35']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .04
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS40']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS44']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS49']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .08
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS54']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .12
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS59']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .12
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS64']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS69']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS74']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS80']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS85']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS91']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>
+    <csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS97']/text()" delim="\n" op="remove" >
+		zombieBikerBomber
+		zombieDemolitionLootGob, .2
+		zombieDemolitionGiant, .02
+		zombieSteveBackpacker, .05
+		zombieTomClarkBackpacker, .05
+		zombieBusinessManBackpacker, .05
+		zombieBoeBackpacker, .05
+		zombieJanitorBackpacker, .05
+		zombieMoeBackpacker, .05
+		zombieYoBackpacker, .05
+		zombieUtilityWorkerBackpacker, .05
+		zombieSkateboarderBackpacker, .05
+		zombieArleneBackpacker, .05
+		zombieMarleneBackpacker, .05
+		zombiePartyGirlBackpacker, .05
+		zombieDarleneBackpacker, .05
+    </csv>			
+</insertAfter>
+
+</EFTX>

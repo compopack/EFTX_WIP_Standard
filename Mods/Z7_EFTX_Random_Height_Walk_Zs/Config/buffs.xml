@@ -1,0 +1,89 @@
+<EFTX>
+
+<append xpath="/buffs">
+	<!-- ### Zombie Random Walktypes & Scale -->
+		<buff name="zombieRandomWalktypeAndScale">
+			<duration value="0"/>
+            <effect_group>
+				<requirement name="!EntityTagCompare" tags="crawler,spider,zombieFemaleFat,zombieFatHawaiian,zombieBowler,zombieCop"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".walktyperandom" operation="set" value="randomint(1,5)"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="2"> <!-- Crazy Headshake aka. Stomper -->
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="3"> <!-- Straight Forward -->
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="2"/>
+					</triggered_effect>
+					<!--triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="4"> Stuck In Ground?
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="3"/>
+					</triggered_effect-->
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="5"> <!-- Cripple -->
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="3"/>
+						<requirement name="!EntityTagCompare" tags="zombieWightFeral"/>
+						<requirement name="!EntityTagCompare" tags="zombieDemolition"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="6"> <!-- Crazy Idle | Arms Forward Runner -->
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"> <!-- Straight Forward -->
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="5"/>
+					</triggered_effect>
+					<!--triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="22">
+						<requirement name="CVarCompare" cvar=".walktyperandom" operation="Equals" value="7"/>
+					</triggered_effect-->
+					
+					<!--triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar=".walktyperandom"/-->
+					<!--passive_effect name="WalkSpeed" operation="perc_add" value="10"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value="10"/-->
+            </effect_group>
+            <effect_group>
+				<requirement name="EntityTagCompare" tags="zombie"/>
+				<requirement name="!EntityTagCompare" tags="femaleZombie"/> <!-- Too lazy atm to properly implement it differently -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".zombiescalerandom" operation="set" value="randomint(-10,10)"><requirement name="CVarCompare" cvar="_difficulty" operation="LTE" value="2"/></triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".zombiescalerandom" operation="set" value="randomint(-5,10)"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".zombiescalerandom" operation="set" value="randomint(0,10)"><requirement name="CVarCompare" cvar="_difficulty" operation="GTE" value="4"/></triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".zombiescalerandom" operation="set" value="randomint(0,10)"><requirement name="EntityTagCompare" tags="zombieWightFeral,zombieDemolition"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.1"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-10"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.95"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-10"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.09"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-9"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.955"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-9"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.08"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-8"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.96"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-8"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.07"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-7"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.965"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-7"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.06"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-6"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.97"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-6"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.05"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-5"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.975"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-5"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.04"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-4"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.98"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-4"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.03"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-3"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.985"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-3"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.02"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-2"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.99"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-2"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value="-.01"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-1"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="0.995"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="-1"/></triggered_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.005"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="1"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".01"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="1"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.01"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="2"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".02"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="2"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.015"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="3"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".03"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="3"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.02"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="4"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".04"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="4"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.025"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="5"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".05"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="5"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.03"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="6"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".06"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="6"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.035"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="7"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".07"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="7"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.04"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="8"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".08"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="8"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.045"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="9"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".09"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="9"/></passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.05"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="10"/></triggered_effect>
+					<passive_effect name="HealthMax" operation="perc_add" value=".1"><requirement name="CVarCompare" cvar=".zombiescalerandom" operation="Equals" value="10"/></passive_effect>
+            </effect_group>
+		</buff>
+		</append>
+		</EFTX>

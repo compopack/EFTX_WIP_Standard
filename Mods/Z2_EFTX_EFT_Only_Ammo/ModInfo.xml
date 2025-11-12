@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="Z2_EFTX_EFT_Only_Ammo" />
+	<DisplayName value="EFT_AMMO" />
+	<Description value="Adds EFT Ammo to the Weapons" />
+	<Author value="BryanDVS,CloserEx,M14" />
+	<Version value="2.4.2.5" />
+</xml>

@@ -1,0 +1,277 @@
+<EFTX>
+    <conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+    <append xpath="/progression/crafting_skills">
+    <crafting_skill name="craftinggunpp19bizon" max_level="100" parent="attCrafting" name_key="craftinggunpp19bizonName" desc_key="craftinggunpp19bizonDesc" long_desc_key="craftinggunpp19bizonLongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunpp19bizon" name_key="gunpp19bizon" has_quality="true" unlock_level="20,30,40,60,80,100">
+				<unlock_entry item="gunpp19bizon" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="gunpp19bizon"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="30,40,60,80,100" value="1,2,3,4,5" tags="gunpp19bizon"/>
+				</effect_group>		
+	</crafting_skill>	
+    <crafting_skill name="craftingguntokarevmachine" max_level="50" parent="attCrafting" name_key="craftingguntokarevmachineName" desc_key="craftingguntokarevmachineDesc" long_desc_key="craftingguntokarevmachineLongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="guntokarevmachine" name_key="Tokarev Machine Gun" has_quality="true" unlock_level="15,20,25,30,35,50">
+				<unlock_entry item="guntokarevmachine" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,50" value="1" tags="guntokarevmachine"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="20,25,30,35,50" value="1,2,3,4,5" tags="guntokarevmachine"/>
+				</effect_group>		
+	</crafting_skill>
+    <crafting_skill name="craftinggunstar15" max_level="100" parent="attCrafting" name_key="craftinggunstar15Name" desc_key="craftinggunstar15Desc" long_desc_key="craftinggunstar15LongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunstar15" name_key="Star 15" has_quality="true" unlock_level="25,45,60,75,90,100">
+				<unlock_entry item="gunstar15" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="gunstar15"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="45,60,75,90,100" value="1,2,3,4,5" tags="gunstar15"/>
+				</effect_group>		
+	</crafting_skill>
+    <crafting_skill name="craftinggunl85a2" max_level="70" parent="attCrafting" name_key="craftinggunl85a2Name" desc_key="craftinggunl85a2Desc" long_desc_key="craftinggunl85a2LongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunl85a2" name_key="L85A2" has_quality="true" unlock_level="25,30,35,40,50,70">
+				<unlock_entry item="gunl85a2" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,70" value="1" tags="gunl85a2"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="30,35,40,50,70" value="1,2,3,4,5" tags="gunl85a2"/>
+				</effect_group>		
+	</crafting_skill>
+    <crafting_skill name="craftinggunmdr556" max_level="80" parent="attCrafting" name_key="craftinggunmdr556Name" desc_key="craftinggunmdr556Desc" long_desc_key="craftinggunmdr556LongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunmdr556" name_key="MDR 556" has_quality="true" unlock_level="40,45,50,55,60,80">
+				<unlock_entry item="gunmdr556" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,80" value="1" tags="gunmdr556"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="45,50,55,60,80" value="1,2,3,4,5" tags="gunmdr556"/>
+				</effect_group>		
+	</crafting_skill>
+    </append>
+    <append xpath="/progression/perks" >
+    <!-- PP19BIZON -->
+		<perk name="perkPP19Bizon" parent="skillEFTXSmgs" max_level="6" name_key="PP19 Bizon" desc_key="Finding More PP19 Bizon Books in loot" icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="1" desc_key="reqAgilityLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="3" desc_key="reqAgilityLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="5" desc_key="reqAgilityLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="9" desc_key="reqAgilityLevel09"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,1" tags="eftxpp19bizon"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftxpp19bizon"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="0,5" value="0,0.25" tags="eftxpp19bizon"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="0,5" value="0,0.30" tags="eftxpp19bizon"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="0,5" value="0,-.25" tags="eftxpp19bizon"/>
+			</effect_group>	
+		<!-- Increase the chance to find SMG crafting skill magazines with each perk rank up to crafting skill 35 -->
+		<effect_group>
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="Gunpp19bizonCSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunpp19bizon" operation="LT" value="35"/>
+			</passive_effect>
+			<!-- Once SMG crafting skill reaches 35, set the probability bonus of finding SMG crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="Gunpp19bizonCSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunpp19bizon" operation="Equals" value="35"/>
+			</passive_effect>
+			</effect_group>	
+			<effect_group>
+			<effect_description level="1" desc_key="perkPP19BizonRank1Desc" long_desc_key="Find PP19 Bizon books in loot"/>
+			<effect_description level="2" desc_key="perkPP19BizonRank2Desc" long_desc_key="Find more PP19 Bizon books in loot"/>
+			<effect_description level="3" desc_key="perkPP19BizonRank3Desc" long_desc_key="Find even more PP19 Bizon books in loot"/>
+			<effect_description level="4" desc_key="perkPP19BizonRank4Desc" long_desc_key="Do you really need this many PP19 Bizon books"/>
+			<effect_description level="5" desc_key="perkPP19BizonRank5Desc" long_desc_key="Fine have more PP19 Bizon books"/>
+			<effect_description level="6" desc_key="perkPP19BizonRank6Desc" long_desc_key="Cant have to many PP19 Bizon books right"/>
+		</effect_group>		
+		</perk>			
+		<!-- PP19BIZON -->
+        <!-- TOKAREVMACHINE -->
+		<perk name="perkTokarevMachine" parent="skillEFTXPistols" max_level="6" name_key="Tokarev Machine" desc_key="Finding More Tokarev Machine Books in loot" icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="1" desc_key="reqAgilityLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="3" desc_key="reqAgilityLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="5" desc_key="reqAgilityLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="9" desc_key="reqAgilityLevel09"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,1" tags="eftxtokarevmachine"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftxtokarevmachine"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="0,5" value="0,0.25" tags="eftxtokarevmachine"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="0,5" value="0,0.30" tags="eftxtokarevmachine"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="0,5" value="0,-.25" tags="eftxtokarevmachine"/>
+			</effect_group>	
+			<effect_group>
+			<!-- Increase the chance to find Pistol crafting skill magazines with each perk rank up to crafting skill 50 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="GuntokarevmachineCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingguntokarevmachine" operation="LT" value="50"/>
+			</passive_effect>
+			<!-- Once Pistol crafting skill reaches 50, set the probability bonus of finding Pistol crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,6" value="1,1" tags="GuntokarevmachineCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingguntokarevmachine" operation="Equals" value="50"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkTokarevMachineRank1Desc" long_desc_key="Finding Tokarev Machine books"/>
+			<effect_description level="2" desc_key="perkTokarevMachineRank2Desc" long_desc_key="You find more Tokarev Machine books"/>
+			<effect_description level="3" desc_key="perkTokarevMachineRank3Desc" long_desc_key="What have we here, even more Tokarev Machine books"/>
+			<effect_description level="4" desc_key="perkTokarevMachineRank4Desc" long_desc_key="Let me guess what is in here. Yep more Tokarev Machine books"/>
+			<effect_description level="5" desc_key="perkTokarevMachineRank5Desc" long_desc_key="All I find is Tokarev Machine books"/>
+			<effect_description level="6" desc_key="perkTokarevMachineRank6Desc" long_desc_key="Tokarev Machine books galore"/>
+			</effect_group>
+			</perk>
+		<!-- TOKAREVMACHINE -->
+        <!-- STAR15 -->
+		<perk name="perkStar15" parent="skillEFTXRifles" max_level="6"  name_key="Star15" desc_key="Find More Star15 Books in loot" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="09" desc_key="reqPerceptionLevel09"/></level_requirements>
+			<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="eftxstar15"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.32,.45,.60" tags="eftxstar15"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="eftxstar15"/>
+			</effect_group>
+			<effect_group>
+		<!-- Increase the chance to find rifle crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="Gunstar15CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunstar15" operation="LT" value="100"/>
+			</passive_effect>
+			<!-- Once rifle crafting skill reaches 100, set the probability bonus of finding rifle crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,6" value="1,1" tags="Gunstar15CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunstar15" operation="Equals" value="100"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkStar15Rank1Desc" long_desc_key="Find more Star15 books"/>
+			<effect_description level="2" desc_key="perkStar15Rank2Desc" long_desc_key="Find the Star15 Books"/>
+			<effect_description level="3" desc_key="perkStar15Rank3Desc" long_desc_key="Find even more Star15 books"/>
+			<effect_description level="4" desc_key="perkStar15Rank4Desc" long_desc_key="You want more Star15 books"/>
+			<effect_description level="5" desc_key="perkStar15Rank5Desc" long_desc_key="Mass Star15 book find"/>
+			<effect_description level="6" desc_key="perkStar15Rank6Desc" long_desc_key="Star15 books galore"/>
+			</effect_group>
+		</perk>
+		<!-- STAR15 -->
+        <!-- L85A2 -->
+		<perk name="perkL85A2" parent="skillEFTXMGS" max_level="6" name_key="L85A2" desc_key="Find More L85A2 Books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="09" desc_key="reqFortitudeLevel09"/></level_requirements>
+			<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="EFTXl85a2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="EFTXl85a2"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value="0.05,0.25" tags="EFTXl85a2"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="EFTXl85a2"/>
+
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="0,5" value="0,-.03" tags="EFTXl85a2"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="0,5" value="0,-.15" tags="EFTXl85a2"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="0,5" value="0,-.03" tags="EFTXl85a2"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="0,5" value="0,-.15" tags="EFTXl85a2"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1,5" value="-.03,-.15" tags="EFTXl85a2"/>
+			</effect_group>
+			<effect_group>
+		<!-- Increase the chance to find Machine Gun crafting skill magazines with each perk rank up to crafting skill 70 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="Gunl85a2CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunl85a2" operation="LT" value="70"/>
+			</passive_effect>
+			<!-- Once Machine Gun crafting skill reaches 70, set the probability bonus of finding Machine Gun crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,6" value="1,1" tags="Gunl85a2CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunl85a2" operation="Equals" value="70"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkL85A2Rank1Desc" long_desc_key="Find more L85A2 books"/>
+			<effect_description level="2" desc_key="perkL85A2Rank2Desc" long_desc_key="Find the L85A2 Books"/>
+			<effect_description level="3" desc_key="perkL85A2Rank3Desc" long_desc_key="Find even more L85A2 books"/>
+			<effect_description level="4" desc_key="perkL85A2Rank4Desc" long_desc_key="You want more L85A2 books"/>
+			<effect_description level="5" desc_key="perkL85A2Rank5Desc" long_desc_key="Mass L85A2 book find"/>
+			<effect_description level="6" desc_key="perkL85A2Rank6Desc" long_desc_key="L85A2 books galore"/>
+			</effect_group>
+		</perk>
+		<!-- L85A2 -->
+		<!-- MDR556 -->
+		<perk name="perkMDR556" parent="skillEFTXMGS" max_level="6" name_key="MDR556" desc_key="Find More MDR556 Books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="09" desc_key="reqFortitudeLevel09"/></level_requirements>
+			<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="eftxmdr556"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="eftxmdr556"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value="0.05,0.25" tags="eftxmdr556"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="eftxmdr556"/>
+
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="0,5" value="0,-.03" tags="eftxmdr556"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="0,5" value="0,-.15" tags="eftxmdr556"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="0,5" value="0,-.03" tags="eftxmdr556"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="0,5" value="0,-.15" tags="eftxmdr556"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1,5" value="-.03,-.15" tags="eftxmdr556"/>
+			</effect_group>
+			<effect_group>
+		<!-- Increase the chance to find Machine Gun crafting skill magazines with each perk rank up to crafting skill 80 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="Gunmdr556CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunmdr556" operation="LT" value="80"/>
+			</passive_effect>
+			<!-- Once Machine Gun crafting skill reaches 80, set the probability bonus of finding Machine Gun crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,6" value="1,1" tags="Gunmdr556CSM">
+				<requirement name="ProgressionLevel" progression_name="craftinggunmdr556" operation="Equals" value="80"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkMDR556Rank1Desc" long_desc_key="Find more MDR556 books"/>
+			<effect_description level="2" desc_key="perkMDR556Rank2Desc" long_desc_key="Find the MDR556 Books"/>
+			<effect_description level="3" desc_key="perkMDR556Rank3Desc" long_desc_key="Find even more MDR556 books"/>
+			<effect_description level="4" desc_key="perkMDR556Rank4Desc" long_desc_key="You want more MDR556 books"/>
+			<effect_description level="5" desc_key="perkMDR556Rank5Desc" long_desc_key="Mass MDR556 book find"/>
+			<effect_description level="6" desc_key="perkMDR556Rank6Desc" long_desc_key="MDR556 books galore"/>
+			</effect_group>
+		</perk>
+		<!-- MDR556 -->
+        </append>
+    </if>
+	</conditional>
+    <conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry[contains(@icon,'gunpp9klin')]/@icon">,gunpp19bizon</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry/unlock_entry[contains(@item,'gunpp9klin')]/@item">,gunpp19bizon</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/effect_group/passive_effect[contains(@tags,'gunpp9klin')]/@tags">,gunpp19bizon</append>
+
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry[contains(@icon,'guntokarevgold')]/@icon">,guntokarevmachine</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry/unlock_entry[contains(@item,'guntokarevgold')]/@item">,guntokarevmachine</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/effect_group/passive_effect[contains(@tags,'guntokarevgold')]/@tags">,guntokarevmachine</append>
+
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry[contains(@icon,'gunadar')]/@icon">,gunstar15</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry/unlock_entry[contains(@item,'gunadar')]/@item">,gunstar15</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/effect_group/passive_effect[contains(@tags,'gunadar')]/@tags">,gunstar15</append>
+
+     <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[contains(@icon,'gunm16a4')]/@icon">,gunl85a2,gunmdr556</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry/unlock_entry[contains(@item,'gunm16a4')]/@item">,gunl85a2,gunmdr556</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/effect_group/passive_effect[contains(@tags,'gunm16a4')]/@tags">,gunl85a2,gunmdr556</append>
+
+    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry[@name_key='SMGS']/display_entry[contains(@item,'gunpp9klin')]/@icon">,gunpp19bizon</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry[@name_key='SMGS']/unlock_entry[contains(@item,'gunpp9klin')]/@item">,gunpp19bizon</append>    
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='6,200']/@tags"/>,gunpp19bizon</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='23,43,63,83,103,125']/@tags"/>,gunpp19bizon</append> -->
+
+    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry[@name_key='Pistols']/display_entry[contains(@item,'guntokarevgold')]/@icon">,guntokarevmachine</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry[@name_key='Pistols']/unlock_entry[contains(@item,'guntokarevgold')]/@item">,guntokarevmachine</append>    
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='20,125']/@tags"/>,guntokarevmachine</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='40,60,80,100,120,125']/@tags"/>,guntokarevmachine</append> -->
+
+    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry[@name_key='Rifles']/display_entry[contains(@item,'gunadar')]/@icon">,gunstar15</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry[@name_key='Rifles']/unlock_entry[contains(@item,'gunadar')]/@item">,gunstar15</append>    
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='10,200']/@tags"/>,gunstar15</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='35,60,85,110,135,200']/@tags"/>,gunstar15</append> -->
+
+    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[@name_key='Machineguns']/display_entry[contains(@item,'gunm16a4')]/@icon">,gunl85a2,gunmdr556</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[@name_key='Machineguns']/unlock_entry[contains(@item,'gunm16a4')]/@item">,gunl85a2,gunmdr556</append> 
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='10,200']/@tags"/>,gunl85a2,gunmdr556</append>
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='35,60,85,110,135,200']/@tags"/>,gunl85a2,gunmdr556</append> -->
+    </if>
+	</conditional>	
+</EFTX>

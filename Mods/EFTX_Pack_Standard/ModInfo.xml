@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="EFTX_Pack_Standard" />
+	<DisplayName value="EFT Extraction Pack Standard" />
+	<Description value="Adds just the weapons from Escape From Tarkov" />
+	<Author value="BryanDVS,CloserEx,M14,Stallionsden" />
+	<Version value="2.4.2.5" />
+</xml>

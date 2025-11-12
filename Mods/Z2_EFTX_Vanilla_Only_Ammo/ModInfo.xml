@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="Z2_EFTX_Vanilla_Only_Ammo" />
+	<DisplayName value="VANILLA_AMMO" />
+	<Description value="Adds Vanilla Ammo to the Weapons" />
+	<Author value="BryanDVS,CloserEx,M14" />
+	<Version value="2.4.2.5" />
+</xml>

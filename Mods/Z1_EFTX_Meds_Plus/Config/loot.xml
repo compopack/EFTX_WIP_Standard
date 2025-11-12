@@ -1,0 +1,213 @@
+<EFTX>
+<insertBefore xpath="//lootgroup[@name='groupModEftSkillMagazinesSmg']">
+	<lootgroup name="groupModEftSkillMagazinesMedical" >
+			<item name="DoctorMedicalJournalsSkillMagazine" count="1,2"/>
+			<item name="BooksOfASurgeonSkillMagazine" count="1,2"/>
+	</lootgroup>	
+</insertBefore>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+	<!-- MEDICAL -->
+				<lootgroup name="groupInjectorSmall" >
+					<item name="resourcePileOfMeds" count="1,2" loot_prob_template="medLow"/>	
+					<item name="resourceDisposableSyringe" count="1,2" loot_prob_template="medLow"/>
+					<item name="resourceSalineSolution" count="1,2" loot_prob_template="medHigh"/>						
+					<item name="DoctorMedicalJournalsSkillMagazine" count="1,2" loot_prob_template="low"/>
+					</lootgroup>
+				<lootgroup name="groupInjectorMed" >
+					<item name="resourcePileOfMeds" count="1,3" loot_prob_template="medLow"/>	 
+					<item name="resourceDisposableSyringe" count="1,3" loot_prob_template="medLow"/>
+					<item name="resourceSalineSolution" count="1,3" loot_prob_template="medHigh"/>
+					<item name="medicalIFAK" count="0,1" loot_prob_template="veryLow" force_prob="true"/>						
+					<item name="medicalSurv12" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="DoctorMedicalJournalsSkillMagazine" count="1" loot_prob_template="low"/>
+				</lootgroup>
+				<lootgroup name="groupInjectorLarge" >
+					<item name="resourcePileOfMeds" count="1,4" loot_prob_template="medLow"/>	
+					<item name="resourceDisposableSyringe" count="1,4" loot_prob_template="medLow"/>
+					<item name="resourceSalineSolution" count="1,4" loot_prob_template="medHigh"/>
+					<item name="medicalIFAK" count="1" loot_prob_template="veryLow" force_prob="true"/>							
+					<item name="medicalInjectorMULE" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalSalewa" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalCMS" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalSurv12" count="1" loot_prob_template="veryLow" force_prob="true"/>	
+					<item name="DoctorMedicalJournalsSkillMagazine" count="1" loot_prob_template="low"/>
+					<item name="BooksOfASurgeonSkillMagazine" count="1" loot_prob_template="low"/>
+				</lootgroup>
+				<lootgroup name="groupInjectorExtraLarge">
+					<item name="resourceDisposableSyringe" count="1,5" loot_prob_template="medLow"/>
+					<item name="medicalInjectorAdrenaline" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalInjectorMorphine" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalInjectorPerfortran" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalInjectorPropitalRegenerativeStim" count="1" loot_prob_template="veryLow"/>
+					<item name="medicalInjectorMULE" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalSurv12" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalInjectorSJ12" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalInjector2A2" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="resourcePileOfMeds" count="1" loot_prob_template="medLow"/>	
+					<item name="medicalSalewa" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="medicalCMS" count="1" loot_prob_template="veryLow" force_prob="true"/>
+					<item name="resourceSalineSolution" count="1,5" loot_prob_template="medHigh"/>
+					<item name="medicalIFAK" count="1" loot_prob_template="veryLow" force_prob="true"/>					
+					<item name="DoctorMedicalJournalsSkillMagazine" count="1" loot_prob_template="low"/>
+					<item name="BooksOfASurgeonSkillMagazine" count="1" loot_prob_template="low"/>
+				</lootgroup>
+<!-- MEDICAL -->
+</insertAfter>
+<append xpath="//lootgroup[@name='groupModEftSkillMagazinesAll']">
+		<item group="groupModEftSkillMagazinesMedical" count="1"/>
+</append>
+<conditional>
+	<if cond="not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">	
+<append xpath="//lootgroup[@name='schematicsModsAndGeneralT1']">
+			<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+</append>
+</if>
+</conditional>
+<insertBefore xpath="//lootgroup[@name='groupModEftSkillMagazinesAll']">
+ <!-- MEDICAL -->
+				<lootgroup name="groupInjectors">		
+					<item group="groupInjectorSmall" count="1"/>
+					<item group="groupInjectorMed" count="1"/>
+					<item group="groupInjectorLarge" count="1"/>
+					<item group="groupInjectorExtraLarge" count="1"/>
+				</lootgroup>
+<!-- MEDICAL -->
+</insertBefore>
+<append xpath="//lootgroup[@name='groupChemistryStationLoot02']">
+			<item name="resourceBottleOfHydrogenPeroxide" count="1,2" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupChem01']">
+			<item name="resourceBottleOfHydrogenPeroxide" count="1,2" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupScrapCommon']">
+		<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+		<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+		<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>
+		<item name="resourceBottleOfHydrogenPeroxide" count="1,3" loot_prob_template="low"/>		
+</append>
+<append xpath="//lootgroup[@name='groupCraftingUncommon']">
+		<item name="resourceDisposableSyringe" count="1,2" loot_prob_template="low"/>
+		<item name="resourceBottleOfHydrogenPeroxide" count="1,2" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupFoodTrashCommon']">
+			<item name="resourceCanisterWithPurifiedWater" count="0,1" loot_prob_template="veryLow"/>
+			<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>
+			<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+</append>		
+<append xpath="//lootgroup[@name='groupFoodTrashUncommon']">
+			<item name="resourceBottleOfHydrogenPeroxide" count="1,2" loot_prob_template="veryLow"/>			
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+			<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="1,2" loot_prob_template="medLow"/>
+			<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+			<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>				
+</append>
+<append xpath="//lootgroup[@name='groupToilet01']">	
+			<item name="resourceToiletPaper" count="1,2"/>
+			<item name="resourceDisposableSyringe" count="0,1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupToilet02']">				
+			<item name="resourcePileOfMeds" count="1,2" loot_prob_template="veryLow"/>
+			<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+			<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+</append>			
+<append xpath="//lootgroup[@name='groupMedicalCommon']">	
+			<item name="resourceDisposableSyringe" count="1,2" loot_prob_template="veryLow"/>	
+			<item group="groupInjectorSmall" count="1" loot_prob_template="veryLow"/>			
+</append>
+<append xpath="//lootgroup[@name='groupMedicalUncommon']">	
+			<item group="groupInjectorMed" count="1" loot_prob_template="veryLow"/>			
+</append>
+<append xpath="//lootgroup[@name='groupMedicalRare']">	
+			<item group="groupInjectorLarge" count="1"  loot_prob_template="veryLow"/>
+</append>		
+<append xpath="//lootgroup[@name='groupAmbulance']">	
+			<item group="groupInjectorExtraLarge" count="1"  loot_prob_template="veryLow"/>
+</append>	
+<append xpath="//lootgroup[@name='groupValuablesSmall']">	
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>		
+<append xpath="//lootgroup[@name='groupValuablesMed']">	
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupValuablesLarge']">	
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupValuablesExtraLarge']">	
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+			<item name="bundleMoneyCase" count="1" loot_prob_template="veryLow"/>			
+</append>	
+<append xpath="//lootgroup[@name='groupPurse01']">
+			<item name="bundleWallet" count="0,1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupCars01']">
+			<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>
+			<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+			<item name="resourceToiletPaper" count="1,2"/>
+			<item name="resourceDisposableSyringe" count="1,2" loot_prob_template="medLow"/>
+			<item name="medicalSurv12" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="resourcePileOfMeds" count="0,1" loot_prob_template="medLow"/>	
+			<item name="medicalSalewa" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="medicalCMS" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item name="resourceSalineSolution" count="1,2" loot_prob_template="medHigh"/>
+			<item name="medicalIFAK" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+<append xpath="//lootgroup[@name='groupSmallSafeLoot01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medLow"/>
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupGunSafeSecure_01']">
+			<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupBackpacks01']">
+				<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>
+				<item name="medicalSurv12" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+				<item name="resourcePileOfMeds" count="0,1" loot_prob_template="medLow"/>	
+				<item name="medicalSalewa" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+<append xpath="//lootgroup[@name='groupBackpacks02']">
+				<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+				<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+				<item name="medicalCMS" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+				<item name="resourceSalineSolution" count="1,2" loot_prob_template="medHigh"/>
+				<item name="medicalIFAK" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+</append>	
+<append xpath="//lootgroup[@name='groupLocker01']">
+				<item name="resourcePrinterPaper" count="1,2" loot_prob_template="medLow"/>
+				<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+				<item name="resourceOldBook" count="1,2" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupDesks01']">
+				<item name="resourcePrinterPaper" count="1,3" loot_prob_template="medLow"/>
+				<item name="resourceNewspaper" count="1,2" loot_prob_template="low"/>
+	</append>		
+<append xpath="//lootgroup[@name='groupMedicalPileSmall']">
+				<item group="groupInjectorSmall" count="1" loot_prob_template="low"/>				
+</append>
+<append xpath="//lootgroup[@name='groupMedicalPileMed']">
+				<item group="groupInjectorMed" count="1" loot_prob_template="low" force_prob="true"/>				
+</append>
+<append xpath="//lootgroup[@name='groupMedicalPileLarge']"> <!-- BCase -->
+				<item group="groupInjectorLarge" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>				
+</append>
+<append xpath="//lootgroup[@name='groupMedicineCabinet']"> <!-- Small Bathroom one -->
+				<item group="groupInjectorExtraLarge" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+</append>
+<append xpath="//lootgroup[@name='groupPopNPillsCrate']">
+				<item group="groupInjectorExtraLarge" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+</append>	
+<append xpath="//lootgroup[@name='groupQuestMedical']">
+		<item name="medicalInjectorAdrenaline" count="1" loot_prob_template="QuestT1Prob"/>
+		<item name="medicalInjectorMorphine" count="1" loot_prob_template="QuestT1Prob"/>
+		<item name="medicalIFAK" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="medicalInjectorPerfortran" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="medicalInjectorPropitalRegenerativeStim" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="medicalSalewa" count="1" loot_prob_template="QuestT3Prob"/>
+		<item name="medicalInjectorSJ12" count="1" loot_prob_template="QuestT3Prob"/>
+		<item name="medicalInjector2A2" count="1" loot_prob_template="QuestT3Prob"/>
+</append>	
+<append xpath="//lootcontainer[@name='atmLoot']">
+		<item name="bundleMoneyCase" count="1" loot_prob_template="moreLow"/>
+		<item name="bundleWallet" count="1" loot_prob_template="veryLow"/>
+</append>	
+</EFTX>

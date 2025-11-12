@@ -1,0 +1,511 @@
+<EFTX>
+
+<append xpath="/Sounds">
+	<!-- *** Trip-Sounds -->
+		<SoundDataNode name="soundBuffEftTrip"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?tarkovweaponfire.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?wrong_place"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="1"/>
+			<HighestPitch name="1"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+			
+		<SoundDataNode name="soundBuffEftTrip2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?tarkovweaponfire.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?deadlyTrip.prefab"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="soundBuffEftTripHB"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?tarkovweaponfire.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat1.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat2.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat3.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat4.prefab"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="soundBuffEftTripHB_Slow"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?tarkovweaponfire.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat1_slow.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat2_slow.prefab"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="soundBuffEftTripHB_Fast"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?tarkovweaponfire.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat1_fast.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/schizosounds.unity3d?soundEftHeartbeat2_fast.prefab"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="testEftSounds"> <AudioSource name="Sounds/Prefabs/AudioSource_Impact_Large"/>
+			<AudioClip ClipName="Sounds/Prefabs/Ambient_Oneshots/a_horde_oneshot1"/>
+			<AudioClip ClipName="Sounds/Prefabs/Ambient_Oneshots/a_horde_oneshot2"/>
+			<AudioClip ClipName="Sounds/Prefabs/Ambient_Oneshots/a_horde_oneshot3"/>
+			<LowestPitch name="1"/>
+			<HighestPitch name="1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="rsh12_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rsh_12_outdoor_close_oneshot"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="deagle_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?deagle_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="57_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?fiveseven_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="57_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?fiveseven_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="glock17_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?glock17_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="glock17_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?glock17_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="glock17_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?glock17_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="pl_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pl_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="pl_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pl_fire_silenced_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="usp45_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?usp_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="usp45_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?usp_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="m1911_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?1911_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="m1911_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?1911_fire_silenced_close1"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?1911_fire_silenced_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="tt_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?tt_fire_outdoor_close"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?tt_fire_outdoor_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="makarov_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pm_close1"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pm_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="makarov_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pb_silenced_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="pb_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?pb_silenced_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="sr1mp_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?gyrza_close1"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?gyrza_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="sr1mp_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?gyrza_silenced_close1"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?gyrza_silenced_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="p226_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?p226_fire_close"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?p226_fire_close2"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="p226_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?p226_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="p226_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?p226_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="m9a3_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m9a3_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="m9a3_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m9a3_fire_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="m9a3_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m9a3_fire_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="ucp_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.03" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?ucp_close_outdoor"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="ucp_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?ucp_outdoors_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+
+	<!-- ###### Launcher Shotguns -->
+		<SoundDataNode name="m203_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.07" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m203_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="gp25_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.07" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?gp_25_grenade_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="rpg7_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.07" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rpg_7_fire_close_outdoor"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="ks23_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?ks23_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mp153_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mr153_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mp153_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mr153_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mp153_close_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mr153_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m3_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m3_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m3_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m3_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m3_close_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m3_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mp43_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mr43_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m590_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?moss500_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m870_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rem870_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m870_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rem870_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m870_close_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rem870_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="fn40gl_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?fn40gl_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="AA12_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?AA12_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="AA12_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?AA12_outdoor_silence_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="AA12_close_silence2"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?AA12_outdoor_silence_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="chinalake_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?china_lake_close_outdoor"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="ksg12_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?ksg12_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mts255_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mts255_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+
+	<!-- ###### Conversion: Rifles -->
+		<SoundDataNode name="tx15_fire"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?tx15_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="tx15_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="58" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?tx15_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="adar_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?adar_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="adar_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="58" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?adar_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mosin_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mosin_outdoor_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mosin_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="48" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mosin_outdoor_silenced_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="svt_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mosin_outdoor_distant1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mp18_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mr18_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="g28_outdoor_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?g28_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="g28_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?g28_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m1a_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m1a_fire_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m1a_close_silence"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?m1a_fire_silenced_close1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="svd_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?svd_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="svd_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="48" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?svd_fire_close_silenced"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sv98_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sv98_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sv98_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sv98_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="dvl_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?dvl_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="dvl_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?dvl_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="t5000_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?t5000_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="t5000_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?t5000_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="rsass_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rsass_fire_close5"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="rsass_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="58" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rsass_close_silenced1"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mk18_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mk18_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="mk18_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="48" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?mk18_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="axmc_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?aiax_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="axmc_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="28" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?aiax_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="rfb_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rfb_fire_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="rfb_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="58" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rfb_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sr25_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sr25_fire_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sr25_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="58" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sr25_fire_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m700_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rem700_outdoor_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="m700_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?rem700_outdoor_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sks_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sks_fire_close"/>
+
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="sks_silence_close"> <AudioSource name="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?TarkovWeaponFire.prefab"/> <NetworkAudioSource name="Sounds/Prefabs/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="48" time="2" muffled_when_crouched="0.8" heat_map_strength="0.01" heat_map_time="6"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/RsoundsCOD.unity3d?sks_fire_silenced_close"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>			
+	</append>
+		<insertAfter xpath="//SoundDataNode[@name='explosion3']">		
+		<SoundDataNode name="g33_toggle"> <AudioSource name="@:Sounds/Prefabs/AudioSource_UseAction.prefab"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/EFTOptics.unity3d?g33switch"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxEntities name="3"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+	</insertAfter>
+	
+	
+</EFTX>

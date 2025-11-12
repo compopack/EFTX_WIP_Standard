@@ -1,0 +1,2256 @@
+<EFTX>
+<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+<append xpath="/items">
+        <item name="Gunpp19bizonSkillMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="Gunpp19bizonCSM,csm"/>
+			<property name="CustomIcon" value="gunpp19bizonSkillMagazine"/>
+			<property name="DescriptionKey" value="Gunpp19bizonSkillMagazineDesc"/>
+			<property name="Unlocks" value="craftinggunpp19bizon"/>
+			<property name="Stacknumber" value="20"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunpp19bizon" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+			<requirements compare_type="or">
+				<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+			</requirements>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunpp19bizon" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>
+        <item name="GuntokarevmachineSkillMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="GuntokarevmachineCSM,csm"/>
+			<property name="CustomIcon" value="guntokarevmachineSkillMagazine"/>
+			<property name="DescriptionKey" value="GuntokarevmachineSkillMagazineDesc"/>
+			<property name="Unlocks" value="craftingguntokarevmachine"/>
+			<property name="Stacknumber" value="20"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingguntokarevmachine" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+			<requirements compare_type="or">
+				<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+			</requirements>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingguntokarevmachine" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>
+        <item name="Gunstar15SkillMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="Gunstar15CSM,csm"/>
+			<property name="CustomIcon" value="gunstar15SkillMagazine"/>
+			<property name="DescriptionKey" value="Gunstar15SkillMagazineDesc"/>
+			<property name="Unlocks" value="craftinggunstar15"/>
+			<property name="Stacknumber" value="20"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunstar15" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+			<requirements compare_type="or">
+				<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+			</requirements>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunstar15" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>
+        <item name="Gunl85a2SkillMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="Gunl85a2CSM,csm"/>
+			<property name="CustomIcon" value="gunl85a2SkillMagazine"/>
+			<property name="DescriptionKey" value="Gunl85a2SkillMagazineDesc"/>
+			<property name="Unlocks" value="craftinggunl85a2"/>
+			<property name="Stacknumber" value="20"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunl85a2" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+			<requirements compare_type="or">
+				<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+			</requirements>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunl85a2" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>		
+		<item name="Gunmdr556SkillMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="Gunmdr556CSM,csm"/>
+			<property name="CustomIcon" value="gunmdr556SkillMagazine"/>
+			<property name="DescriptionKey" value="Gunmdr556SkillMagazineDesc"/>
+			<property name="Unlocks" value="craftinggunmdr556"/>
+			<property name="Stacknumber" value="20"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunmdr556" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+			<requirements compare_type="or">
+				<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+			</requirements>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftinggunmdr556" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>	
+        </append>
+        </if>
+		</conditional>
+        <append xpath="/items">
+        <item name="bundlePistolCaseTTM">
+			<property name="Extends" value="disassembleAmmoMasterBundle"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bundlePistolcase"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="bundlePistolCaseGroupDesc"/>
+			<property name="SoundPickup" value="parts_grab"/>
+			<property name="SoundPlace" value="parts_place"/>
+			<property class="Action0">
+				<property name="Create_item" value="guntokarevmachine"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="schematicsmodGunEFTXLaserSight">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modGunLaserSight"/>
+			<property name="DescriptionKey" value="schematicsmodGunEFTXLaserSightDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modGunEFTXLaserSight"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunEFTXLaserSight" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsm203grenadelaunchers">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modm203grenadelaunchers"/>
+			<property name="DescriptionKey" value="schematicsm203grenadelaunchersDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modm203grenadelaunchers"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modm203grenadelaunchers" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsgp25grenadelauncher">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modgp25grenadelauncher"/>
+			<property name="DescriptionKey" value="schematicsgp25grenadelauncherDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modgp25grenadelauncher"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modgp25grenadelauncher" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<!-- MOD SCHEMATICS -->
+<!-- SILENCER -->
+        <item name="schematicssilencerco46multi">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencerco46multi"/>
+			<property name="DescriptionKey" value="schematicssilencerco46multiDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencerco46multi"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencerco46multi" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencertt33makeshift">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencertt33makeshift"/>
+			<property name="DescriptionKey" value="schematicssilencertt33makeshiftDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencertt33makeshift"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencertt33makeshift" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzlettlaserdtk">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzlettlaserdtk"/>
+			<property name="DescriptionKey" value="schematicsmuzzlettlaserdtkDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmuzzlettlaserdtk"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlettlaserdtk" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencergriffinm4sdk">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencergriffinm4sdk"/>
+			<property name="DescriptionKey" value="schematicssilencergriffinm4sdkDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencergriffinm4sdk"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencergriffinm4sdk" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencersocomrc2">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencersocomrc2"/>
+			<property name="DescriptionKey" value="schematicssilencersocomrc2Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencersocomrc2"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencersocomrc2" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzle_ar15_ferfrans_muzzle_brake_556x45">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzle_ar15_ferfrans_muzzle_brake_556x45"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="schematicsmuzzle_ar15_ferfrans_muzzle_brake_556x45Desc"/>
+			<property name="Unlocks" value="modmuzzlear15ferfransmuzzlebrake556x45"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlear15ferfransmuzzlebrake556x45" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzle_ar15_double_star_carlson_tac_comp_556x45">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzle_ar15_double_star_carlson_tac_comp_556x45"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="schematicsmuzzle_ar15_double_star_carlson_tac_comp_556x45Desc"/>
+			<property name="Unlocks" value="modmuzzlear15doublestarcarlsontaccomp556x45"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlear15doublestarcarlsontaccomp556x45" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzle_ar15_alientech_gubich_muzzle_brake_556x45">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="schematicsmuzzle_ar15_alientech_gubich_muzzle_brake_556x45Desc"/>
+			<property name="Unlocks" value="modmuzzlear15alientechgubichmuzzlebrake556x45"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlear15alientechgubichmuzzlebrake556x45" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzleAR15thunderbeast223cb">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzleAR15thunderbeast223cb"/>
+			<property name="DescriptionKey" value="schematicsmuzzleAR15thunderbeast223cbDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmuzzleAR15thunderbeast223cb"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzleAR15thunderbeast223cb" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencerthunderbeastultra5">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencerthunderbeastultra5"/>
+			<property name="DescriptionKey" value="schematicssilencerthunderbeastultra5Desc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencerthunderbeastultra5"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencerthunderbeastultra5" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencersdnaacmulti">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencersdnaacmulti"/>
+			<property name="DescriptionKey" value="schematicssilencersdnaacmultiDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencersdnaacmulti"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencersdnaacmulti" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzlesigtwoportbrake">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzlesigtwoportbrake"/>
+			<property name="DescriptionKey" value="schematicsmuzzlesigtwoportbrakeDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmuzzlesigtwoportbrake"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlesigtwoportbrake" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencersigsrd762ti">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencersigsrd762ti"/>
+			<property name="DescriptionKey" value="schematicssilencersigsrd762tiDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencersigsrd762ti"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencersigsrd762ti" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencersigsrdqd">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencersigsrdqd"/>
+			<property name="DescriptionKey" value="schematicssilencersigsrdqdDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencersigsrdqd"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencersigsrdqd" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencerco9osprey">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencerco9osprey"/>
+			<property name="DescriptionKey" value="schematicssilencerco9ospreyDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencerco9osprey"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencerco9osprey" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicssilencersigsrd9">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modsilencersigsrd9"/>
+			<property name="DescriptionKey" value="schematicssilencersigsrd9Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modsilencersigsrd9"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modsilencersigsrd9" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmuzzlevityazbrakecompensator">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmuzzlevityazbrakecompensator"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="schematicsmuzzlevityazbrakecompensatorDesc"/>
+			<property name="Unlocks" value="modmuzzlevityazbrakecompensator"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzlevityazbrakecompensator" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <!-- SILENCER -->
+        <!-- MAGAZINES -->
+        <item name="schematicsmagttcustomdrum75">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagttcustomdrum75"/>
+			<property name="DescriptionKey" value="schematicsmagttcustomdrum75Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagttcustomdrum75"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagttcustomdrum75" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagpp19vityazdrum50">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagpp19vityazdrum50"/>
+			<property name="DescriptionKey" value="schematicsmagpp19vityazdrum50Desc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagpp19vityazdrum50"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagpp19vityazdrum50" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagstanagstd30">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagstanagstd30"/>
+			<property name="DescriptionKey" value="schematicsmagstanagstd30Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagstanagstd30"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagstanagstd30" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagstanag556x45pmag40">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagstanag556x45pmag40"/>
+			<property name="DescriptionKey" value="schematicsmagstanag556x45pmag40Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagstanag556x45pmag40"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagstanag556x45pmag40" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagstanag556x45pmagd60">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagstanag556x45pmagd60"/>
+			<property name="DescriptionKey" value="schematicsmagstanag556x45pmagd60Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagstanag556x45pmagd60"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagstanag556x45pmagd60" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagstanag556x45sf60">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagstanag556x45sf60"/>
+			<property name="DescriptionKey" value="schematicsmagstanag556x45sf60Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagstanag556x45sf60"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagstanag556x45sf60" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsmagstanag556x45sf100">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modmagstanag556x45sf100"/>
+			<property name="DescriptionKey" value="schematicsmagstanag556x45sf100Desc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modmagstanag556x45sf100"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmagstanag556x45sf100" operation="set" value="1"/>
+			</effect_group>
+		</item>        
+        <!-- MAGAZINES -->		
+        <!-- STOCKS -->
+        <item name="schematicsstockttmachinecustom">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockttmachinecustom"/>
+			<property name="DescriptionKey" value="schematicsstockttmachinecustomDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockttmachinecustom"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockttmachinecustom" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockakzenitpt1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockakzenitpt1"/>
+			<property name="DescriptionKey" value="schematicsstockakzenitpt1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockakzenitpt1"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockakzenitpt1" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockakzenitpt3">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockakzenitpt3"/>
+			<property name="DescriptionKey" value="schematicsstockakzenitpt3Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockakzenitpt3"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockakzenitpt3" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstocka2ar15prsgen2tan">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstocka2ar15prsgen2tan"/>
+			<property name="DescriptionKey" value="schematicsstocka2ar15prsgen2tanDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstocka2ar15prsgen2tan"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstocka2ar15prsgen2tan" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstocka2ar15prsgen3">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstocka2ar15prsgen3"/>
+			<property name="DescriptionKey" value="schematicsstocka2ar15prsgen3Desc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstocka2ar15prsgen3"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstocka2ar15prsgen3" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15b5precision">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15b5precision"/>
+			<property name="DescriptionKey" value="schematicsstockar15b5precisionDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15b5precision"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15b5precision" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15troym7a1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15troym7a1"/>
+			<property name="DescriptionKey" value="schematicsstockar15troym7a1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15troym7a1"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15troym7a1" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15glcore">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15glcore"/>
+			<property name="DescriptionKey" value="schematicsstockar15glcoreDesc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15glcore"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15glcore" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15acesocomgen4">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15acesocomgen4"/>
+			<property name="DescriptionKey" value="schematicsstockar15acesocomgen4Desc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15acesocomgen4"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15acesocomgen4" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15hke1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15hke1"/>
+			<property name="DescriptionKey" value="schematicsstockar15hke1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15hke1"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15hke1" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsstockar15ergof93pro">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modstockar15ergof93pro"/>
+			<property name="DescriptionKey" value="schematicsstockar15ergof93proDesc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modstockar15ergof93pro"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modstockar15ergof93pro" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <!-- STOCKS -->
+        <!-- FOREGRIPS -->
+        <item name="schematicsgriphksturmgriff">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modgriphksturmgriff"/>
+			<property name="DescriptionKey" value="schematicsgriphksturmgriffDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modgriphksturmgriff"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modgriphksturmgriff" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsgripmagpulrvg">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modgripmagpulrvg"/>
+			<property name="DescriptionKey" value="schematicsgripmagpulrvgDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modgripmagpulrvg"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modgripmagpulrvg" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsgripzenitrk1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modgripzenitrk1"/>
+			<property name="DescriptionKey" value="schematicsgripzenitrk1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modgripzenitrk1"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modgripzenitrk1" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsgripzenitb25urk1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modgripzenitb25urk1"/>
+			<property name="DescriptionKey" value="schematicsgripzenitb25urk1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modgripzenitb25urk1"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modgripzenitb25urk1" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <!-- FOREGRIPS -->
+        <!-- BIPODS -->
+        <item name="schematicsbipodrailRexana">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modbipodrailRexana"/>
+			<property name="DescriptionKey" value="schematicsbipodrailRexanaDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modbipodrailRexana"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modbipodrailRexana" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <!-- BIPODS -->
+        <!-- SCOPES -->
+        <item name="schematicsscopeaimpointAcroP1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointAcroP1"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointAcroP1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointAcroP1Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointAcroP1Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeaimpointAcroP1canted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointAcroP1canted"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointAcroP1cantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointAcroP1cantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointAcroP1cantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeaimpointMicroH2">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointMicroH2"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointMicroH2Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointMicroH2Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointMicroH2Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeaimpointMicroH2canted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointMicroH2canted"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointMicroH2cantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointMicroH2cantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointMicroH2cantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeaimpointMicroT1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointMicroT1"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointMicroT1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointMicroT1Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointMicroT1Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeaimpointMicroT1canted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaimpointMicroT1canted"/>
+			<property name="DescriptionKey" value="schematicsscopeaimpointMicroT1cantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaimpointMicroT1cantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaimpointMicroT1cantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeBelOMOpk06">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeBelOMOpk06"/>
+			<property name="DescriptionKey" value="schematicsscopeBelOMOpk06Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeBelOMOpk06Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeBelOMOpk06Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeBelOMOpk06canted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeBelOMOpk06canted"/>
+			<property name="DescriptionKey" value="schematicsscopeBelOMOpk06cantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeBelOMOpk06cantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeBelOMOpk06cantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeburrisfastfire">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeburrisfastfire"/>
+			<property name="DescriptionKey" value="schematicsscopeburrisfastfireDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeburrisfastfireOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeburrisfastfireOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeburrisfastfirecanted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeburrisfastfirecanted"/>
+			<property name="DescriptionKey" value="schematicsscopeburrisfastfirecantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeburrisfastfirecantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeburrisfastfirecantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeSIGromeo4">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSIGromeo4"/>
+			<property name="DescriptionKey" value="schematicsscopeSIGromeo4Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSIGromeo4Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSIGromeo4Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeSIGromeo4canted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSIGromeo4canted"/>
+			<property name="DescriptionKey" value="schematicsscopeSIGromeo4cantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSIGromeo4cantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSIGromeo4cantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeRMR">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeRMR"/>
+			<property name="DescriptionKey" value="schematicsscopeRMRDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeRMROld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeRMROld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeRMRcanted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeRMRcanted"/>
+			<property name="DescriptionKey" value="schematicsscopeRMRcantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeRMRcantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeRMRcantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeleupolddeltapoint">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeleupolddeltapoint"/>
+			<property name="DescriptionKey" value="schematicsscopeleupolddeltapointDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeleupolddeltapointOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeleupolddeltapointOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeleupolddeltapointcanted">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeleupolddeltapointcanted"/>
+			<property name="DescriptionKey" value="schematicsscopeleupolddeltapointcantedDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeleupolddeltapointcantedOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeleupolddeltapointcantedOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeAimPointCompM4">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeAimPointCompM4"/>
+			<property name="DescriptionKey" value="schematicsscopeAimPointCompM4Desc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeAimPointCompM4Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeAimPointCompM4Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeAimPointPro">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeAimPointPro"/>
+			<property name="DescriptionKey" value="schematicsscopeAimPointProDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeAimPointProOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeAimPointProOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeaksionEKP818">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeaksionEKP818"/>
+			<property name="DescriptionKey" value="schematicsscopeaksionEKP818Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeaksionEKP818Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeaksionEKP818Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeElcanSpecterHCO">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeElcanSpecterHCO"/>
+			<property name="DescriptionKey" value="schematicsscopeElcanSpecterHCODesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeElcanSpecterHCOOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeElcanSpecterHCOOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeLeapersUTG">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeLeapersUTG"/>
+			<property name="DescriptionKey" value="schematicsscopeLeapersUTGDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeLeapersUTGOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeLeapersUTGOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeSIGRomeo8T">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSIGRomeo8T"/>
+			<property name="DescriptionKey" value="schematicsscopeSIGRomeo8TDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSIGRomeo8TOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSIGRomeo8TOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeSRS02">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSRS02"/>
+			<property name="DescriptionKey" value="schematicsscopeSRS02Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSRS02Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSRS02Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeValdayKrechet">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeValdayKrechet"/>
+			<property name="DescriptionKey" value="schematicsscopeValdayKrechetDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeValdayKrechetOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeValdayKrechetOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeValdayPK120">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeValdayPK120"/>
+			<property name="DescriptionKey" value="schematicsscopeValdayPK120Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeValdayPK120Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeValdayPK120Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeVOMZPiladP1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeVOMZPiladP1"/>
+			<property name="DescriptionKey" value="schematicsscopeVOMZPiladP1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeVOMZPiladP1Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeVOMZPiladP1Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeVortexRazorAMGUH1">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeVortexRazorAMGUH1"/>
+			<property name="DescriptionKey" value="schematicsscopeVortexRazorAMGUH1Desc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeVortexRazorAMGUH1Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeVortexRazorAMGUH1Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopewalthermrsreflex">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopewalthermrsreflex"/>
+			<property name="DescriptionKey" value="schematicsscopewalthermrsreflexDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopewalthermrsreflexOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopewalthermrsreflexOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeWilcoxBossXeHP">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeWilcoxBossXeHP"/>
+			<property name="DescriptionKey" value="schematicsscopeWilcoxBossXeHPDesc"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeWilcoxBossXeHPOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeWilcoxBossXeHPOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeokp7reflex">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeokp7reflex"/>
+			<property name="DescriptionKey" value="schematicsscopeokp7reflexDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeokp7reflexOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeokp7reflexOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeEOTech553holo">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeEOTech553holo"/>
+			<property name="DescriptionKey" value="schematicsscopeEOTech553holoDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeEOTech553holoOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeEOTech553holoOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeElcanSpecterDR">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeElcanSpecterDR"/>
+			<property name="DescriptionKey" value="schematicsscopeElcanSpecterDRDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeElcanSpecterDROld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeElcanSpecterDROld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeKibaArmsPrism">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeKibaArmsPrism"/>
+			<property name="DescriptionKey" value="schematicsscopeKibaArmsPrismDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeKibaArmsPrismOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeKibaArmsPrismOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopemonstrumcompact">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopemonstrumcompact"/>
+			<property name="DescriptionKey" value="schematicsscopemonstrumcompactDesc"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopemonstrumcompactOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopemonstrumcompactOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeSwampFoxPrism">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSwampFoxPrism"/>
+			<property name="DescriptionKey" value="schematicsscopeSwampFoxPrismDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSwampFoxPrismOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSwampFoxPrismOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeeotechhhshybrid">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeeotechhhshybrid"/>
+			<property name="DescriptionKey" value="schematicsscopeeotechhhshybridDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeeotechhhshybridOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeeotechhhshybridOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeacogta01NSN4x32">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeacogta01NSN4x32"/>
+			<property name="DescriptionKey" value="schematicsscopeacogta01NSN4x32Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeacogta01NSN4x32Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeacogta01NSN4x32Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeacogta11D35x">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeacogta11D35x"/>
+			<property name="DescriptionKey" value="schematicsscopeacogta11D35xDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeacogta11D35xOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeacogta11D35xOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeLeupoldMark4Hamr">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeLeupoldMark4Hamr"/>
+			<property name="DescriptionKey" value="schematicsscopeLeupoldMark4HamrDesc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeLeupoldMark4HamrOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeLeupoldMark4HamrOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeSIGBravo4">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSIGBravo4"/>
+			<property name="DescriptionKey" value="schematicsscopeSIGBravo4Desc"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSIGBravo4Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSIGBravo4Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeValdayPS320">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeValdayPS320"/>
+			<property name="DescriptionKey" value="schematicsscopeValdayPS320Desc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeValdayPS320Old"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeValdayPS320Old" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeSBPMII18x2430mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSBPMII18x2430mm"/>
+			<property name="DescriptionKey" value="schematicsscopeSBPMII18x2430mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSBPMII18x2430mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSBPMII18x2430mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeSBPMII320x5034mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSBPMII320x5034mm"/>
+			<property name="DescriptionKey" value="schematicsscopeSBPMII320x5034mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSBPMII320x5034mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSBPMII320x5034mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeSBPMII525x5634mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSBPMII525x5634mm"/>
+			<property name="DescriptionKey" value="schematicsscopeSBPMII525x5634mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSBPMII525x5634mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSBPMII525x5634mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeBFTac3014x2430mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeBFTac3014x2430mm"/>
+			<property name="DescriptionKey" value="schematicsscopeBFTac3014x2430mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeBFTac3014x2430mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeBFTac3014x2430mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeEOTVudu16x2430mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeEOTVudu16x2430mm"/>
+			<property name="DescriptionKey" value="schematicsscopeEOTVudu16x2430mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeEOTVudu16x2430mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeEOTVudu16x2430mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeLeupoldMark4LR30mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeLeupoldMark4LR30mm"/>
+			<property name="DescriptionKey" value="schematicsscopeLeupoldMark4LR30mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeLeupoldMark4LR30mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeLeupoldMark4LR30mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeMarchTactical30mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeMarchTactical30mm"/>
+			<property name="DescriptionKey" value="schematicsscopeMarchTactical30mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeMarchTactical30mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeMarchTactical30mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeSIGTango6T16x2430mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeSIGTango6T16x2430mm"/>
+			<property name="DescriptionKey" value="schematicsscopeSIGTango6T16x2430mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeSIGTango6T16x2430mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeSIGTango6T16x2430mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeRazorHDGen216x2430mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeRazorHDGen216x2430mm"/>
+			<property name="DescriptionKey" value="schematicsscopeRazorHDGen216x2430mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeRazorHDGen216x2430mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeRazorHDGen216x2430mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeNFATACR735x5634mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeNFATACR735x5634mm"/>
+			<property name="DescriptionKey" value="schematicsscopeNFATACR735x5634mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeNFATACR735x5634mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeNFATACR735x5634mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeHensoldtFF416x5634mm">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeHensoldtFF416x5634mm"/>
+			<property name="DescriptionKey" value="schematicsscopeHensoldtFF416x5634mmDesc"/>
+			<property name="TraderStageTemplate" value="baseTier4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeHensoldtFF416x5634mmOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeHensoldtFF416x5634mmOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <item name="schematicsscopeNCStarADO">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeNCStarADO"/>
+			<property name="DescriptionKey" value="schematicsscopeNCStarADODesc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeNCStarADOOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeNCStarADOOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		<item name="schematicsscopeKMZ1p69Weaver">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modscopeKMZ1p69Weaver"/>
+			<property name="DescriptionKey" value="schematicsscopeKMZ1p69WeaverDesc"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Unlocks" value="modscopeKMZ1p69WeaverOld"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modscopeKMZ1p69WeaverOld" operation="set" value="1"/>
+			</effect_group>
+		</item>
+        <!-- MOD SCHEMATICS -->
+        <!-- *** 9x18mm / Russian -->
+		<item name="gunpp19bizon"> <!-- Tier 2 -->
+			<property name="Tags" value="stuff"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="6"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Assets/smgA.unity3d?guntarkovpp19vityaz.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/>
+			<property name="TintColor" value="80, 80, 80"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceWeaponRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+			<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			<property name="Sound_Sight_In" value="smg_sight_in"/>
+			<property name="Sound_Sight_Out" value="smg_sight_out"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="UnlockedBy" value="craftingSMGS"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="TakeOverReloadTime" value="true"/>
+			<property name="SoundPickup" value="rifle_polymer_grab"/>
+			<property name="SoundPlace" value="rifle_polymer_place"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="ItemActionModules" value="InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib;FireModeSelector,KFCommonUtilityLib"/>
+				<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Magazine_items" value="ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP"/>
+				<property name="FireMode0.BurstCount" value="1"/>
+				<property name="FireMode0.IsFullAuto" value="true"/>
+				<property name="FireMode0.ModeName" value="ttFiringModeFullAuto"/>
+				<property name="FireMode1.BurstCount" value="1"/>
+				<property name="FireMode1.IsFullAuto" value="false"/>
+				<property name="FireMode1.ModeName" value="ttFiringModeSemiAuto"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="bizon_fire"/>
+				<property name="Sound_loop" value="bizon_fire"/>
+				<property name="Sound_end" value="fire_general_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesSMG.unity3d?Muzzlebizon.prefab"/>
+				<!-- <property name="DamageBonus.head" value="4"/>
+				<property name="DamageBonus.wood" value="5"/>
+				<property name="DamageBonus.earth" value=".2"/> -->
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+                <property name="ItemActionModules" value="ErgoAffected,KFCommonUtilityLib;ProceduralAiming,KFCommonUtilityLib;VariableZoom,KFCommonUtilityLib;Tagged,KFCommonUtilityLib;DynamicSensitivity,KFCommonUtilityLib"/>
+				<property name="ZoomInTimeBase" value="0.25"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="SightsCameraOffset" value="0,0,0"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="tarkovSMGs">
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupIron"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.045">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.446">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+				</passive_effect>
+				<passive_effect name="WeaponErgonomics" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.05,.05" tier="1,6" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="700" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkGunslinger"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkGunslinger"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkGunslinger"/> <!-- 4s -->
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1" tags="perkGunslinger"/> <!-- random DegMax -->
+				<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> --> <!-- random APM -->
+				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkGunslinger"/> <!-- random WeaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.9,0.85" tier="1,6" tags="perkGunslinger"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.9,0.85" tier="1,6" tags="perkGunslinger"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".75" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.08,1.02" tier="1,6" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.15,1.04" tier="1,6" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".55" tags="perkGunslinger"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.2" tags="perkGunslinger"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="346" tags="perkGunslinger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="800,1600" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+				
+				<!-- Display Values -->
+				<passive_effect name="DamageModifier" operation="base_set" value="2.8" tags="hipfireAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0.9,0.85" tier="1,6" tags="aimedAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1.5,1.44" tier="1,6" tags="recoilDisplay"/>
+				<!-- Recoil Snap -->
+				<passive_effect name="RecoilSnappiness" operation="base_set" value="4"/>
+				<passive_effect name="RecoilReturnSpeed" operation="base_set" value="5"/>
+			</effect_group>
+		</item>
+<!-- *** 7.62x25mm / Russian -->
+		<item name="guntokarevmachine"> <!-- Tier 1 --> <!-- Custom Silencer Bonus -->
+			<property name="Tags" value="stuff"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="6"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Assets/PistolB.unity3d?guntarkovtokarevmachine.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/>
+			<property name="TintColor" value="80, 80, 80"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceWeaponRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+			<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			<property name="Sound_Sight_In" value="smg_sight_in"/>
+			<property name="Sound_Sight_Out" value="smg_sight_out"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="UnlockedBy" value="craftingPistols"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="TakeOverReloadTime" value="true"/>
+			<property name="SoundPickup" value="pistol_grab"/>
+			<property name="SoundPlace" value="pistol_place"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="ItemActionModules" value="InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib"/>
+				<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Magazine_items" value="ammoEft76225mmTokarev"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="ttmachine_close"/>
+				<property name="Sound_loop" value="ttmachine_close"/>
+				<property name="Sound_end" value="ttmachine_close_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesPistol.unity3d?MuzzleTTmachine.prefab"/>
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="ItemActionModules" value="ErgoAffected,KFCommonUtilityLib;ProceduralAiming,KFCommonUtilityLib"/>
+				<property name="ZoomInTimeBase" value="0.15"/>
+				<property name="Zoom_max_out" value="50"/>
+				<property name="Zoom_max_in" value="50"/>
+				<property name="SightsCameraOffset" value="0,0,0"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="tarkovpistols">
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupIron"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.045">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+					
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.045">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkMachineGunner" operation="GTE" value="5"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.446">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+					
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.446">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkMachineGunner" operation="GTE" value="5"/>
+				</passive_effect>
+				<passive_effect name="WeaponErgonomics" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.05,.05" tier="1,6" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="1000" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkGunslinger"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="25" tags="perkGunslinger"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkGunslinger"/> <!-- 4s -->
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1" tags="perkGunslinger"/> <!-- random DegMax -->
+				<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/> --> <!-- random APM -->
+				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+				<passive_effect name="weaponHandling" operation="perc_add" value="0,0" tags="perkGunslinger"/> <!-- random weaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.15,1.09" tier="1,6" tags="perkGunslinger"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.15,1.09" tier="1,6" tags="perkGunslinger"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".75" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.65,1.57" tier="1,6" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.8,1.72" tier="1,6" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25" tags="perkGunslinger"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.2" tags="perkGunslinger"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="346" tags="perkGunslinger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="800,1600" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+				
+				<!-- Display Values -->
+				<passive_effect name="DamageModifier" operation="base_set" value="3.2" tags="hipfireAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1.15,1.09" tier="1,6" tags="aimedAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1.8,1.72" tier="1,6" tags="recoilDisplay"/>
+				<!-- Recoil Snap -->
+				<passive_effect name="RecoilSnappiness" operation="base_set" value="3.3"/>
+				<passive_effect name="RecoilReturnSpeed" operation="base_set" value="5"/>				
+				<!-- Custom Silencer Bonus -->				
+			</effect_group>
+            </item>
+            <!-- *** .300 blk / NATO -->
+		<item name="gunstar15"> <!-- Tier 2 DE -->
+			<property name="Tags" value="stuff"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="77"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Assets/556x45and300BLKOUTGuns.unity3d?guntarkovstar15.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MRifleParts"/>
+			<property name="TintColor" value="80, 80, 80"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceWeaponRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="false"/> <!-- aimTest-->
+			<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest-->
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="2500"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="UnlockedBy" value="craftingEFTRifles"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="TakeOverReloadTime" value="true"/>
+			<property name="SoundPickup" value="rifle_wood_grab"/>
+			<property name="SoundPlace" value="rifle_wood_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="ItemActionModules" value="InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib"/>
+				<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists-->
+				<property name="Magazine_items" value="ammoEft300blk,ammoEft300blkAP,ammoEft300blkHP"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="tx15_fired"/>
+				<property name="Sound_loop" value="tx15_fired"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle300.prefab"/>
+				<!-- <property name="DamageBonus.head" value="4"/>
+				<property name="DamageBonus.wood" value="5"/>
+				<property name="DamageBonus.earth" value=".2"/>-->
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="ItemActionModules" value="ErgoAffected,KFCommonUtilityLib;ProceduralAiming,KFCommonUtilityLib;VariableZoom,KFCommonUtilityLib;Tagged,KFCommonUtilityLib;DynamicSensitivity,KFCommonUtilityLib"/>
+				<property name="ZoomInTimeBase" value="0.35"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="SightsCameraOffset" value="0,0,0"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="tarkovrifles">
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupIron"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.043">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+				</passive_effect>
+				<passive_effect name="WeaponErgonomics" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.05,.05" tier="1,6" tags="perkDeadEye"/> <!-- random effective rng-->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="480" tags="perkDeadEye"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="20" tags="perkDeadEye"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkDeadEye"/> <!-- 4s-->
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1" tags="perkDeadEye"/> <!-- random DegMax-->
+				<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkDeadEye"/>--> <!-- random APM-->
+				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>--> <!-- random MagazineSize-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkDeadEye"/> <!-- random WeaponHandling-->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.1" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.1" tags="perkDeadEye"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.52,0.48" tier="1,6" tags="perkDeadEye"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.52,0.48" tier="1,6" tags="perkDeadEye"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".75" tags="perkDeadEye"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="3" tags="perkDeadEye"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="3" tags="perkDeadEye"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.38,1.25" tier="1,6" tags="perkDeadEye"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.75,1.63" tier="1,6" tags="perkDeadEye"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.42" tags="perkDeadEye"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".52" tags="perkDeadEye"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6" tags="perkDeadEye"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="346" tags="perkDeadEye"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="800,1600" tier="1,6" tags="perkDeadEye"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+				
+				<!-- Display Values -->
+				<passive_effect name="DamageModifier" operation="base_set" value="4.1" tags="hipfireAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0.52,0.48" tier="1,6" tags="aimedAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="2.75,2.63" tier="1,6" tags="recoilDisplay"/>
+				<!-- Recoil Snap -->
+				<passive_effect name="RecoilSnappiness" operation="base_set" value="3.8"/>
+				<passive_effect name="RecoilReturnSpeed" operation="base_set" value="5"/>
+				<passive_effect name="KickDegreeHorizontalModifier" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreeVerticalModifier" operation="base_set" value="0"/>
+
+			</effect_group>
+		</item>	
+        <!-- *** 5.56x45 / NATO -->
+		<item name="gunl85a2"> <!-- Tier 3 --> <!-- T2 Precision Stock Bonus -->
+			<property name="Tags" value="stuff"/><!-- attachmentsIncluded-->
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="71"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Assets/BullpupAndOthers.unity3d?guntarkovl85a2.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MMachineGunParts"/>
+			<property name="TintColor" value="80, 80, 80"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceWeaponRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="false"/> <!-- aimTest-->
+			<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest-->
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
+			<property name="UnlockedBy" value="craftingEFTMachineguns"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="TakeOverReloadTime" value="true"/>
+			<property name="SoundPickup" value="rifle_wood_grab"/>
+			<property name="SoundPlace" value="rifle_wood_place"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="ItemActionModules" value="InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib;FireModeSelector,KFCommonUtilityLib;MultiActionFix,KFCommonUtilityLib;Alternative,KFCommonUtilityLib"/>
+                                <property name="FireMode0.BurstCount" value="1"/>
+                                <property name="FireMode0.IsFullAuto" value="true"/>
+                                <property name="FireMode0.ModeName" value="ttFiringModeFullAuto"/>
+                                <property name="FireMode1.BurstCount" value="1"/>
+                                <property name="FireMode1.IsFullAuto" value="false"/>
+                                <property name="FireMode1.ModeName" value="ttFiringModeSemiAuto"/>
+				<property name="ExcludeTags" value="attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+				<property name="Magazine_items" value="ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="l85a2_close"/>
+				<property name="Sound_loop" value="l85a2_close"/>
+				<property name="Sound_end" value="l85a2_close_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?MuzzleL85.prefab"/>
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="ItemActionModules" value="ErgoAffected,KFCommonUtilityLib;ProceduralAiming,KFCommonUtilityLib;VariableZoom,KFCommonUtilityLib;Tagged,KFCommonUtilityLib;DynamicSensitivity,KFCommonUtilityLib"/>
+				<property name="ZoomInTimeBase" value="0.4"/>
+				<property name="Zoom_max_out" value="50"/>
+				<property name="Zoom_max_in" value="50"/>
+				<property name="SightsCameraOffset" value="0,0,0"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<property class="Action3">
+				<property name="Class" value="BetterLauncher,FullautoLauncher"/>
+				<!-- <property name="Class" value="Launcher"/> -->
+				<property name="ActionUnlocked" value="false"/>
+				<property name="ItemActionModules" value="Tagged,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib;MultiActionFix,KFCommonUtilityLib"/>
+				<property name="Magazine_items" value="ammoEft4046381"/>
+				<property name="Sound_start" value="m203_close"/>
+				<property name="Sound_loop" value=""/>
+				<property name="VisibleInMag" value="false"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle3Bullpup.prefab"/>
+				<property name="ExcludeTags" value="attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill"/>
+				<property name="ExcludeMods" value="modsilencersdnaacmulti,modsilencerco46multi,modsilencerthunderbeastultra5,modsilencergriffinm4sdk,modsilencersocomrc2"/>
+				<property name="ExcludePassives" value="modmagstanag556x45pmag40,modmagstanag556x45pmagd60,modmagstanag556x45sf60,modmagstanag556x45sf100"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<effect_group name="tarkovrifles">
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupIron"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			</effect_group>
+			<effect_group name="tarkovrifles">
+				<requirement name="ActionIndexIs,KFCommonUtilityLib" index="0"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+				</passive_effect>
+				<passive_effect name="WeaponErgonomics" operation="base_set" value="1" tags="perkMachineGunner"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.05,.05" tier="1,6" tags="perkMachineGunner"/> <!-- random effective rng-->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="670" tags="perkMachineGunner"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 4s-->
+				<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1" tags="perkMachineGunner"/> <!-- random DegMax-->
+				<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/>--> <!-- random APM-->
+				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>--> <!-- random MagazineSize-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkMachineGunner"/> <!-- random WeaponHandling-->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.55,0.5" tier="1,6" tags="perkMachineGunner"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.55,0.5" tier="1,6" tags="perkMachineGunner"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="1" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".75" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.19,1.06" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.56,1.44" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.42" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".62" tags="perkMachineGunner"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.3" tags="perkMachineGunner"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="346" tags="perkMachineGunner"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="950,1900" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner"/>
+				
+				<!-- Display Values -->
+				<passive_effect name="DamageModifier" operation="base_set" value="4.0" tags="hipfireAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0.55,0.5" tier="1,6" tags="aimedAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1.56,1.44" tier="1,6" tags="recoilDisplay"/>
+				<!-- Recoil Snap -->
+				<passive_effect name="RecoilSnappiness" operation="base_set" value="3.5"/>
+				<passive_effect name="RecoilReturnSpeed" operation="base_set" value="5"/>
+				<passive_effect name="KickDegreeHorizontalModifier" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreeVerticalModifier" operation="base_set" value="0"/>
+			</effect_group>
+			
+			<effect_group name="M203">
+				<requirement name="ActionIndexIs,KFCommonUtilityLib" index="3"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.043">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="LT" value="5"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="GTE" value="5"/>
+				</passive_effect>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="180" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="0.9" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkDemolitionsExpert"/> <!-- random WeaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkDemolitionsExpert"/>
+			</effect_group>
+		</item>	
+		<!-- *** 5.56x45 / NATO -->
+		<item name="gunmdr556">	<!-- Tier 4 --> <!-- T3 Precision Stock Bonus | Bullpup -0.4 Hip-Spread Bonus -->
+			<property name="Tags" value="stuff"/><!-- attachmentsIncluded-->
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="71"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Assets/BullpupAndOthers.unity3d?guntarkovmdr556.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MMachineGunParts"/>
+			<property name="TintColor" value="80, 80, 80"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceWeaponRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="false"/> <!-- aimTest-->
+			<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest-->
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
+			<property name="UnlockedBy" value="craftingEFTMachineguns"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="TakeOverReloadTime" value="true"/>
+			<property name="SoundPickup" value="rifle_wood_grab"/>
+			<property name="SoundPlace" value="rifle_wood_place"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="ItemActionModules" value="InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib;FireModeSelector,KFCommonUtilityLib;MultiActionFix,KFCommonUtilityLib;Alternative,KFCommonUtilityLib"/>
+                                <property name="FireMode0.BurstCount" value="1"/>
+                                <property name="FireMode0.IsFullAuto" value="true"/>
+                                <property name="FireMode0.ModeName" value="ttFiringModeFullAuto"/>
+                                <property name="FireMode1.BurstCount" value="1"/>
+                                <property name="FireMode1.IsFullAuto" value="false"/>
+                                <property name="FireMode1.ModeName" value="ttFiringModeSemiAuto"/>
+				<property name="ExcludeTags" value="attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+				<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists-->
+				<property name="Magazine_items" value="ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="mdr_556"/>
+				<property name="Sound_loop" value="mdr_556"/>
+				<property name="Sound_end" value="mdr_556_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?MuzzleMDR.prefab"/>
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="ItemActionModules" value="ErgoAffected,KFCommonUtilityLib;ProceduralAiming,KFCommonUtilityLib;VariableZoom,KFCommonUtilityLib;Tagged,KFCommonUtilityLib;DynamicSensitivity,KFCommonUtilityLib"/>
+				<property name="ZoomInTimeBase" value="0.4"/>
+				<property name="Zoom_max_out" value="50"/>
+				<property name="Zoom_max_in" value="50"/>
+				<property name="SightsCameraOffset" value="0,0,0"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<property class="Action3">
+				<property name="Class" value="BetterLauncher,FullautoLauncher"/>
+				<!-- <property name="Class" value="Launcher"/> -->
+				<property name="ActionUnlocked" value="false"/>
+				<property name="ItemActionModules" value="Tagged,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib;MultiActionFix,KFCommonUtilityLib"/>
+				<property name="Magazine_items" value="ammoEft4046381"/>
+				<property name="Sound_start" value="m203_close"/>
+				<property name="Sound_loop" value=""/>
+				<property name="VisibleInMag" value="false"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle3Bullpup.prefab"/>
+				<property name="ExcludeTags" value="attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill"/>
+				<property name="ExcludeMods" value="modsilencersdnaacmulti,modsilencerco46multi,modsilencerthunderbeastultra5,modsilencergriffinm4sdk,modsilencersocomrc2"/>
+				<property name="ExcludePassives" value="modmagstanag556x45pmag40,modmagstanag556x45pmagd60,modmagstanag556x45sf60,modmagstanag556x45sf100"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<effect_group name="tarkovrifles">
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupIron"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			</effect_group>
+			<effect_group name="tarkovrifles">
+				<requirement name="ActionIndexIs,KFCommonUtilityLib" index="0"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+				</passive_effect>
+				<passive_effect name="WeaponErgonomics" operation="base_set" value="1" tags="perkMachineGunner"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.05,.05" tier="1,6" tags="perkMachineGunner"/> <!-- random effective rng-->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="650" tags="perkMachineGunner"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 4s-->
+				<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1" tags="perkMachineGunner"/> <!-- random DegMax-->
+				<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/>--> <!-- random APM-->
+				<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>--> <!-- random MagazineSize-->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkMachineGunner"/> <!-- random WeaponHandling-->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.5" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.5" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.5,0.48" tier="1,6" tags="perkMachineGunner"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.5,0.48" tier="1,6" tags="perkMachineGunner"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="1" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".75" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.06,0.94" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.44,1.31" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.29" tags="perkMachineGunner"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".69" tags="perkMachineGunner"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.3" tags="perkMachineGunner"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="346" tags="perkMachineGunner"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="900,1800" tier="1,6" tags="perkMachineGunner"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner"/>
+				
+				<!-- Display Values -->
+				<passive_effect name="DamageModifier" operation="base_set" value="3.5" tags="hipfireAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0.5,0.48" tier="1,6" tags="aimedAccuracyDisplay"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="2.44,2.31" tier="1,6" tags="recoilDisplay"/>
+				<!-- Recoil Snap -->
+				<passive_effect name="RecoilSnappiness" operation="base_set" value="3.5"/>
+				<passive_effect name="RecoilReturnSpeed" operation="base_set" value="5"/>
+				<passive_effect name="KickDegreeHorizontalModifier" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreeVerticalModifier" operation="base_set" value="0"/>
+			</effect_group>
+			
+			<effect_group name="M203">
+				<requirement name="ActionIndexIs,KFCommonUtilityLib" index="3"/>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.043">
+					<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="LT" value="5"/>
+				</passive_effect>
+				<passive_effect name="ReloadSpeedRatioFPV2TPV" operation="base_set" value="1.333">
+					<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="GTE" value="5"/>
+				</passive_effect>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="180" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="0.9" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0" tags="perkDemolitionsExpert"/> <!-- random WeaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkDemolitionsExpert"/>
+				
+				<!-- T3 Precision Stock Bonus -->
+				<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.14"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.14"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.14"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.14"/>
+				<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="-.09">
+					<requirement name="!HasBuff" buff="buffHoldBreathAiming01"/>
+				</passive_effect>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="-.09">
+					<requirement name="!HasBuff" buff="buffHoldBreathAiming01"/>
+				</passive_effect>
+			</effect_group>
+		</item>
+       </append>
+       <append xpath="/items/item[@name='gunl85a2']">
+		<effect_group>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftErgoFactor" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftHipAccFactor" operation="set" value="1"/>
+		</effect_group>
+	    </append>
+        <append xpath="/items/item[@name='gunmdr556']">
+		<effect_group>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftErgoFactor" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftHipAccFactor" operation="set" value="1"/>
+		</effect_group>
+	    </append>
+    <!-- GUNPP19BIZON -->
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='EconomicValue']" name="value">2000</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action1']/property[@name='ZoomInTimeBase']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/effect_group[@name='tarkovSMGs']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">700</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/effect_group[@name='tarkovSMGs']/passive_effect[@name='BurstRoundCount' and @operation='base_set']" name="value">1000</setattribute>				
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/effect_group[@name='tarkovSMGs']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/effect_group[@name='tarkovSMGs']/passive_effect[@name='DegradationMax' and @operation='base_set']" name="value">800,1600</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Assets/smgA.unity3d?guntarkovpp19vityaz.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesSMG.unity3d?Muzzlebizon.prefab</setattribute>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+			<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='UnlockedBy']" name="value">craftinggunpp19bizon</setattribute>
+			<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='Tags']" name="value">eftxpp19bizon,eftxbizon,eftxnom203gl,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,hydramount,attAgility,perkGunslinger,9mmGun,handgunSkill</setattribute>	
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+			<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='UnlockedBy']" name="value">craftingSMGS</setattribute>
+			<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@name='Tags']" name="value">eftSMG,eftxbizon,eftxnom203gl,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,hydramount,attAgility,perkGunslinger,9mmGun,handgunSkill</setattribute>	
+		</if>
+	</conditional>
+	<!-- GUNPP19BIZON -->
+    <!-- GUNTOKAREVMACHINE -->
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='EconomicValue']" name="value">1500</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftAir</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action1']/property[@name='ZoomInTimeBase']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/effect_group[@name='tarkovpistols']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/effect_group[@name='tarkovpistols']/passive_effect[@name='BurstRoundCount' and @operation='base_set']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/effect_group[@name='tarkovpistols']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">25</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/effect_group[@name='tarkovpistols']/passive_effect[@name='DegradationMax' and @operation='base_set']" name="value">800,1600</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Assets/PistolB.unity3d?guntarkovtokarevmachine.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesPistol.unity3d?MuzzleTTmachine.prefab</setattribute>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+			<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='UnlockedBy']" name="value">craftingguntokarevmachine</setattribute>
+			<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='Tags']" name="value">eftxtokarevmachine,eftxTTM,eftxnom203gl,eftxCompactReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxsideattachments,eftxtokarevmachine,modGunEFTXLaserSight,weapon,ranged,holdBreathAiming,reloadPenalty,gun,hydramount,attAgility,perkGunslinger,9mmGun,handgunSkill</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+			<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='UnlockedBy']" name="value">craftingPistols</setattribute>
+			<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@name='Tags']" name="value">eftPistol,eftxTTM,eftxnom203gl,eftxCompactReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxsideattachments,eftxtokarevmachine,weapon,modGunEFTXLaserSight,ranged,holdBreathAiming,reloadPenalty,gun,hydramount,attAgility,perkGunslinger,9mmGun,handgunSkill</setattribute>
+		</if>
+	</conditional>
+	<!-- GUNTOKAREVMACHINE -->
+    <!-- GUNSTAR15 -->
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@name='EconomicValue']" name="value">2500</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action1']/property[@name='ZoomInTimeBase']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/effect_group[@name='tarkovrifles']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">480</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/effect_group[@name='tarkovrifles']/passive_effect[@name='BurstRoundCount' and @operation='base_set']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/effect_group[@name='tarkovrifles']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/effect_group[@name='tarkovrifles']/passive_effect[@name='DegradationMax' and @operation='base_set']" name="value">800,1600</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Assets/556x45and300BLKOUTGuns.unity3d?guntarkovstar15.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle300.prefab</setattribute>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">eftxstar15
+			<setattribute xpath="/items/item[@name='gunstar15']/property[@name='UnlockedBy']" name="value">craftinggunstar15</setattribute>
+			<setattribute xpath="/items/item[@name='gunstar15']/property[@name='Tags']" name="value">eftxstar15,eftxstars15,eftxnom203gl,eftxCompactReflexSight,modGunEFTXLaserSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxsideattachments,eftxAR15stocks,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxstar15only,eftxrexbipod,eftxnogripzenitb25urk1,weapon,ranged,holdBreathAiming,reloadPenalty,gun,attPerception,perkDeadEye,rifleSkill</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+			<setattribute xpath="/items/item[@name='gunstar15']/property[@name='UnlockedBy']" name="value">craftingEFTRifles</setattribute>
+			<setattribute xpath="/items/item[@name='gunstar15']/property[@name='Tags']" name="value">eftRifles,eftxstars15,eftxnom203gl,eftxCompactReflexSight,modGunEFTXLaserSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxsideattachments,eftxAR15stocks,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxstar15only,eftxrexbipod,eftxnogripzenitb25urk1,weapon,ranged,holdBreathAiming,reloadPenalty,gun,attPerception,perkDeadEye,rifleSkill</setattribute>
+		</if>
+	</conditional>
+	<!-- GUNSTAR15 -->
+    <!-- GUNL85A2 -->
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='EconomicValue']" name="value">5000</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEftGrenadeAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action1']/property[@name='ZoomInTimeBase']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/effect_group[@name='tarkovrifles']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">670</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/effect_group[@name='tarkovrifles']/passive_effect[@name='BurstRoundCount' and @operation='base_set']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/effect_group[@name='tarkovrifles']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/effect_group[@name='tarkovrifles']/passive_effect[@name='DegradationMax' and @operation='base_set']" name="value">950,1900</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Assets/BullpupAndOthers.unity3d?guntarkovl85a2.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?MuzzleL85.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3'][1]/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle3Bullpup.prefab</setattribute>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+			<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='UnlockedBy']" name="value">craftinggunl85a2</setattribute>
+			<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='Tags']" name="value">EFTXl85a2,modGunEFTXLaserSight,EFTXl85a2Only,eftxbizmdrl85a2,m203,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxhandguard,weapon,ranged,holdBreathAiming,reloadPenalty,gun,l85a2only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+			<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='UnlockedBy']" name="value">craftingEFTMachineguns</setattribute>
+			<setattribute xpath="/items/item[@name='gunl85a2']/property[@name='Tags']" name="value">eftMGS,modGunEFTXLaserSight,EFTXl85a2Only,eftxbizmdrl85a2,m203,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxforegrip,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxhandguard,weapon,ranged,holdBreathAiming,reloadPenalty,gun,l85a2only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
+		</if>
+	</conditional>
+	<!-- GUNL85A2 -->
+	<!-- GUNMDR556 -->
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='EconomicValue']" name="value">7500</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEftGrenadeAir</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action1']/property[@name='ZoomInTimeBase']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/effect_group[@name='tarkovrifles']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">650</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/effect_group[@name='tarkovrifles']/passive_effect[@name='BurstRoundCount' and @operation='base_set']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/effect_group[@name='tarkovrifles']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/effect_group[@name='tarkovrifles']/passive_effect[@name='DegradationMax' and @operation='base_set']" name="value">900,1800</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Assets/BullpupAndOthers.unity3d?guntarkovmdr556.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?MuzzleMDR.prefab</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3'][1]/property[@name='Particles_muzzle_fire_fpv']" name="value">#@modfolder(EFTX_Pack_Core):Assets/MuzzleFlashesRifle.unity3d?Muzzle3Bullpup.prefab</setattribute>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='UnlockedBy']" name="value">craftinggunmdr556</setattribute>
+			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='Tags']" name="value">,eftxmdr556,modGunEFTXLaserSight,eftxbizmdrl85a2,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,eftxforegrip,eftxsideattachments,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxm203,weapon,ranged,holdBreathAiming,reloadPenalty,gun,mdronly,mdr556only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('EFTX_Pack_Standard') and not mod_loaded('EFTX_Pack_Slow_Progress') ">
+			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='UnlockedBy']" name="value">craftingEFTMachineguns</setattribute>
+			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='Tags']" name="value">eftMGS,modGunEFTXLaserSight,eftxbizmdrl85a2,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,eftxforegrip,eftxsideattachments,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxm203,weapon,ranged,holdBreathAiming,reloadPenalty,gun,mdronly,mdr556only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
+		</if>
+	</conditional>
+	<!-- GUNMDR556 -->
+    <conditional>
+	<if cond="mod_loaded('Z2_EFTX_Both_Ammo')">
+    <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+	<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>
+	<setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>		
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+    </if>
+	</conditional>
+    <conditional>
+	<if cond="mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver')">
+    <append xpath="/items">
+    <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+    <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft76225mmTokarev</setattribute>
+    <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+    </append>
+    </if>
+	</conditional>
+    <conditional>
+	<if cond="mod_loaded('Z2_EFTX_EFT_Only_Ammo')">
+    <append xpath="/items">
+    <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+    <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft76225mmTokarev</setattribute>
+    <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+    <setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>		
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
+    </append>
+    </if>
+	</conditional>
+    <conditional>
+	<if cond="mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+    <append xpath="/items">
+    <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo45ACPBulletBall,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+    </append>
+    </if>
+	</conditional>
+    <conditional>
+	<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo')">
+    <append xpath="/items">
+    <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+    <setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>		
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
+	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
+    </append>
+    </if>
+	</conditional>
+</EFTX>

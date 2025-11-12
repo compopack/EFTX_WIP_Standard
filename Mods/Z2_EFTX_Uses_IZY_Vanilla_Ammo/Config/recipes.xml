@@ -1,0 +1,89 @@
+<EFTX>
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<append xpath="/recipes">	
+	<conditional>
+		<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
+		<recipe name="resourceCanisterWithPurifiedWater" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="drinkJarPureMineralWater" count="5"/>
+			<ingredient name="resourceSilverNugget" count="1"/>
+		</recipe>
+		</if>
+    </conditional>	
+		<recipe name="ammoEft50BMGSlap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceGunPowder" count="350"/>
+			<ingredient name="resourceBulletCasing" count="5"/>
+		</recipe>
+		<recipe name="ammoEft50BMGHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="4"/>
+			<ingredient name="resourceGunPowder" count="510"/>
+			<ingredient name="resourceBulletCasing" count="10"/>
+		</recipe>
+
+		<recipe name="ammoEft4046381" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="2"/>
+			<ingredient name="thrownGrenade" count="8"/>
+			<ingredient name="resourceForgedSteel" count="45"/>
+			<ingredient name="ammoShotgunShell" count="35"/>
+			<ingredient name="resourcePaper" count="10"/>
+		</recipe>
+		<recipe name="ammoEft4053vog25" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="75"/>
+			<ingredient name="thrownGrenade" count="12"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="ammoShotgunShell" count="35"/>
+			<ingredient name="resourcePaper" count="10"/>
+		</recipe>	
+		<recipe name="ammoEft4046576" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="100"/>
+			<ingredient name="resourceForgedSteel" count="55"/>
+			<ingredient name="resourceMechanicalParts" count="55"/>
+			<ingredient name="resourceScrapLead" count="100"/>
+			<ingredient name="ammoShotgunShell" count="35"/>
+		</recipe>	
+		<recipe name="ammoEft9340pg7vl" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="100"/>
+			<ingredient name="ammoRocketFrag" count="10"/>
+			<ingredient name="resourceGunPowder" count="2000"/>
+			<ingredient name="resourceForgedSteel" count="67"/>
+			<ingredient name="ammoShotgunShell" count="35"/>
+		</recipe>
+		<recipe name="ammoEftshg725" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="80"/>
+			<ingredient name="ammoRocketFrag" count="8"/>
+			<ingredient name="resourceGunPowder" count="1900"/>
+			<ingredient name="resourceForgedSteel" count="45"/>
+			<ingredient name="ammoShotgunShell" count="35"/>
+		</recipe>
+
+		<recipe name="disassembleAmmo52_x10" count="1">
+			<ingredient name="ammoEft50BMGSlap" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo53_x10" count="1">
+			<ingredient name="ammoEft50BMGHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo52_x100" count="1">
+			<ingredient name="ammoEft50BMGSlap" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo53_x100" count="1">
+			<ingredient name="ammoEft50BMGHP" count="100"/>
+		</recipe>
+								
+		<recipe name="disassembleAmmo52_x5" count="1">
+            <ingredient name="ammoEft4046381" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo53_x5" count="1">
+            <ingredient name="ammoEft4053vog25" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo52_x20" count="1">
+            <ingredient name="ammoEft4046381" count="20"/>
+        </recipe>
+        <recipe name="disassembleAmmo53_x20" count="1">
+            <ingredient name="ammoEft4053vog25" count="20"/>
+        </recipe>        
+	</append>	
+	</if>
+	</conditional>
+</EFTX>

@@ -1,0 +1,27 @@
+<EFTX>
+<append xpath="/lootcontainers">
+<lootgroup name="groupZombieLumberjackAxe" count="all">
+			<item name="meleeToolAxeT1IronFireaxe" loot_quality_template="QLTemplateT1"/>
+			<item name="modMeleeFiremansAxeMod" loot_prob_template="low" force_prob="true"/>
+		</lootgroup>
+		
+		<lootcontainer name="zombieBackpack" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupBackpacks"/>
+		</lootcontainer>
+		<lootcontainer name="zombieLootGobBagMutated" count="1" size="6,3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="groupAmmoMunitions"/>
+		</lootcontainer>
+		<lootcontainer name="zombieSoldierLootGobBag" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="groupLargeWeaponBag"/>
+		</lootcontainer>
+		<lootcontainer name="zombieLootLumberjack" count="1" size="6,3" sound_open="UseActions/crate_wood_open" sound_close="UseActions/crate_wood_close" loot_quality_template="qualBaseTemplate">
+			<item group="groupZombieLumberjackAxe"/>
+		</lootcontainer>
+		<lootcontainer name="zombieLootGobBagDemo" count="1" size="8,9" sound_open="UseActions/chest_tier5_open" sound_close="UseActions/chest_tier5_close" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="groupHardenedChestT5"/>
+		</lootcontainer>
+</append>
+ 
+ 
+ 
+</EFTX>

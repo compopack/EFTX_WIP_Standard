@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="Z9_Lootable_Zs" />
+  <Author value="Stallionsden" />
+  <Description value="Makes all zs Lootable rather then bag drops" />
+  <DisplayName value="Lootable Zs" />
+  <Version value="2.4.2.5" />
+  <Website value="" />
+</xml>

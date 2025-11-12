@@ -1,0 +1,72 @@
+<EFTX>	
+<append xpath="/recipes">
+		<recipe name="resourceSmokedChimneyDrainCleaner" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceCoal" count="1"/>
+			<ingredient name="resourceAcid" count="250"/>
+		</recipe>
+	<!-- *** Food/Drink -->
+		<recipe name="foodBread" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="foodWheatFlour" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCanOfWhiteSalt" count="1"/>
+		</recipe>
+		<recipe name="drinkMilk" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="foodCondensedMilk" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodSugar" count="1"/>
+			<ingredient name="resourceCanOfWhiteSalt" count="1"/>
+		</recipe>
+		<recipe name="drinkRatCola" count="1">
+			<ingredient name="drinkGreenTea" count="1"/>
+			<ingredient name="drinkTarCola" count="1"/>
+			<ingredient name="drinkMaxEnergy" count="1"/>
+		</recipe>
+		<!-- *** Sugar -->		
+		<recipe name="foodSugar" count="3" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="foodCondensedMilk" count="3"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+			<ingredient name="resourceSmokedChimneyDrainCleaner" count="1"/>
+		</recipe>
+		<recipe name="foodSugar" count="3" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="foodAlyonka" count="3"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+			<ingredient name="resourceSmokedChimneyDrainCleaner" count="1"/>
+		</recipe>
+		<recipe name="foodSugar" count="3" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="foodSlickers" count="3"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+			<ingredient name="resourceSmokedChimneyDrainCleaner" count="1"/>
+		</recipe>
+		
+		<!-- *** Liquor -->
+		<recipe name="liquorPevkoBeer" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="foodSugar" count="1"/>
+			<ingredient name="resourceCropHopsFlower" count="2"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		<recipe name="liquorVodka" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="foodSugar" count="1"/>
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		<recipe name="liquorDanJackiel" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="foodSugar" count="1"/>
+			<ingredient name="foodCropCorn" count="5"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		<recipe name="liquorMoonshine" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="foodSugar" count="9"/>
+			<ingredient name="foodCropGraceCorn" count="9"/>
+			<ingredient name="thrownAmmoMolotovCocktail" count="1"/>
+			<ingredient name="resourceSilverNugget" count="3"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		<recipe name="drinkKvass" count="3" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="foodSugar" count="1"/>
+			<ingredient name="foodBread" count="1"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		
+</append>
+</EFTX>

@@ -1,0 +1,63 @@
+<EFTX>	
+<append xpath="/recipes">
+        <recipe name="gunpp19bizon" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+			<ingredient name="gunHandgunT1PistolParts" count="1"/>
+			<ingredient name="resourceWeaponParts" count="2"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+			<ingredient name="resourceSpring" count="1"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,11" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceWeaponParts"/>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+			</effect_group>
+		</recipe>
+        <recipe name="guntokarevmachine" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="gunHandgunT1PistolParts" count="1"/>
+			<ingredient name="resourceWeaponParts" count="1"/>
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceSpring" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts"/>
+			</effect_group>
+		</recipe>
+        <recipe name="gunstar15" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="gunMGT1AK47Parts" count="1"/>
+			<ingredient name="resourceWeaponParts" count="1"/>
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceSpring" count="1"/>
+			<ingredient name="resourceMultitool" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunMGT1AK47Parts"/>
+				<passive_effect name="CraftingIngredientCount" level="1,6" operation="perc_add" value="0,2" tags="resourceWeaponParts"/>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceMultitool"/>
+			</effect_group>
+		</recipe>
+        <recipe name="gunl85a2" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="gunMGT1AK47Parts" count="1"/>
+			<ingredient name="resourceWeaponParts" count="2"/>
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceSpring" count="1"/>
+			<ingredient name="resourceWD40" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunMGT1AK47Parts"/>
+				<passive_effect name="CraftingIngredientCount" level="1,6" operation="perc_add" value="0,2" tags="resourceWeaponParts"/>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceWD40"/>
+			</effect_group>
+		</recipe>
+		<recipe name="gunmdr556" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="gunMGT1AK47Parts" count="1"/>
+			<ingredient name="resourceWeaponParts" count="2"/>
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceSpring" count="1"/>
+			<ingredient name="resourceWD40" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunMGT1AK47Parts"/>
+				<passive_effect name="CraftingIngredientCount" level="1,6" operation="perc_add" value="0,2" tags="resourceWeaponParts"/>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceWD40"/>
+			</effect_group>
+		</recipe>
+</append>
+</EFTX>
