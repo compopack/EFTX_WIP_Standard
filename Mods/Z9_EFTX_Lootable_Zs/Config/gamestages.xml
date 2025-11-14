@@ -1,6 +1,7 @@
 <EFTX>
 <append xpath="/gamestages">
 <group name="zombieSteveCrawlerRadiated" spawner="zombieSteveCrawlerRadiated"/>
+<group name="zombieWight" spawner="zombieWight"/>
 <group name="zombieMoeCharged" spawner="zombieMoeCharged"/>
 <group name="zombieBikerCharged" spawner="zombieBikerCharged"/>
 <group name="zombieLumberjackCharged" spawner="zombieLumberjackCharged"/>
@@ -21,7 +22,9 @@
 <group name="zombieScreamerInfernal" spawner="zombieScreamerInfernal"/>
 <group name="zombieSteveCrawlerInfernal" spawner="zombieSteveCrawlerInfernal"/>
 
+
     <spawner name="zombieSteveCrawlerRadiated"><gamestage stage="1"><spawn group="zombieSteveCrawlerRadiated" num="1" maxAlive="1" duration="10"/></gamestage></spawner>
+    <spawner name="zombieWight"><gamestage stage="1"><spawn group="zombieWight" num="1" maxAlive="1" duration="10"/></gamestage></spawner>
     <spawner name="zombieMoeCharged"><gamestage stage="1"><spawn group="zombieMoeCharged" num="1" maxAlive="1" duration="10"/></gamestage></spawner>
     <spawner name="zombieBikerCharged"><gamestage stage="1"><spawn group="zombieBikerCharged" num="1" maxAlive="1" duration="10"/></gamestage></spawner>
     <spawner name="zombieLumberjackCharged"><gamestage stage="1"><spawn group="zombieLumberjackCharged" num="1" maxAlive="1" duration="10"/></gamestage></spawner>

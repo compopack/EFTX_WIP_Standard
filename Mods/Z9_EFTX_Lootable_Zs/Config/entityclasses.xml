@@ -1,5 +1,46 @@
 <EFTX>
-<append xpath="/entity_classes">
+<append xpath="/entity_classes">	
+	<!-- *** ZOMBIE_WIGHT -->
+	<entity_class name="zombieWight" extends="zombieTemplateMale">
+		<property name="UserSpawnType" value="Menu"/>
+		<property name="Censor" value="1,2"/>
+		<property name="SizeScale" value="1"/>
+		<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
+		<property name="Mesh" value="@:Entities/Zombies/Wight/ZWightFeral.prefab"/>
+		<property name="SoundRandom" value="zombieferalroam"/>
+		<property name="SoundAlert" value="zombieferalalert"/>
+		<property name="SoundAttack" value="zombieferalattack"/>
+		<property name="SoundHurt" value="zombieferalpain"/>
+		<property name="SoundDeath" value="zombieferaldeath"/>
+		<property name="SoundSense" value="zombieferalsense"/>
+		<property name="SoundStepType" value="barehvystep"/>
+		<property name="WalkType" value="2"/>
+		<property name="Mass" value="210"/>
+
+		<!-- Dismemberment -->
+		<property name ="DismemberTag_L_HeadGore" value="Wight/Dismemberment/Blade/Head;Wight/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+		<property name ="DismemberTag_L_LeftLowerArmGore" value="Wight/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_LeftUpperArmGore" value="Wight/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_LeftUpperLegGore" value="Wight/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_RightLowerArmGore" value="Wight/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_RightUpperArmGore" value="Wight/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_RightUpperLegGore" value="Wight/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+		<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+		<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+		<!-- Gameplay zombieWight -->
+		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+		<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+		<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- Fit Feral -->
+		<property name="JumpMaxDistance" value="4.6, 5"/>
+		<property name="HandItem" value="meleeHandZombie01"/>
+		<property name="ExperienceGain" value="1200"/><!-- XP Fit Feral -->
+		<property name="LootDropProb" value=".04"/> <!-- Feral -->
+
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+		</effect_group>
+	</entity_class>
 	<!-- ZOMBIE_STEVE_CRAWLER_RADIATED -->
 	<entity_class name="zombieSteveCrawlerRadiated" extends="zombieSteveCrawlerFeral">
 	<property name="MatColor" value="radiated"/>
@@ -1015,6 +1056,10 @@
 	</append>
 <!-- SCREAMER -->
 <!-- WIGHT -->
+	<append xpath="/entity_classes/entity_class[@name='zombieWight']">
+		<property name="LootListOnDeath" value="groupZombieWight"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieWightFeral']">
 		<property name="LootListOnDeath" value="groupZombieWightFeral"/>
 		<property name="TimeStayAfterDeath" value="90"/>
@@ -1082,4 +1127,84 @@
 		<property name="TimeStayAfterDeath" value="90"/>
 	</append>
 <!-- STEVE CRAWLER -->
+<conditional>
+		<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+		<append xpath="/entity_classes/entity_class[@name='zombieMutatedLootGob']">			
+			<property name="LootDropProb" value=".7"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGobMutated"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieSoldierLootGob']">			
+			<property name="LootDropProb" value=".6"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGob"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieLumberjackAxe']">			
+			<property name="LootDropProb" value=".5"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerLootLumber1"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieLumberjackFeralAxe']">			
+			<property name="LootDropProb" value=".6"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerLootLumber1"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieDemolitionLootGob']">			
+			<property name="LootDropProb" value=".8"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGobDemo"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieJoeBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieSteveBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieTomClarkBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessManBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieBoeBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieJanitorBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieMoeBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieYoBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieSkateboarderBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieArleneBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieMarleneBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombiePartyGirlBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='zombieDarleneBackpacker']">			
+			<property name="LootDropProb" value=".3"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+		</append>
+		</if>
+	</conditional>	
 </EFTX>
