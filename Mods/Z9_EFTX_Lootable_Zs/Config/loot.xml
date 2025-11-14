@@ -5815,7 +5815,7 @@
 		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">	
 	<!-- MAIN 1 -->
 		<!-- ARLENE -->
-		<lootcontainer name="groupZombieArlene" count="1" size="8,9" destroy_on_close="true" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieArlene" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupArlene" count="1" loot_prob_template="veryLow" />			
 		</lootcontainer>
 		<lootcontainer name="groupZombieArleneFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
