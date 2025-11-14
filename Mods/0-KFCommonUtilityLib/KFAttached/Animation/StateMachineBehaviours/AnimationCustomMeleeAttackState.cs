@@ -28,6 +28,7 @@ public class AnimationCustomMeleeAttackState : StateMachineBehaviour
     public float SwingAngle = 0f;
     [Range(-180f, 180f)]
     public float SwingDegrees = 0f;
+    public int ForceActionIndex = -1;
     public bool IsAlternative = false;
     public bool InvariableRPM = false;
     public bool CancelLoopOnRelease = false;
@@ -96,7 +97,7 @@ public class AnimationCustomMeleeAttackState : StateMachineBehaviour
         {
             animator.SetWrappedBool(Animator.StringToHash("UseAltMelee"), false);
         }
-        actionIndex = animator.GetWrappedInt(AvatarController.itemActionIndexHash);
+        actionIndex = ForceActionIndex >= 0 ? ForceActionIndex : animator.GetWrappedInt(AvatarController.itemActionIndexHash);
         entity = animator.GetComponentInParent<EntityAlive>();
         if (!slotGurad.IsValid(entity) || entity.isEntityRemote)
         {
@@ -123,14 +124,14 @@ public class AnimationCustomMeleeAttackState : StateMachineBehaviour
         animator.SetWrappedFloat(AttackSpeedHash, InvariableRPM ? 1 : originalMeleeAttackSpeed);
         speedMultiplierToKeep = originalMeleeAttackSpeed;
         ItemClass holdingItem = entity.inventory.holdingItem;
-        holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.RaycastTime" : "Action1.RaycastTime", ref RaycastTime);
-        float impactDuration = -1f;
-        holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.ImpactDuration" : "Action1.ImpactDuration", ref impactDuration);
-        if (impactDuration >= 0f)
-        {
-            ImpactDuration = impactDuration * originalMeleeAttackSpeed;
-        }
-        holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.ImpactPlaybackSpeed" : "Action1.ImpactPlaybackSpeed", ref ImpactPlaybackSpeed);
+        //holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.RaycastTime" : "Action1.RaycastTime", ref RaycastTime);
+        //float impactDuration = -1f;
+        //holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.ImpactDuration" : "Action1.ImpactDuration", ref impactDuration);
+        //if (impactDuration >= 0f)
+        //{
+        //    ImpactDuration = impactDuration * originalMeleeAttackSpeed;
+        //}
+        //holdingItem.Properties.ParseFloat((actionIndex != 1) ? "Action0.ImpactPlaybackSpeed" : "Action1.ImpactPlaybackSpeed", ref ImpactPlaybackSpeed);
         if (originalMeleeAttackSpeed != 0f)
         {
             calculatedRaycastTime = RaycastTime / originalMeleeAttackSpeed;

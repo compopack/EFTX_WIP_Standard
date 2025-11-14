@@ -1993,7 +1993,7 @@ namespace KFCommonUtilityLib.Harmony
                     codes[i].opcode = OpCodes.Call;
                     codes[i].operand = AccessTools.Method(typeof(MultiActionUtils), nameof(MultiActionUtils.GetSelectedAmmoIndexByActionIndex));
                     codes.Insert(i, new CodeInstruction(OpCodes.Ldloc_S, lbd_index));
-                    break;
+                    i++;
                 }
             }
             return codes;
@@ -2013,15 +2013,15 @@ namespace KFCommonUtilityLib.Harmony
         {
             private static IEnumerable<MethodBase> TargetMethods()
             {
-                if (Constants.cVersionInformation.Major <= 2 && Constants.cVersionInformation.Minor <= 2)
-                {
-                    Log.Out($"Choosing old GetBindingValue for XUiC_ItemInfoWindow for game version {Constants.cVersionInformation.Major}.{Constants.cVersionInformation.Minor}");
-                    yield return AccessTools.Method(typeof(XUiC_ItemInfoWindow), "GetBindingValue");
-                }
-                else
+                if (Constants.cVersionInformation.Major > 2 || Constants.cVersionInformation.Minor > 2)
                 {
                     Log.Out($"Choosing new GetBindingValueInternal for XUiC_ItemInfoWindow for game version {Constants.cVersionInformation.Major}.{Constants.cVersionInformation.Minor}");
                     yield return AccessTools.Method(typeof(XUiC_ItemInfoWindow), "GetBindingValueInternal");
+                }
+                else
+                {
+                    Log.Out($"Choosing old GetBindingValue for XUiC_ItemInfoWindow for game version {Constants.cVersionInformation.Major}.{Constants.cVersionInformation.Minor}");
+                    yield return AccessTools.Method(typeof(XUiC_ItemInfoWindow), "GetBindingValue");
                 }
             }
 
