@@ -1123,7 +1123,7 @@
 		<property name="TimeStayAfterDeath" value="90"/>
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerInfernal']">
-		<property name="LootListOnDeath" value="groupZombieSteveCrawlerInfernal"/>
+		<property name="LootListOnDeath" value="group"/>
 		<property name="TimeStayAfterDeath" value="90"/>
 	</append>
 <!-- STEVE CRAWLER -->
@@ -1207,4 +1207,501 @@
 		</append>
 		</if>
 	</conditional>	
+	<conditional>
+		<if cond="mod_loaded('DoubleGZombies2')">
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleNurse']">
+		<property name="LootListOnDeath" value="groupMaleNurse"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleNurseFeral']">
+		<property name="LootListOnDeath" value="groupNurseFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleNurseRadiated']">
+		<property name="LootListOnDeath" value="groupMaleNurseRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleNurseCharged']">
+		<property name="LootListOnDeath" value="groupMaleNurseCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCop']">
+		<property name="LootListOnDeath" value="groupFemaleCop"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCopFeral']">
+		<property name="LootListOnDeath" value="groupFemaleCopFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCopRadiated']">
+		<property name="LootListOnDeath" value="groupFemaleCopRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCopCharged']">
+		<property name="LootListOnDeath" value="groupFemaleCopCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCopInfernal']">
+		<property name="LootListOnDeath" value="groupFemaleCopInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFirefighter']">
+		<property name="LootListOnDeath" value="groupFirefighter"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFirefighterFeral']">
+		<property name="LootListOnDeath" value="groupFirefighterFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFirefighterRadiated']">
+		<property name="LootListOnDeath" value="groupFirefighterRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFirefighterInfernal']">
+		<property name="LootListOnDeath" value="groupFirefighterInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleCadaver']">
+		<property name="LootListOnDeath" value="groupMaleCadaver"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleCadaverFeral']">
+		<property name="LootListOnDeath" value="groupMaleCadaverFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleCadaverRadiated']">
+		<property name="LootListOnDeath" value="groupMaleCadaverRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleCadaverCharged']">
+		<property name="LootListOnDeath" value="groupMaleCadaverCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMaleCadaverInfernal']">
+		<property name="LootListOnDeath" value="groupMaleCadaverInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularMale']">
+		<property name="LootListOnDeath" value="groupRegularMale"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularMaleFeral']">
+		<property name="LootListOnDeath" value="groupRegularMaleFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularMaleRadiated']">
+		<property name="LootListOnDeath" value="groupRegularMaleRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularMaleCharged']">
+		<property name="LootListOnDeath" value="groupRegularMaleCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularMaleInfernal']">
+		<property name="LootListOnDeath" value="groupRegularMaleInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCadaver']">
+		<property name="LootListOnDeath" value="groupFemaleCadaver"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCadaverFeral']">
+		<property name="LootListOnDeath" value="groupFemaleCadaverFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCadaverRadiated']">
+		<property name="LootListOnDeath" value="groupFemaleCadaverRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFemaleCadaverCharged']">
+		<property name="LootListOnDeath" value="groupFemaleCadaverCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularFemale']">
+		<property name="LootListOnDeath" value="groupRegularFemale"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularFemaleFeral']">
+		<property name="LootListOnDeath" value="groupRegularFemaleFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularFemaleRadiated']">
+		<property name="LootListOnDeath" value="groupRegularFemaleRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieRegularFemaleCharged']">
+		<property name="LootListOnDeath" value="groupRegularFemaleCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyKim']">
+		<property name="LootListOnDeath" value="groupSnowBunnyKim"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyKimFeral']">
+		<property name="LootListOnDeath" value="groupSnowBunnyKimFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyKimRadiated']">
+		<property name="LootListOnDeath" value="groupSnowBunnyKimRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyKimCharged']">
+		<property name="LootListOnDeath" value="groupSnowBunnyKimCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyParis']">
+		<property name="LootListOnDeath" value="groupSnowBunnyParis"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyParisFeral']">
+		<property name="LootListOnDeath" value="groupSnowBunnyParisFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyParisRadiated']">
+		<property name="LootListOnDeath" value="groupSnowBunnyParisRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSnowBunnyParisCharged']">
+		<property name="LootListOnDeath" value="groupSnowBunnyParisCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFreddie']">
+		<property name="LootListOnDeath" value="groupFreddie"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFreddieFeral']">
+		<property name="LootListOnDeath" value="groupFreddieFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFreddieRadiated']">
+		<property name="LootListOnDeath" value="groupFreddieRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFreddieCharged']">
+		<property name="LootListOnDeath" value="groupFreddieCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFreddieInfernal']">
+		<property name="LootListOnDeath" value="groupFreddieInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessWoman']">
+		<property name="LootListOnDeath" value="groupBusinessWoman"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessWomanFeral']">
+		<property name="LootListOnDeath" value="groupBusinessWomanFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessWomanRadiated']">
+		<property name="LootListOnDeath" value="groupBusinessWomanRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessWomanCharged']">
+		<property name="LootListOnDeath" value="groupBusinessWomanCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBusinessWomanInfernal']">
+		<property name="LootListOnDeath" value="groupBusinessWomanInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieDave']">
+		<property name="LootListOnDeath" value="groupDave"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieDaveFeral']">
+		<property name="LootListOnDeath" value="groupDaveFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieDaveRadiated']">
+		<property name="LootListOnDeath" value="groupDaveRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieDaveCharged']">
+		<property name="LootListOnDeath" value="groupDaveCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieDaveInfernal']">
+		<property name="LootListOnDeath" value="groupDaveInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMilitaryFemale']">
+		<property name="LootListOnDeath" value="groupMilitaryFemale"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMilitaryFemaleFeral']">
+		<property name="LootListOnDeath" value="groupMilitaryFemaleFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMilitaryFemaleRadiated']">
+		<property name="LootListOnDeath" value="groupMilitaryFemaleRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMilitaryFemaleCharged']">
+		<property name="LootListOnDeath" value="groupMilitaryFemaleCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieMilitaryFemaleInfernal']">
+		<property name="LootListOnDeath" value="groupMilitaryFemaleInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFloridaMan']">
+		<property name="LootListOnDeath" value="groupFloridaMan"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFloridaManFeral']">
+		<property name="LootListOnDeath" value="groupFloridaManFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCorpse']">
+		<property name="LootListOnDeath" value="groupCorpse"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('DoubleGZombiesClassicsReanimated')">
+		<append xpath="/entity_classes/entity_class[@name='zombieStripperDGZ']">
+		<property name="LootListOnDeath" value="groupStripperDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieStripperDGZFeral']">
+		<property name="LootListOnDeath" value="groupStripperDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieStripperDGZRadiated']">
+		<property name="LootListOnDeath" value="groupStripperDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieStripperDGZCharged']">
+		<property name="LootListOnDeath" value="groupStripperDGZCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCowboyDGZ']">
+		<property name="LootListOnDeath" value="groupCowboyDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCowboyDGZFeral']">
+		<property name="LootListOnDeath" value="groupCowboyDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCowboyDGZRadiated']">
+		<property name="LootListOnDeath" value="groupCowboyDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCowboyDGZInfernal']">
+		<property name="LootListOnDeath" value="groupCowboyDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCheerleaderDGZ']">
+		<property name="LootListOnDeath" value="groupCheerleaderDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCheerleaderDGZFeral']">
+		<property name="LootListOnDeath" value="groupCheerleaderDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCheerleaderDGZRadiated']">
+		<property name="LootListOnDeath" value="groupCheerleaderDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCheerleaderDGZCharged']">
+		<property name="LootListOnDeath" value="groupCheerleaderDGZCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieCheerleaderDGZInfernal']">
+		<property name="LootListOnDeath" value="groupCheerleaderDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFootballDGZ']">
+		<property name="LootListOnDeath" value="groupFootballDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFootballDGZFeral']">
+		<property name="LootListOnDeath" value="groupFootballDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFootballDGZRadiated']">
+		<property name="LootListOnDeath" value="groupFootballDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFootballDGZCharged']">
+		<property name="LootListOnDeath" value="groupFootballDGZCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFootballDGZInfernal']">
+		<property name="LootListOnDeath" value="groupFootballDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFarmerDGZ']">
+		<property name="LootListOnDeath" value="groupFarmerDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFarmerDGZFeral']">
+		<property name="LootListOnDeath" value="groupFarmerDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFarmerDGZRadiated']">
+		<property name="LootListOnDeath" value="groupFarmerDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieFarmerDGZInfernal']">
+		<property name="LootListOnDeath" value="groupFarmerDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieBurntDGZ']">
+		<property name="LootListOnDeath" value="groupBurntDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieWightDGZFeral']">
+		<property name="LootListOnDeath" value="groupWightDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieWightDGZRadiated']">
+		<property name="LootListOnDeath" value="groupWightDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieWightDGZCharged']">
+		<property name="LootListOnDeath" value="groupWightDGZCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieWightDGZInfernal']">
+		<property name="LootListOnDeath" value="groupWightDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieHazmatDGZ']">
+		<property name="LootListOnDeath" value="groupHazmatDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieHazmatDGZFeral']">
+		<property name="LootListOnDeath" value="groupHazmatDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieHazmatDGZRadiated']">
+		<property name="LootListOnDeath" value="groupHazmatDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieHazmatDGZCharged']">
+		<property name="LootListOnDeath" value="groupHazmatDGZCharged"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieHazmatDGZInfernal']">
+		<property name="LootListOnDeath" value="groupHazmatDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSoldierDGZ']">
+		<property name="LootListOnDeath" value="groupSoldierDGZ"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSoldierDGZFeral']">
+		<property name="LootListOnDeath" value="groupSoldierDGZFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSoldierDGZRadiated']">
+		<property name="LootListOnDeath" value="groupSoldierDGZRadiated"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+
+		<append xpath="/entity_classes/entity_class[@name='zombieSoldierDGZInfernal']">
+		<property name="LootListOnDeath" value="groupSoldierDGZInfernal"/>
+		<property name="TimeStayAfterDeath" value="90"/>
+		</append>
+		</if>
+	</conditional>
 </EFTX>
