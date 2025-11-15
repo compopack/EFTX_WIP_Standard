@@ -59,5 +59,537 @@
 				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceWD40"/>
 			</effect_group>
 		</recipe>
+			<!-- ### Craftable Modifiers From Schematics -->
+	<recipe name="modGunEFTXLaserSight" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceGlue" count="2"/>
+	<ingredient name="resourceElectricParts" count="10"/>
+	<ingredient name="resourceMechanicalParts" count="2"/>
+	</recipe>	
+	<!-- ### Grenade Launchers -->
+	<recipe name="modm203grenadelaunchers" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedSteel" count="24"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="28"/>
+		<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modsilencerco46multi" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="3"/>
+	</recipe>
+	<recipe name="modsilencertt33makeshift" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="3"/>
+	</recipe>
+	<recipe name="modmuzzlettlaserdtk" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="3"/>
+	</recipe>
+	<recipe name="modsilencergriffinm4sdk" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="6"/>
+	</recipe>
+	<recipe name="modsilencersocomrc2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="12"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modmuzzlear15ferfransmuzzlebrake556x45" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="6"/>
+	</recipe>
+	<recipe name="modmuzzlear15doublestarcarlsontaccomp556x45" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="12"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modmuzzlear15alientechgubichmuzzlebrake556x45" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="16"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modmuzzleAR15thunderbeast223cb" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="12"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modsilencerthunderbeastultra5" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="12"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modsilencersdnaacmulti" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="24"/>
+			<ingredient name="resourceToolset" count="1"/>
+	</recipe>
+	<recipe name="modmuzzlesigtwoportbrake" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="16"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modsilencersigsrd762ti" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="16"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modsilencersigsrdqd" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="24"/>
+			<ingredient name="resourceToolset" count="1"/>
+	</recipe>
+	<recipe name="modsilencerco9osprey" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="6"/>
+	</recipe>
+	<recipe name="modsilencersigsrd9" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceForgedSteel" count="12"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modmuzzlevityazbrakecompensator" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="6"/>
+	</recipe>
+	<recipe name="modmagttcustomdrum75" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="6"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+			<ingredient name="resourceMechanicalParts" count="3"/>
+	</recipe>
+	<recipe name="modmagpp19vityazdrum50" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="16"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modmagstanagstd30" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+	</recipe>
+	<recipe name="modmagstanag556x45pmag40" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="16"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modmagstanag556x45pmagd60" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="24"/>
+			<ingredient name="resourceScrapPolymers" count="16"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modmagstanag556x45sf60" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="24"/>
+			<ingredient name="resourceScrapPolymers" count="16"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modmagstanag556x45sf100" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="32"/>
+			<ingredient name="resourceScrapPolymers" count="16"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceToolset" count="1"/>
+	</recipe>
+	<recipe name="modstockttmachinecustom" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="3"/>
+			<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>
+	<recipe name="modstockakzenitpt1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="24"/>
+	</recipe>
+	<recipe name="modstockakzenitpt3" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="24"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modstocka2ar15prsgen2tan" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="32"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modstocka2ar15prsgen3" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="44"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modstockar15b5precision" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="3"/>
+			<ingredient name="resourceScrapPolymers" count="80"/>
+			<ingredient name="resourceToolset" count="1"/>
+	</recipe>
+	<recipe name="modstockar15troym7a1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="24"/>
+	</recipe>
+	<recipe name="modstockar15glcore" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="52"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modstockar15acesocomgen4" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="72"/>
+			<ingredient name="resourceToolset" count="1"/>
+	</recipe>
+	<recipe name="modstockar15hke1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="36"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modstockar15ergof93pro" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="60"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modgriphksturmgriff" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapPolymers" count="44"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modgripmagpulrvg" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapPolymers" count="54"/>
+			<ingredient name="resourceGlue" count="3"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modgripzenitrk1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapPolymers" count="64"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modgripzenitb25urk1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapPolymers" count="72"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<!-- ### Bipod -->
+	<recipe name="modbipodrailRexana" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedSteel" count="6"/>
+		<ingredient name="resourceScrapPolymers" count="64"/>
+		<ingredient name="resourceGlue" count="4"/>
+		<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointAcroP1Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointAcroP1cantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeaimpointAcroP1Old" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointMicroH2Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointMicroH2cantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeaimpointMicroH2Old" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointMicroT1Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeaimpointMicroT1cantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeaimpointMicroT1Old" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeBelOMOpk06Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeBelOMOpk06cantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeBelOMOpk06Old" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeburrisfastfireOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeburrisfastfirecantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeburrisfastfireOld" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeSIGromeo4Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeSIGromeo4cantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeSIGromeo4Old" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeRMROld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeRMRcantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeRMROld" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeleupolddeltapointOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeleupolddeltapointcantedOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="modscopeleupolddeltapointOld" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+	</recipe>
+	<recipe name="modscopeAimPointCompM4Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeAimPointProOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeaksionEKP818Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeElcanSpecterHCOOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeLeapersUTGOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeSIGRomeo8TOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeSRS02Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeValdayKrechetOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeValdayPK120Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeVOMZPiladP1Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeVortexRazorAMGUH1Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopewalthermrsreflexOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeWilcoxBossXeHPOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeokp7reflexOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeEOTech553holoOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeElcanSpecterDROld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeKibaArmsPrismOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopemonstrumcompactOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceGlue" count="2"/>
+	</recipe>
+	<recipe name="modscopeSwampFoxPrismOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeeotechhhshybridOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeacogta01NSN4x32Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeacogta11D35xOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeLeupoldMark4HamrOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeSIGBravo4Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+	<recipe name="modscopeValdayPS320Old" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeSBPMII18x2430mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeSBPMII320x5034mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeSBPMII525x5634mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeBFTac3014x2430mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeEOTVudu16x2430mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeLeupoldMark4LR30mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeMarchTactical30mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeSIGTango6T16x2430mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeRazorHDGen216x2430mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeNFATACR735x5634mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeHensoldtFF416x5634mmOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="1"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+			<ingredient name="resourceWD40" count="1"/>
+	</recipe>
+	<recipe name="modscopeNCStarADOOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="2"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="resourceGlue" count="3"/>
+			<ingredient name="resourceWD40" count="1"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>
+	<recipe name="modscopeKMZ1p69WeaverOld" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScopeLens" count="2"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="resourceGlue" count="3"/>
+			<ingredient name="resourceWD40" count="1"/>
+			<ingredient name="resourceLegendaryParts" count="1"/>
+	</recipe>		
 </append>
 </EFTX>

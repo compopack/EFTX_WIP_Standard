@@ -92,7 +92,6 @@
     <item name="schematicsstockar15glcore"/>
     <item name="schematicsstockar15ergof93pro"/>
 	<item name="schematicsm203grenadelaunchers"/>
-	<item name="schematicsgp25grenadelauncher"/>
 	</append>
 	<append xpath="//trader_item_group[@name='EFTXschematicsT5']">
 	<item name="schematicsscopeElcanSpecterDR"/>
@@ -109,7 +108,6 @@
 	<item name="schematicsmagpp19vityazdrum50"/>
     <item name="schematicsmagstanag556x45sf100"/>
     <item name="schematicsm203grenadelaunchers"/>
-	<item name="schematicsgp25grenadelauncher"/>
     <item name="schematicssilencersdnaacmulti"/>
     <item name="schematicssilencersigsrd762ti"/>
     <item name="schematicsmuzzle_ar15_ferfrans_muzzle_brake_556x45"/>
@@ -201,13 +199,10 @@
     <item name="modmuzzlear15alientechgubichmuzzlebrake556x45"/>
     <item name="modscopeSBPMII18x2430mmOld"/>
     <item name="modm203grenadelaunchers"/>
-	<item name="modgp25grenadelauncher"/>
     <item name="modsilencerthunderbeastultra5"/>
     <item name="modstocka2ar15prsgen3"/>
     <item name="modstockar15glcore"/>
 	<item name="modstockar15ergof93pro"/>
-	<item name="modm203grenadelaunchers"/>
-	<item name="modgp25grenadelauncher"/>
 	</append>
 	<append xpath="//trader_item_group[@name='EFTXModsT5']">
 	<item name="modscopeSBPMII320x5034mm"/>

@@ -1,13 +1,11 @@
 <EFTX>	
 	<append xpath="/progression/crafting_skills">
 	<crafting_skill name="craftingBigBoomBoom" max_level="150" parent="attCrafting" name_key="craftingBigBoomBoomName" desc_key="craftingBigBoomBoomDesc" long_desc_key="craftingBigBoomBoomLongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="GrenadeImpactRGN,GrenadeM67" name_key="GrenadeImpactRGN" has_quality="false" unlock_level="20">
-				<unlock_entry item="GrenadeImpactRGN" unlock_tier="1" />
-				<unlock_entry item="GrenadeM67" unlock_tier="1" />
-			</display_entry>
-			<display_entry icon="ammoEft4046381,ammoEft4046576" name_key="ammoEft4046381" has_quality="false" unlock_level="40">
-				<unlock_entry item="ammoEft4046381" unlock_tier="1" />
+			<display_entry icon="ammoEft4046576" name_key="ammoEft4046576" has_quality="false" unlock_level="20">
 				<unlock_entry item="ammoEft4046576" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="ammoEft4046381" name_key="ammoEft4046381" has_quality="false" unlock_level="40">
+				<unlock_entry item="ammoEft4046381" unlock_tier="1" />
 			</display_entry>
 			<display_entry icon="ammoEft4053vog25" name_key="ammoEft4053vog25" has_quality="false" unlock_level="60">
 				<unlock_entry item="ammoEft4053vog25" unlock_tier="1" />
@@ -19,8 +17,8 @@
 				<unlock_entry item="ammoEft9340pg7vl" unlock_tier="1" />
 			</display_entry>			
 			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,150" value="1" tags="GrenadeImpactRGN,GrenadeM67"/> 
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,150" value="1" tags="ammoEft4046381,ammoEft4046576"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,150" value="1" tags="ammoEft4046576"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,150" value="1" tags="ammoEft4046381"/> 
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,150" value="1" tags="ammoEft4053vog25"/> 
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,150" value="1" tags="ammoEftshg725"/>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="150,150" value="1" tags="ammoEft9340pg7vl"/> 

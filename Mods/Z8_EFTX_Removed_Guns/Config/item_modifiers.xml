@@ -1032,50 +1032,7 @@
 			<effect_group tiered="false" name="mod effects">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftWeightKg" operation="add" value="1.36"/>
 			</effect_group>
-		</item_modifier>
-		<item_modifier name="modgp25grenadelauncher" installable_tags="gp25" modifier_tags="underbarrel,grips,accuracy" blocked_tags="nogp25" type="attachment">
-			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-			<property name="TraderStageTemplate" value="modsTier4"/>
-			<property name="EconomicValue" value="3950"/>
-			<property name="UnlockedBy" value="craftingGrenadeLauncherAttachments"/>
-			<item_property_overrides name="gunl85a2,gunmdr556">
-				<property name="ActionUnlocked_3" value="true"/>
-			</item_property_overrides>
-			<item_property_overrides name="gunl85a2,gunmdr556">
-				<property name="Sound_start" value="gp25_close"/>
-				<property name="DisableAmmo" value="ammoEft4046381"/>
-				<property name="ActionTagsAppend" value="gp25only"/>
-				<property name="DisplayType" value="rangedLauncher"/>				
-			</item_property_overrides>
-            <item_property_overrides name="gunl85a2">
-			<property name="ItemTagsAppend" value="eftxsideattachments"/>
-		    </item_property_overrides>		
-		    <item_property_overrides name="gunmdr556">
-			<property name="ItemTagsAppend" value="eftxsideattachments"/>
-		    </item_property_overrides>
-			<effect_group tiered="false" name="internal attachment prefab (A19)">
-				<requirement name="HoldingItemHasTags" tags="eftxattachmentsIncluded"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffEftErgoDown1"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffEftErgoDown1"/>
-				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="gp25on"/>			
-			</effect_group>
-			<effect_group tiered="false" name="disableScopeCam">
-				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="AimRefGroupLauncher"/>
-				<triggered_effect trigger="onSelfItemSwitchMode" action="SetTransformActive" active="true" parent_transform="AimRefGroupLauncher" transform_path="launcherSight">
-					<requirement name="ActionHasTags,KFCommonUtilityLib" tags="gp25only"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfItemSwitchMode" action="SetTransformActive" active="false" parent_transform="AimRefGroupLauncher" transform_path="launcherSight">
-					<requirement name="!ActionHasTags,KFCommonUtilityLib" tags="gp25only"/>
-				</triggered_effect>			
-			</effect_group>
-			<effect_group tiered="false" name="mod effects">
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftWeightKg" operation="add" value="1.4"/>
-			</effect_group>
-			<effect_group tiered="false" name="StallTags">
-				<requirement name="HoldingItemHasTags" tags="EFTXl85a2Only"/>
-				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="eftxhandguard"/>
-			</effect_group>
-		</item_modifier>		
+		</item_modifier>			
 		<!-- GRENADE LAUNCHERS -->	
         <!-- BIPODS -->
 		<item_modifier name="modbipodrailRexana" installable_tags="rexbipod" modifier_tags="bipod,accuracy" blocked_tags="nobipod" type="attachment">
@@ -2603,12 +2560,6 @@
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modm203grenadelaunchers']/effect_group[@name='StallTags']/requirement[@name='HoldingItemHasTags']" name="tags">EFTXl85a2Only</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modm203grenadelaunchers']/property[@name='TraderStageTemplate']" name="value">baseTier4</setattribute>
 	<!-- modm203grenadelaunchers -->
-	<!-- modgp25grenadelauncher -->
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modgp25grenadelauncher']/property[@name='EconomicValue']" name="value">55950</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modgp25grenadelauncher']/property[@name='UnlockedBy']" name="value">schematicsgp25grenadelauncher</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modgp25grenadelauncher']/effect_group[@name='StallTags']/requirement[@name='HoldingItemHasTags']" name="tags">EFTXl85a2Only</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modgp25grenadelauncher']/property[@name='TraderStageTemplate']" name="value">baseTier4</setattribute>
-	<!-- modgp25grenadelauncher -->
     <!-- LAUNCHERS -->
     <!--  SCOPES -->
     <!-- modscopeaimpointAcroP1Old -->
