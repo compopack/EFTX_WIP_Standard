@@ -16,6 +16,8 @@
     </append>
     </if>
 	</conditional> 
+    <conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core_2_0')">
     <insertBefore xpath="//lootgroup[@name='groupEftPistolsCasesT4']">
     <lootgroup name="groupguntokarevmachine" loot_quality_template="QLTemplateT1">
 		<item name="guntokarevmachine" count="1" quality="1"/>
@@ -26,7 +28,7 @@
     </append>
     <append xpath="//lootgroup[@name='groupEftPistolCase4']">
         <item name="bundlePistolCaseTTM" count="1"/>
-    </append>
+    </append>    
     <append xpath="//lootgroup[@name='groupWeaponsT1']">
         <item name="gunpp19bizon" count="1"  quality="1"/>
     </append>
@@ -54,7 +56,6 @@
         <item name="gunmdr556" loot_prob_template="QuestT3Prob"/>
         <item name="guntokarevmachine" loot_prob_template="QuestT3Prob"/>
     </append> 
-
     <append xpath="//lootgroup[@name='EFTXModSchemsT1']">
     <item name="schematicsgriphksturmgriff"/>
     <item name="schematicsgripmagpulrvg"/>
@@ -266,6 +267,8 @@
     <item name="modstockar15b5precision"/>
 	<item name="modstockar15acesocomgen4"/>    
     </append>
+    </if>
+    </conditional>    
     <conditional>
 	<if cond="not mod_loaded('FNS_Loot_All_the_Things_Persistent_Containers_Variant') and mod_loaded('EFTX_Pack_Standard') and mod_loaded('EFTX_Pack_Slow_Progress')">
 	<append xpath="//lootgroup[@name='EFTXArmyPallets']">

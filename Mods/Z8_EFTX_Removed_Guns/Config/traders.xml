@@ -10,6 +10,8 @@
 	</append>	
 	</if>
 	</conditional>   
+    <conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core_2_0')">
 	<append xpath="//trader_item_group[@name='EFTXschematicsT1']">
 	<item name="schematicsgriphksturmgriff"/>
     <item name="schematicsgripmagpulrvg"/>
@@ -222,4 +224,6 @@
     <item name="modstockar15b5precision"/>
 	<item name="modstockar15acesocomgen4"/> 
 	</append>
+    </if>
+	</conditional>    
 </EFTX>

@@ -253,7 +253,7 @@
 		</append>
 		
 		<conditional>
-		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
+		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core_2_0') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
 		<append xpath="//lootcontainer[@name='EFTXMilitaryPallet']">
 			<item group="groupEFTXMilitaryFood" count="1" loot_prob_template="low"/>
 			<item group="groupEFTXMilitaryDrink" count="1" loot_prob_template="low"/>	

@@ -251,27 +251,7 @@
 
      <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[contains(@icon,'gunm16a4')]/@icon">,gunl85a2,gunmdr556</append>
     <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry/unlock_entry[contains(@item,'gunm16a4')]/@item">,gunl85a2,gunmdr556</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/effect_group/passive_effect[contains(@tags,'gunm16a4')]/@tags">,gunl85a2,gunmdr556</append>
-
-    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry[@name_key='SMGS']/display_entry[contains(@item,'gunpp9klin')]/@icon">,gunpp19bizon</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/display_entry[@name_key='SMGS']/unlock_entry[contains(@item,'gunpp9klin')]/@item">,gunpp19bizon</append>    
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='6,200']/@tags"/>,gunpp19bizon</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSMGS']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='23,43,63,83,103,125']/@tags"/>,gunpp19bizon</append> -->
-
-    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry[@name_key='Pistols']/display_entry[contains(@item,'guntokarevgold')]/@icon">,guntokarevmachine</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/display_entry[@name_key='Pistols']/unlock_entry[contains(@item,'guntokarevgold')]/@item">,guntokarevmachine</append>    
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='20,125']/@tags"/>,guntokarevmachine</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingPistols']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='40,60,80,100,120,125']/@tags"/>,guntokarevmachine</append> -->
-
-    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry[@name_key='Rifles']/display_entry[contains(@item,'gunadar')]/@icon">,gunstar15</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/display_entry[@name_key='Rifles']/unlock_entry[contains(@item,'gunadar')]/@item">,gunstar15</append>    
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='10,200']/@tags"/>,gunstar15</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTRifles']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='35,60,85,110,135,200']/@tags"/>,gunstar15</append> -->
-
-    <!-- <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[@name_key='Machineguns']/display_entry[contains(@item,'gunm16a4')]/@icon">,gunl85a2,gunmdr556</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/display_entry[@name_key='Machineguns']/unlock_entry[contains(@item,'gunm16a4')]/@item">,gunl85a2,gunmdr556</append> 
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/passive_effect/[@name='RecipeTagUnlocked']/operation[@name='base_set']/level[@name='10,200']/@tags"/>,gunl85a2,gunmdr556</append>
-    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/passive_effect/[@name='CraftingTier']/operation[@name='base_add']/level[@name='35,60,85,110,135,200']/@tags"/>,gunl85a2,gunmdr556</append> -->
+    <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingEFTMachineguns']/effect_group/passive_effect[contains(@tags,'gunm16a4')]/@tags">,gunl85a2,gunmdr556</append>    
     </if>
 	</conditional>	
 </EFTX>

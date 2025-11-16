@@ -980,7 +980,7 @@
 		</append>
 		<!-- *** Food/Medics (lootable) -->
 		<conditional>
-    <if cond="mod_loaded('zz_REBIRTH__Core') and not mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') ">
+    <if cond="mod_loaded('zz_REBIRTH__Core_2_0') and not mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') ">
 	<append xpath="/items">
 	<item name="disassembleAmmoMasterBundle">
 			<property name="CreativeMode" value="None"/>
@@ -1123,7 +1123,7 @@
 			</property>	
     </append>
 <conditional>
-    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core')">
+    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core_2_0')">
 <remove xpath="/items/item[@name='drugPainkillers']/property[@class='Action0']"></remove>
 <remove xpath="/items/item[@name='drugPainkillers']/property[@name='Meshfile']"></remove>
     <append xpath="/items/item[@name='drugPainkillers']">
@@ -1358,7 +1358,7 @@
 </item>
 </insertAfter>
 <conditional>
-    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
+    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core_2_0') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
 	<remove xpath="/items/item[@name='medicalPlasterCast']"></remove>
 	<insertBefore xpath="//item[@name='medicalBloodBag']">
 <item name="medicalPlasterCast">

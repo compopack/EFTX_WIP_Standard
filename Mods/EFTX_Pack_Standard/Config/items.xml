@@ -7033,7 +7033,7 @@
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="5"/>
                         <property name="ItemClassModules" value="TrueHolster,KFCommonUtilityLib"/>
-			<property name="Meshfile" value="#@modfolder:Resources/762x54RGuns.unity3d?guntarkovmp18.prefab"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x54RGuns.unity3d?guntarkovmp18.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MRifleParts"/>
 			<property name="TintColor" value="80, 80, 80"/>
@@ -7071,7 +7071,7 @@
 				<property name="Sound_reload" value=""/>
 				<property name="AutoReload" value="false"/>
 				<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
-				<property name="Particles_muzzle_fire_fpv" value="#@modfolder:Resources/MuzzleFlashesRifle.unity3d?MuzzleMP18.prefab"/>
+				<property name="Particles_muzzle_fire_fpv" value="#@modfolder(EFTX_Pack_Core):Resources/MuzzleFlashesRifle.unity3d?MuzzleMP18.prefab"/>
 				<property name="ScopeOffset" value="0,0,0"/>
 				<property name="SideOffset" value="0,0,0"/>
 				<property name="BarrelOffset" value="-.062,.062,.16"/>
