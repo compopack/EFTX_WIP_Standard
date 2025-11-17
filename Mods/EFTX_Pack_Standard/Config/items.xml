@@ -5590,7 +5590,6 @@
 				<property name="SideOffset" value="0,0,0"/>
 				<property name="BarrelOffset" value="0,0,0"/>
 				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
 					<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
 					<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
 					<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
