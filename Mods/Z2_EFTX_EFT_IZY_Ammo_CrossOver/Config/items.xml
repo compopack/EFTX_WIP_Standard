@@ -4911,7 +4911,7 @@
             <setattribute xpath="/items/item[@name='resourceHighCaliberBulletTip']/property[@name='EconomicValue']" name="value">20</setattribute>
             <!-- *********************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='Stacknumber']" name="value">50</setattribute>
-            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='EconomicValue']" name="value">500</setattribute>
+            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='EconomicValue']" name="value">75</setattribute>
             <!-- *********************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='Stacknumber']" name="value">500</setattribute>
             <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='EconomicValue']" name="value">60</setattribute>
