@@ -4813,12 +4813,12 @@
 
 			<item name="ammoBundleEFTX762APAmmo">
 				<property name="Extends" value="ammoBundleMaster"/>
-				<property name="CustomIcon" value="AMMOEFT76251NATOAP"/>
+				<property name="CustomIcon" value="ammoEft76251NATOAP"/>
 				<property name="Stacknumber" value="10"/> <!-- STK ammobundle high -->
 				<property name="EconomicValue" value="1400"/>
 				<property name="TraderStageTemplate" value="ammoTier2"/>
 				<property class="Action0">
-					<property name="Create_item" value="AMMOEFT76251NATOAP"/>
+					<property name="Create_item" value="ammoEft76251NATOAP"/>
 				</property>
 			</item>
 			</append>	
