@@ -2192,7 +2192,6 @@
 	</conditional>
     <conditional>
 	<if cond="mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver')">
-    <append xpath="/items">
     <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
     <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft76225mmTokarev</setattribute>
     <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
@@ -2200,12 +2199,10 @@
 	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
-    </append>
     </if>
 	</conditional>
     <conditional>
 	<if cond="mod_loaded('Z2_EFTX_EFT_Only_Ammo')">
-    <append xpath="/items">
     <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
     <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft76225mmTokarev</setattribute>
     <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
@@ -2213,12 +2210,10 @@
 	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>		
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
-    </append>
     </if>
 	</conditional>
     <conditional>
 	<if cond="mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
-    <append xpath="/items">
     <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
     <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo45ACPBulletBall,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP</setattribute>
     <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
@@ -2226,12 +2221,10 @@
 	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo556mmBulletBall,ammo556mmHIpower,ammo556mmArmorPiercing,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
-    </append>
     </if>
 	</conditional>
     <conditional>
 	<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo')">
-    <append xpath="/items">
     <setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
     <setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP</setattribute>
     <setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
@@ -2239,7 +2232,6 @@
 	<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>		
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP</setattribute>
 	<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
-    </append>
     </if>
 	</conditional>
 </EFTX>
