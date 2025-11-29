@@ -1129,26 +1129,6 @@
 <!-- STEVE CRAWLER -->
 <conditional>
 		<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
-		<remove xpath="/entity_classes/entity_class[@name='zombieMutatedLootGob']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieSoldierLootGob']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieLumberjackAxe']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieLumberjackFeralAxe']property[@name='LootListOnDeath']"></remove>		
-		<remove xpath="/entity_classes/entity_class[@name='zombieDemolitionLootGob']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieJoeBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieSteveBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieTomClarkBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieBusinessManBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieBoeBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieJanitorBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieMoeBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieYoBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieSkateboarderBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieArleneBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieMarleneBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombiePartyGirlBackpacker']property[@name='LootListOnDeath']"></remove>
-		<remove xpath="/entity_classes/entity_class[@name='zombieDarleneBackpacker']property[@name='LootListOnDeath']"></remove>
-		
 		<append xpath="/entity_classes/entity_class[@name='zombieMutatedLootGob']">			
 			<property name="LootDropProb" value=".7"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerLootGobMutated"/>

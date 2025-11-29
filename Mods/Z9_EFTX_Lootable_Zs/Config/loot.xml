@@ -3249,7 +3249,7 @@
 		</if>
 		</conditional>
 		<conditional>
-		<if cond="mod_loaded('Z8_EFTX_Removed_Guns') and not mod_loaded('EFTX_Pack_Standard')">
+		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')">
 		<item name="Gunstar15SkillMagazine" count="1" loot_prob_template="low"/>	
 		</if>
 		</conditional>
@@ -3483,7 +3483,7 @@
 		</if>
 		</conditional>
 		<conditional>
-		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')  and not mod_loaded('EFTX_Pack_Standard')">
+		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')">
 		<item name="Gunstar15SkillMagazine" count="1" loot_prob_template="low"/>	
 		</if>
 		</conditional>
