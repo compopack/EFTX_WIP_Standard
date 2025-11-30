@@ -3,13 +3,6 @@
 		<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1"/>		
 	</append>
 
-	<!--  On-Aim Absolute Accuracy - Bullets go where the reticle is -->
-	<append xpath="/items/item[starts-with(@name, 'gun') and ./property[@name='Tags' and not(contains(@value, 'shotgun'))] and not(@name='gunm32a1mgl') and not(@name='gunfn40gl') and not(@name='gunchinalake')]">
-			<effect_group tiered="false">
-				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="0" tag="shotgun" invert_tag_check="true"/>
-			</effect_group>
-	</append>
-
 	<append xpath="/items">	
 				
 		<item name="resourceWeaponRepairKit">
@@ -12794,27 +12787,8 @@
 	</append>	
 
 	<!-- ### Widen The Zooming FOV -->
-	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_out']" name="value">60</set>
-	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_in']" name="value">60</set>
-	<set xpath="/items/item[contains(@name, 'Crossbow') and contains(@name, 'Bow')]/effect_group/passive_effect[@name='SpreadMultiplierAiming']" name="value">0.15</set>
-	<set xpath="/items/item/effect_group[not (contains(@name, 'Bow')) and not (contains(@name, 'Crossbow')) and not (contains(@name, 'Shotgun'))]/passive_effect[@name='SpreadMultiplierCrouching']" name="value">.66</set>
-	<set xpath="/items/item/effect_group/passive_effect[(@name='WeaponHandling') and (@operation='base_set')]" name="value">346</set>
-	
-	<append xpath="/items/item[starts-with(@name, 'gun') and not (contains(@name, 'Parts'))]">
-			<effect_group name="kickModifier">
-				<!-- Recoil Snap -->
-				<passive_effect name="KickDegreeHorizontalModifier" operation="base_set" value="0"/>
-				<passive_effect name="KickDegreeVerticalModifier" operation="base_set" value="0"/>
-			</effect_group>
-</append>
-
-
-	<append xpath="/items/item[(starts-with(@name, 'gun')) and not (@name='gunstm9') and not (@name='gunmpx') and not (@name='gunmp9') and not (@name='gunuziprosmg') and not (@name='gunmp7') and not (@name='gunsr2mveresk') and not (@name='gunak300velociraptor') and not (@name='gunrsass') and not (@name='gunhk416') and not (@name='gunIWItavorx95') and not (@name='gunIWIcarmel') and not (@name='gunauga3') and not (@name='gunrfb') and not (@name='gunmdr762') and not (@name='gunash12') and not (starts-with(@name, 'gunBow')) and not (starts-with(@name, 'gunBot')) and not ((contains(@name, 'gun')) and (contains(@name, 'Parts')))]">
-		<effect_group>
-			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftErgoFactor" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gunEftHipAccFactor" operation="set" value="1"/>
-		</effect_group>
-	</append>
+	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_out']/@value">45</set>
+	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_in']/@value">45</set>
 	
 	<conditional>
 	<if cond="not mod_loaded('Z1_EFTX_Meds_Plus')">
@@ -15040,13 +15014,13 @@
         <item name="schematicmuzzle_sv_98_srw_dtk_jet_mk2_762x54r">
 			<property name="Extends" value="schematicNoQualityMaster"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r"/>
+			<property name="CustomIcon" value="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/>
 			<property name="DescriptionKey" value="schematicmuzzle_sv_98_srw_dtk_jet_mk2_762x54rDesc"/>
 			<property name="TraderStageTemplate" value="baseTier3"/>
 			<property name="EconomicValue" value="10"/>
-			<property name="Unlocks" value="modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r"/>
+			<property name="Unlocks" value="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r" operation="set" value="1"/>
 			</effect_group>
 		</item>
         <item name="schematicmuzzle_svd_izhmash_svd_s_std_762x54">

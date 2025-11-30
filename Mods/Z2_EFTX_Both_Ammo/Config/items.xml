@@ -3959,7 +3959,7 @@
 		
 		<!-- ### 40x46 & 40x53 -->
 		<item name="ammoEft4046381">
-			<property name="Tags" value="ammo,perkDemolitionsExpert"/>
+			<property name="Tags" value="ammo,ammo4046,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="ammoLauncher"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/grenades.unity3d?patron_40x46_m381.prefab"/>
@@ -3967,43 +3967,49 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mlead_scrap"/>
 			<property name="Stacknumber" value="10"/>
-			<property name="EconomicValue" value="309"/>
+			<property name="EconomicValue" value="300"/>
 			<property name="TraderStageTemplate" value="ammoTier1"/>
 			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="UnlockedBy" value="craftingBigBoomBoom"/>
+			<property name="UnlockedBy" value="schematicsExplosives"/>
 			<property name="SoundPickup" value="parts_grab"/>
 			<property name="SoundPlace" value="parts_place"/>
-			<property name="DescriptionKey" value="ammoEft4046381Desc"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="CustomProjectileType" value="GameObject,FullautoLauncher"/>
-				<!--<property name="Explosion.ParticleIndex" value="#@modfolder(EFTX_Pack_Core):Resources/M16M203.unity3d?m203_explosion$M203Frag"/>-->
+				<!--property name="Explosion.ParticleIndex" value="#@modfolder:Resources/M16M203.unity3d?m203_explosion$M203Frag"/-->
 				<property name="Explosion.ParticleIndex" value="13"/>
 				<property name="Explosion.AudioName" value="kaboomstick_explosion"/>
 				<property name="Explosion.BlockDamage" value="25"/>
-				<property name="Explosion.EntityDamage" value="1000"/>
-				<property name="Explosion.RadiusBlocks" value="8"/>
+				<property name="Explosion.EntityDamage" value="1050"/>
 				<property name="Explosion.RadiusEntities" value="8"/>
+				<property name="Explosion.RadiusBlocks" value="4"/>
 				<property name="Explosion.BlastPower" value="225"/>
 				<property name="Gravity" value="-7"/>
-				<property name="FlyTime" value=".5"/>
-				<property name="LifeTime" value="12"/>
+				<property name="FlyTime" value="0.5"/>
+				<property name="LifeTime" value="60"/>
 				<property name="DeadTime" value="4"/>
 			</property>
 			<effect_group name="40x46grenade" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="500"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="25"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="1500"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="16"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>
-				<display_value name="dExEntityDamage" value="1000"/>
+				<display_value name="dExEntityDamage" value="1048"/>
 				<display_value name="dExBlockDamage" value="25"/>
 				<display_value name="dExRadius" value="8"/>
 				<passive_effect name="ProjectileVelocity" operation="base_set" value="35" tags="perkDemolitionsExpert"/>
 				
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.8"/>
+				<!--passive_effect name="ProjectileImpactDamagePercentBlock" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
+				<passive_effect name="ProjectileImpactDamagePercentEntity" operation="base_set" value="0" tags="perkDemolitionsExpert"/-->
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="human"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="barrelExplosive"/>				
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftShotgunAmmo" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="2"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.35"/>
 				<passive_effect name="DismemberChance" operation="base_set" value="10"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
 			</effect_group>
 			<effect_group tiered="false" name="Shell Display">
 				<requirement name="AmmoIndexIs" value="0"/>
@@ -4019,13 +4025,12 @@
 			<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="Material" value="Mlead_scrap"/>
 			<property name="Stacknumber" value="10"/>
-			<property name="EconomicValue" value="999999"/>
+			<property name="EconomicValue" value="125"/>
 			<property name="TraderStageTemplate" value="ammoTier1"/>
 			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="UnlockedBy" value="craftingBigBoomBoom"/>
+			<property name="UnlockedBy" value="schematicsExplosives"/>
 			<property name="SoundPickup" value="parts_grab"/>
 			<property name="SoundPlace" value="parts_place"/>
-			<property name="DescriptionKey" value="ammoEft4046576Desc"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="CustomProjectileType" value="GameObject,FullautoLauncher"/>
@@ -4041,9 +4046,10 @@
 				<property name="Explosion.DamageBonus.metal" value="0"/>
 				<property name="Explosion.DamageBonus.earth" value="0"/>
 				<property name="Explosion.DamageBonus.wood" value="0"/>
-				<property name="Gravity" value="-3"/>
-				<property name="FlyTime" value=".8"/>
-				<property name="LifeTime" value="70"/>
+				<property name="Gravity" value="-5"/>
+				<property name="FlyTime" value="0.8"/>
+				<property name="LifeTime" value="60"/>
+				<property name="DeadTime" value="4"/>
 			</property>
 			<effect_group name="40x46grenade2" tiered="false">
 				<passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>
@@ -4051,21 +4057,29 @@
 				<passive_effect name="ProjectileImpactDamagePercentEntity" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
 				
 				<passive_effect name="MaxRange" operation="base_set" value="88" tags="perkDemolitionsExpert"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
 				<passive_effect name="EntityDamage" operation="base_set" value="160" tags="perkDemolitionsExpert"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="15" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieBodyArmorDamage" operation="add" value="950"><requirement name="HitLocation" body_parts="Torso"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieHelmetDamage" operation="add" value="1900"><requirement name="HitLocation" body_parts="Head"/></triggered_effect><display_value name="dEftArmorDamage" value="950"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="torso"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="head"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="torso"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelTorso" operation="LTE" value="5"/></passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="head"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelHead" operation="LTE" value="5"/></passive_effect><display_value name="dEftPenetration" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="0" tags="perkDemolitionsExpert"/><display_value name="dTargetPenetration" value="0"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="6" tags="wood"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkDemolitionsExpert"/> 
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftShotgunAmmo" operation="set" value="0.75"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="1.5"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.35"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftShotgunAmmo" operation="set" value="4.5"/>
 				<passive_effect name="DismemberChance" operation="base_set" value="10" tags="arm"/>
 				<passive_effect name="DismemberChance" operation="base_set" value="10" tags="leg"/>
 				<passive_effect name="InternalDamageModifier" operation="perc_add" value=".5" tags="arms,legs"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
 			</effect_group>
 			<effect_group tiered="false" name="Shell Display">
 				<requirement name="AmmoIndexIs" value="1"/>
@@ -4073,9 +4087,8 @@
 					<triggered_effect trigger="onSelfHoldingItemCreated" action="AnimatorSetInt" property="ammoIndex"  value="1"></triggered_effect>
 			</effect_group>
 		</item>
-
 		<item name="ammoEft4053vog25">
-			<property name="Tags" value="ammo,perkDemolitionsExpert"/>
+			<property name="Tags" value="ammo,ammo4046,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="ammoLauncher"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/grenades.unity3d?patron_vog25_40mm.prefab"/>
@@ -4083,49 +4096,49 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mlead_scrap"/>
 			<property name="Stacknumber" value="10"/>
-			<property name="EconomicValue" value="304.9"/>
+			<property name="EconomicValue" value="325"/>
 			<property name="TraderStageTemplate" value="ammoTier1"/>
 			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="UnlockedBy" value="craftingBigBoomBoom"/>
+			<property name="UnlockedBy" value="schematicsExplosives"/>
 			<property name="SoundPickup" value="parts_grab"/>
 			<property name="SoundPlace" value="parts_place"/>
-			<property name="DescriptionKey" value="ammoEft4053vog25Desc"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="CustomProjectileType" value="GameObject,FullautoLauncher"/>
-				<!--<property name="Explosion.ParticleIndex" value="#@modfolder(EFTX_Pack_Core):Resources/M16M203.unity3d?m203_explosion$M203Frag"/>-->
+				<!--property name="Explosion.ParticleIndex" value="#@modfolder:Resources/M16M203.unity3d?m203_explosion$M203Frag"/-->
 				<property name="Explosion.ParticleIndex" value="13"/>
 				<property name="Explosion.AudioName" value="kaboomstick_explosion"/>
 				<property name="Explosion.BlockDamage" value="25"/>
-				<property name="Explosion.EntityDamage" value="1000"/>
-				<property name="Explosion.RadiusBlocks" value="4"/>
+				<property name="Explosion.EntityDamage" value="1200"/>
 				<property name="Explosion.RadiusEntities" value="8"/>
+				<property name="Explosion.RadiusBlocks" value="4"/>
 				<property name="Explosion.BlastPower" value="225"/>
 				<property name="Gravity" value="-7"/>
-				<property name="FlyTime" value=".5"/>
-				<property name="LifeTime" value="12"/>
+				<property name="FlyTime" value="0.5"/>
+				<property name="LifeTime" value="60"/>
 				<property name="DeadTime" value="4"/>
 			</property>
 			<effect_group name="40x46grenade" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="500"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="25"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="1800"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="16"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>
-				<display_value name="dExEntityDamage" value="1000"/>
+				<display_value name="dExEntityDamage" value="1048"/>
 				<display_value name="dExBlockDamage" value="25"/>
 				<display_value name="dExRadius" value="8"/>
-				<passive_effect name="ProjectileVelocity" operation="base_set" value="35" tags="perkDemolitionsExpert"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="36" tags="perkDemolitionsExpert"/>
 				
 				<!--passive_effect name="ProjectileImpactDamagePercentBlock" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
 				<passive_effect name="ProjectileImpactDamagePercentEntity" operation="base_set" value="0" tags="perkDemolitionsExpert"/-->
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="human"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-				<!--passive_effect name="SpreadDegreesVertical" operation="base_set" value="5.5" tags="perkDemolitionsExpert"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5.5" tags="perkDemolitionsExpert"/-->
-				
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.8"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="barrelExplosive"/>				
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftShotgunAmmo" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="2"/>
-				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.35"/>
 				<passive_effect name="DismemberChance" operation="base_set" value="10"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0" tags="perkDemolitionsExpert"><requirement name="HasBuff" buff="buffHoldBreathAiming01"/></passive_effect>
 			</effect_group>
 		</item>
 		
@@ -4516,11 +4529,11 @@
 		<setattribute xpath="/items/item[@name='gunAA12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
 		<!-- SHOTGUNS -->
 		<!-- GRENADE LAUNCHERS -->
-		<setattribute xpath="/items/item[@name='gunfn40gl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4046576</setattribute>
+		<setattribute xpath="/items/item[@name='gunfn40gl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4053vog25</setattribute>
 		
-		<setattribute xpath="/items/item[@name='gunchinalake']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4046576</setattribute>
+		<setattribute xpath="/items/item[@name='gunchinalake']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4053vog25</setattribute>
 		
-		<setattribute xpath="/items/item[@name='gunm32a1mgl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4046576</setattribute>
+		<setattribute xpath="/items/item[@name='gunm32a1mgl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576,ammoEft4053vog25</setattribute>
 		<!-- GRENADE LAUNCHERS -->	
 		<!-- ROCKET LAUNCHER -->
 		<setattribute xpath="/items/item[@name='gunrpg7']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft9340pg7vl</setattribute>
@@ -5813,7 +5826,7 @@
             <!-- AMMOEFTBARRICADESLUG -->
 			
 			<!-- AMMOEFT4046381 -->
-			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Tags']" name="value">ammo,ammo4046,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Stacknumber']" name="value">20</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='EconomicValue']" name="value">2987</setattribute>
@@ -5846,7 +5859,7 @@
 	        </append>			
             <!-- AMMOEFT4046576 -->
             <!-- AMMOEFT4053VOG25 -->
-			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Tags']" name="value">ammo,ammo4046,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Stacknumber']" name="value">20</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='EconomicValue']" name="value">3623</setattribute>
@@ -5855,7 +5868,7 @@
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
             <!-- AMMOEFT4053VOG25 -->
             <!-- ammoEft9340pg7vl -->
-			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='Tags']" name="value">ammo,ammo9340,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='Stacknumber']" name="value">10</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='EconomicValue']" name="value">52252</setattribute>

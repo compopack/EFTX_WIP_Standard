@@ -2298,7 +2298,7 @@
 			<ingredient name="resourceForgedSteel" count="9"/>
 			<ingredient name="resourceToolset" count="1"/>
 		</recipe>
-		<recipe name="modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceMetalPipe" count="1"/>
 			<ingredient name="resourceForgedSteel" count="9"/>
 			<ingredient name="resourceToolset" count="1"/>

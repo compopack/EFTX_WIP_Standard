@@ -4677,7 +4677,7 @@
 				<passive_effect name="DegradationPerUse" operation="perc_add" value=".15"/>
 			</effect_group>
 		</item_modifier>
-		<item_modifier name="modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r" installable_tags="sv98only" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment"> <!-- T3 -->
+		<item_modifier name="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r" installable_tags="sv98only" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment"> <!-- T3 -->
 			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 			<property name="TraderStageTemplate" value="modsTier3"/>
 			<property name="EconomicValue" value="2250"/>
@@ -10843,11 +10843,11 @@
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modsilencer_sv98_izhmash_silencer_std_762x54']/property[@name='TraderStageTemplate']" name="value">baseTier3</setattribute>
 	<append xpath="/item_modifiers/item_modifier[@name='modsilencer_sv98_izhmash_silencer_std_762x54']"><property name="UnlockedBy" value="schematicsilencer_sv98_izhmash_silencer_std_762x54"/></append>
 	<!-- modsilencer_sv98_izhmash_silencer_std_762x54 -->
-	<!-- modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r -->
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r']/property[@name='EconomicValue']" name="value">4400</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r']/property[@name='TraderStageTemplate']" name="value">baseTier3</setattribute>
-	<append xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r']"><property name="UnlockedBy" value="schematicmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/></append>
-	<!-- modmuzzle_sv-98_srw_dtk_jet_mk2_762x54r -->
+	<!-- modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r -->
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r']/property[@name='EconomicValue']" name="value">4400</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r']/property[@name='TraderStageTemplate']" name="value">baseTier3</setattribute>
+	<append xpath="/item_modifiers/item_modifier[@name='modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r']"><property name="UnlockedBy" value="schematicmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/></append>
+	<!-- modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r -->
 	<!-- modmuzzle_svd_izhmash_svd_s_std_762x54 -->
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_svd_izhmash_svd_s_std_762x54']/property[@name='EconomicValue']" name="value">4400</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modmuzzle_svd_izhmash_svd_s_std_762x54']/property[@name='TraderStageTemplate']" name="value">baseTier3</setattribute>
