@@ -4062,12 +4062,8 @@
 				<passive_effect name="RoundRayCount" operation="base_set" value="15" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>
-				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieBodyArmorDamage" operation="add" value="950"><requirement name="HitLocation" body_parts="Torso"/></triggered_effect>
-				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieHelmetDamage" operation="add" value="1900"><requirement name="HitLocation" body_parts="Head"/></triggered_effect><display_value name="dEftArmorDamage" value="950"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="torso"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="head"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="torso"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelTorso" operation="LTE" value="5"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="head"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelHead" operation="LTE" value="5"/></passive_effect><display_value name="dEftPenetration" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="0" tags="perkDemolitionsExpert"/><display_value name="dTargetPenetration" value="0"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="6" tags="wood"/>
@@ -4379,52 +4375,52 @@
 		<append xpath="/items/item[@name='bundleWeaponsCaseT2_2']/property[@class='Action0']/property[@name='Create_item_count']/@value">,30,30</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseGoldenTT']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft76225mmTokarev</append>
-		<append xpath="/items/item[@name='bundlePistolCaseGoldenTT']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseGoldenTT']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseTT']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft76225mmTokarev</append>
-		<append xpath="/items/item[@name='bundlePistolCaseTT']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseTT']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 
 		<append xpath="/items/item[@name='bundlePistolCasePM']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft918mmPM</append>
-		<append xpath="/items/item[@name='bundlePistolCasePM']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCasePM']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseAPS']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft918mmPM</append>
-		<append xpath="/items/item[@name='bundlePistolCaseAPS']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseAPS']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseG17']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft919mm</append>
-		<append xpath="/items/item[@name='bundlePistolCaseG17']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseG17']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseP226']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft919mm</append>
-		<append xpath="/items/item[@name='bundlePistolCaseP226']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseP226']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseM9A3']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft919mm</append>
-		<append xpath="/items/item[@name='bundlePistolCaseM9A3']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseM9A3']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseG18C']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft919mm</append>
-		<append xpath="/items/item[@name='bundlePistolCaseG18C']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseG18C']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseSR1MP']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft921mm</append>
-		<append xpath="/items/item[@name='bundlePistolCaseSR1MP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseSR1MP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseUSP45T']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo44MagnumBulletBall,ammoEft45ACP</append>	
-		<append xpath="/items/item[@name='bundlePistolCaseUSP45T']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseUSP45T']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCase1911']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo44MagnumBulletBall,ammoEft45ACP</append>
-		<append xpath="/items/item[@name='bundlePistolCase1911']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCase1911']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseM45']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo44MagnumBulletBall,ammoEft45ACP</append>
-		<append xpath="/items/item[@name='bundlePistolCaseM45']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseM45']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseUSP45M']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo44MagnumBulletBall,ammoEft45ACP</append>
-		<append xpath="/items/item[@name='bundlePistolCaseUSP45M']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseUSP45M']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft4630mmHK</append>
-		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,75-150,75,150</append>
+		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,75-150,75-150</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseFS']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft5728FN</append>
-		<append xpath="/items/item[@name='bundlePistolCaseFS']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseFS']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseRSH']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft12755PS12</append>
-		<append xpath="/items/item[@name='bundlePistolCaseRSH']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
+		<append xpath="/items/item[@name='bundlePistolCaseRSH']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25-50</append>
 		
 		<!-- SMG -->
 		<setattribute xpath="/items/item[@name='gunppsh41']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>

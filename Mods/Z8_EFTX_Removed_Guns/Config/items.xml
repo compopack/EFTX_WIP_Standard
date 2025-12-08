@@ -2169,7 +2169,7 @@
 	<conditional>
 		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
 			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='UnlockedBy']" name="value">craftinggunmdr556</setattribute>
-			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='Tags']" name="value">,eftxmdr556,modGunEFTXLaserSight,eftxbizmdrl85a2,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,eftxforegrip,eftxsideattachments,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxm203,weapon,ranged,holdBreathAiming,reloadPenalty,gun,mdronly,mdr556only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
+			<setattribute xpath="/items/item[@name='gunmdr556']/property[@name='Tags']" name="value">eftxmdr556,modGunEFTXLaserSight,eftxbizmdrl85a2,eftxCompactReflexSight,eftxAssaultScope,eftxReflexSight,eftxattachmentsIncluded,eftxnobipod,eftxforegrip,eftxsideattachments,eftxScope30mm,eftxScope34mm,eftxCantedSight,eftxmuzzleAR15aac51t,eftxmuzzleAR15thunderbeast223cb,eftxmuzzleAR15sf3p556,eftxm203,weapon,ranged,holdBreathAiming,reloadPenalty,gun,mdronly,mdr556only,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill</setattribute>
 		</if>
 	</conditional>
 	<conditional>

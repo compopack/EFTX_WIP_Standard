@@ -3,48 +3,48 @@
 	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
     <append xpath="/progression/crafting_skills">
     <crafting_skill name="craftinggunpp19bizon" max_level="100" parent="attCrafting" name_key="craftinggunpp19bizonName" desc_key="craftinggunpp19bizonDesc" long_desc_key="craftinggunpp19bizonLongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="gunpp19bizon" name_key="gunpp19bizon" has_quality="true" unlock_level="20,30,40,60,80,100">
+			<display_entry icon="gunpp19bizon" name_key="gunpp19bizon" has_quality="true" unlock_level="20,30,40,50,60,70">
 				<unlock_entry item="gunpp19bizon" unlock_tier="1" />
 			</display_entry>
 			<effect_group>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="gunpp19bizon"/> 					
-				<passive_effect name="CraftingTier" operation="base_add" level="30,40,60,80,100" value="1,2,3,4,5" tags="gunpp19bizon"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="30,40,50,60,70,100" value="1,2,3,4,5" tags="gunpp19bizon"/>
 				</effect_group>		
 	</crafting_skill>	
-    <crafting_skill name="craftingguntokarevmachine" max_level="50" parent="attCrafting" name_key="craftingguntokarevmachineName" desc_key="craftingguntokarevmachineDesc" long_desc_key="craftingguntokarevmachineLongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="guntokarevmachine" name_key="Tokarev Machine Gun" has_quality="true" unlock_level="15,20,25,30,35,50">
+    <crafting_skill name="craftingguntokarevmachine" max_level="100" parent="attCrafting" name_key="craftingguntokarevmachineName" desc_key="craftingguntokarevmachineDesc" long_desc_key="craftingguntokarevmachineLongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="guntokarevmachine" name_key="Tokarev Machine Gun" has_quality="true" unlock_level="20,25,35,45,55,65">
 				<unlock_entry item="guntokarevmachine" unlock_tier="1" />
 			</display_entry>
 			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,50" value="1" tags="guntokarevmachine"/> 					
-				<passive_effect name="CraftingTier" operation="base_add" level="20,25,30,35,50" value="1,2,3,4,5" tags="guntokarevmachine"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="guntokarevmachine"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="25,35,45,55,65,100" value="1,2,3,4,5" tags="guntokarevmachine"/>
 				</effect_group>		
 	</crafting_skill>
     <crafting_skill name="craftinggunstar15" max_level="100" parent="attCrafting" name_key="craftinggunstar15Name" desc_key="craftinggunstar15Desc" long_desc_key="craftinggunstar15LongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="gunstar15" name_key="Star 15" has_quality="true" unlock_level="25,45,60,75,90,100">
+			<display_entry icon="gunstar15" name_key="Star 15" has_quality="true" unlock_level="20,35,50,65,80,95">
 				<unlock_entry item="gunstar15" unlock_tier="1" />
 			</display_entry>
 			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="gunstar15"/> 					
-				<passive_effect name="CraftingTier" operation="base_add" level="45,60,75,90,100" value="1,2,3,4,5" tags="gunstar15"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="gunstar15"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="35,50,65,80,95,100" value="1,2,3,4,5" tags="gunstar15"/>
 				</effect_group>		
 	</crafting_skill>
-    <crafting_skill name="craftinggunl85a2" max_level="70" parent="attCrafting" name_key="craftinggunl85a2Name" desc_key="craftinggunl85a2Desc" long_desc_key="craftinggunl85a2LongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="gunl85a2" name_key="L85A2" has_quality="true" unlock_level="25,30,35,40,50,70">
+    <crafting_skill name="craftinggunl85a2" max_level="100" parent="attCrafting" name_key="craftinggunl85a2Name" desc_key="craftinggunl85a2Desc" long_desc_key="craftinggunl85a2LongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunl85a2" name_key="L85A2" has_quality="true" unlock_level="20,30,40,50,60,70">
 				<unlock_entry item="gunl85a2" unlock_tier="1" />
 			</display_entry>
 			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,70" value="1" tags="gunl85a2"/> 					
-				<passive_effect name="CraftingTier" operation="base_add" level="30,35,40,50,70" value="1,2,3,4,5" tags="gunl85a2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="gunl85a2"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="30,40,50,60,70,100" value="1,2,3,4,5" tags="gunl85a2"/>
 				</effect_group>		
 	</crafting_skill>
-    <crafting_skill name="craftinggunmdr556" max_level="80" parent="attCrafting" name_key="craftinggunmdr556Name" desc_key="craftinggunmdr556Desc" long_desc_key="craftinggunmdr556LongDesc" icon="ui_game_symbol_tool_smithing">
-			<display_entry icon="gunmdr556" name_key="MDR 556" has_quality="true" unlock_level="40,45,50,55,60,80">
+    <crafting_skill name="craftinggunmdr556" max_level="100" parent="attCrafting" name_key="craftinggunmdr556Name" desc_key="craftinggunmdr556Desc" long_desc_key="craftinggunmdr556LongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="gunmdr556" name_key="MDR 556" has_quality="true" unlock_level="40,45,50,55,60,65">
 				<unlock_entry item="gunmdr556" unlock_tier="1" />
 			</display_entry>
 			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,80" value="1" tags="gunmdr556"/> 					
-				<passive_effect name="CraftingTier" operation="base_add" level="45,50,55,60,80" value="1,2,3,4,5" tags="gunmdr556"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100" value="1" tags="gunmdr556"/> 					
+				<passive_effect name="CraftingTier" operation="base_add" level="45,50,55,60,65,100" value="1,2,3,4,5" tags="gunmdr556"/>
 				</effect_group>		
 	</crafting_skill>
     </append>

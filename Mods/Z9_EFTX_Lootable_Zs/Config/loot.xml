@@ -3249,7 +3249,7 @@
 		</if>
 		</conditional>
 		<conditional>
-		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')">
+		<if cond="mod_loaded('Z8_EFTX_Removed_Guns') and not mod_loaded('EFTX_Pack_Standard')">
 		<item name="Gunstar15SkillMagazine" count="1" loot_prob_template="low"/>	
 		</if>
 		</conditional>
@@ -3483,7 +3483,7 @@
 		</if>
 		</conditional>
 		<conditional>
-		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')">
+		<if cond="mod_loaded('Z8_EFTX_Removed_Guns') and not mod_loaded('EFTX_Pack_Standard')">
 		<item name="Gunstar15SkillMagazine" count="1" loot_prob_template="low"/>	
 		</if>
 		</conditional>
@@ -4809,7 +4809,7 @@
 		</if>
 		</conditional>
 		<conditional>
-		<if cond="mod_loaded('Z8_EFTX_Removed_Guns')">
+		<if cond="mod_loaded('Z8_EFTX_Removed_Guns') and not mod_loaded('EFTX_Pack_Standard')">
 		<item name="GuntokarevmachineSkillMagazine"  count="0,1" loot_prob_template="low"/>
 		</if>
 		</conditional>
@@ -6362,12 +6362,6 @@
     <remove xpath="//lootgroup[@name='groupMedicineCabinet']/item[@group='groupInjectorExtraLarge']"/>
     <remove xpath="//lootgroup[@name='groupPopNPillsCrate']/item[@group='groupInjectorExtraLarge']"/>
 	
-	<insertBefore xpath="//lootgroup[@name='groupModEftSkillMagazinesSmg']">
-	<lootgroup name="groupModEftSkillMagazinesMedical" >
-			<item name="DoctorMedicalJournalsSkillMagazine" count="1,2"/>
-			<item name="BooksOfASurgeonSkillMagazine" count="1,2"/>
-	</lootgroup>	
-</insertBefore>
     <append xpath="/lootcontainers">	
 <!-- LAB -->
 		<lootgroup name="GroupLabPistolsT1" count="1" loot_quality_template="QLTemplateT1">

@@ -4018,12 +4018,8 @@
 				<passive_effect name="RoundRayCount" operation="base_set" value="15" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="3" tags="perkDemolitionsExpert"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>
-				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieBodyArmorDamage" operation="add" value="950"><requirement name="HitLocation" body_parts="Torso"/></triggered_effect>
-				<triggered_effect trigger="onSelfAttackedOther" target="other" action="ModifyCVar" cvar="eftZombieHelmetDamage" operation="add" value="1900"><requirement name="HitLocation" body_parts="Head"/></triggered_effect><display_value name="dEftArmorDamage" value="950"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="torso"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="head"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="torso"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelTorso" operation="LTE" value="5"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="head"><requirement name="CVarCompare" target="other" cvar="eftArmorLevelHead" operation="LTE" value="5"/></passive_effect><display_value name="dEftPenetration" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="0" tags="perkDemolitionsExpert"/><display_value name="dTargetPenetration" value="0"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="6" tags="wood"/>
@@ -4373,7 +4369,7 @@
 		<append xpath="/items/item[@name='bundlePistolCaseUSP45M']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50</append>
 
 		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item']/@value">,ammo9mmBulletBall,ammoEft4630mmHK</append>
-		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,75-150,75,150</append>
+		<append xpath="/items/item[@name='bundlePistolCaseUCP']/property[@class='Action0']/property[@name='Create_item_count']/@value">,75-150,75-150</append>
 		
 		<append xpath="/items/item[@name='bundlePistolCaseFS']/property[@class='Action0']/property[@name='Create_item']/@value">,ammoEft5728FN</append>
 		<append xpath="/items/item[@name='bundlePistolCaseFS']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50</append>
