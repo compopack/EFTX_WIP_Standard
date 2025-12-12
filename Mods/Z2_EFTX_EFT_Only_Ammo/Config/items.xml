@@ -4858,12 +4858,25 @@
             <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">55</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<remove xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>			
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
 			<append xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']">
 			<display_value name="DegradationPerUse" value=".01,.05"/>
 			<display_value name="dDegradationPerUse" value=".01,.05"/>
 			</append>
-
             <!-- AMMOEFT54539 -->
             <!-- AMMOEFT54539AP -->
 			<setattribute xpath="/items/item[@name='ammoEft54539AP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -4874,7 +4887,8 @@
             <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">50</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']">
+			
+		    <append xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']">
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner,ammo"/><display_value name="dTargetArmor" value="-.5"/>
              	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner,ammo">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
@@ -4889,7 +4903,8 @@
 			</append>
 			<setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='DegradationPerUse']" name="value">.08,.15</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/display_value[@name='dDegradationPerUse']" name="value">.08,.15</setattribute>
-			<!-- AMMOEFT54539AP -->
+						
+            <!-- AMMOEFT54539AP -->
             <!-- AMMOEFT54539HP -->
 			<setattribute xpath="/items/item[@name='ammoEft54539HP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft54539HP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -4899,14 +4914,25 @@
             <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">61</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<remove xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>			
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>		
 			<append xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']">
 			<display_value name="DegradationPerUse" value=".05,.10"/>
 			<display_value name="dDegradationPerUse" value=".05,.10"/>
-			</append>
-			<append xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
-			</append>
+			</append>	
 			<!-- AMMOEFT54539HP -->
             <!-- AMMOEFT55645NATO -->
 			<setattribute xpath="/items/item[@name='ammoEft55645NATO']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -4918,6 +4944,24 @@
             <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT55645NATO -->
             <!-- AMMOEFT55645NATOAP -->
 			<setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -4928,6 +4972,7 @@
             <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">52</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']">			
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
@@ -4941,7 +4986,8 @@
 				<display_value name="dTargetArmorDMG" value="81"/>
 				<display_value name="dTargetArmorPEN" value="30"/>  
 	        </append>
-			<!-- AMMOEFT55645NATOAP -->
+			
+            <!-- AMMOEFT55645NATOAP -->
             <!-- AMMOEFT55645NATOHP -->
 			<setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -4952,10 +4998,25 @@
             <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			 <!-- AMMOEFT55645NATOHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT55645NATOHP -->
             <!-- AMMOEFT300BLK -->
 			<setattribute xpath="/items/item[@name='ammoEft300blk']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft300blk']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -4966,6 +5027,24 @@
             <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT300BLK -->
             <!-- ammoEft300blkAP -->
 			<setattribute xpath="/items/item[@name='ammoEft300blkAP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -4976,8 +5055,9 @@
             <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">49</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']">
-		    	<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+			
+		   	<append xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']">
+		       <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	           <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
 		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
@@ -4987,9 +5067,10 @@
 		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 				<display_value name="dTargetArmorDMG" value="47"/>
-				<display_value name="dTargetArmorPEN" value="25"/>  
+				<display_value name="dTargetArmorPEN" value="25"/> 
 	        </append>
-			<!-- ammoEft300blkAP -->
+			
+            <!-- ammoEft300blkAP -->
             <!-- AMMOEFT300BLKHP -->
 			<setattribute xpath="/items/item[@name='ammoEft300blkHP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft300blkHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5000,10 +5081,26 @@
             <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>	
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			 <!-- AMMOEFT300BLKHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+			
+            <!-- AMMOEFT300BLKHP -->
             <!-- AMMOEFT76239 -->
 			<setattribute xpath="/items/item[@name='ammoEft76239']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76239']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5014,6 +5111,24 @@
             <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT76239 -->
             <!-- AMMOEFT76239AP -->
 			<setattribute xpath="/items/item[@name='ammoEft76239AP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -5024,6 +5139,7 @@
             <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">57</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']">
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
@@ -5037,7 +5153,8 @@
 				<display_value name="dTargetArmorDMG" value="81"/>
 				<display_value name="dTargetArmorPEN" value="35"/> 
 			</append>
-			<!-- AMMOEFT76239AP -->
+			
+            <!-- AMMOEFT76239AP -->
             <!-- AMMOEFT76239HP -->
 			<setattribute xpath="/items/item[@name='ammoEft76239HP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76239HP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5048,10 +5165,25 @@
             <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT76239HP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT76239HP -->
             <!-- AMMOEFT939 -->
 			<setattribute xpath="/items/item[@name='ammoEft939']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft939']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5062,6 +5194,24 @@
             <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT939 -->
             <!-- AMMOEFT939AP -->
 			<setattribute xpath="/items/item[@name='ammoEft939AP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -5072,6 +5222,7 @@
             <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">54</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']">
 		  		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
@@ -5085,7 +5236,8 @@
 				<display_value name="dTargetArmorDMG" value="30"/>
 				<display_value name="dTargetArmorPEN" value="20"/> 
 	        </append>
-			<!-- AMMOEFT939AP -->
+			
+            <!-- AMMOEFT939AP -->
             <!-- AMMOEFT939HP -->
 			<setattribute xpath="/items/item[@name='ammoEft939HP']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft939HP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5095,11 +5247,26 @@
             <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">65</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>	
+			<remove xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			 <!-- AMMOEFT939HP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT939HP -->
             <!-- AMMOEFT76251NATO -->
 			<setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5109,7 +5276,25 @@
             <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">103</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>			
             <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>	
-			<remove xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
+			<remove xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>	
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>	
             <!-- AMMOEFT76251NATO -->
             <!-- AMMOEFT76251NATOAP -->
 			<setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/property[@name='Tags']" name="value">ammo,ammoArmorPiercing,ammo762mmHC</setattribute>
@@ -5120,6 +5305,7 @@
             <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">93</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']">
 		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
@@ -5133,7 +5319,8 @@
 				<display_value name="dTargetArmorDMG" value="83"/>
 				<display_value name="dTargetArmorPEN" value="47"/> 
 	        </append>
-			<!-- AMMOEFT76251NATOAP -->
+			
+            <!-- AMMOEFT76251NATOAP -->
             <!-- AMMOEFT76251NATOHP -->
 			<setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5144,10 +5331,25 @@
             <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT76251NATOHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT76251NATOHP -->
             <!-- AMMOEFT76254R -->
 			<setattribute xpath="/items/item[@name='ammoEft76254R']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76254R']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5158,6 +5360,24 @@
             <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT76254R -->
             <!-- AMMOEFT76254RAP -->
 			<setattribute xpath="/items/item[@name='ammoEft76254RAP']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
@@ -5168,7 +5388,8 @@
             <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">90</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']">
+			
+		    <append xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']">
 			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
@@ -5179,9 +5400,10 @@
 		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 				<display_value name="dTargetArmorDMG" value="83"/>
-				<display_value name="dTargetArmorPEN" value="47"/> 
+				<display_value name="dTargetArmorPEN" value="45"/> 
 	        </append>
-			<!-- AMMOEFT76254RAP -->
+			
+            <!-- AMMOEFT76254RAP -->
             <!-- AMMOEFT76254RHP -->
 			<setattribute xpath="/items/item[@name='ammoEft76254RHP']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76254RHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5192,10 +5414,26 @@
             <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT76254RHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+			
+            <!-- AMMOEFT76254RHP -->
             <!-- AMMOEFT12755PS12 -->
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='Tags']" name="value">ammo,ammo762mmHC,ammo12755</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5207,6 +5445,24 @@
             <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			</append>
+			<setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/display_value[@name='dDegradationPerUse']" name="value">.01,.05</setattribute>			
             <!-- AMMOEFT12755PS12 -->
             <!-- AMMOEFT12755PS12A -->
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12A']/property[@name='Tags']" name="value">ammo,ammo762mmHC,ammo12755</setattribute>
@@ -5219,10 +5475,25 @@
             <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT12755PS12A -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT12755PS12A -->
             <!-- AMMOEFT12755PS12B -->
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12B']/property[@name='Tags']" name="value">ammo,ammo762mmHC,ammo12755</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12B']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
@@ -5233,6 +5504,7 @@
             <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">119</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']">
             <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
         	    <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner">
@@ -5246,7 +5518,8 @@
 				<display_value name="dTargetArmorDMG" value="83"/>
 				<display_value name="dTargetArmorPEN" value="47"/> 
             </append>
-			<!-- AMMOEFT12755PS12B -->
+			
+            <!-- AMMOEFT12755PS12B -->
             <!-- AMMOEFT338 -->
 			<setattribute xpath="/items/item[@name='ammoEft338']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft338']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5259,6 +5532,24 @@
 			<remove xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
 			<remove xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/display_value[@name='dTargetArmorDMG']"/>
 			<remove xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/display_value[@name='dTargetArmorPEN']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT338 -->
             <!-- AMMOEFT338AP -->
 			<setattribute xpath="/items/item[@name='ammoEft338AP']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
@@ -5269,6 +5560,7 @@
             <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">142</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']">
 		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
 	            <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
@@ -5280,9 +5572,10 @@
 		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 			</append>
-			<setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorDMG']" name="value">89</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorPEN']" name="value">79</setattribute>
-			<!-- AMMOEFT338AP -->
+			<setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorDMG']" name="value">83</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorPEN']" name="value">47</setattribute>
+			
+            <!-- AMMOEFT338AP -->
             <!-- AMMOEFT338HP -->
 			<setattribute xpath="/items/item[@name='ammoEft338HP']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft338HP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5295,10 +5588,25 @@
 			<remove xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
 			<remove xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorDMG']"/>
 			<remove xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/display_value[@name='dTargetArmorPEN']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT338HP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>			
+            <!-- AMMOEFT338HP -->
 			<!-- AMMOEFT50BMGSLAP -->
 			<setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5318,7 +5626,25 @@
             <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">560</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">100</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">100</setattribute>
-			<remove xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>					
+			<remove xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			</append>
+			<setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/display_value[@name='dDegradationPerUse']" name="value">.01,.05</setattribute>			
 			<!-- AMMOEFT50BMGHP -->
             <!-- AMMOEFT76225MMTOKAREV -->
 			<setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
@@ -5330,6 +5656,24 @@
             <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT76225MMTOKAREV -->
             <!-- AMMOEFT918MMPM -->
 			<setattribute xpath="/items/item[@name='ammoEft918mmPM']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
@@ -5341,6 +5685,24 @@
             <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT918MMPM -->
             <!-- AMMOEFT919MM -->
 			<setattribute xpath="/items/item[@name='ammoEft919mm']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
@@ -5352,6 +5714,24 @@
             <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT919MM -->
             <!-- AMMOEFT919MMAP -->
 			<setattribute xpath="/items/item[@name='ammoEft919mmAP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
@@ -5362,199 +5742,8 @@
             <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">29</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="30"/>
-				<display_value name="dTargetArmorPEN" value="20"/> 
-	        </append>
-			<!-- AMMOEFT919MMAP -->
-            <!-- AMMOEFT919MMHP -->
-			<setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='Stacknumber']" name="value">400</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">80</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-			<append xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
-			</append>
-			<!-- AMMOEFT919MMHP -->
-            <!-- AMMOEFT921MM -->
-			<setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-            <!-- AMMOEFT921MM -->
-            <!-- AMMOEFT921MMAP -->
-			<setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">120</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">31</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="40"/>
-				<display_value name="dTargetArmorPEN" value="25"/> 
-	        </append>
-			<!-- AMMOEFT921MMAP -->
-            <!-- AMMOEFT921MMHP -->
-			<setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">85</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
-			<append xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
-			</append>
-			<!-- AMMOEFT921MMHP -->
-            <!-- AMMOEFT45ACP -->
-			<setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">110</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-            <!-- AMMOEFT45ACP -->
-            <!-- AMMOEFT45ACPAP -->
-			<setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">135</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="55"/>
-				<display_value name="dTargetArmorPEN" value="35"/> 
-	        </append>
-			<!-- AMMOEFT45ACPAP -->
-            <!-- AMMOEFT45ACPRIP -->
-			<setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='Stacknumber']" name="value">350</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">90</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">41</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-			<append xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
-			</append>
-			<!-- AMMOEFT45ACPRIP -->
-            <!-- AMMOEFT4630MMHK -->
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='Stacknumber']" name="value">550</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-            <!-- AMMOEFT4630MMHK -->
-            <!-- AMMOEFT4630MMHKAP -->
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='Stacknumber']" name="value">550</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">175</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
-			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="65"/>
-				<display_value name="dTargetArmorPEN" value="40"/> 
-	        </append>
-			<!-- AMMOEFT4630MMHKAP -->
-            <!-- AMMOEFT4630MMHKHP -->
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='Stacknumber']" name="value">550</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-			<append xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
-			</append>
-			<!-- AMMOEFT4630MMHKHP -->
-            <!-- AMMOEFT5728FN -->
-			<setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo5728</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='Stacknumber']" name="value">550</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-            <!-- AMMOEFT5728FN -->
-            <!-- AMMOEFT5728FNAP -->
-			<setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo5728</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='Stacknumber']" name="value">550</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']">
+			
+            <append xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']">
 			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
                 <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
@@ -5567,7 +5756,339 @@
 				<display_value name="dTargetArmorDMG" value="83"/>
 				<display_value name="dTargetArmorPEN" value="47"/> 
 	        </append>
-			 <!-- AMMOEFT5728FNAP -->
+			
+            <!-- AMMOEFT919MMAP -->
+            <!-- AMMOEFT919MMHP -->
+			<setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='Stacknumber']" name="value">400</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">80</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT919MMHP -->
+            <!-- AMMOEFT921MM -->
+			<setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
+            <!-- AMMOEFT921MM -->
+            <!-- AMMOEFT921MMAP -->
+			<setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">120</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">31</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
+            <append xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>			
+            <!-- AMMOEFT921MMAP -->
+            <!-- AMMOEFT921MMHP -->
+			<setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo921</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">85</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT921MMHP -->
+            <!-- AMMOEFT45ACP -->
+			<setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">110</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
+            <!-- AMMOEFT45ACP -->
+            <!-- AMMOEFT45ACPAP -->
+			<setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">135</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
+            <append xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>
+			
+            <!-- AMMOEFT45ACPAP -->
+            <!-- AMMOEFT45ACPRIP -->
+			<setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='Tags']" name="value">ammo,ammo9mm</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">90</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">41</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT45ACPRIP -->
+            <!-- AMMOEFT4630MMHK -->
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
+            <!-- AMMOEFT4630MMHK -->
+            <!-- AMMOEFT4630MMHKAP -->
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">175</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
+            <append xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>
+			
+            <!-- AMMOEFT4630MMHKAP -->
+            <!-- AMMOEFT4630MMHKHP -->
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo4630</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT4630MMHKHP -->
+            <!-- AMMOEFT5728FN -->
+			<setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo5728</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
+            <!-- AMMOEFT5728FN -->
+            <!-- AMMOEFT5728FNAP -->
+			<setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo5728</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
+            <append xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>
+			
+            <!-- AMMOEFT5728FNAP -->
             <!-- AMMOEFT5728FNHP -->
 			<setattribute xpath="/items/item[@name='ammoEft5728FNHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo5728</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft5728FNHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5578,10 +6099,25 @@
             <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT5728FNHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT5728FNHP -->
             <!-- AMMOEFT50AE -->
 			<setattribute xpath="/items/item[@name='ammoEft50ae']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo50ae</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft50ae']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
@@ -5591,7 +6127,8 @@
             <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">107</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<append xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']">
+			
+            <append xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']">
 			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
                 <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
@@ -5601,10 +6138,10 @@
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
 		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
 			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="105"/>
-				<display_value name="dTargetArmorPEN" value="55"/> 
-	        </append>
-			<!-- AMMOEFT50AE -->
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>			
+            <!-- AMMOEFT50AE -->
             <!-- AMMOEFT50AEHP -->
 			<setattribute xpath="/items/item[@name='ammoEft50aeHP']/property[@name='Tags']" name="value">ammo,ammo9mm,ammo50ae</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft50aeHP']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5615,10 +6152,25 @@
             <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
 			<append xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']">
-            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.05"/>
 			</append>
-			<!-- AMMOEFT50AEHP -->
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+            <!-- AMMOEFT50AEHP -->
             <!-- AMMOEFT7MMSHOTGUN -->
 			<setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/property[@name='Tags']" name="value">ammo,shotgun,ammoShells</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5629,6 +6181,24 @@
             <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">2</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT7MMSHOTGUN -->
             <!-- AMMOEFTFLECHETTESHOTGUN -->
 			<setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/property[@name='Tags']" name="value">ammo,shotgun,ammoShells</setattribute>
@@ -5640,6 +6210,7 @@
             <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">2</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			
 			<append xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']">
 		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.5"/>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
@@ -5650,10 +6221,11 @@
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="55"/>
-				<display_value name="dTargetArmorPEN" value="20"/> 
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
 	        </append>
-			<!-- AMMOEFTFLECHETTESHOTGUN -->
+			
+            <!-- AMMOEFTFLECHETTESHOTGUN -->
             <!-- AMMOEFTAP20SLUG -->
 			<setattribute xpath="/items/item[@name='ammoEftAP20Slug']/property[@name='Tags']" name="value">ammo,shotgun,ammoShells</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEftAP20Slug']/property[@name='DisplayType']" name="value">ammoBulletAP_2</setattribute>
@@ -5662,7 +6234,7 @@
             <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">77</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">256</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">21</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>			
 			<append xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']">
 		    <passive_effect name="TargetArmor" operation="perc_add" value="-.75" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.75"/><!--75% Armor Penetration-->
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
@@ -5673,10 +6245,10 @@
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="40"/>
-				<display_value name="dTargetArmorPEN" value="25"/> 
-	        </append>
-			 <!-- AMMOEFTAP20SLUG -->
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>			
+            <!-- AMMOEFTAP20SLUG -->
             <!-- AMMOEFTSHRAPNEL25SHOTGUN -->
 			<setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/property[@name='Tags']" name="value">ammo,shotgun,ammoShells,ammo2375</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5687,6 +6259,24 @@
             <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
 			<remove xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
             <!-- AMMOEFTSHRAPNEL25SHOTGUN -->
             <!-- AMMOEFTBARRICADESLUG -->
 			<setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/property[@name='Tags']" name="value">ammo,shotgun,ammoShells,ammo2375</setattribute>
@@ -5697,6 +6287,7 @@
             <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">273</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">26</setattribute>
             <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']">
 		    <passive_effect name="TargetArmor" operation="perc_add" value="-.75" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.75"/><!--75% Armor Penetration-->
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
@@ -5707,18 +6298,37 @@
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="20"/>
-				<display_value name="dTargetArmorPEN" value="10"/> 
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
 	        </append>
             <!-- AMMOEFTBARRICADESLUG -->
+			
 			<!-- AMMOEFT4046381 -->
-			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Tags']" name="value">ammo,ammo4046,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Stacknumber']" name="value">20</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='EconomicValue']" name="value">2987</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">250</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.01" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.01"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']">
+			<display_value name="DegradationPerUse" value=".01,.05"/>
+			<display_value name="dDegradationPerUse" value=".01,.05"/>
+			</append>
             <!-- AMMOEFT4046381 -->
             <!-- AMMOEFT4046576 -->
 			<setattribute xpath="/items/item[@name='ammoEft4046576']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
@@ -5729,6 +6339,7 @@
             <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">130</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			
 			<append xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']">
 			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.5"/>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
@@ -5739,18 +6350,36 @@
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
 	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
 	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-				<display_value name="dTargetArmorDMG" value="85"/>
-				<display_value name="dTargetArmorPEN" value="40"/> 
-	        </append>
-			<!-- AMMOEFT4046576 -->
+				<display_value name="dTargetArmorDMG" value="83"/>
+				<display_value name="dTargetArmorPEN" value="47"/> 
+	        </append>			
+            <!-- AMMOEFT4046576 -->
             <!-- AMMOEFT4053VOG25 -->
-			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Tags']" name="value">ammo,ammo4046,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Stacknumber']" name="value">20</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='EconomicValue']" name="value">3623</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">250</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
             <!-- AMMOEFT4053VOG25 -->
             <!-- ammoEft9340pg7vl -->
 			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
