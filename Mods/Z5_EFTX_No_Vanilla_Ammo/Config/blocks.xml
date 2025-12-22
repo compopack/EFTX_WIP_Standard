@@ -1,4 +1,0 @@
-<EFTX>
-	<set xpath="//block[@name='autoTurret']/property[@name='AmmoItem']/@value">ammoEft919mm</set>	
-	<set xpath="//block[@name='shotgunTurret']/property[@name='AmmoItem']/@value">ammoEft7mmShotgun</set>	
-</EFTX>

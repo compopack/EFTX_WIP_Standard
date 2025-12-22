@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EFTX>
-<setattribute xpath="//reward[@id='questRewardPipePistolBundle']" name="id">questRewardEFTPistolBundle</setattribute>
-<setattribute xpath="//reward[@id='questRewardPipeShotgunBundle']" name="id">questRewardEFTShotgunBundle</setattribute>
-<setattribute xpath="//reward[@id='questRewardPipeRifleBundle']" name="id">questRewardEFTRifleBundle</setattribute>
-<setattribute xpath="//reward[@id='questRewardPipeMachineGunBundle']" name="id">questRewardEFTMachineGunBundle</setattribute>
-<setattribute xpath="//reward[@id='questRewardPipeBatonBundle']" name="id">questRewardAmmoBundle</setattribute>
-</EFTX>
