@@ -1,0 +1,55 @@
+<EFTX>	
+	<append xpath="/progression/crafting_skills">
+	<crafting_skill name="craftingBigBoomBoom" max_level="150" parent="attCrafting" name_key="craftingBigBoomBoomName" desc_key="craftingBigBoomBoomDesc" long_desc_key="craftingBigBoomBoomLongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="ammoEft4046576" name_key="ammoEft4046576" has_quality="false" unlock_level="20">
+				<unlock_entry item="ammoEft4046576" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="ammoEft4046381" name_key="ammoEft4046381" has_quality="false" unlock_level="40">
+				<unlock_entry item="ammoEft4046381" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="ammoEft4053vog25" name_key="ammoEft4053vog25" has_quality="false" unlock_level="60">
+				<unlock_entry item="ammoEft4053vog25" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="ammoEftshg725" name_key="ammoEftshg725" has_quality="false" unlock_level="100">
+				<unlock_entry item="ammoEftshg725" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="ammoEft9340pg7vl" name_key="ammoEft9340pg7vl" has_quality="false" unlock_level="150">
+				<unlock_entry item="ammoEft9340pg7vl" unlock_tier="1" />
+			</display_entry>			
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,150" value="1" tags="ammoEft4046576"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,150" value="1" tags="ammoEft4046381"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,150" value="1" tags="ammoEft4053vog25"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,150" value="1" tags="ammoEftshg725"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="150,150" value="1" tags="ammoEft9340pg7vl"/> 
+				</effect_group>		
+		</crafting_skill>
+		</append>
+		<append xpath="/progression/perks">
+		<!-- LAUNCHERS AND RPG7 AMMO PERK -->
+		<perk name="perkBoomBoom" parent="skillEFTXExplosives" max_level="5"  name_key="Boom Boom" desc_key="Finding More Boom Boom Books in loot" icon="ui_game_symbol_explosion">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+			
+			<effect_group>
+			<!-- Increase the chance to find Launcher crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,6" value="2,10" tags="BigBoomBoomCSM">
+				<requirement name="ProgressionLevel" progression_name="BigBoomBoomSkillMagazine" operation="LT" value="150"/>
+			</passive_effect>
+			<!-- Once Launcher crafting skill reaches 100, set the probability bonus of finding Launcher crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,6" value="1,1" tags="BigBoomBoomCSM">
+				<requirement name="ProgressionLevel" progression_name="BigBoomBoomSkillMagazine" operation="Equals" value="150"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkBoomBoomRank1Desc" long_desc_key="Find Boom Boom books"/>
+			<effect_description level="2" desc_key="perkBoomBoomRank2Desc" long_desc_key="Find more Boom Boom Books"/>
+			<effect_description level="3" desc_key="perkBoomBoomRank3Desc" long_desc_key="Find even more Boom Boom books"/>
+			<effect_description level="4" desc_key="perkBoomBoomRank4Desc" long_desc_key="You want more Boom Boom books"/>
+			<effect_description level="5" desc_key="perkBoomBoomRank5Desc" long_desc_key="Drop the bombs you are finding lots of Boom Boom books"/>			
+			</effect_group>
+		</perk>
+		<!-- LAUNCHERS AND RPG7 AMMO PERK -->
+		</append>	
+</EFTX>

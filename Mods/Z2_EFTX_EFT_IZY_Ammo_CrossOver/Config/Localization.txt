@@ -45,6 +45,10 @@ gunsaiga12,"[BB00FF]Saiga-12K[-]"
 gunsaiga12Desc,"[BB00FF]Saiga-12K [-][FFFFFF]Semi-Automatic Shotgun\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 12/70 Buckshot, Flechette, Slug[-]\n[FE7B7C]Vanilla: [-][FFFFFF] Shotgun Shell, AP Slug, Breaching Slug[-]\n[FF0000]IZYS: [-][FFFFFF] 12 Gauge Magnum Ammo, 12 Gauge Dragonbreath[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] Grenade Launcher\nRequires a grip to equip flashlights/lasers"
 gunAA12,"[BB00FF]AA-12[-]"
 gunAA12Desc,"[BB00FF]MPS Auto Assault-12 Gen 2 [-][FFFFFF]Automatic Shotgun\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 12/70 Buckshot, Flechette, Slug[-]\n[FE7B7C]Vanilla: [-][FFFFFF] Shotgun Shell, AP Slug, Breaching Slug[-]\n[FF0000]IZYS: [-][FFFFFF] 12 Gauge Magnum Ammo, 12 Gauge Dragonbreath[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]"
+gunmp133,"[004CFF]MP 133[-]"
+gunmp133Desc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 12/70 Buckshot, Flechette, Slug[-]\n[FE7B7C]Vanilla: [-][FFFFFF] Shotgun Shell, AP Slug, Breaching Slug[-]\n[FF0000]IZYS: [-][FFFFFF] 12 Gauge Magnum Ammo, 12 Gauge Dragonbreath[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]"
+guntoz106,"TOZ 106"
+guntoz106Desc,"[004CFF]guntoz106 Shotgun\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 20/70 Buckshot,12/70 AP-20 Slug Ammo\n[-][FE7B7C]Vanilla: [-][FFFFFF] Shotgun Shell,Shotgun AP Slug Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 12 Gauge Magnum Ammo[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires"
 
 gunadar,"[09FF00]ADAR[-]"
 gunadarDesc,"[09FF00]ADAR 2-15 [-][FFFFFF]Marksman Rifle\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 5.56×45mm Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 7.62mm Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 5.56x45mm Ammo[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]"
@@ -157,19 +161,12 @@ gunfamas,"[004CFF]FAMAS[-]"
 gunfamasDesc,"[004CFF]FAMAS [-][FFFFFF]Assault Rifle\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 5.56×45mm Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 7.62mm Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 5.56x45mm Ammo[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] Grenade Launcher\nRequires a grip or under barrel to equip flashlights/lasers."
 gunTheAKGuyAK50,"[004CFF]AK50[-]"
 gunTheAKGuyAK50Desc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] .50SL BMG AP Ammo[-]\n[FE7B7C]EFTX: [-][FFFFFF] .50 BMG HP Ammo[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires a grip or under barrel to equip flashlights/lasers."
-
-gunmp133,"[004CFF]MP 133[-]"
-gunmp133Desc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 12/70 Buckshot, Flechette, Slug[-]\n[FE7B7C]Vanilla: [-][FFFFFF] Shotgun Shell, AP Slug, Breaching Slug[-]\n[FF0000]IZYS: [-][FFFFFF] 12 Gauge Magnum Ammo, 12 Gauge Dragonbreath[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]"
-
 gunm16a1,"[004CFF]M16a1[-]"
 gunm16a1Desc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 5.56×45mm,5.56×45mmHP,5.56×45mmAP Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 762mm Ball,762mm HP,762mm AP Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 556mm,556mm HP,556mm AP[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires a grip or under barrel to equip flashlights/lasers."
-
 gunmk12spr,"[004CFF]MK12 SPR[-]"
 gunmk12sprDesc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 5.56×45mm,5.56×45mmHP,5.56×45mmAP Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 762mm Ball,762mm HP,762mm AP Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 556mm,556mm HP,556mm AP[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires a grip or under barrel to equip flashlights/lasers."
-
 gunnl545,"[004CFF]NL 545[-]"
 gunnl545Desc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] 5.45×39mm - PS,5.45×39mm - BS,5.45×39mm - HP Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 762mm,762mm HP,762mm AP Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 7.62 Explosive Fragmentations[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires a grip or under barrel to equip flashlights/lasers.
-
 gunmxlr,"[004CFF]MXLR Lever Arch[-]"
 gunmxlrDesc,"[004CFF]AK50\n\n[FFEB04]Compatible Ammo:[-]\n[00FF00]EFTX: [-][FFFFFF] .308 ME Ammo[-]\n[FE7B7C]Vanilla: [-][FFFFFF] 762mm Ball,762mm HP,762mm AP Ammo[-]\n[FF0000]IZYS: [-][FFFFFF] 7.62 Explosive Fragmentations[-]\n\nRepair with a [D3CE1D]Weapon Repair Kit[-]\n\nCan equip an [D3CE1D]M203[-] \nRequires a grip or under barrel to equip flashlights/lasers."
 

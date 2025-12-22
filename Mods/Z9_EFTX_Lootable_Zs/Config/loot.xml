@@ -4514,25 +4514,61 @@
 		<lootgroup name="groupSoldierFeralOnly" >	
 		<item group="group762mmMedium" count="1"/>
 		<item group="groupMilitaryFootlocker" count="0,1" />
+		<conditional>
+		<if cond="not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
 		<item name="ammoEft50BMGHP" count="10,50" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</if>
+		</conditional>
+		<conditional>
+		<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') or mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammo762mmBulletHP" count="10,50" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</if>
+		</conditional>
 		<item group="GroupSoldierMGST2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupSoldierRadiatedOnly" >	
 		<item group="group762mmLarge" count="1"/>
 		<item group="groupMilitaryFootlocker" count="1" />
-		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>	
+		<conditional>
+		<if cond="not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</if>
+		</conditional>
+		<conditional>
+		<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') or mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammo762mmBulletAP" count="10,50" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</if>
+		</conditional>		
 		<item group="GroupSoldierMGST3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft6" force_prob="true"/>	
 		</lootgroup>
 		<lootgroup name="groupSoldierChargedOnly" >		
 		<item group="group762mmLarge" count="1"/>
 		<item group="groupMilitaryFootlocker" count="1" />
-		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		<conditional>
+		<if cond="not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</if>
+		</conditional>
+		<conditional>
+		<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') or mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammo762mmBulletAP" count="10,50" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</if>
+		</conditional>
 		<item group="GroupSoldierMGST4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft7" force_prob="true"/>	
 		</lootgroup>
 		<lootgroup name="groupSoldierInfernalOnly" >	
 		<item group="group762mmLarge" count="1"/>
 		<item group="groupMilitaryFootlocker" count="1" />
-		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>	
+		<conditional>
+		<if cond="not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammoEft50BMGSlap" count="10,50" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</if>
+		</conditional>
+		<conditional>
+		<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') or mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
+		<item name="ammo762mmBulletAP" count="10,50" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</if>
+		</conditional>
 		<item group="GroupSoldierMGST5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft8" force_prob="true"/>
 		<item group="GroupSoldierMGST6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft9" force_prob="true"/>
 		</lootgroup>
@@ -5809,535 +5845,535 @@
 		<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core') and not mod_loaded('zzz_EFTX_Pack_Rebirth_v2')">	
 	<!-- MAIN 1 -->
 		<!-- ARLENE -->
-		<lootcontainer name="groupZombieArlene" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArlene" count="1" />			
+		<lootcontainer name="groupZombieArlene" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArlene" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieArleneFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneFeral" count="1" />
+		<lootcontainer name="groupZombieArleneFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieArleneRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneRadiated" count="1" />
+		<lootcontainer name="groupZombieArleneRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieArleneCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneCharged" count="1" />
+        <lootcontainer name="groupZombieArleneCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieArleneInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneInfernal" count="1" />
+		<lootcontainer name="groupZombieArleneInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneInfernal" />
 		</lootcontainer>
 		<!-- ARLENE -->
 		<!-- MARLENE -->
-		<lootcontainer name="groupZombieMarlene" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarlene" count="1" />			
+		<lootcontainer name="groupZombieMarlene" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarlene" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieMarleneFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneFeral" count="1" />
+		<lootcontainer name="groupZombieMarleneFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMarleneRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneRadiated" count="1" />
+		<lootcontainer name="groupZombieMarleneRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieMarleneCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneCharged" count="1" />
+        <lootcontainer name="groupZombieMarleneCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMarleneInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneInfernal" count="1" />
+		<lootcontainer name="groupZombieMarleneInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneInfernal" />
 		</lootcontainer>
 		<!-- MARLENE -->
         <!-- PARTYGIRL -->
-		<lootcontainer name="groupZombiePartGirl" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirl" count="1" />			
+		<lootcontainer name="groupZombiePartGirl" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirl" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombiePartGirlFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlFeral" count="1" />
+		<lootcontainer name="groupZombiePartGirlFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombiePartGirlRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlRadiated" count="1" />
+		<lootcontainer name="groupZombiePartGirlRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombiePartGirlCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlCharged" count="1" />
+        <lootcontainer name="groupZombiePartGirlCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombiePartGirlInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlInfernal" count="1" />
+		<lootcontainer name="groupZombiePartGirlInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlInfernal" />
 		</lootcontainer>
 		<!-- PARTYGIRL -->
 		<!-- JOE -->
-		<lootcontainer name="groupZombieJoe" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupJoe" count="1" />			
+		<lootcontainer name="groupZombieJoe" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupJoe" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieJoeFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupJoeFeral" count="1" />
+		<lootcontainer name="groupZombieJoeFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupJoeFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieJoeRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupJoeRadiated" count="1" />
+		<lootcontainer name="groupZombieJoeRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupJoeRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieJoeCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupJoeCharged" count="1" />
+        <lootcontainer name="groupZombieJoeCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupJoeCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieJoeInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupJoeInfernal" count="1" />
+		<lootcontainer name="groupZombieJoeInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupJoeInfernal" />
 		</lootcontainer>
 		<!-- JOE -->
 		<!-- STEVE -->
-		<lootcontainer name="groupZombieSteve" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteve" count="1" />			
+		<lootcontainer name="groupZombieSteve" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteve" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveFeral" count="1" />
+		<lootcontainer name="groupZombieSteveFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveRadiated" count="1" />
+		<lootcontainer name="groupZombieSteveRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieSteveCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCharged" count="1" />
+        <lootcontainer name="groupZombieSteveCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveInfernal" count="1" />
+		<lootcontainer name="groupZombieSteveInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveInfernal" />
 		</lootcontainer>
 		<!-- STEVE -->
 		<!-- TOM CLARK -->
-		<lootcontainer name="groupZombieTomClark" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClark" count="1" />			
+		<lootcontainer name="groupZombieTomClark" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClark" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieTomClarkFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkFeral" count="1" />
+		<lootcontainer name="groupZombieTomClarkFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieTomClarkRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkRadiated" count="1" />
+		<lootcontainer name="groupZombieTomClarkRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieTomClarkCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkCharged" count="1" />
+        <lootcontainer name="groupZombieTomClarkCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieTomClarkInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkInfernal" count="1" />
+		<lootcontainer name="groupZombieTomClarkInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkInfernal" />
 		</lootcontainer>
 		<!-- TOM CLARK -->
         <!-- BUSINESS MAN -->
-		<lootcontainer name="groupZombieBusinessMan" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessMan" count="1" />			
+		<lootcontainer name="groupZombieBusinessMan" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessMan" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieBusinessManFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManFeral" count="1" />
+		<lootcontainer name="groupZombieBusinessManFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBusinessManRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManRadiated" count="1" />
+		<lootcontainer name="groupZombieBusinessManRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBusinessManCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManCharged" count="1" />
+        <lootcontainer name="groupZombieBusinessManCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManCharged" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBusinessManInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManInfernal" count="1" />
+        <lootcontainer name="groupZombieBusinessManInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManInfernal" />
 		</lootcontainer>
 		<!-- BUSINESS MAN -->		
 		<!-- BURNT -->
-		<lootcontainer name="groupZombieBurnt" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurnt" count="1" />			
+		<lootcontainer name="groupZombieBurnt" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurnt" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieBurntFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurntFeral" count="1" />
+		<lootcontainer name="groupZombieBurntFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurntFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBurntRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurntRadiated" count="1" />
+		<lootcontainer name="groupZombieBurntRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurntRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBurntCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurntCharged" count="1" />
+        <lootcontainer name="groupZombieBurntCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurntCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBurntInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurntInfernal" count="1" />
+		<lootcontainer name="groupZombieBurntInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurntInfernal" />
 		</lootcontainer>
 		<!-- BURNT -->
 		<!-- Plague SPITTER -->
-		<lootcontainer name="groupZombieRancher" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancher" count="1" />			
+		<lootcontainer name="groupZombieRancher" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancher" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieRancherFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherFeral" count="1" />
+		<lootcontainer name="groupZombieRancherFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieRancherRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherRadiated" count="1" />
+		<lootcontainer name="groupZombieRancherRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieRancherCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherCharged" count="1" />
+        <lootcontainer name="groupZombieRancherCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieRancherInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherInfernal" count="1" />
+		<lootcontainer name="groupZombieRancherInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherInfernal" />
 		</lootcontainer>
 		<!-- Plague SPITTER -->
 		<!-- Chuck -->
-		<lootcontainer name="groupZombieChuck" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupChuck" count="1" />			
+		<lootcontainer name="groupZombieChuck" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupChuck" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieChuckFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupChuckFeral" count="1" />
+		<lootcontainer name="groupZombieChuckFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupChuckFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieChuckRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupChuckRadiated" count="1" />
+		<lootcontainer name="groupZombieChuckRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupChuckRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieChuckCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupChuckCharged" count="1" />
+        <lootcontainer name="groupZombieChuckCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupChuckCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieChuckInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupChuckInfernal" count="1" />
+		<lootcontainer name="groupZombieChuckInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupChuckInfernal" />
 		</lootcontainer>
 		<!-- Chuck -->
 		<!-- SPIDER -->
-		<lootcontainer name="groupZombieSpider" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpider" count="1" />			
+		<lootcontainer name="groupZombieSpider" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpider" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSpiderFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderFeral" count="1" />
+		<lootcontainer name="groupZombieSpiderFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSpiderRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderRadiated" count="1" />
+		<lootcontainer name="groupZombieSpiderRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieSpiderCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderCharged" count="1" />
+        <lootcontainer name="groupZombieSpiderCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSpiderInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderInfernal" count="1" />
+		<lootcontainer name="groupZombieSpiderInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderInfernal" />
 		</lootcontainer>
 		<!-- SPIDER -->
 		<!-- BOE -->
-		<lootcontainer name="groupZombieBoe" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoe" count="1" />			
+		<lootcontainer name="groupZombieBoe" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoe" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieBoeFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeFeral" count="1" />
+		<lootcontainer name="groupZombieBoeFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBoeRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeRadiated" count="1" />
+		<lootcontainer name="groupZombieBoeRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBoeCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeCharged" count="1" />
+        <lootcontainer name="groupZombieBoeCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBoeInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeInfernal" count="1" />
+		<lootcontainer name="groupZombieBoeInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeInfernal" />
 		</lootcontainer>
 		<!-- BOE -->
 		<!-- MaleHazmat -->
-		<lootcontainer name="groupZombieMaleHazmat" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmat" count="1" />			
+		<lootcontainer name="groupZombieMaleHazmat" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmat" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieMaleHazmatFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatFeral" count="1" />
+		<lootcontainer name="groupZombieMaleHazmatFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMaleHazmatRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatRadiated" count="1" />
+		<lootcontainer name="groupZombieMaleHazmatRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieMaleHazmatCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatCharged" count="1" />
+        <lootcontainer name="groupZombieMaleHazmatCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMaleHazmatInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatInfernal" count="1" />
+		<lootcontainer name="groupZombieMaleHazmatInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatInfernal" />
 		</lootcontainer>
 		<!-- MaleHazmat -->
         <!-- JANITOR -->
-		<lootcontainer name="groupZombieMechanic" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMechanic" count="1" />			
+		<lootcontainer name="groupZombieMechanic" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMechanic" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieMechanicFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMechanicFeral" count="1" />
+		<lootcontainer name="groupZombieMechanicFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMechanicFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMechanicRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMechanicRadiated" count="1" />
+		<lootcontainer name="groupZombieMechanicRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMechanicRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieMechanicCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMechanicCharged" count="1" />
+        <lootcontainer name="groupZombieMechanicCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMechanicCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMechanicInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMechanicInfernal" count="1" />
+		<lootcontainer name="groupZombieMechanicInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMechanicInfernal" />
 		</lootcontainer>
 		<!-- JANITOR -->
 		<!-- INMATE -->
-		<lootcontainer name="groupZombieInmate" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmate" count="1" />			
+		<lootcontainer name="groupZombieInmate" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmate" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieInmateFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateFeral" count="1" />
+		<lootcontainer name="groupZombieInmateFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieInmateRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateRadiated" count="1" />
+		<lootcontainer name="groupZombieInmateRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieInmateCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateCharged" count="1" />
+        <lootcontainer name="groupZombieInmateCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieInmateInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateInfernal" count="1" />
+		<lootcontainer name="groupZombieInmateInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateInfernal" />
 		</lootcontainer>
 		<!-- INMATE -->
 		<!-- MOE -->
-		<lootcontainer name="groupZombieMoe" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMoe" count="1" />			
+		<lootcontainer name="groupZombieMoe" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoe" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieMoeFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMoeFeral" count="1" />
+		<lootcontainer name="groupZombieMoeFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoeFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMoeRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMoeRadiated" count="1" />
+		<lootcontainer name="groupZombieMoeRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoeRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieMoeCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMoeCharged" count="1" />
+        <lootcontainer name="groupZombieMoeCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoeCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieMoeInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMoeInfernal" count="1" />
+		<lootcontainer name="groupZombieMoeInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoeInfernal" />
 		</lootcontainer>
 		<!-- MOE -->
 		<!-- DARLENE -->
-		<lootcontainer name="groupZombieDarlene" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarlene" count="1" />			
+		<lootcontainer name="groupZombieDarlene" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarlene" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieDarleneFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneFeral" count="1" />
+		<lootcontainer name="groupZombieDarleneFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieDarleneRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneRadiated" count="1" />
+		<lootcontainer name="groupZombieDarleneRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieDarleneCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneCharged" count="1" />
+        <lootcontainer name="groupZombieDarleneCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieDarleneInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneInfernal" count="1" />
+		<lootcontainer name="groupZombieDarleneInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneInfernal" />
 		</lootcontainer>
 		<!-- DARLENE -->
 		<!-- YO -->
-		<lootcontainer name="groupZombieYo" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupYo" count="1" />			
+		<lootcontainer name="groupZombieYo" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupYo" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieYoFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupYoFeral" count="1" />
+		<lootcontainer name="groupZombieYoFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupYoFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieYoRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupYoRadiated" count="1" />
+		<lootcontainer name="groupZombieYoRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupYoRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieYoCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupYoCharged" count="1" />
+        <lootcontainer name="groupZombieYoCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupYoCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieYoInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupYoInfernal" count="1" />
+		<lootcontainer name="groupZombieYoInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupYoInfernal" />
 		</lootcontainer>
 		<!-- YO -->
 		<!-- UTILITY WORKER -->
-		<lootcontainer name="groupZombieUtilityWorker" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupUtilityWorker" count="1" />			
+		<lootcontainer name="groupZombieUtilityWorker" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupUtilityWorker" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieUtilityWorkerFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupUtilityWorkerFeral" count="1" />
+		<lootcontainer name="groupZombieUtilityWorkerFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupUtilityWorkerFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieUtilityWorkerRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupUtilityWorkerRadiated" count="1" />
+		<lootcontainer name="groupZombieUtilityWorkerRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupUtilityWorkerRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieUtilityWorkerCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupUtilityWorkerCharged" count="1" />
+        <lootcontainer name="groupZombieUtilityWorkerCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupUtilityWorkerCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieUtilityWorkerInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupUtilityWorkerInfernal" count="1" />
+		<lootcontainer name="groupZombieUtilityWorkerInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupUtilityWorkerInfernal" />
 		</lootcontainer>
 		<!-- UTILITY WORKER -->
         <!-- BIKERS -->
-		<lootcontainer name="groupZombieBiker" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBiker" count="1" />			
+		<lootcontainer name="groupZombieBiker" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBiker" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieBikerFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBikerFeral" count="1" />
+		<lootcontainer name="groupZombieBikerFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBikerFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBikerRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBikerRadiated" count="1" />
+		<lootcontainer name="groupZombieBikerRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBikerRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBikerCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBikerCharged" count="1" />
+        <lootcontainer name="groupZombieBikerCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBikerCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBikerInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBikerInfernal" count="1" />
+		<lootcontainer name="groupZombieBikerInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBikerInfernal" />
 		</lootcontainer>
 		<!-- BIKERS -->
         <!-- LUMBERJACK -->
-		<lootcontainer name="groupZombieLumberjack" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLumberjack" count="1" />			
+		<lootcontainer name="groupZombieLumberjack" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLumberjack" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieLumberjackFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLumberjackFeral" count="1" />
+		<lootcontainer name="groupZombieLumberjackFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLumberjackFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLumberjackRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLumberjackRadiated" count="1" />
+		<lootcontainer name="groupZombieLumberjackRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLumberjackRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieLumberjackCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLumberjackCharged" count="1" />
+        <lootcontainer name="groupZombieLumberjackCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLumberjackCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLumberjackInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLumberjackInfernal" count="1" />
+		<lootcontainer name="groupZombieLumberjackInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLumberjackInfernal" />
 		</lootcontainer>
 		<!-- LUMBERJACK -->
         <!-- FATMOMMA -->
-		<lootcontainer name="groupZombieFemaleFat" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMomma" count="1" />			
+		<lootcontainer name="groupZombieFemaleFat" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMomma" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieFemaleFatFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMommaFeral" count="1" />
+		<lootcontainer name="groupZombieFemaleFatFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMommaFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieFemaleFatRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMommaRadiated" count="1" />
+		<lootcontainer name="groupZombieFemaleFatRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMommaRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieFemaleFatCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMommaCharged" count="1" />
+		<lootcontainer name="groupZombieFemaleFatCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMommaCharged" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieFemaleFatInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMommaInfernal" count="1" />
+        <lootcontainer name="groupZombieFemaleFatInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMommaInfernal" />
 		</lootcontainer>
 		<!-- FATMOMMA -->
 		<!-- FAT HAWAIIAN -->
-		<lootcontainer name="groupZombieFatHawaiian" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupFatHawaiian" count="1" />			
+		<lootcontainer name="groupZombieFatHawaiian" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupFatHawaiian" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieFatHawaiianFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupFatHawaiianFeral" count="1" />
+		<lootcontainer name="groupZombieFatHawaiianFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupFatHawaiianFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieFatHawaiianRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupFatHawaiianRadiated" count="1" />
+		<lootcontainer name="groupZombieFatHawaiianRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupFatHawaiianRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieFatHawaiianCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupFatHawaiianCharged" count="1" />
+		<lootcontainer name="groupZombieFatHawaiianCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupFatHawaiianCharged" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieFatHawaiianInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupFatHawaiianInfernal" count="1" />
+        <lootcontainer name="groupZombieFatHawaiianInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupFatHawaiianInfernal" />
 		</lootcontainer>
 		<!-- FAT HAWAIIAN -->
 		<!-- BOWLER -->
-		<lootcontainer name="groupZombieBowler" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowler" count="1" />
+		<lootcontainer name="groupZombieBowler" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowler" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBowlerFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerFeral" count="1" />
+		<lootcontainer name="groupZombieBowlerFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBowlerRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerRadiated" count="1" />
+		<lootcontainer name="groupZombieBowlerRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieBowlerCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerCharged" count="1" />
+		<lootcontainer name="groupZombieBowlerCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerCharged" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieBowlerInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerInfernal" count="1" />
+        <lootcontainer name="groupZombieBowlerInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerInfernal" />
 		</lootcontainer>
 		<!-- BOWLER -->
 		<!-- COPS -->
-		<lootcontainer name="groupZombieCop" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCop" count="1" />
+		<lootcontainer name="groupZombieCop" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCop" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieCopFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopFeral" count="1" />
+		<lootcontainer name="groupZombieCopFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieCopRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopRadiated" count="1" />
+		<lootcontainer name="groupZombieCopRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieCopCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopCharged" count="1" />
+		<lootcontainer name="groupZombieCopCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopCharged" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieCopInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopInfernal" count="1" />
+        <lootcontainer name="groupZombieCopInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopInfernal" />
 		</lootcontainer>
 		<!-- COPS -->
         <!-- THUG/SKATEBOARDER -->
-		<lootcontainer name="groupZombieSkateboarder" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupThug" count="1" />			
+		<lootcontainer name="groupZombieSkateboarder" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupThug" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSkateboarderFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupThugFeral" count="1" />
+		<lootcontainer name="groupZombieSkateboarderFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupThugFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSkateboarderRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupThugRadiated" count="1" />
+		<lootcontainer name="groupZombieSkateboarderRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupThugRadiated" />
 		</lootcontainer>
-        <lootcontainer name="groupZombieSkateboarderCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupThugCharged" count="1" />
+        <lootcontainer name="groupZombieSkateboarderCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupThugCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieSkateboarderInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupThugInfernal" count="1" />
+		<lootcontainer name="groupZombieSkateboarderInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupThugInfernal" />
 		</lootcontainer>
 		<!-- THUG/SKATEBOARDER -->
 		<!-- SOLDIERS -->
-		<lootcontainer name="groupZombieSoldier" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieSoldier" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldier" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieSoldierFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieSoldierFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldierFeral" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieSoldierRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieSoldierRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldierRadiated" count="1"/>
 		</lootcontainer>
-        <lootcontainer name="groupZombieSoldierCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+        <lootcontainer name="groupZombieSoldierCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldierCharged" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieSoldierInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieSoldierInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupSoldierInfernal" count="1"/>
 		</lootcontainer>
 		<!-- SOLDIERS -->		
 		<!-- SCREAMER -->
-		<lootcontainer name="groupZombieScreamer" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieScreamer" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamer" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieScreamerFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieScreamerFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamerFeral" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieScreamerRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieScreamerRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamerRadiated" count="1"/>
 		</lootcontainer>
-        <lootcontainer name="groupZombieScreamerCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+        <lootcontainer name="groupZombieScreamerCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamerCharged" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieScreamerInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieScreamerInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupScreamerInfernal" count="1"/>
 		</lootcontainer>
 		<!-- SCREAMER -->
 		<!-- MUTATED -->
-		<lootcontainer name="groupZombieMutated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieMutated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutated" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieMutatedFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieMutatedFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedFeral" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieMutatedRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieMutatedRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedRadiated" count="1"/>
 		</lootcontainer>
-        <lootcontainer name="groupZombieMutatedCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+        <lootcontainer name="groupZombieMutatedCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedCharged" count="1"/>
 		</lootcontainer>
-		<lootcontainer name="groupZombieMutatedInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="groupZombieMutatedInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
 			<item group="groupMutatedInfernal" count="1"/>
 		</lootcontainer>
 		<!-- MUTATED -->	
 		<!-- DEMOLITION -->
-		<lootcontainer name="groupZombieDemolition" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDemolition" count="1" />			
+		<lootcontainer name="groupZombieDemolition" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDemolition" />			
 		</lootcontainer>		
 		<!-- DEMOLITION -->
 		<!-- STEVE CRAWLER -->
-		<lootcontainer name="groupZombieSteveCrawler" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCrawler" count="1" />			
+		<lootcontainer name="groupZombieSteveCrawler" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCrawler" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveCrawlerFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCrawlerFeral" count="1" />			
+		<lootcontainer name="groupZombieSteveCrawlerFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCrawlerFeral" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveCrawlerRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCrawlerRadiated" count="1" />			
+		<lootcontainer name="groupZombieSteveCrawlerRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCrawlerRadiated" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveCrawlerCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCrawlerCharged" count="1" />			
+		<lootcontainer name="groupZombieSteveCrawlerCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCrawlerCharged" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieSteveCrawlerInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSteveCrawlerInfernal" count="1" />			
+		<lootcontainer name="groupZombieSteveCrawlerInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSteveCrawlerInfernal" />			
 		</lootcontainer>		
 		<!-- STEVE CRAWLER -->	
 		<!-- WIGHT -->
-		<lootcontainer name="groupZombieWight" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWight" count="1" />			
+		<lootcontainer name="groupZombieWight" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWight" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieWightFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightFeral" count="1" />			
+		<lootcontainer name="groupZombieWightFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightFeral" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieWightRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightRadiated" count="1" />			
+		<lootcontainer name="groupZombieWightRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightRadiated" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieWightCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightCharged" count="1" />			
+		<lootcontainer name="groupZombieWightCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightCharged" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieWightInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightInfernal" count="1" />			
+		<lootcontainer name="groupZombieWightInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightInfernal" />			
 		</lootcontainer>		
 		<!-- WIGHT -->			
 	
@@ -6629,37 +6665,37 @@
 		</lootgroup>
 		<!-- NURSE -->    		
 		<!-- LAB -->
-		<lootcontainer name="groupZombieLab" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLab" count="1" />			
+		<lootcontainer name="groupZombieLab" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLab" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabFeral" count="1" />
+		<lootcontainer name="groupZombieLabFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabRadiated" count="1" />
+		<lootcontainer name="groupZombieLabRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabCharged" count="1" />
+		<lootcontainer name="groupZombieLabCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabInfernal" count="1" />
+		<lootcontainer name="groupZombieLabInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabInfernal" />
 		</lootcontainer>
 		<!-- LAB -->
 		<!-- Nurse -->
-		<lootcontainer name="groupZombieNurse" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurse" count="1" />			
+		<lootcontainer name="groupZombieNurse" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurse" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseFeral" count="1" />
+		<lootcontainer name="groupZombieNurseFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseRadiated" count="1" />
+		<lootcontainer name="groupZombieNurseRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseCharged" count="1" />
+		<lootcontainer name="groupZombieNurseCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseInfernal" count="1" />
+		<lootcontainer name="groupZombieNurseInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseInfernal" />
 		</lootcontainer>
 		<!-- Nurse -->
 		<!-- MAIN 1 -->
@@ -6929,37 +6965,37 @@
 		</lootgroup>
 		<!-- NURSE -->		
     	<!-- LAB -->
-		<lootcontainer name="groupZombieLab" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLab" count="1" />			
+		<lootcontainer name="groupZombieLab" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLab" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabFeral" count="1" />
+		<lootcontainer name="groupZombieLabFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabRadiated" count="1" />
+		<lootcontainer name="groupZombieLabRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabCharged" count="1" />
+		<lootcontainer name="groupZombieLabCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieLabInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupLabInfernal" count="1" />
+		<lootcontainer name="groupZombieLabInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupLabInfernal" />
 		</lootcontainer>
 		<!-- LAB -->
 		<!-- Nurse -->
-		<lootcontainer name="groupZombieNurse" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurse" count="1" />			
+		<lootcontainer name="groupZombieNurse" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurse" />			
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseFeral" count="1" />
+		<lootcontainer name="groupZombieNurseFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseRadiated" count="1" />
+		<lootcontainer name="groupZombieNurseRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseCharged" count="1" />
+		<lootcontainer name="groupZombieNurseCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupZombieNurseInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseInfernal" count="1" />
+		<lootcontainer name="groupZombieNurseInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseInfernal" />
 		</lootcontainer>
 		<!-- Nurse --> 
 		</append>   
@@ -6975,205 +7011,205 @@
 	<conditional>
 		<if cond="mod_loaded('DoubleGZombies2')">
 		<append xpath="/lootcontainers">
-		<lootcontainer name="groupMaleNurse" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurse" count="1" />			
+		<lootcontainer name="groupMaleNurse" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurse" />			
 		</lootcontainer>
-		<lootcontainer name="groupMaleNurseFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseFeral" count="1" />
+		<lootcontainer name="groupMaleNurseFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupMaleNurseRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseRadiated" count="1" />
+		<lootcontainer name="groupMaleNurseRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupMaleNurseCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupNurseCharged" count="1" />
-		</lootcontainer>
-
-		<lootcontainer name="groupFemaleCop" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCop" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFemaleCopFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFemaleCopRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFemaleCopCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFemaleCopInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopInfernal" count="1" />
+		<lootcontainer name="groupMaleNurseCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupNurseCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupFirefighter" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCop" count="1" />
+		<lootcontainer name="groupFemaleCop" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCop" />
 		</lootcontainer>
-		<lootcontainer name="groupFirefighterFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopFeral" count="1" />
+		<lootcontainer name="groupFemaleCopFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupFirefighterRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopRadiated" count="1" />
+		<lootcontainer name="groupFemaleCopRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupFirefighterInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupCopInfernal" count="1" />
+		<lootcontainer name="groupFemaleCopCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopCharged" />
 		</lootcontainer>
-
-		<lootcontainer name="groupMaleCadaver" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpider" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupMaleCadaverFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupMaleCadaverRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupMaleCadaverCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupMaleCadaverInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSpiderInfernal" count="1" />
+		<lootcontainer name="groupFemaleCopInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupRegularMale" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClark" count="1" />
+		<lootcontainer name="groupFirefighter" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCop" />
 		</lootcontainer>
-		<lootcontainer name="groupRegularMaleFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkFeral" count="1" />
+		<lootcontainer name="groupFirefighterFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupRegularMaleRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkRadiated" count="1" />
+		<lootcontainer name="groupFirefighterRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupRegularMaleCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupRegularMaleInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupTomClarkInfernal" count="1" />
+		<lootcontainer name="groupFirefighterInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupCopInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupFemaleCadaver" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarlene" count="1" />
+		<lootcontainer name="groupMaleCadaver" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpider" />
 		</lootcontainer>
-		<lootcontainer name="groupFemaleCadaverFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneFeral" count="1" />
+		<lootcontainer name="groupMaleCadaverFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupFemaleCadaverRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneRadiated" count="1" />
+		<lootcontainer name="groupMaleCadaverRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupFemaleCadaverCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupDarleneCharged" count="1" />
+		<lootcontainer name="groupMaleCadaverCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderCharged" />
 		</lootcontainer>
-
-		<lootcontainer name="groupRegularFemale" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarlene" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupRegularFemaleFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupRegularFemaleRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupRegularFemaleCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMarleneCharged" count="1" />
+		<lootcontainer name="groupMaleCadaverInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSpiderInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupSnowBunnyKim" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirl" count="1" />
+		<lootcontainer name="groupRegularMale" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClark" />
 		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyKimFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlFeral" count="1" />
+		<lootcontainer name="groupRegularMaleFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyKimRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlRadiated" count="1" />
+		<lootcontainer name="groupRegularMaleRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyKimCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlCharged" count="1" />
+		<lootcontainer name="groupRegularMaleCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkCharged" />
 		</lootcontainer>
-
-		<lootcontainer name="groupSnowBunnyParis" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirl" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyParisFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyParisRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupSnowBunnyParisCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlCharged" count="1" />
+		<lootcontainer name="groupRegularMaleInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupTomClarkInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupFreddie" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmate" count="1" />
+		<lootcontainer name="groupFemaleCadaver" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarlene" />
 		</lootcontainer>
-		<lootcontainer name="groupFreddieFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateFeral" count="1" />
+		<lootcontainer name="groupFemaleCadaverFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupFreddieRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateRadiated" count="1" />
+		<lootcontainer name="groupFemaleCadaverRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupFreddieCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFreddieInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupInmateInfernal" count="1" />
+		<lootcontainer name="groupFemaleCadaverCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupDarleneCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupBusinessWoman" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessMan" count="1" />
+		<lootcontainer name="groupRegularFemale" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarlene" />
 		</lootcontainer>
-		<lootcontainer name="groupBusinessWomanFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManFeral" count="1" />
+		<lootcontainer name="groupRegularFemaleFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupBusinessWomanRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManRadiated" count="1" />
+		<lootcontainer name="groupRegularFemaleRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupBusinessWomanCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupBusinessWomanInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBusinessManInfernal" count="1" />
+		<lootcontainer name="groupRegularFemaleCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMarleneCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupDave" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoe" count="1" />
+		<lootcontainer name="groupSnowBunnyKim" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirl" />
 		</lootcontainer>
-		<lootcontainer name="groupDaveFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeFeral" count="1" />
+		<lootcontainer name="groupSnowBunnyKimFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupDaveRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeRadiated" count="1" />
+		<lootcontainer name="groupSnowBunnyKimRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupDaveCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupDaveInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBoeInfernal" count="1" />
+		<lootcontainer name="groupSnowBunnyKimCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupMilitaryFemale" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldier" count="1" />
+		<lootcontainer name="groupSnowBunnyParis" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirl" />
 		</lootcontainer>
-		<lootcontainer name="groupMilitaryFemaleFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierFeral" count="1" />
+		<lootcontainer name="groupSnowBunnyParisFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupMilitaryFemaleRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierRadiated" count="1" />
+		<lootcontainer name="groupSnowBunnyParisRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupMilitaryFemaleCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupMilitaryFemaleInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierInfernal" count="1" />
+		<lootcontainer name="groupSnowBunnyParisCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupFloridaMan" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMutated" count="1" />
+		<lootcontainer name="groupFreddie" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmate" />
 		</lootcontainer>
-		<lootcontainer name="groupFloridaManFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMutatedFeral" count="1" />
+		<lootcontainer name="groupFreddieFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupFreddieRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupFreddieCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupFreddieInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupInmateInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupCorpse" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancher" count="1" />
+		<lootcontainer name="groupBusinessWoman" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessMan" />
+		</lootcontainer>
+		<lootcontainer name="groupBusinessWomanFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupBusinessWomanRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupBusinessWomanCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupBusinessWomanInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBusinessManInfernal" />
+		</lootcontainer>
+
+		<lootcontainer name="groupDave" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoe" />
+		</lootcontainer>
+		<lootcontainer name="groupDaveFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupDaveRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupDaveCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupDaveInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBoeInfernal" />
+		</lootcontainer>
+
+		<lootcontainer name="groupMilitaryFemale" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldier" />
+		</lootcontainer>
+		<lootcontainer name="groupMilitaryFemaleFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupMilitaryFemaleRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupMilitaryFemaleCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupMilitaryFemaleInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierInfernal" />
+		</lootcontainer>
+
+		<lootcontainer name="groupFloridaMan" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMutated" />
+		</lootcontainer>
+		<lootcontainer name="groupFloridaManFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMutatedFeral" />
+		</lootcontainer>
+
+		<lootcontainer name="groupCorpse" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancher" />
 		</lootcontainer>
 		</append>
 		</if>
@@ -7181,121 +7217,121 @@
 	<conditional>
 		<if cond="mod_loaded('DoubleGZombiesClassicsReanimated')">
 		<append xpath="/lootcontainers">
-		<lootcontainer name="groupStripperDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirl" count="1" />
+		<lootcontainer name="groupStripperDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirl" />
 		</lootcontainer>
-		<lootcontainer name="groupStripperDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlFeral" count="1" />
+		<lootcontainer name="groupStripperDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupStripperDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlRadiated" count="1" />
+		<lootcontainer name="groupStripperDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupStripperDGZCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlCharged" count="1" />
-		</lootcontainer>
-
-		<lootcontainer name="groupCowboyDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancher" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupCowboyDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupCowboyDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupCowboyDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupRancherInfernal" count="1" />
+		<lootcontainer name="groupStripperDGZCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlCharged" />
 		</lootcontainer>
 
-		<lootcontainer name="groupCheerleaderDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirl" count="1" />
+		<lootcontainer name="groupCowboyDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancher" />
 		</lootcontainer>
-		<lootcontainer name="groupCheerleaderDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlFeral" count="1" />
+		<lootcontainer name="groupCowboyDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupCheerleaderDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlRadiated" count="1" />
+		<lootcontainer name="groupCowboyDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupCheerleaderDGZCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupCheerleaderDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupPartyGirlInfernal" count="1" />
+		<lootcontainer name="groupCowboyDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupRancherInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupFootballDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowler" count="1" />
+		<lootcontainer name="groupCheerleaderDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirl" />
 		</lootcontainer>
-		<lootcontainer name="groupFootballDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerFeral" count="1" />
+		<lootcontainer name="groupCheerleaderDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupFootballDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerRadiated" count="1" />
+		<lootcontainer name="groupCheerleaderDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupFootballDGZCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerCharged" count="1" />
+		<lootcontainer name="groupCheerleaderDGZCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlCharged" />
 		</lootcontainer>
-		<lootcontainer name="groupFootballDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBowlerInfernal" count="1" />
-		</lootcontainer>
-
-		<lootcontainer name="groupFarmerDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArlene" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFarmerDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFarmerDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupFarmerDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupArleneInfernal" count="1" />
+		<lootcontainer name="groupCheerleaderDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupPartyGirlInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupBurntDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupBurnt" count="1" />
+		<lootcontainer name="groupFootballDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowler" />
+		</lootcontainer>
+		<lootcontainer name="groupFootballDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupFootballDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupFootballDGZCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupFootballDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBowlerInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupWightDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightFeral" count="1" />
+		<lootcontainer name="groupFarmerDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArlene" />
 		</lootcontainer>
-		<lootcontainer name="groupWightDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightRadiated" count="1" />
+		<lootcontainer name="groupFarmerDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupWightDGZCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightCharged" count="1" />
+		<lootcontainer name="groupFarmerDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupWightDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupWightInfernal" count="1" />
-		</lootcontainer>
-
-		<lootcontainer name="groupHazmatDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmat" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupHazmatDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatFeral" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupHazmatDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatRadiated" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupHazmatDGZCharged" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatCharged" count="1" />
-		</lootcontainer>
-		<lootcontainer name="groupHazmatDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupMaleHazmatInfernal" count="1" />
+		<lootcontainer name="groupFarmerDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupArleneInfernal" />
 		</lootcontainer>
 
-		<lootcontainer name="groupSoldierDGZ" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldier" count="1" />
+		<lootcontainer name="groupBurntDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupBurnt" />
 		</lootcontainer>
-		<lootcontainer name="groupSoldierDGZFeral" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierFeral" count="1" />
+
+		<lootcontainer name="groupWightDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightFeral" />
 		</lootcontainer>
-		<lootcontainer name="groupSoldierDGZRadiated" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierRadiated" count="1" />
+		<lootcontainer name="groupWightDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightRadiated" />
 		</lootcontainer>
-		<lootcontainer name="groupSoldierDGZInfernal" count="1" size="8,9" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
-			<item group="groupSoldierInfernal" count="1" />
+		<lootcontainer name="groupWightDGZCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupWightDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupWightInfernal" />
+		</lootcontainer>
+
+		<lootcontainer name="groupHazmatDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmat" />
+		</lootcontainer>
+		<lootcontainer name="groupHazmatDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupHazmatDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupHazmatDGZCharged" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatCharged" />
+		</lootcontainer>
+		<lootcontainer name="groupHazmatDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupMaleHazmatInfernal" />
+		</lootcontainer>
+
+		<lootcontainer name="groupSoldierDGZ" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldier" />
+		</lootcontainer>
+		<lootcontainer name="groupSoldierDGZFeral" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierFeral" />
+		</lootcontainer>
+		<lootcontainer name="groupSoldierDGZRadiated" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierRadiated" />
+		</lootcontainer>
+		<lootcontainer name="groupSoldierDGZInfernal" count="1" size="8,9" destroy_on_close="empty" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="groupSoldierInfernal" />
 		</lootcontainer>
 		</append>
 		</if>

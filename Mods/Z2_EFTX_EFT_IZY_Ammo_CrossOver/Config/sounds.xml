@@ -1,0 +1,20 @@
+<EFTX>
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+<remove xpath="//SoundDataNode[@name='explosion_grenade']"></remove>
+	<insertAfter xpath="//SoundDataNode[@name='explosion3']">
+
+		<SoundDataNode name="explosion_grenade"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+			<Noise ID="5" noise="150" time="5" heat_map_strength="5" heat_map_time="300"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?gren_expl1_close"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?gren_expl2_close"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?gren_expl3_close"/>
+			<AudioClip ClipName="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?gren_expl4_close"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+	</insertAfter>
+	</if>
+	</conditional>
+</EFTX>

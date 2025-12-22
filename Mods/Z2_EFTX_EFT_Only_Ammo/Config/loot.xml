@@ -1,0 +1,1187 @@
+<EFTX>	
+			<conditional>
+			<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
+				<append xpath="//lootgroup[@name='groupInjectorSmall']">
+				<item name="resourceCanisterWithPurifiedWater" count="0,1" loot_prob_template="medLow"/>		
+				</append>
+				<append xpath="//lootgroup[@name='groupInjectorMed']">
+				<item name="resourceCanisterWithPurifiedWater" count="1,2" loot_prob_template="medLow"/>	
+				</append>
+				<append xpath="//lootgroup[@name='groupInjectorLarge']">
+				<item name="resourceCanisterWithPurifiedWater" count="1,2" loot_prob_template="veryLow"/>	
+				</append>
+				<append xpath="//lootgroup[@name='groupInjectorExtraLarge']">
+				<item name="resourceCanisterWithPurifiedWater" count="1,2" loot_prob_template="medLow"/>		
+				</append>
+				</if>
+			</conditional>
+				<append xpath="//lootgroup[@name='groupChemistryStationLoot02']">
+					<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+					<item name="resourceNitricAcid" count="2,10" loot_prob_template="medLow"/>
+					<item name="resourceSulfuricAcid" count="2,7" loot_prob_template="medLow"/>
+					<item name="resourceCellulosePowder" count="15,45" loot_prob_template="low"/>
+					<item name="resourceOxBleach" count="1,2" loot_prob_template="medLow"/>			
+				</append>
+				<append xpath="//lootgroup[@name='groupChem01']">
+					<item name="resourceNitricAcid" count="0,5" loot_prob_template="medLow"/>
+					<item name="resourceSulfuricAcid" count="0,5" loot_prob_template="medLow"/>
+					<item name="resourceCellulosePowder" count="10,25" loot_prob_template="low"/>
+					<item name="resourceOxBleach" count="1,2" loot_prob_template="medLow"/>
+					<item name="resourceCanisterWithPurifiedWater" count="0,1" loot_prob_template="veryLow"/>
+				</append>
+				<append xpath="//lootgroup[@name='groupChemPileSmall']">
+					<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+				</append>
+				<append xpath="//lootgroup[@name='groupChemPileMed']">
+							<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+				</append>
+				<append xpath="//lootgroup[@name='groupChemPileLarge']">
+							<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+				</append>
+				<append xpath="//lootgroup[@name='groupScrapCommon']">
+					<item name="resourceClassicMatches" count="1,2" loot_prob_template="low"/>
+					<item name="resourceNitricAcid" count="5,75" loot_prob_template="medLow"/>
+					<item name="resourceSulfuricAcid" count="5,75" loot_prob_template="medLow"/>
+					<item name="resourceCellulosePowder" count="15,45" loot_prob_template="low"/>
+					<item name="resourceOxBleach" count="1,2" loot_prob_template="medLow"/>
+					<item name="schematicsChemician" count="1" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupCraftingUncommon']">
+					<item name="resourceClassicMatches" count="1,2" loot_prob_template="low"/>
+					<item name="resourceCellulosePowder" count="15,45" loot_prob_template="low"/>
+					<item name="resourceNitricAcid" count="15,10" loot_prob_template="low"/>
+					<item name="resourceSulfuricAcid" count="15,100" loot_prob_template="low"/>
+					<item name="resourceOxBleach" count="1,2" loot_prob_template="low"/>
+			</append>	
+			<append xpath="//lootgroup[@name='groupFoodTrashUncommon']">
+					<item name="resourceOxBleach" count="1,2" loot_prob_template="veryLow"/>
+					<item name="resourceCanisterWithPurifiedWater" count="0,1" loot_prob_template="veryLow"/>
+					<item name="resourceSulfuricAcid" count="25,75" loot_prob_template="veryLow"/>
+					<item name="resourceNitricAcid" count="5,75" loot_prob_template="veryLow"/>		
+			</append>	
+			<append xpath="//lootgroup[@name='groupMedicalCommon']">	
+				<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupMedicalUncommon']">	
+				<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupMedicalRare']">	
+				<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupCars01']">
+					<item name="resourceCanisterWithPurifiedWater" count="1,2" loot_prob_template="medLow"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupBackpacks01']">
+						<item name="schematicsChemician" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupBackpacks02']">
+						<item name="resourceCanisterWithPurifiedWater" count="0,1" loot_prob_template="medLow"/>
+		</append>			
+		
+		<append xpath="//lootgroup[@name='groupguntokarevtt']">
+			<item name="ammoEft76225mmTokarev" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupguntokarevgold']">
+			<item name="ammoEft76225mmTokarev" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunpmalphadog']">
+			<item name="ammoEft918mmPM" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunstechkin']">
+			<item name="ammoEft918mmPM" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunglock17']">
+			<item name="ammoEft919mm" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunp226']">
+			<item name="ammoEft919mm" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunm9a3']">
+			<item name="ammoEft919mm" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunsr1mp']">
+			<item name="ammoEft921mm" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunusp45tac']">
+			<item name="ammoEft45ACP" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunm1911']">
+			<item name="ammoEft45ACP" count="10,20"/>
+			<item name="ammo44MagnumBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunm45']">
+			<item name="ammoEft45ACP" count="10,20"/>
+			<item name="ammo44MagnumBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunusp45match']">
+			<item name="ammoEft45ACP" count="10,20"/>
+			<item name="ammo44MagnumBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunucp']">
+			<item name="ammoEft4630mmHK" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunfiveseven']">
+			<item name="ammoEft5728FN" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunglock18c']">
+			<item name="ammoEft919mm" count="10,20"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupgunrsh12']">
+			<item name="ammoEft12755PS12" count="3,6"/>
+			<item name="ammoEft12755PS12" count="3,6"/>
+			<item name="ammo9mmBulletBall" count="10,20"/>
+		</append>	
+		
+	<!-- *** Ammo -->		
+	<insertBefore xpath="//lootgroup[@name='groupWeapons_RangedParts']">	
+		<lootgroup name="groupEftAmmoSmallT1">
+		<item name="ammoEft54539" count="6,8"/>	
+		<item name="ammoEft55645NATO" count="6,8"/>	
+		<item name="ammoEft300blk" count="6,8"/>
+		<item name="ammoEft6851SIGHybrid" count="6,8"/>
+		<item name="ammoEft308ME" count="6,8"/>
+		<item name="ammoEft76239" count="6,8"/>
+		<item name="ammoEft939" count="6,8"/>
+		<item name="ammoEft76251NATO" count="6,8"/>
+		<item name="ammoEft76254R" count="6,8"/>
+		<item name="ammoEft12755PS12" count="6,8"/>
+		<item name="ammoEft338" count="6,8"/>
+		<item name="ammoEft76225mmTokarev" count="6,8"/>
+		<item name="ammoEft918mmPM" count="6,8"/>
+		<item name="ammoEft919mm" count="6,8"/>
+		<item name="ammoEft921mm" count="6,8"/>
+		<item name="ammoEft45ACP" count="6,8"/>
+		<item name="ammoEft4630mmHK" count="6,8"/>
+		<item name="ammoEft5728FN" count="6,8"/>
+		<item name="ammoEft7mmShotgun" count="6,8"/>
+		<item name="ammoEft20GBuck" count="6,8"/>
+		<item name="ammoEftShrapnel25Shotgun" count="6,8"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoSmallT2">
+		<item name="ammoEft54539" count="5,12"/>	
+		<item name="ammoEft55645NATO" count="5,12"/>
+		<item name="ammoEft300blk" count="5,12"/>
+		<item name="ammoEft6851SIGHybrid" count="5,12"/>
+		<item name="ammoEft308ME" count="5,12"/>
+		<item name="ammoEft76239" count="5,12"/>
+		<item name="ammoEft939" count="5,12"/>
+		<item name="ammoEft76251NATO" count="5,12"/>
+		<item name="ammoEft76254R" count="5,12"/>
+		<item name="ammoEft12755PS12" count="5,12"/>
+		<item name="ammoEft338" count="5,12"/>		
+		<item name="ammoEft76225mmTokarev" count="5,12"/>
+		<item name="ammoEft918mmPM" count="5,12"/>
+		<item name="ammoEft919mm" count="5,12"/>
+		<item name="ammoEft921mm" count="5,12"/>
+		<item name="ammoEft45ACP" count="5,12"/>
+		<item name="ammoEft4630mmHK" count="5,12"/>
+		<item name="ammoEft5728FN" count="5,12"/>
+		<item name="ammoEft7mmShotgun" count="5,8"/>
+		<item name="ammoEft20GBuck" count="5,8"/>
+		<item name="ammoEftShrapnel25Shotgun" count="5,8"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoSmallT3">
+		<item name="ammoEft54539" count="10,20"/>	
+		<item name="ammoEft55645NATO" count="10,20"/>
+		<item name="ammoEft300blk" count="10,20"/>
+		<item name="ammoEft6851SIGHybrid" count="10,20"/>
+		<item name="ammoEft308ME" count="10,20"/>
+		<item name="ammoEft76239" count="10,20"/>
+		<item name="ammoEft939" count="10,20"/>
+		<item name="ammoEft76251NATO" count="10,20"/>
+		<item name="ammoEft76254R" count="10,20"/>
+		<item name="ammoEft12755PS12" count="10,20"/>
+		<item name="ammoEft338" count="10,20"/>
+		<item name="ammoEft76225mmTokarev" count="10,20"/>
+		<item name="ammoEft918mmPM" count="10,20"/>
+		<item name="ammoEft919mm" count="10,20"/>
+		<item name="ammoEft921mm" count="10,20"/>
+		<item name="ammoEft45ACP" count="10,20"/>
+		<item name="ammoEft4630mmHK" count="10,20"/>
+		<item name="ammoEft5728FN" count="10,20"/>
+		<item name="ammoEft7mmShotgun" count="8,12"/>
+		<item name="ammoEft20GBuck" count="8,12"/>
+		<item name="ammoEftShrapnel25Shotgun" count="8,12"/>
+		</lootgroup>
+		<lootgroup name="groupEftAmmoMediumT0">
+		<item name="ammoEft54539"  count="5,7"/>	
+		<item name="ammoEft55645NATO"  count="5,7"/>
+		<item name="ammoEft300blk"  count="5,7"/>
+		<item name="ammoEft6851SIGHybrid" count="5,7"/>
+		<item name="ammoEft308ME" count="5,7"/>
+		<item name="ammoEft76239"  count="5,7"/>
+		<item name="ammoEft939"  count="5,7"/>
+		<item name="ammoEft76251NATO" count="5,7"/>
+		<item name="ammoEft76254R" count="5,7"/>
+		<item name="ammoEft12755PS12" count="5,7"/>
+		<item name="ammoEft338" count="5,7"/>
+		<item name="ammoEft76225mmTokarev" count="5,7"/>
+		<item name="ammoEft918mmPM" count="5,7"/>
+		<item name="ammoEft919mm" count="5,7"/>
+		<item name="ammoEft921mm" count="5,7"/>
+		<item name="ammoEft45ACP" count="5,7"/>
+		<item name="ammoEft4630mmHK" count="5,7"/>
+		<item name="ammoEft5728FN" count="5,7"/>
+		<item name="ammoEft7mmShotgun" count="3,4"/>
+		<item name="ammoEft20GBuck" count="3,4"/>
+		<item name="ammoEftShrapnel25Shotgun" count="3,4"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoMediumT1">
+		<item name="ammoEft54539" count="7,12"/>	
+		<item name="ammoEft55645NATO" count="7,12"/>	
+		<item name="ammoEft300blk" count="7,12"/>
+		<item name="ammoEft6851SIGHybrid" count="7,12"/>
+		<item name="ammoEft308ME" count="5,7"/>
+		<item name="ammoEft76239" count="7,12"/>
+		<item name="ammoEft939" count="7,12"/>
+		<item name="ammoEft76251NATO" count="7,12"/>
+		<item name="ammoEft76254R" count="7,12"/>
+		<item name="ammoEft12755PS12" count="7,12"/>
+		<item name="ammoEft338" count="7,12"/>
+		<item name="ammoEft76225mmTokarev" count="7,12"/>
+		<item name="ammoEft918mmPM" count="7,12"/>
+		<item name="ammoEft919mm" count="7,12"/>
+		<item name="ammoEft921mm" count="7,12"/>
+		<item name="ammoEft45ACP" count="7,12"/>
+		<item name="ammoEft4630mmHK" count="7,12"/>
+		<item name="ammoEft5728FN" count="7,12"/>
+		<item name="ammoEft7mmShotgun" count="170,12"/>
+		<item name="ammoEftShrapnel25Shotgun" count="7,12"/>
+		<item name="ammoEft54539AP" count="7,12"/>
+		<item name="ammoEft55645NATOAP" count="7,12"/>
+		<item name="ammoEft300blkAP" count="7,12"/>
+		<item name="ammoEft76239AP" count="7,12"/>
+		<item name="ammoEft939AP" count="7,12"/>
+		<item name="ammoEft76251NATOAP" count="7,12"/>
+		<item name="ammoEft76254RAP" count="7,12"/>
+		<item name="ammoEft12755PS12A" count="7,12"/>
+		<item name="ammoEft338AP" count="7,12"/>
+		<item name="ammoEft919mmAP" count="7,12"/>
+		<item name="ammoEft921mmAP" count="7,12"/>
+		<item name="ammoEft45ACPAP" count="7,12"/>
+		<item name="ammoEft4630mmHKAP" count="7,12"/>
+		<item name="ammoEft5728FNAP" count="7,12"/>
+		<item name="ammoEft50ae" count="5,10"/>		
+		<item name="ammoEft50BMGSlap" count="5,10"/>
+		<item name="ammoEftFlechetteShotgun" count="5,10"/>
+		<item name="ammoEft20GBuck" count="5,10"/>
+		</lootgroup>
+		<lootgroup name="groupEftAmmoMediumT2">
+		<item name="ammoEft54539" count="8,15"/>	
+		<item name="ammoEft55645NATO" count="8,15"/>
+		<item name="ammoEft300blk" count="8,15"/>
+		<item name="ammoEft6851SIGHybrid" count="8,15"/>
+		<item name="ammoEft308ME" count="8,15"/>
+		<item name="ammoEft76239" count="8,15"/>
+		<item name="ammoEft939" count="8,15"/>
+		<item name="ammoEft76251NATO" count="8,15"/>
+		<item name="ammoEft76254R" count="8,15"/>
+		<item name="ammoEft12755PS12" count="8,15"/>
+		<item name="ammoEft338" count="8,15"/>		
+		<item name="ammoEft76225mmTokarev" count="8,15"/>
+		<item name="ammoEft918mmPM" count="8,15"/>
+		<item name="ammoEft919mm" count="8,15"/>
+		<item name="ammoEft921mm" count="8,15"/>
+		<item name="ammoEft45ACP" count="8,15"/>
+		<item name="ammoEft4630mmHK" count="8,15"/>
+		<item name="ammoEft5728FN" count="8,15"/>
+		<item name="ammoEft7mmShotgun" count="8,15"/>
+		<item name="ammoEftShrapnel25Shotgun" count="8,15"/>	
+		<item name="ammoEft54539AP" count="8,15"/>
+		<item name="ammoEft55645NATOAP" count="8,15"/>
+		<item name="ammoEft300blkAP" count="8,15"/>
+		<item name="ammoEft76239AP" count="8,15"/>
+		<item name="ammoEft939AP" count="8,15"/>
+		<item name="ammoEft76251NATOAP" count="8,15"/>
+		<item name="ammoEft76254RAP" count="8,15"/>
+		<item name="ammoEft12755PS12A" count="8,15"/>
+		<item name="ammoEft338AP" count="8,15"/>
+		<item name="ammoEft919mmAP" count="8,15"/>
+		<item name="ammoEft921mmAP" count="8,15"/>
+		<item name="ammoEft45ACPAP" count="8,15"/>
+		<item name="ammoEft4630mmHKAP" count="8,15"/>
+		<item name="ammoEft5728FNAP" count="8,15"/>
+		<item name="ammoEft50ae" count="5,10"/>
+		<item name="ammoEft50BMGSlap" count="10,15"/>
+		<item name="ammoEftFlechetteShotgun" count="10,15"/>
+		<item name="ammoEft20GBuck" count="10,15"/>
+		</lootgroup>
+		<lootgroup name="groupEftAmmoMediumT3">
+		<item name="ammoEft54539" count="15,30"/>	
+		<item name="ammoEft55645NATO" count="15,30"/>
+		<item name="ammoEft300blk" count="15,30"/>
+		<item name="ammoEft6851SIGHybrid" count="15,30"/>
+		<item name="ammoEft308ME" count="15,30"/>
+		<item name="ammoEft76239" count="15,30"/>
+		<item name="ammoEft939" count="15,30"/>
+		<item name="ammoEft76251NATO" count="15,30"/>
+		<item name="ammoEft76254R" count="15,30"/>
+		<item name="ammoEft12755PS12" count="15,30"/>
+		<item name="ammoEft338" count="15,30"/>
+		<item name="ammoEft76225mmTokarev" count="15,30"/>
+		<item name="ammoEft918mmPM" count="15,30"/>
+		<item name="ammoEft919mm" count="15,30"/>
+		<item name="ammoEft921mm" count="15,30"/>
+		<item name="ammoEft45ACP" count="15,30"/>
+		<item name="ammoEft4630mmHK" count="15,30"/>
+		<item name="ammoEft5728FN" count="15,30"/>
+		<item name="ammoEft7mmShotgun" count="15,30"/>
+		<item name="ammoEftShrapnel25Shotgun" count="15,30"/>	
+		<item name="ammoEft54539AP" count="15,30"/>
+		<item name="ammoEft55645NATOAP" count="15,30"/>
+		<item name="ammoEft300blkAP" count="15,30"/>	
+		<item name="ammoEft76239AP" count="15,30"/>
+		<item name="ammoEft939AP" count="15,30"/>
+		<item name="ammoEft76251NATOAP" count="15,30"/>
+		<item name="ammoEft76254RAP" count="15,30"/>
+		<item name="ammoEft12755PS12A" count="15,30"/>
+		<item name="ammoEft338AP" count="15,30"/>
+		<item name="ammoEft919mmAP" count="15,30"/>
+		<item name="ammoEft921mmAP" count="15,30"/>
+		<item name="ammoEft45ACPAP" count="15,30"/>
+		<item name="ammoEft4630mmHKAP" count="15,30"/>
+		<item name="ammoEft5728FNAP" count="15,30"/>
+		<item name="ammoEft50ae" count="15,20"/>
+		<item name="ammoEft50BMGHP" count="15,20"/>
+		<item name="ammoEftFlechetteShotgun" count="15,20"/>
+		<item name="ammoEft20GBuck" count="15,20"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoLargeT0">
+		<item name="ammoEft54539" count="5,15"/>	
+		<item name="ammoEft55645NATO" count="5,15"/>	
+		<item name="ammoEft300blk" count="5,15"/>
+		<item name="ammoEft6851SIGHybrid" count="5,15"/>
+		<item name="ammoEft308ME" count="5,15"/>
+		<item name="ammoEft76239" count="5,15"/>
+		<item name="ammoEft939" count="5,15"/>
+		<item name="ammoEft76251NATO" count="5,15"/>
+		<item name="ammoEft76254R" count="5,15"/>
+		<item name="ammoEft12755PS12" count="5,15"/>
+		<item name="ammoEft338" count="5,15"/>
+		<item name="ammoEft76225mmTokarev" count="5,15"/>
+		<item name="ammoEft918mmPM" count="5,15"/>
+		<item name="ammoEft919mm" count="5,15"/>
+		<item name="ammoEft921mm" count="5,15"/>
+		<item name="ammoEft45ACP" count="5,15"/>
+		<item name="ammoEft4630mmHK" count="5,15"/>
+		<item name="ammoEft5728FN" count="5,15"/>
+		<item name="ammoEft7mmShotgun" count="5,15"/>
+		<item name="ammoEftShrapnel25Shotgun" count="5,15"/>
+		<item name="ammoEft20GBuck" count="5,15"/>			
+		</lootgroup>
+		<lootgroup name="groupEftAmmoLargeT1">
+		<item name="ammoEft54539" count="10,20"/>	
+		<item name="ammoEft55645NATO" count="10,20"/>	
+		<item name="ammoEft300blk" count="10,20"/>
+		<item name="ammoEft6851SIGHybrid" count="10,20"/>
+		<item name="ammoEft308ME" count="10,20"/>
+		<item name="ammoEft76239" count="10,20"/>
+		<item name="ammoEft939" count="10,20"/>
+		<item name="ammoEft76251NATO" count="10,20"/>
+		<item name="ammoEft76254R" count="10,20"/>
+		<item name="ammoEft12755PS12" count="10,20"/>
+		<item name="ammoEft338" count="10,20"/>
+		<item name="ammoEft76225mmTokarev" count="10,20"/>
+		<item name="ammoEft918mmPM" count="10,20"/>
+		<item name="ammoEft919mm" count="10,20"/>
+		<item name="ammoEft921mm" count="10,20"/>
+		<item name="ammoEft45ACP" count="10,20"/>
+		<item name="ammoEft4630mmHK" count="10,20"/>
+		<item name="ammoEft5728FN" count="10,20"/>
+		<item name="ammoEft7mmShotgun" count="10,20"/>
+		<item name="ammoEftShrapnel25Shotgun" count="10,20"/>
+		<item name="ammoEft54539AP" count="10,20"/>
+		<item name="ammoEft55645NATOAP" count="10,20"/>
+		<item name="ammoEft300blkAP" count="10,20"/>
+		<item name="ammoEft76239AP" count="10,20"/>
+		<item name="ammoEft939AP" count="10,20"/>
+		<item name="ammoEft76251NATOAP" count="10,20"/>
+		<item name="ammoEft76254RAP" count="10,20"/>
+		<item name="ammoEft12755PS12A" count="10,20"/>
+		<item name="ammoEft338AP" count="10,20"/>
+		<item name="ammoEft919mmAP" count="10,20"/>
+		<item name="ammoEft921mmAP" count="10,20"/>
+		<item name="ammoEft45ACPAP" count="10,20"/>
+		<item name="ammoEft4630mmHKAP" count="10,20"/>
+		<item name="ammoEft5728FNAP" count="10,20"/>
+		<item name="ammoEft50ae" count="5,10"/>
+		<item name="ammoEftFlechetteShotgun" count="10,20"/>
+		<item name="ammoEft54539HP" count="10,20"/>
+		<item name="ammoEft55645NATOHP" count="10,20"/>
+		<item name="ammoEft300blkHP" count="10,20"/>
+		<item name="ammoEft76239HP" count="10,20"/>
+		<item name="ammoEft939HP" count="10,20"/>
+		<item name="ammoEft76251NATOHP" count="10,20"/>
+		<item name="ammoEft76254RHP" count="10,20"/>
+		<item name="ammoEft12755PS12B" count="10,20"/>
+		<item name="ammoEft338HP" count="10,20"/>
+		<item name="ammoEft919mmHP" count="10,20"/>
+		<item name="ammoEft921mmHP" count="10,20"/>
+		<item name="ammoEft45ACPRIP" count="10,20"/>
+		<item name="ammoEft4630mmHKHP" count="10,20"/>
+		<item name="ammoEft5728FNHP" count="10,20"/>
+		<item name="ammoEft50aeHP" count="5,10"/>
+		<item name="ammoEftAP20Slug" count="10,20"/>
+		<item name="ammoEftBarricadeSlug" count="10,20"/>
+		<item name="ammoEft20GBuck" count="10,20"/>			
+		</lootgroup>
+		<lootgroup name="groupEftAmmoLargeT2">
+		<item name="ammoEft54539" count="10,25"/>	
+		<item name="ammoEft55645NATO" count="10,25"/>
+		<item name="ammoEft300blk" count="10,25"/>
+		<item name="ammoEft6851SIGHybrid" count="10,25"/>
+		<item name="ammoEft308ME" count="10,25"/>
+		<item name="ammoEft76239" count="10,25"/>
+		<item name="ammoEft939" count="10,25"/>
+		<item name="ammoEft76251NATO" count="10,25"/>
+		<item name="ammoEft76254R" count="10,25"/>
+		<item name="ammoEft12755PS12" count="10,25"/>
+		<item name="ammoEft338" count="10,25"/>		
+		<item name="ammoEft76225mmTokarev" count="10,25"/>
+		<item name="ammoEft918mmPM" count="10,25"/>
+		<item name="ammoEft919mm" count="10,25"/>
+		<item name="ammoEft921mm" count="10,25"/>
+		<item name="ammoEft45ACP" count="10,25"/>
+		<item name="ammoEft4630mmHK" count="10,25"/>
+		<item name="ammoEft5728FN" count="10,25"/>
+		<item name="ammoEft7mmShotgun" count="10,25"/>
+		<item name="ammoEftShrapnel25Shotgun" count="10,25"/>	
+		<item name="ammoEft54539AP" count="10,25"/>
+		<item name="ammoEft55645NATOAP" count="10,25"/>
+		<item name="ammoEft300blkAP" count="10,25"/>
+		<item name="ammoEft76239AP" count="10,25"/>
+		<item name="ammoEft939AP" count="10,25"/>
+		<item name="ammoEft76251NATOAP" count="10,25"/>
+		<item name="ammoEft76254RAP" count="10,25"/>
+		<item name="ammoEft12755PS12A" count="10,25"/>
+		<item name="ammoEft338AP" count="10,25"/>
+		<item name="ammoEft919mmAP" count="10,25"/>
+		<item name="ammoEft921mmAP" count="10,25"/>
+		<item name="ammoEft45ACPAP" count="10,25"/>
+		<item name="ammoEft4630mmHKAP" count="10,25"/>
+		<item name="ammoEft5728FNAP" count="10,25"/>
+		<item name="ammoEft50ae" count="5,15"/>
+		<item name="ammoEftFlechetteShotgun" count="10,25"/>
+		<item name="ammoEft54539HP" count="10,25"/>
+		<item name="ammoEft55645NATOHP" count="10,25"/>
+		<item name="ammoEft300blkHP" count="10,25"/>
+		<item name="ammoEft76239HP" count="10,25"/>
+		<item name="ammoEft939HP" count="10,25"/>
+		<item name="ammoEft76251NATOHP" count="10,25"/>
+		<item name="ammoEft76254RHP" count="10,25"/>
+		<item name="ammoEft12755PS12B" count="10,25"/>
+		<item name="ammoEft338HP" count="10,25"/>
+		<item name="ammoEft919mmHP" count="10,25"/>
+		<item name="ammoEft921mmHP" count="10,25"/>
+		<item name="ammoEft45ACPRIP" count="10,25"/>
+		<item name="ammoEft4630mmHKHP" count="10,25"/>
+		<item name="ammoEft5728FNHP" count="10,25"/>
+		<item name="ammoEft50aeHP" count="5,15"/>
+		<item name="ammoEft50BMGSlap" count="5,10"/>
+		<item name="ammoEftAP20Slug" count="10,25"/>
+		<item name="ammoEftBarricadeSlug" count="10,25"/>
+		<item name="ammoEft20GBuck" count="10,25"/>			
+		</lootgroup>
+		<lootgroup name="groupEftAmmoLargeT3">
+		<item name="ammoEft54539" count="20,45"/>	
+		<item name="ammoEft55645NATO" count="20,45"/>
+		<item name="ammoEft300blk" count="20,45"/>
+		<item name="ammoEft6851SIGHybrid" count="20,45"/>
+		<item name="ammoEft308ME" count="20,45"/>
+		<item name="ammoEft76239" count="20,45"/>
+		<item name="ammoEft939" count="20,45"/>
+		<item name="ammoEft76251NATO" count="20,45"/>
+		<item name="ammoEft76254R" count="20,45"/>
+		<item name="ammoEft12755PS12" count="20,45"/>
+		<item name="ammoEft338" count="20,45"/>
+		<item name="ammoEft76225mmTokarev" count="20,45"/>
+		<item name="ammoEft918mmPM" count="20,456"/>
+		<item name="ammoEft919mm" count="20,45"/>
+		<item name="ammoEft921mm" count="20,45"/>
+		<item name="ammoEft45ACP" count="20,45"/>
+		<item name="ammoEft4630mmHK" count="20,45"/>
+		<item name="ammoEft5728FN" count="20,45"/>
+		<item name="ammoEft7mmShotgun" count="20,45"/>
+		<item name="ammoEftShrapnel25Shotgun" count="20,45"/>	
+		<item name="ammoEft54539AP" count="20,45"/>
+		<item name="ammoEft55645NATOAP" count="20,45"/>
+		<item name="ammoEft300blkAP" count="20,45"/>	
+		<item name="ammoEft76239AP" count="20,45"/>
+		<item name="ammoEft939AP" count="20,45"/>
+		<item name="ammoEft76251NATOAP" count="20,45"/>
+		<item name="ammoEft76254RAP" count="20,45"/>
+		<item name="ammoEft12755PS12A" count="20,45"/>
+		<item name="ammoEft338AP" count="20,45"/>
+		<item name="ammoEft919mmAP" count="20,45"/>
+		<item name="ammoEft921mmAP" count="20,45"/>
+		<item name="ammoEft45ACPAP" count="20,45"/>
+		<item name="ammoEft4630mmHKAP" count="20,45"/>
+		<item name="ammoEft5728FNAP" count="20,45"/>
+		<item name="ammoEft50ae" count="5,15"/>
+		<item name="ammoEftFlechetteShotgun" count="20,45"/>
+		<item name="ammoEft20GBuck" count="20,45"/>	
+		<item name="ammoEft54539HP" count="20,45"/>
+		<item name="ammoEft55645NATOHP" count="20,45"/>
+		<item name="ammoEft300blkHP" count="20,45"/>
+		<item name="ammoEft76239HP" count="20,45"/>
+		<item name="ammoEft939HP" count="20,45"/>
+		<item name="ammoEft76251NATOHP" count="20,45"/>
+		<item name="ammoEft76254RHP" count="20,45"/>
+		<item name="ammoEft12755PS12B" count="20,45"/>
+		<item name="ammoEft338HP" count="20,45"/>
+		<item name="ammoEft919mmHP" count="20,45"/>
+		<item name="ammoEft921mmHP" count="20,45"/>
+		<item name="ammoEft45ACPRIP" count="20,45"/>
+		<item name="ammoEft4630mmHKHP" count="20,45"/>
+		<item name="ammoEft5728FNHP" count="20,45"/>
+		<item name="ammoEft50aeHP" count="5,15"/>
+		<item name="ammoEft50BMGHP" count="5,10"/>
+		<item name="ammoEftAP20Slug" count="10,20"/>
+		<item name="ammoEftBarricadeSlug" count="20,45"/>		
+		</lootgroup>
+
+		<lootgroup name="groupEftAmmoSmall">
+		<item group="groupEftAmmoSmallT1"  />
+		<item group="groupEftAmmoSmallT2"/>
+		<item group="groupEftAmmoSmallT3"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoMedium">
+		<item group="groupEftAmmoMediumT0"/>
+		<item group="groupEftAmmoMediumT1"/>
+		<item group="groupEftAmmoMediumT2"/>
+		<item group="groupEftAmmoMediumT3"/>		
+		</lootgroup>
+		<lootgroup name="groupEftAmmoLarge">
+		<item group="groupEftAmmoLargeT0"/>
+		<item group="groupEftAmmoLargeT1"/>
+		<item group="groupEftAmmoLargeT2"/>
+		<item group="groupEftAmmoLargeT3"/>		
+		</lootgroup>
+
+		<!-- *** Ammo -->	
+	
+		<lootgroup name="groupAmmoBox" count="1">
+			<item name="bundleAmmoBoxT1Ammo"/>
+			<item name="bundleAmmoBoxT2Ammo"/>
+			<item name="bundleAmmoBoxT3Ammo"/>
+		</lootgroup>
+	</insertBefore>
+	
+	<insertAfter xpath="//lootgroup[@name='groupEftPistolsCases']">	
+		<!-- *** Weaponry Themed Lootgroups -->				
+		<lootgroup name="groupEftAmmoExplosivesIngreds">
+			<item name="resourceTP200TNTBrick" count="4,7"/>
+			<item name="resourceUZRGMGrenadeFuze" count="2,5"/>
+			<item name="resourceOFZ30x165mmShell" count="10,25" loot_prob_template="veryLow"/>
+			<item name="BigBoomBoomSkillMagazine" count="1,2" loot_prob_template="med"/>
+		</lootgroup>
+		<lootgroup name="groupEftWeaponryPartsAndIngredients">
+			<item group="groupEftAmmoExplosivesIngreds" count="1" loot_prob_template="veryLow"/>
+		</lootgroup>	
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupModEftSkillMagazinesAll']">
+		<item name="BigBoomBoomSkillMagazine" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+		</append>		
+		<insertAfter xpath="//lootgroup[@name='EFTXModSchemsT5']">		
+		<lootgroup name="groupModEftSchematicsAmmoAP" count="1">
+				<item name="schematicsAmmoEft54539AP" count="1"/>
+				<item name="schematicsAmmoEft55645NATOAP" count="1"/>
+				<item name="schematicsAmmoEft300blkAP" count="1"/>
+				<item name="schematicsAmmoEft76239AP" count="1"/>
+				<item name="schematicsAmmoEft939AP" count="1"/>
+				<item name="schematicsAmmoEft76251NATOAP" count="1"/>
+				<item name="schematicsAmmoEft76254RAP" count="1"/>
+				<item name="schematicsAmmoEft12755PS12A" count="1"/>
+				<item name="schematicsAmmoEft338AP" count="1"/>
+				<item name="schematicsAmmoEft919mmAP" count="1"/>
+				<item name="schematicsAmmoEft921mmAP" count="1"/>		
+				<item name="schematicsAmmoEft45ACPAP" count="1"/>
+				<item name="schematicsAmmoEft4630mmHKAP" count="1"/>
+				<item name="schematicsAmmoEft5728FNAP" count="1"/>
+				<item name="schematicsammoEft50BMGSlap" count="1"/>
+				<item name="schematicsAmmoEftFlechetteShotgun" count="1"/>
+				<item name="schematicsAmmoEftAP20Slug" count="1"/>				
+			</lootgroup>
+			<lootgroup name="groupModEftSchematicsAmmoHP" >
+				<item name="schematicsAmmoEft54539HP" count="1"/>
+				<item name="schematicsAmmoEft55645NATOHP" count="1"/>
+				<item name="schematicsAmmoEft300blkHP" count="1"/>
+				<item name="schematicsAmmoEft76239HP" count="1"/>
+				<item name="schematicsAmmoEft939HP" count="1"/>
+				<item name="schematicsAmmoEft76251NATOHP" count="1"/>
+				<item name="schematicsAmmoEft76254RHP" count="1"/>
+				<item name="schematicsAmmoEft12755PS12B" count="1"/>
+				<item name="schematicsAmmoEft338HP" count="1"/>
+				<item name="schematicsAmmoEft919mmHP" count="1"/>
+				<item name="schematicsAmmoEft921mmHP" count="1"/>
+				<item name="schematicsAmmoEft45ACPRIP" count="1"/>
+				<item name="schematicsAmmoEft4630mmHKHP" count="1"/>
+				<item name="schematicsAmmoEft5728FNHP" count="1"/>
+				<item name="schematicsammoEft50ae" count="1"/>
+				<item name="schematicsammoEft50aeHP" count="1"/>
+				<item name="schematicsammoEft50BMGHP" count="1"/>
+				<item name="schematicsAmmoEftBarricadeSlug" count="1"/>
+			</lootgroup>
+			</insertAfter>			
+			<insertAfter xpath="//lootgroup[@name='groupModEftSkillMagazinesAll']">
+				<lootgroup name="groupEftAPHPSchematics" loot_quality_template="QLTemplateT5">
+				<item group="groupModEftSchematicsAmmoAP" count="1"/>
+				<item group="groupModEftSchematicsAmmoHP" count="1"/>
+				</lootgroup>
+			</insertAfter>
+			<append xpath="//lootgroup[@name='groupMailbox01']">
+				<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2"  force_prob="true"/>
+			</append>	
+			<append xpath="//lootgroup[@name='groupMailbox02']">
+				<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3"  force_prob="true"/>
+			</append>	
+			<append xpath="//lootgroup[@name='groupBookPile01']">
+				<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+				<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			</append>		
+			<append xpath="//lootgroup[@name='groupCrackabookShelves01']">
+				<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupCrackabookShelves02']">
+				<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupCrackabookCrate02']">
+				<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupCrackabookCrate03']">
+				<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupBookcase01']">
+				<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupBookcase02']">
+				<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceGunPowderSmall']">
+				<item name="resource_item_other_powder" count="10,25"  loot_prob_template="low"/>
+				<item name="resource_item_other_powder_green" count="10,25" loot_prob_template="low"/>
+				<item name="resource_item_other_powder_red" count="10,25" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceGunPowderMedium']">
+				<item name="resource_item_other_powder" count="25,40"  loot_prob_template="low"/>
+				<item name="resource_item_other_powder_green" count="25,40" loot_prob_template="low"/>
+				<item name="resource_item_other_powder_red" count="25,40" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceGunPowderLarge']">
+				<item name="resource_item_other_powder" count="40,100"  loot_prob_template="low"/>
+				<item name="resource_item_other_powder_green" count="40,100" loot_prob_template="low"/>
+				<item name="resource_item_other_powder_red" count="40,100" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletCasingSmall']">
+				<item name="resourceLowCaliberCasing" count="4,10" loot_prob_template="low"/>
+				<item name="resourceEmptyShotgunShell" count="4,10" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletCasingMedium']">
+				<item name="resourceMedCaliberCasing" count="10,20" loot_prob_template="low"/>
+				<item name="resourceEmptyShotgunShell" count="10,15" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletCasingLarge']">
+				<item name="resourceHighCaliberCasing" count="20,30" loot_prob_template="low"/>
+				<item name="resourceEmptyShotgunShell" count="15,20" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletTipSmall']">
+			<item name="resourceLowCaliberBulletTip" count="10,15" loot_prob_template="low"/>
+			<item name="resourceBuckshot" count="5,10" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletTipMedium']">
+			<item name="resourceMedCaliberBulletTip" count="15,20" loot_prob_template="low"/>
+			<item name="resourceBuckshot" count="10,15" loot_prob_template="low"/>
+			</append>
+			<append xpath="//lootgroup[@name='groupResourceBulletTipLarge']">
+			<item name="resourceHighCaliberBulletTip" count="20,30" loot_prob_template="low"/>
+			<item name="resourceBuckshot" count="15,40" loot_prob_template="low"/>		
+			</append>		
+		
+		<!-- T1 Chest -->
+		<append xpath="//lootgroup[@name='groupReinforcedChestT1_01']">
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>
+			<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>			
+		</append>
+		<append xpath="//lootgroup[@name='groupReinforcedChestT1']">
+			<item group="groupEftAmmoSmallT1" count="1"/>
+		</append>
+		<!-- T2 Chest -->
+		<append xpath="//lootgroup[@name='groupReinforcedChestT2_01']">
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>
+			<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+			<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupReinforcedChestT2']">
+			<item group="groupEftAmmoMediumT2" count="1"/>
+		</append>
+		<!-- T3 Chest -->
+		<append xpath="//lootgroup[@name='groupReinforcedChestT3_01']">
+		<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>
+		<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupReinforcedChestT3']">
+		<item group="groupEftAmmoMediumT3" count="1"/>
+	</append>
+		<!-- T4 Chest -->
+		<append xpath="//lootgroup[@name='groupHardenedChestT4_01']">
+			<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupHardenedChestT4']">
+			<item group="groupEftAmmoLargeT1" count="1"/>
+		</append>
+		<!-- T5 Chest -->
+		<append xpath="//lootgroup[@name='groupHardenedChestT5_01']">
+			<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		</append>	
+		<append xpath="//lootgroup[@name='groupHardenedChestT5']">
+			<item group="groupEftAmmoLargeT2" count="2"/>
+		</append>	
+		<!-- Small Weapon Bag -->
+		<insertBefore xpath="//lootgroup[@name='groupSmallWeaponBag']">
+			<lootgroup name="groupSmallWeaponBag01">
+			<item group="groupEftAmmoSmallT1"  count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</lootgroup>
+		</insertBefore>
+		<append xpath="//lootgroup[@name='groupSmallWeaponBag']">		
+			<item group="groupSmallWeaponBag01" count="1"/>			
+		</append>		
+		<!-- Large Weapon Bag -->
+		<insertBefore xpath="//lootgroup[@name='groupLargeWeaponBag']">
+			<lootgroup name="groupLargeWeaponBag01">
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		</lootgroup>
+		</insertBefore>		
+		<append xpath="//lootgroup[@name='groupLargeWeaponBag']">
+			<item group="groupLargeWeaponBag01" count="1"/>			
+		</append>
+		<!-- Small Ammo Pile -->
+		<insertAfter xpath="//lootgroup[@name='groupPigTrough']">
+			<lootgroup name="groupEftAmmoSmall01" >
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			</lootgroup>
+		</insertAfter>
+			<append xpath="//lootgroup[@name='groupAmmoPileSmall']">
+			<item group="groupEftAmmoSmall01" count="1"/>
+		</append>
+		<insertAfter xpath="//lootgroup[@name='groupAmmoPileSmall']">
+			<lootgroup name="groupAmmoPileMed01" >		
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="med" force_prob="true"/>
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+			</lootgroup>
+			</insertAfter>
+		<append xpath="//lootgroup[@name='groupAmmoPileMed']">
+			<item group="groupAmmoPileMed01" count="1"/>
+		</append>	
+		<!-- Large Ammo Pile -->
+		<insertAfter xpath="//lootgroup[@name='groupAmmoPileMed']">
+			<lootgroup name="groupEftAmmoLarge01" >	
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="medHigh" force_prob="true"/>
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupAmmoPileLarge']">			
+			<item group="groupEftAmmoLarge01" count="1"/>
+		</append>
+		<!-- Army Truck -->
+		<append xpath="//lootgroup[@name='groupArmyTruck02']">
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</append>
+		<!-- Police Car Bonus -->
+		<append xpath="//lootgroup[@name='groupPoliceCarBonus01']"> <!-- Lockpicked -->			
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+		</append>
+		<!-- Foot Locker Military -->
+		<append xpath="//lootgroup[@name='groupMilitaryFootlocker02']"> 
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>			
+		</append>
+		<!-- Big Ammo Crate -->
+		<append xpath="//lootgroup[@name='groupAmmoLarge']">
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="med" force_prob="true"/>
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+			<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>			
+		</append>
+		<!-- Infested T1 -->
+		<insertAfter xpath="//lootgroup[@name='groupInfestedT5MeleeRanged']">
+			<lootgroup name="groupInfestedT1_01" >
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>			
+			</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupInfestedT1']">
+			<item group="groupInfestedT1_01" count="1"/>
+		</append>
+		<!-- Infested T2 -->
+		<insertAfter xpath="//lootgroup[@name='groupInfestedT1']">
+		<lootgroup name="groupInfestedT2_01" >
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupInfestedT2']">
+			<item group="groupInfestedT2_01" count="1"/>		
+		</append>
+		<!-- Infested T3 -->
+		<insertAfter xpath="//lootgroup[@name='groupInfestedT2']">
+		<lootgroup name="groupInfestedT3_01" >
+			<item group="groupEftAmmoSmallT3" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupInfestedT3']">
+			<item group="groupInfestedT3_01" count="1"/>
+		</append>
+		<!-- Infested T4 -->
+		<insertAfter xpath="//lootgroup[@name='groupInfestedT3']">
+		<lootgroup name="groupInfestedT4_01" >
+			<item group="groupEftAmmoLargeT1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupInfestedT4']">			
+			<item group="groupInfestedT4_01" count="1"/>
+		</append>
+		<!-- Infested T5 -->
+		<insertAfter xpath="//lootgroup[@name='groupInfestedT4']">
+		<lootgroup name="groupInfestedT5_01" >
+			<item group="groupEftAmmoLargeT1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+			<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupInfestedT5']">
+			<item group="groupInfestedT5_01" count="1"/>
+		</append>
+		
+		<append xpath="//lootgroup[@name='groupSmallSafeLoot01']">
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupSmallSafeLoot02']">
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupSmallSafeLoot03']">
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupGunRack_01']">
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>		
+		</append>
+		<append xpath="//lootgroup[@name='groupGunRack']">
+			<item group="groupGunRack_01" count="1"/>
+		</append>
+		<insertAfter xpath="//lootgroup[@name='groupGunRack']">
+		<lootgroup name="groupAmmoRackDisplay_01" >
+			<item group="groupEftAmmoSmallT1" count="1"  />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupAmmoRackDisplay']">
+			<item group="groupAmmoRackDisplay_01" count="1"/>
+		</append>
+		
+		<insertAfter xpath="//lootgroup[@name='groupSafeBooks']">
+		<lootgroup name="groupGunSafeSecure_02" >
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>		
+		</lootgroup>
+		</insertAfter>
+		<append xpath="//lootgroup[@name='groupGunSafeSecure']">
+			<item group="groupGunSafeSecure_02" count="1"/>
+		</append>		
+		
+		<!-- Shotgun Messiah Crate -->
+		<append xpath="//lootgroup[@name='groupShotgunMessiahCrate01']">
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2"/>	
+		</append>
+		<!-- Hidden Stash / Buried Weapon Chest -->
+		<append xpath="//lootgroup[@name='groupHiddenStash01']">
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupBuriedWeaponChest02']">
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>	
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>		
+		</append>			
+		<!-- Coffins, Motical Drawer, Random Chests -->
+		<append xpath="//lootgroup[@name='groupCoffins01']">
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupCaskets02']">
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupOldWestChest01']">
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+		</append>	
+		<!-- Zombie-Loot -->
+		<append xpath="//lootgroup[@name='groupZpackReg04']">
+			<item group="groupEftAmmoSmallT1" count="1"  />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupZpackStrong02']">
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupZpackBoss02']">
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+			<item group="groupEftWeaponryPartsAndIngredients" count="1,2" loot_prob_template="med"/>	
+			<item name="BigBoomBoomSkillMagazine" count="1" loot_prob_template="med" force_prob="true"/>
+		</append>		
+		<append xpath="//lootgroup[@name='groupCars01']">
+			<item group="groupEftAmmoSmallT1" count="1" />
+			<item group="groupEftAmmoSmallT2" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoSmallT3" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupCars02']">
+			<item group="groupEftAmmoMediumT0" count="1" />
+			<item group="groupEftAmmoMediumT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+			<item group="groupEftAmmoMediumT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftAmmoMediumT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupCars03']">
+			<item group="groupEftAmmoLargeT0" count="1" />
+			<item group="groupEftAmmoLargeT1" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftAmmoLargeT2" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftAmmoLargeT3" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupModEFTXLauncherSchematics']">
+			<item name="BigBoomBoomSkillMagazine" count="1" loot_prob_template="med"/>
+		</append>
+	    <append xpath="//lootgroup[@name='groupQuestAmmo']">
+			<item name="ammoEft54539" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft55645NATO" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft300blk" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft6851SIGHybrid" count="25,50" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft308ME" count="25,50" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft76239" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft939" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft939AP" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft76251NATO" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft76254R" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft12755PS12" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft76225mmTokarev" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft918mmPM" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft919mm" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft921mm" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft45ACP" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft4630mmHK" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft5728FN" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEftFlechetteShotgun" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft7mmShotgun" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEftShrapnel25Shotgun" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEftAP20Slug" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft20GBuck" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft50BMGSlap" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft50BMGHP" count="50,100" loot_prob_template="QuestT0Prob"/>
+			<item name="ammoEft54539" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft55645NATO" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft300blk" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft6851SIGHybrid" count="50,100" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft308ME" count="50,100" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft76239" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft939" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft939AP" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft76251NATO" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft76254R" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft12755PS12" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft76225mmTokarev" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft918mmPM" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft919mm" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft921mm" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft45ACP" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft4630mmHK" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft5728FN" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEftFlechetteShotgun" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft7mmShotgun" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEftShrapnel25Shotgun" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEftAP20Slug" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft20GBuck" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft50BMGSlap" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft50BMGHP" count="100,150" loot_prob_template="QuestT1Prob"/>
+			<item name="ammoEft54539AP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft54539HP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft55645NATOAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft55645NATOHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft300blkAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft300blkHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft6851SIGHybrid" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft308ME" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76239AP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76239HP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft939" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft939AP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76251NATOAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76251NATOHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76254RAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft76254RHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft12755PS12A" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft12755PS12B" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft919mmAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft919mmHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft921mmAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft921mmHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft45ACPAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft45ACPRIP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft4630mmHKAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft4630mmHKHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft5728FNAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft5728FNHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEftFlechetteShotgun" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft7mmShotgun" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEftShrapnel25Shotgun" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEftAP20Slug" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft20GBuck" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft50BMGSlap" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft50BMGHP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft54539AP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft54539HP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft55645NATOAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft55645NATOHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft300blkAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft300blkHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft6851SIGHybrid" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft308ME" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76239AP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76239HP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft939" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft939AP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76251NATOAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76251NATOHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76254RAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft76254RHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft12755PS12A" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft12755PS12B" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft919mmAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft919mmHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft921mmAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft921mmHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft45ACPAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft45ACPRIP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft4630mmHKAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft4630mmHKHP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft5728FNAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft5728FNHP" count="100,200" loot_prob_template="QuestT3Prob"/>		
+			<item name="ammoEft338" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft338AP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft338HP" count="100,200" loot_prob_template="QuestT3Prob"/>	
+			<item name="ammoEftFlechetteShotgun" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft7mmShotgun" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEftShrapnel25Shotgun" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEftAP20Slug" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft20GBuck" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft50BMGSlap" count="100,100" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft50BMGHP" count="100,100" loot_prob_template="QuestT3Prob"/>		
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestResourcesT0']">
+			<item name="resource_item_other_powder" count="25,50"  loot_prob_template="low"/>
+			<item name="resource_item_other_powder_green" count="50,150"  loot_prob_template="low"/>
+			<item name="resource_item_other_powder_red" count="100,200"  loot_prob_template="low"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestResourcesT1']">
+			<item name="resource_item_other_powder" count="50,100"  loot_prob_template="low"/>
+			<item name="resource_item_other_powder_green" count="100,250"  loot_prob_template="low"/>
+			<item name="resource_item_other_powder_red" count="250,400"  loot_prob_template="low"/>
+		</append>	
+		<append xpath="//lootgroup[@name='schematicsModsAndGeneralT1']">
+			<item group="groupModEftSchematicsAmmoAP" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		</append>
+		<append xpath="//lootgroup[@name='schematicsModsAndGeneralT2']">
+			<item group="groupModEftSchematicsAmmoHP" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		</append>	
+		<append xpath="//lootgroup[@name='groupAirDropT1Bundles']">
+		<item name="bundleAmmoBoxT1Ammo" count="1" loot_prob_template="QuestT1Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAirDropT2Bundles']">
+		<item name="bundleAmmoBoxT2Ammo" count="1" loot_prob_template="QuestT2Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAirDropT3Bundles']">
+		<item name="bundleAmmoBoxT3Ammo" count="1" loot_prob_template="QuestT3Prob"/>
+	</append>	
+</EFTX>

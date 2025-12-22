@@ -1,0 +1,889 @@
+<EFTX>
+	<append xpath="/recipes">			
+	<!-- ### Ammo Resources -->
+		<!-- Casings -->
+		<recipe name="resourceLowCaliberCasing" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_brass" count="4"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceMedCaliberCasing" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_brass" count="6"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceHighCaliberCasing" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_brass" count="8"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceEmptyShotgunShell" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceScrapBrass" count="2"/>
+		</recipe>
+		<recipe name="resourceEmptyShotgunShell" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceScrapPolymers" count="1"/>
+			<ingredient name="resourceScrapBrass" count="2"/>
+		</recipe>
+		
+		<!-- Bullet Tips -->
+		<recipe name="resourceLowCaliberBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_lead" count="2"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceMedCaliberBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_lead" count="3"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceHighCaliberBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false">
+			<ingredient name="unit_lead" count="4"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		
+		<!-- Nitrocellulosepowder / CellulosePowder -->
+		<recipe name="resourceCellulosePowder" count="8" craft_time="3.2" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+		<recipe name="resource_item_other_powder" count="8" craft_exp_gain="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceCellulosePowder" count="1"/>
+			<ingredient name="resourceNitricAcid" count="3"/>
+			<ingredient name="resourceSulfuricAcid" count="4"/>
+		</recipe>
+		<recipe name="resource_item_other_powder_green" count="8" craft_exp_gain="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceCellulosePowder" count="1"/>
+			<ingredient name="resourceNitricAcid" count="3"/>
+			<ingredient name="resourceSulfuricAcid" count="4"/>
+		</recipe>
+		<recipe name="resource_item_other_powder_red" count="8" craft_exp_gain="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceCellulosePowder" count="1"/>
+			<ingredient name="resourceNitricAcid" count="3"/>
+			<ingredient name="resourceSulfuricAcid" count="4"/>
+		</recipe>
+		<recipe name="resourceGunPowder" count="10" craft_time="50">
+			<ingredient name="resourceClassicMatches" count="1"/>
+		</recipe>
+		
+		<!-- *** Chemicals -->
+		<recipe name="bundleEftResourceNitricAcid" count="1" craft_time="450" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceOxBleach" count="1"/>
+			<ingredient name="foodRottingFlesh" count="25"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="375"/>
+		</recipe>
+		<recipe name="bundleEftResourceNitricAcid_2" count="1" craft_time="363" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="drinkJarRiverWater" count="1"/>
+			<ingredient name="resourceCellulosePowder" count="1"/>
+			<ingredient name="resourceOxBleach" count="1"/>
+			<ingredient name="resourceClayLump" count="50"/>
+		</recipe>
+		<recipe name="bundleEftResourceSulfuricAcid" count="1" craft_time="328" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="resourceCanisterWithPurifiedWater" count="1"/>
+			<ingredient name="resourceScrapLead" count="250"/>
+		</recipe>
+		<recipe name="bundleEftResourceSulfuricAcid_2" count="1" craft_time="302" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceOxBleach" count="1"/>
+			<ingredient name="resourceClassicMatches" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+	<!-- ### Ammo -->
+	
+		<!-- *** 5.45x39 -->
+		<recipe name="ammoEft54539" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="16"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft54539AP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="17"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft54539HP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="15"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 5.56x45 -->
+		<recipe name="ammoEft55645NATO" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="16"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft55645NATOAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="17"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft55645NATOHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="15"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** .300 Blackout -->
+		<recipe name="ammoEft300blk" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="13"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft300blkAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="13"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft300blkHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="12"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+
+		<!-- 6.8x51 -->
+		<recipe name="ammoEft6851SIGHybrid" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="58"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="3"/>
+		</recipe>
+		
+		<!-- 308 -->
+		<recipe name="ammoEft308ME" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="35"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="2"/>
+		</recipe>
+		
+		<!-- *** 7.62x39 -->
+		<recipe name="ammoEft76239" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="18"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76239AP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="19"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76239HP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMedCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="17"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 939 -->
+		<recipe name="ammoEft939" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="11"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft939AP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_green" count="12"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft939HP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="10"/>
+			<ingredient name="resourceMedCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 7.62x51 -->
+		<recipe name="ammoEft76251NATO" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="30"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76251NATOAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="32"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76251NATOHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="29"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 7.62x54R -->
+		<recipe name="ammoEft76254R" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="31"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76254RAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="33"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft76254RHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="30"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 12.7x55 -->
+		<recipe name="ammoEft12755PS12" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="55"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft12755PS12A" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="3"/>
+			<ingredient name="resource_item_other_powder_red" count="52"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft12755PS12B" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="58"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** .338 LM -->
+		<recipe name="ammoEft338" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="54"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft338AP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder_red" count="57"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft338HP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="51"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft50BMGSlap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_green" count="35"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="10"/>
+		</recipe>
+		<recipe name="ammoEft50BMGHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="4"/>
+			<ingredient name="resource_item_other_powder_red" count="51"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="25"/>
+		</recipe>
+		
+		<!-- *** 7.62x25 -->
+		<recipe name="ammoEft76225mmTokarev" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="5"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 9x18 -->
+		<recipe name="ammoEft918mmPM" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 9x19 -->
+		<recipe name="ammoEft919mm" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft919mmAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft919mmHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 9x21 -->
+		<recipe name="ammoEft921mm" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft921mmAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft921mmHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** .45 ACP -->
+		<recipe name="ammoEft45ACP" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="6"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft45ACPAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="6"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft45ACPRIP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="3"/>
+			<ingredient name="resource_item_other_powder" count="5"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 4.6x30 -->
+		<recipe name="ammoEft4630mmHK" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft4630mmHKAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft4630mmHKHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="3"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 5.7x28 -->
+		<recipe name="ammoEft5728FN" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft5728FNAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="1"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft5728FNHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceLowCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder" count="4"/>
+			<ingredient name="resourceLowCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** .50AE -->
+		<recipe name="ammoEft50ae" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="18"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		<recipe name="ammoEft50aeHP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceHighCaliberBulletTip" count="3"/>
+			<ingredient name="resource_item_other_powder_red" count="17"/>
+			<ingredient name="resourceHighCaliberCasing" count="1"/>
+		</recipe>
+		
+		<!-- *** 12/70 -->
+		<recipe name="ammoEft7mmShotgun" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="8"/>
+			<ingredient name="resource_item_other_powder_red" count="26"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoEft20GBuck" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="8"/>
+			<ingredient name="resource_item_other_powder_red" count="26"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoEftFlechetteShotgun" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceOFZ30x165mmShell" count="8"/>
+			<ingredient name="ammoDartIron" count="8"/>
+			<ingredient name="resource_item_other_powder_red" count="25"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoEftAP20Slug" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapLead" count="24"/>
+			<ingredient name="resource_item_other_powder_red" count="27"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		
+		<!-- *** 23/75 -->
+		<recipe name="ammoEftShrapnel25Shotgun" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="8"/>
+			<ingredient name="resource_item_other_powder_red" count="86"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoEftBarricadeSlug" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceScrapLead" count="24"/>
+			<ingredient name="resource_item_other_powder_red" count="89"/>
+			<ingredient name="resourceEmptyShotgunShell" count="1"/>
+		</recipe>
+		
+		<recipe name="resourceUZRGMGrenadeFuze" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="2"/>
+		</recipe>
+		<recipe name="resourceTP200TNTBrick" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceOFZ30x165mmShell" count="15"/>
+			<ingredient name="resource_item_other_powder" count="250"/>
+			<ingredient name="resource_item_other_powder_green" count="250"/>
+			<ingredient name="resource_item_other_powder_red" count="250"/>
+		</recipe>
+		<recipe name="ammoEft4046381" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="2"/>
+			<ingredient name="resourceTP200TNTBrick" count="2"/>
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="2"/>
+		</recipe>
+		<recipe name="ammoEft4053vog25" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="2"/>
+			<ingredient name="resourceTP200TNTBrick" count="2"/>
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="2"/>
+		</recipe>	
+		<recipe name="ammoEft4046576" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="100"/>
+			<ingredient name="resourceForgedSteel" count="2"/>
+			<ingredient name="resourceMechanicalParts" count="2"/>
+			<ingredient name="resource_item_other_powder_red" count="100"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="2"/>
+		</recipe>	
+		<recipe name="ammoEft9340pg7vl" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="100"/>
+			<ingredient name="ammoRocketFrag" count="10"/>
+			<ingredient name="resourceTP200TNTBrick" count="20"/>
+			<ingredient name="resourceForgedSteel" count="67"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="6"/>
+		</recipe>
+		<recipe name="ammoEftshg725" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="80"/>
+			<ingredient name="ammoRocketFrag" count="8"/>
+			<ingredient name="resourceTP200TNTBrick" count="10"/>
+			<ingredient name="resourceForgedSteel" count="45"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="3"/>
+		</recipe>
+		<recipe name="GrenadeM67" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">	
+			<ingredient name="resourceUZRGMGrenadeFuze" count="1"/>
+			<ingredient name="resourceTP200TNTBrick" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="thrownGrenade" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="5"/>
+		</recipe>
+		<recipe name="GrenadeImpactRGN" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">	
+			<ingredient name="resourceUZRGMGrenadeFuze" count="1"/>
+			<ingredient name="resourceTP200TNTBrick" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="ammoRocketFrag" count="1"/>
+			<ingredient name="resourceOFZ30x165mmShell" count="5"/>
+		</recipe>
+				
+		<!-- ### Ammo Disassembly -->
+		<recipe name="disassembleAmmo0" count="1">
+			<ingredient name="resourceOFZ30x165mmShell" count="1"/>
+		</recipe>		
+		<recipe name="disassembleAmmo1_x10" count="1">
+			<ingredient name="ammoEft54539" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo2_x10" count="1">
+			<ingredient name="ammoEft54539AP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo3_x10" count="1">
+			<ingredient name="ammoEft54539HP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo4_x10" count="1">
+			<ingredient name="ammoEft55645NATO" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo5_x10" count="1">
+			<ingredient name="ammoEft55645NATOAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo6_x10" count="1">
+			<ingredient name="ammoEft55645NATOHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo7_x10" count="1">
+			<ingredient name="ammoEft300blk" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo8_x10" count="1">
+			<ingredient name="ammoEft300blkAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo9_x10" count="1">
+			<ingredient name="ammoEft300blkHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo10_x10" count="1">
+			<ingredient name="ammoEft76239" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo11_x10" count="1">
+			<ingredient name="ammoEft76239AP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo12_x10" count="1">
+			<ingredient name="ammoEft76239HP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo13_x10" count="1">
+			<ingredient name="ammoEft939" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo14_x10" count="1">
+			<ingredient name="ammoEft939AP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo15_x10" count="1">
+			<ingredient name="ammoEft939HP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo16_x10" count="1">
+			<ingredient name="ammoEft76251NATO" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo17_x10" count="1">
+			<ingredient name="ammoEft76251NATOAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo18_x10" count="1">
+			<ingredient name="ammoEft76251NATOHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo19_x10" count="1">
+			<ingredient name="ammoEft76254R" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo20_x10" count="1">
+			<ingredient name="ammoEft76254RAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo21_x10" count="1">
+			<ingredient name="ammoEft76254RHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo22_x10" count="1">
+			<ingredient name="ammoEft12755PS12" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo23_x10" count="1">
+			<ingredient name="ammoEft12755PS12A" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo24_x10" count="1">
+			<ingredient name="ammoEft12755PS12B" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo25_x10" count="1">
+			<ingredient name="ammoEft338" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo26_x10" count="1">
+			<ingredient name="ammoEft338AP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo27_x10" count="1">
+			<ingredient name="ammoEft338HP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo28_x10" count="1">
+			<ingredient name="ammoEft76225mmTokarev" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo29_x10" count="1">
+			<ingredient name="ammoEft918mmPM" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo30_x10" count="1">
+			<ingredient name="ammoEft919mm" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo31_x10" count="1">
+			<ingredient name="ammoEft919mmAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo32_x10" count="1">
+			<ingredient name="ammoEft919mmHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo33_x10" count="1">
+			<ingredient name="ammoEft921mm" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo34_x10" count="1">
+			<ingredient name="ammoEft921mmAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo35_x10" count="1">
+			<ingredient name="ammoEft921mmHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo36_x10" count="1">
+			<ingredient name="ammoEft45ACP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo37_x10" count="1">
+			<ingredient name="ammoEft45ACPAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo38_x10" count="1">
+			<ingredient name="ammoEft45ACPRIP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo39_x10" count="1">
+			<ingredient name="ammoEft4630mmHK" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo40_x10" count="1">
+			<ingredient name="ammoEft4630mmHKAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo41_x10" count="1">
+			<ingredient name="ammoEft4630mmHKHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo42_x10" count="1">
+			<ingredient name="ammoEft5728FN" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo43_x10" count="1">
+			<ingredient name="ammoEft5728FNAP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo44_x10" count="1">
+			<ingredient name="ammoEft5728FNHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo45_x10" count="1">
+			<ingredient name="ammoEft50ae" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo46_x10" count="1">
+			<ingredient name="ammoEft50aeHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo47_x10" count="1">
+			<ingredient name="ammoEft7mmShotgun" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo48_x10" count="1">
+			<ingredient name="ammoEftFlechetteShotgun" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo49_x10" count="1">
+			<ingredient name="ammoEftAP20Slug" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo50_x10" count="1">
+			<ingredient name="ammoEftShrapnel25Shotgun" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo51_x10" count="1">
+			<ingredient name="ammoEftBarricadeSlug" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo52_x10" count="1">
+			<ingredient name="ammoEft50BMGSlap" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo53_x10" count="1">
+			<ingredient name="ammoEft50BMGHP" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo54_x10" count="1">
+			<ingredient name="ammoEft6851SIGHybrid" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo55_x10" count="1">
+			<ingredient name="ammoEft308ME" count="10"/>
+		</recipe>
+		<recipe name="disassembleAmmo56_x10" count="1">
+			<ingredient name="ammoEft20GBuck" count="10"/>
+		</recipe>
+		
+		<recipe name="disassembleAmmo1_x100" count="1">
+			<ingredient name="ammoEft54539" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo2_x100" count="1">
+			<ingredient name="ammoEft54539AP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo3_x100" count="1">
+			<ingredient name="ammoEft54539HP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo4_x100" count="1">
+			<ingredient name="ammoEft55645NATO" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo5_x100" count="1">
+			<ingredient name="ammoEft55645NATOAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo6_x100" count="1">
+			<ingredient name="ammoEft55645NATOHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo7_x100" count="1">
+			<ingredient name="ammoEft300blk" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo8_x100" count="1">
+			<ingredient name="ammoEft300blkAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo9_x100" count="1">
+			<ingredient name="ammoEft300blkHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo10_x100" count="1">
+			<ingredient name="ammoEft76239" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo11_x100" count="1">
+			<ingredient name="ammoEft76239AP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo12_x100" count="1">
+			<ingredient name="ammoEft76239HP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo13_x100" count="1">
+			<ingredient name="ammoEft939" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo14_x100" count="1">
+			<ingredient name="ammoEft939AP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo15_x100" count="1">
+			<ingredient name="ammoEft939HP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo16_x100" count="1">
+			<ingredient name="ammoEft76251NATO" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo17_x100" count="1">
+			<ingredient name="ammoEft76251NATOAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo18_x100" count="1">
+			<ingredient name="ammoEft76251NATOHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo19_x100" count="1">
+			<ingredient name="ammoEft76254R" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo20_x100" count="1">
+			<ingredient name="ammoEft76254RAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo21_x100" count="1">
+			<ingredient name="ammoEft76254RHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo22_x100" count="1">
+			<ingredient name="ammoEft12755PS12" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo23_x100" count="1">
+			<ingredient name="ammoEft12755PS12A" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo24_x100" count="1">
+			<ingredient name="ammoEft12755PS12B" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo25_x100" count="1">
+			<ingredient name="ammoEft338" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo26_x100" count="1">
+			<ingredient name="ammoEft338AP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo27_x100" count="1">
+			<ingredient name="ammoEft338HP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo28_x100" count="1">
+			<ingredient name="ammoEft76225mmTokarev" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo29_x100" count="1">
+			<ingredient name="ammoEft918mmPM" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo30_x100" count="1">
+			<ingredient name="ammoEft919mm" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo31_x100" count="1">
+			<ingredient name="ammoEft919mmAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo32_x100" count="1">
+			<ingredient name="ammoEft919mmHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo33_x100" count="1">
+			<ingredient name="ammoEft921mm" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo34_x100" count="1">
+			<ingredient name="ammoEft921mmAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo35_x100" count="1">
+			<ingredient name="ammoEft921mmHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo36_x100" count="1">
+			<ingredient name="ammoEft45ACP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo37_x100" count="1">
+			<ingredient name="ammoEft45ACPAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo38_x100" count="1">
+			<ingredient name="ammoEft45ACPRIP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo39_x100" count="1">
+			<ingredient name="ammoEft4630mmHK" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo40_x100" count="1">
+			<ingredient name="ammoEft4630mmHKAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo41_x100" count="1">
+			<ingredient name="ammoEft4630mmHKHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo42_x100" count="1">
+			<ingredient name="ammoEft5728FN" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo43_x100" count="1">
+			<ingredient name="ammoEft5728FNAP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo44_x100" count="1">
+			<ingredient name="ammoEft5728FNHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo45_x100" count="1">
+			<ingredient name="ammoEft50ae" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo46_x100" count="1">
+			<ingredient name="ammoEft50aeHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo47_x100" count="1">
+			<ingredient name="ammoEft7mmShotgun" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo48_x100" count="1">
+			<ingredient name="ammoEftFlechetteShotgun" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo49_x100" count="1">
+			<ingredient name="ammoEftAP20Slug" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo50_x100" count="1">
+			<ingredient name="ammoEftShrapnel25Shotgun" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo51_x100" count="1">
+			<ingredient name="ammoEftBarricadeSlug" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo52_x100" count="1">
+			<ingredient name="ammoEft50BMGSlap" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo53_x100" count="1">
+			<ingredient name="ammoEft50BMGHP" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo54_x100" count="1">
+			<ingredient name="ammoEft6851SIGHybrid" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo55_x100" count="1">
+			<ingredient name="ammoEft308ME" count="100"/>
+		</recipe>
+		<recipe name="disassembleAmmo56_x100" count="1">
+			<ingredient name="ammoEft20GBuck" count="10"/>
+		</recipe>
+
+		<recipe name="disassembleAmmo52_x5" count="1">
+            <ingredient name="ammoEft4046381" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo53_x5" count="1">
+            <ingredient name="ammoEft4053vog25" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo54_x5" count="1">
+            <ingredient name="thrownGrenade" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo55_x5" count="1">
+            <ingredient name="thrownGrenadeContact" count="5"/>
+        </recipe>
+        <recipe name="disassembleAmmo52_x20" count="1">
+            <ingredient name="ammoEft4046381" count="20"/>
+        </recipe>
+        <recipe name="disassembleAmmo53_x20" count="1">
+            <ingredient name="ammoEft4053vog25" count="20"/>
+        </recipe>
+        <recipe name="disassembleAmmo54_x25" count="1">
+            <ingredient name="thrownGrenade" count="25"/>
+        </recipe>
+        <recipe name="disassembleAmmo55_x25" count="1">
+            <ingredient name="thrownGrenadeContact" count="25"/>
+		</recipe>
+	</append>
+	<!-- ### Vanilla Recipe Changes -->	
+	<append xpath="//recipes">
+	<recipe name="ammoRocketFrag" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+		<ingredient name="resourceBuckshot" count="25"/>
+		<ingredient name="resourceTP200TNTBrick" count="2"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+		<ingredient name="ammoGasCan" count="500"/>
+		<ingredient name="resourceRocketCasing" count="1"/>
+	</recipe>
+	<recipe name="ammoRocketHE" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+		<ingredient name="resourceRocketTip" count="1"/>
+		<ingredient name="resourceTP200TNTBrick" count="2"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+		<ingredient name="ammoGasCan" count="500"/>
+		<ingredient name="resourceRocketCasing" count="1"/>
+	</recipe>
+
+	<recipe name="resourceClassicMatches" count="1">
+		<ingredient name="resourceWood" count="5"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+	</recipe>
+
+	<recipe name="resourceOxBleach" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+		<ingredient name="resourceAcid" count="3"/>
+		<ingredient name="resourceSulfuricAcid" count="5"/>
+		<ingredient name="resourceNitricAcid" count="5"/>
+		<ingredient name="resourceCellulosePowder" count="50"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+	</recipe>
+	
+	</append>
+	
+	<!-- *** Junk Turret Ammo -->
+	<append xpath="//recipe[@name='ammoJunkTurretRegular']">
+		<ingredient name="resource_item_other_powder" count="3"/>
+	</append>
+	<append xpath="//recipe[@name='ammoBundleJunkTurretRegular']">
+		<ingredient name="resource_item_other_powder" count="2400"/>
+	</append>
+	<append xpath="//recipe[@name='ammoJunkTurretShell']">
+		<ingredient name="resource_item_other_powder" count="3"/>
+	</append>
+	<append xpath="//recipe[@name='ammoBundleJunkTurretShell']">
+		<ingredient name="resource_item_other_powder" count="2400"/>
+	</append>
+	<append xpath="//recipe[@name='ammoJunkTurretAP']">
+		<ingredient name="resource_item_other_powder" count="4"/>
+	</append>
+	<append xpath="//recipe[@name='ammoBundleJunkTurretAP']">
+		<ingredient name="resource_item_other_powder" count="3200"/>
+	</append>	
+</EFTX>

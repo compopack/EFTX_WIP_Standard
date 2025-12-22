@@ -27,6 +27,14 @@
 			<entry min="200" max="999999" quality="0"/>
 		</traderstage_template>		
 	</insertAfter>		
+	<insertAfter xpath="//traderstage_template[@name='ammoTier3']">
+		<traderstage_template name="ammoTier4"> 
+			<entry min="90" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="ammoTier5"> 
+			<entry min="130" max="999999" quality="0"/>
+		</traderstage_template>
+	</insertAfter>	
 				
 		<append xpath="//trader_item_group[@name='generalResources']">
 			<item name="resourceWeaponRepairKit" count="1,5"/>			
