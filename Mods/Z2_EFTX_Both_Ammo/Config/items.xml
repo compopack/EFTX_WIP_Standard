@@ -2,7 +2,7 @@
 	<conditional>
 	<if cond="game_version() &gt;= version(1,2,0)">
 	<append xpath="/items">
-		<!-- *** Ammo Crafting Items -->
+		<!-- Ammo Crafting Items -->
 		<item name="resourceCellulosePowder">
 			<property name="Tags" value="chemicalEftItems"/>
 			<property name="HoldType" value="45"/>
@@ -133,7 +133,7 @@
 			<property name="SoundPickup" value="puremineralwater_grab"/>
 			<property name="SoundPlace" value="puremineralwater_place"/>
 		</item>
-		<!-- *** Crafting Bundles -->
+		<!-- Crafting Bundles -->
 		<item name="bundleEftResourceNitricAcid">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
@@ -317,7 +317,7 @@
 			<property name="SoundPlace" value="bullettips_place"/>
 		</item>
 						
-		<!-- *** Ammo/Weapon Related Items -->
+		<!-- Ammo/Weapon Related Items -->
 		<item name="resourceOFZ30x165mmShell">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -362,7 +362,28 @@
 			<property name="SoundPlace" value="corn_grilled_grab"/>
 		</item>		
 		
-		<!-- *** Ammo Box -->
+		<!-- Grenade Box (lootable) -->
+		<item name="bundleGrenadebox">
+			<property name="Extends" value="disassembleAmmoMasterBundle"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bundleGrenadebox"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="1550"/>
+			<property name="DescriptionKey" value="bundleGrenadeboxDesc"/>
+			<property name="SoundPickup" value="drug_fortbites_grab"/>
+			<property name="SoundPlace" value="drug_fortbites_place"/>
+			<property class="Action0">
+				<property name="Create_item" value="GrenadeImpactRGN,GrenadeM67"/>
+				<property name="Create_item_count" value="1-5,1-5"/>
+				<property name="Random_item" value="ammoEft4046381,ammoEft4046576,ammoEft4053vog25"/>
+				<property name="Random_item_count" value="1-3,1-3"/>
+				<property name="Random_count" value="1"/>
+				<property name="Unique_random_only" value="true"/>
+			</property>
+		</item>	
+		
+		<!-- Ammo Box -->
 		<item name="bundleAmmoBoxAll">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
@@ -435,7 +456,7 @@
 				<property name="Unique_random_only" value="true"/>
 			</property>
 		</item>
-		<!-- *** Grenade Box (lootable) -->
+		<!-- Grenade Box (lootable) -->
 		<item name="bundleGrenadebox">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
@@ -475,7 +496,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### Ammo Schematics (Craftable)-->
+		<!-- Ammo Schematics (Craftable)-->
 		<item name="schematicsAmmoEft54539AP">
 			<property name="Extends" value="schematicNoQualityMaster"/>
 			<property name="CreativeMode" value="Player"/>
@@ -862,7 +883,7 @@
 			</effect_group>
 		</item>
 				
-		<!-- ### Ammo Disassembly (craftable) -->
+		<!-- Ammo Disassembly (craftable) -->
 		<item name="disassembleAmmo0">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
@@ -2199,13 +2220,12 @@
 			</item>
 	</append>
 	
-	<!-- *** Quest Reward: ammo crafting bundles -->
+	<!-- Quest Reward: ammo crafting bundles -->
 	<append xpath="//item[@name='questRewardAmmoCraftingBundle']/property[@class='Action0']/property[@name='Create_item']/@value">,resource_item_other_powder,resource_item_other_powder_green,resource_item_other_powder_red,resourcePaper</append>
 	<append xpath="//item[@name='questRewardAmmoCraftingBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">,100,100,100</append>
 		
 	<append xpath="/items">
-		<!-- Stacknumbers are volume-based -->
-		<!-- ### 5.45x39 -->
+		<!-- 5.45x39 -->
 		<item name="ammoEft54539">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2308,7 +2328,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 5.56x45 -->
+		<!-- 5.56x45 -->
 		<item name="ammoEft55645NATO">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2411,7 +2431,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### .300 Blackout -->
+		<!-- .300 Blackout -->
 		<item name="ammoEft300blk">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2514,7 +2534,7 @@
 			</effect_group>
 		</item>
 
-		<!-- ### 7.62x39 -->
+		<!-- 7.62x39 -->
 		<item name="ammoEft76239">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2575,7 +2595,7 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 				<passive_effect name="DegradationPerUse" operation="perc_add" value=".21"/>
 				<display_value name="dDegradationPerUse" value=".21"/>
-				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1500" tags="pervvkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1500" tags="perkDeadEye,perkMachineGunner"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="1.89"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.015"/>
 				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
@@ -2617,7 +2637,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 9x39 -->
+		<!-- 9x39 -->
 		<item name="ammoEft939">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2720,40 +2740,7 @@
 			</effect_group>
 		</item>
 
-		<!-- ### 6.8x51 -->
-		<item name="ammoEft6851SIGHybrid">
-			<property name="Tags" value="ammo,ammoArmorPiercing,ammo762mmHC"/>
-			<property name="DisplayType" value="ammoBulletEft"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Stacknumber" value="200"/>
-			<property name="Material" value="Mbrass"/>
-			<property name="MeltTimePerUnit" value=".4"/>
-			<property name="EconomicValue" value="13.4"/>
-			<property name="TraderStageTemplate" value="ammoTier1"/>
-			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="SoundPickup" value="bullets_grab"/>
-			<property name="SoundPlace" value="bullets_place"/>
-			<effect_group name="ammo" tiered="false">
-				<passive_effect name="MaxRange" operation="base_set" value="800" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="base_set" value="107" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>				
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="3" tags="perkDeadEye,perkMachineGunner"/>
-				<display_value name="dTargetPenetration" value="3"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
-				<passive_effect name="DegradationPerUse" operation="perc_add" value=".23"/>
-				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1200" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
-				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="leg"/>
-				<passive_effect name="CustomTaggedEffect" operation="base_add" value=".1" tags="RecoilIntensityModifier"/>
-			</effect_group>
-		</item>
-		
-		<!-- ### 7.62x51 -->
+		<!-- 7.62x51 -->
 		<item name="ammoEft76251NATO">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2856,7 +2843,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 7.62x54R -->
+		<!-- 7.62x54R -->
 		<item name="ammoEft76254R">
 			<property name="Tags" value="ammo,ammo762mmHC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -2957,40 +2944,9 @@
 				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="leg"/>
 				<!--passive_effect name="InternalDamageModifier" operation="perc_add" value=".25" tags="arms,legs"/--> <!-- Experimental HP Bonus (Might be too OP) -->
 			</effect_group>
-		</item>
-
-		<!-- 308 Marlin Express -->
-		<item name="ammoEft308ME">
-			<property name="Tags" value="ammo,ammo762mmHC"/>
-			<property name="DisplayType" value="ammoBulletEft"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Stacknumber" value="200"/>
-			<property name="Material" value="Mbrass"/>
-			<property name="MeltTimePerUnit" value=".4"/>
-			<property name="EconomicValue" value="12"/>
-			<property name="TraderStageTemplate" value="ammoTier1"/>
-			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="SoundPickup" value="bullets_grab"/>
-			<property name="SoundPlace" value="bullets_place"/>
-			<effect_group name="ammo" tiered="false">
-				<passive_effect name="MaxRange" operation="base_set" value="800" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="base_set" value="120" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>			
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkDeadEye,perkMachineGunner"/>
-				<display_value name="dTargetPenetration" value="2"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
-				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="750" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
-				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="leg"/>
-			</effect_group>
-		</item>
+		</item>	
 		
-		<!-- ### 12.7x55-->
+		<!-- 12.7x55-->
 		<item name="ammoEft12755PS12">
 			<property name="Tags" value="ammo,ammo762mmHC,ammo12755"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3095,7 +3051,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### .338 Lapua Magnum (8.6x70) -->
+		<!-- .338 Lapua Magnum (8.6x70) -->
 		<item name="ammoEft338">
 			<property name="Tags" value="ammo,ammo762mmHC"/>
 			<property name="DisplayType" value="ammoBullet_2"/>
@@ -3212,7 +3168,7 @@
 			</effect_group>
 		</item>	
 
-		<!-- ### .50BMG (12.7x99) -->
+		<!-- .50BMG (12.7x99) -->
 		<item name="ammoEft50BMGSlap">
 			<property name="Tags" value="ammo,ammo762mmHC,ammo338"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3280,7 +3236,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 7.62x25 -->
+		<!-- 7.62x25 -->
 		<item name="ammoEft76225mmTokarev">
 			<property name="Tags" value="ammo,ammo9mm"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3312,7 +3268,7 @@
 			</effect_group>
 		</item>
 
-		<!-- ### 9x18 -->
+		<!-- 9x18 -->
 		<item name="ammoEft918mmPM">
 			<property name="Tags" value="ammo,ammo9mm"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3342,7 +3298,7 @@
 			</effect_group>
 		</item>
 
-		<!-- ### 9x19 -->
+		<!-- 9x19 -->
 		<item name="ammoEft919mm">
 			<property name="Tags" value="ammo,ammo9mm"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3436,7 +3392,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 9x21 -->
+		<!-- 9x21 -->
 		<item name="ammoEft921mm">
 			<property name="Tags" value="ammo,ammo9mm,ammo921"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3530,7 +3486,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### .45 ACP -->
+		<!-- .45 ACP -->
 		<item name="ammoEft45ACP">
 			<property name="Tags" value="ammo,ammo9mm"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3624,7 +3580,7 @@
 			</effect_group>
 		</item>
 
-		<!-- ### 4.6x30 -->
+		<!-- 4.6x30 -->
 		<item name="ammoEft4630mmHK">
 			<property name="Tags" value="ammo,ammo9mm,ammo4630"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3718,7 +3674,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 5.7x28 -->
+		<!-- 5.7x28 -->
 		<item name="ammoEft5728FN">
 			<property name="Tags" value="ammo,ammo9mm,ammo5728"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3812,7 +3768,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 12.7x33 | .50AE -->
+		<!-- 12.7x33 | .50AE -->
 		<item name="ammoEft50ae">
 			<property name="Tags" value="ammo,ammo9mm,ammo50ae"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
@@ -3878,7 +3834,7 @@
 		</item>
 		
 		
-		<!-- ### 12/70 -->
+		<!-- 12/70 -->
 		<item name="ammoEft7mmShotgun">
 			<property name="Tags" value="ammo,shotgun,ammoShells,ammoShotgunEft"/>
 			<property name="DisplayType" value="ammoShotgunSlug2"/>
@@ -4043,7 +3999,7 @@
 			</effect_group>
 		</item>
 		
-		<!-- ### 23/75 -->
+		<!-- 23/75 -->
 		<item name="ammoEftShrapnel25Shotgun">
 			<property name="Tags" value="ammo,shotgun,ammoShells,ammo2375"/>
 			<property name="DisplayType" value="ammoShotgunEft"/>
@@ -4124,8 +4080,72 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.4" tags="perkBoomstick"/>
 			</effect_group>
 		</item>
+
+		<!-- 6.8x51 -->
+		<item name="ammoEft6851SIGHybrid">
+			<property name="Tags" value="ammo,ammoArmorPiercing,ammo762mmHC"/>
+			<property name="DisplayType" value="ammoBulletEft"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Stacknumber" value="200"/>
+			<property name="Material" value="Mbrass"/>
+			<property name="MeltTimePerUnit" value=".4"/>
+			<property name="EconomicValue" value="13.4"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+			<property name="SoundPickup" value="bullets_grab"/>
+			<property name="SoundPlace" value="bullets_place"/>
+			<effect_group name="ammo" tiered="false">
+				<passive_effect name="MaxRange" operation="base_set" value="800" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="107" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>				
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dTargetPenetration" value="3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".23"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1200" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="leg"/>
+				<passive_effect name="CustomTaggedEffect" operation="base_add" value=".1" tags="RecoilIntensityModifier"/>
+			</effect_group>
+		</item>		
+
+		<!-- 308 Marlin Express -->
+		<item name="ammoEft308ME">
+			<property name="Tags" value="ammo,ammo762mmHC"/>
+			<property name="DisplayType" value="ammoBulletEft"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Stacknumber" value="200"/>
+			<property name="Material" value="Mbrass"/>
+			<property name="MeltTimePerUnit" value=".4"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+			<property name="SoundPickup" value="bullets_grab"/>
+			<property name="SoundPlace" value="bullets_place"/>
+			<effect_group name="ammo" tiered="false">
+				<passive_effect name="MaxRange" operation="base_set" value="800" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="120" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="60" tags="barrelExplosive"/>			
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dTargetPenetration" value="2"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="750" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="leg"/>
+			</effect_group>
+		</item>
 		
-		<!-- ### 40x46 & 40x53 -->
+		<!-- 40x46 & 40x53 -->
 		<item name="ammoEft4046381">
 			<property name="Tags" value="ammo,ammo4046,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="ammoLauncher"/>
@@ -4324,7 +4344,7 @@
 				</passive_effect>
 			</effect_group>
 		</item>
-		<!-- ### RPG-26 AntiPersonnel Rocket -->
+		<!-- RPG-26 AntiPersonnel Rocket -->
 		<item name="ammoEftshg725">
 			<property name="Tags" value="ammo,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="ammoLauncher"/>
@@ -4382,7 +4402,7 @@
 				</passive_effect>
 			</effect_group>
 		</item>
-		<!-- ### RPG7 Warhead -->
+		<!-- RPG7 Warhead -->
 		<item name="ammoEft9340pg7vl">
 			<property name="Tags" value="ammo,ammo9340,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="ammoLauncher"/>
@@ -5003,39 +5023,39 @@
 			</append>
 
 	
-<!-- ************************************************************************************************ -->
+<!--********************************************************************************************* -->
 <!--						STALLIONS EDITS															  -->
-<!-- ************************************************************************************************ -->
+<!--********************************************************************************************* -->
 			<setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='Stacknumber']" name="value">10000</setattribute>
             <setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='EconomicValue']" name="value">1</setattribute>
             <setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='EconomicBundleSize']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='Stacknumber']" name="value">10000</setattribute>
             <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='EconomicValue']" name="value">15</setattribute>
             <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='EconomicBundleSize']" name="value">100</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='Stacknumber']" name="value">10000</setattribute>
             <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='EconomicValue']" name="value">15</setattribute>
             <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='EconomicBundleSize']" name="value">100</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resource_item_other_powder']/property[@name='Stacknumber']" name="value">6000</setattribute>
             <setattribute xpath="/items/item[@name='resource_item_other_powder']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resource_item_other_powder_green']/property[@name='Stacknumber']" name="value">6000</setattribute>
             <setattribute xpath="/items/item[@name='resource_item_other_powder_green']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resource_item_other_powder_red']/property[@name='Stacknumber']" name="value">6000</setattribute>
             <setattribute xpath="/items/item[@name='resource_item_other_powder_red']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceClassicMatches']/property[@name='Stacknumber']" name="value">250</setattribute>
             <setattribute xpath="/items/item[@name='resourceClassicMatches']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceCanisterWithPurifiedWater']/property[@name='Stacknumber']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='resourceCanisterWithPurifiedWater']/property[@name='EconomicValue']" name="value">500</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceOxBleach']/property[@name='Stacknumber']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='resourceOxBleach']/property[@name='EconomicValue']" name="value">150</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@name='Stacknumber']" name="value">5</setattribute>
 			<append xpath="//items/item[@name='bundleEftResourceNitricAcid']">
 			<property name="EconomicValue" value="300"/>
@@ -5043,7 +5063,7 @@
 			</append>
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@name='EconomicValue']" name="value">150</setattribute>
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@class='Action0']/property[@name='Create_item_count']" name="value">1950</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@name='Stacknumber']" name="value">5</setattribute>
 			<append xpath="//items/item[@name='bundleEftResourceNitricAcid_2']">
 			<property name="EconomicValue" value="300"/>
@@ -5051,7 +5071,7 @@
 			</append>
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@name='EconomicValue']" name="value">150</setattribute>
             <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@class='Action0']/property[@name='Create_item_count']" name="value">780</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@name='Stacknumber']" name="value">5</setattribute>
 			<append xpath="//items/item[@name='bundleEftResourceSulfuricAcid']">
 			<property name="EconomicValue" value="300"/>
@@ -5059,7 +5079,7 @@
 			</append>
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@name='EconomicValue']" name="value">150</setattribute>
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@class='Action0']/property[@name='Create_item_count']" name="value">10000</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@name='Stacknumber']" name="value">5</setattribute>
 			<append xpath="//items/item[@name='bundleEftResourceSulfuricAcid_2']">
 			<property name="EconomicValue" value="300"/>
@@ -5067,37 +5087,37 @@
 			</append>
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@name='EconomicValue']" name="value">150</setattribute>
             <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@class='Action0']/property[@name='Create_item_count']" name="value">1250</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceMedCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceMedCaliberCasing']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceHighCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceHighCaliberCasing']/property[@name='EconomicValue']" name="value">20</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceEmptyShotgunShell']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceEmptyShotgunShell']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceLowCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceLowCaliberBulletTip']/property[@name='EconomicValue']" name="value">10</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceMedCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceMedCaliberBulletTip']/property[@name='EconomicValue']" name="value">15</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceHighCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceHighCaliberBulletTip']/property[@name='EconomicValue']" name="value">20</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='Stacknumber']" name="value">50</setattribute>
-            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='EconomicValue']" name="value">500</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='EconomicValue']" name="value">75</setattribute>
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='Stacknumber']" name="value">500</setattribute>
             <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='EconomicValue']" name="value">60</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
             <setattribute xpath="/items/item[@name='resourceUZRGMGrenadeFuze']/property[@name='Stacknumber']" name="value">500</setattribute>
             <setattribute xpath="/items/item[@name='resourceUZRGMGrenadeFuze']/property[@name='EconomicValue']" name="value">45</setattribute>
-            <!-- *********************************************************************************************************************************************** -->
+            <!--******************************************************************************************************************************************** -->
 			
 			<!-- AMMOEFT54539 -->
 			<setattribute xpath="/items/item[@name='ammoEft54539']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
@@ -5516,36 +5536,7 @@
 			<display_value name="DegradationPerUse" value=".05,.10"/>
 			<display_value name="dDegradationPerUse" value=".05,.10"/>
 			</append>			
-            <!-- AMMOEFT939HP -->
-			<!-- ammoEft6851SIGHybrid -->
-			<setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='Tags']" name="value">ammo,ammoArmorPiercing,ammo762mmHC</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='Stacknumber']" name="value">200</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">75</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
-			<conditional>
-			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
-			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
-			</append>
-			</if>
-			</conditional>
-			<conditional>
-			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
-			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
-			</append>
-			</if>
-			</conditional>
-			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
-			<display_value name="DegradationPerUse" value=".05,.10"/>
-			<display_value name="dDegradationPerUse" value=".05,.10"/>
-			</append>
-			<!-- ammoEft6851SIGHybrid -->
+            <!-- AMMOEFT939HP -->			
             <!-- AMMOEFT76251NATO -->
 			<setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='Tags']" name="value">ammo,ammo762mmMC</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -5709,36 +5700,7 @@
 			<display_value name="DegradationPerUse" value=".05,.10"/>
 			<display_value name="dDegradationPerUse" value=".05,.10"/>
 			</append>			
-            <!-- AMMOEFT76254RHP -->
-			<!-- ammoEft308ME -->
-			<setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
-			<setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='Stacknumber']" name="value">200</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='EconomicValue']" name="value">30</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">100</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
-			<remove xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
-			<conditional>
-			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
-			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
-			</append>
-			</if>
-			</conditional>
-			<conditional>
-			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
-			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
-			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
-			</append>
-			</if>
-			</conditional>
-			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
-			<display_value name="DegradationPerUse" value=".05,.10"/>
-			<display_value name="dDegradationPerUse" value=".05,.10"/>
-			</append>
-			<!-- ammoEft308ME -->
+            <!-- AMMOEFT76254RHP -->			
             <!-- AMMOEFT12755PS12 -->
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='Tags']" name="value">ammo,ammo762mmHC,ammo12755</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
@@ -6634,6 +6596,64 @@
 				<display_value name="dTargetArmorPEN" value="47"/> 
 	        </append>
             <!-- AMMOEFTBARRICADESLUG -->
+			<!-- ammoEft6851SIGHybrid -->
+			<setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='Tags']" name="value">ammo,ammoArmorPiercing,ammo762mmHC</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>		
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft6851SIGHybrid']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+			<!-- ammoEft6851SIGHybrid -->
+			<!-- ammoEft308ME -->
+			<setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='Tags']" name="value">ammo,ammo762mmHC</setattribute>
+			<setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='DisplayType']" name="value">ammoBullet_2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<remove xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']/passive_effect[@name='EntityPenetrationCount']"/>
+			<conditional>
+			<if cond="not mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.05" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.05"/>
+			</append>
+			</if>
+			</conditional>
+			<conditional>
+			<if cond="mod_loaded('Z6_EFTX_Armored_Zs')">
+			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.09" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.09"/>
+			</append>
+			</if>
+			</conditional>
+			<append xpath="/items/item[@name='ammoEft308ME']/effect_group[@name='ammo']">
+			<display_value name="DegradationPerUse" value=".05,.10"/>
+			<display_value name="dDegradationPerUse" value=".05,.10"/>
+			</append>
+			<!-- ammoEft308ME -->
 			<!-- AMMOEFT4046381 -->
 			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Tags']" name="value">ammo,ammo4046,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?patron_40x46_M381.prefab</setattribute>
