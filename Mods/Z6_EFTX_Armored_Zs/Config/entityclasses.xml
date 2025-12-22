@@ -811,7 +811,7 @@
 					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
 				</effect_group>
 			</entity_class>
-			<entity_class name="zombieSkateboarderBackpacker" extends="zombieBoe">
+			<entity_class name="zombieSkateboarderBackpacker" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Censor" value="1,2"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,zombieSkateboarder"/>
