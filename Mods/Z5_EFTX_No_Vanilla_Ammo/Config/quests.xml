@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EFTX>
+<set xpath="//reward[@id='groupQuestAmmoCraftingBundle']/@id">groupAmmoBox</set>
+
+<setattribute xpath="//quest[@id='quest_reward_lumberjack_zombie_slayer']/reward[@type='Item' and @id='thrownGrenade']" name="id">GrenadeM67</setattribute>
+<setattribute xpath="//quest[@id='quest_reward_lumberjack_zombie_slayer']/reward[@type='Item' and @id='thrownGrenadeContact']" name="id">GrenadeImpactRGN</setattribute>
+
+<setattribute xpath="//reward[@id='ammoBundle9mmBulletBall']" name="id">ammoBundleEFTXBulletAmmo</setattribute>
+<setattribute xpath="//reward[@id='ammoBundleShotgunShell']" name="id">ammoBundleEFTXShotgunAmmo</setattribute>
+<setattribute xpath="//reward[@id='ammoBundle762mmBulletBall']" name="id">ammoBundleEFTX762Ammo</setattribute>
+
+<setattribute xpath="//reward[@id='ammoBundle9mmBulletAP']" name="id">ammoBundleEFTXBulletAPAmmo</setattribute>
+<setattribute xpath="//reward[@id='ammoBundleShotgunSlug']" name="id">ammoBundleEFTXFlechetteAmmo</setattribute>
+<setattribute xpath="//reward[@id='ammoBundle762mmBulletAP']" name="id">ammoBundleEFTX762APAmmo</setattribute>
+</EFTX>

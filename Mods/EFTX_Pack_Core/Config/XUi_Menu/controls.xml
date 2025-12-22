@@ -1,0 +1,8 @@
+<EFTX>
+	<conditional>
+    <if cond="game_version() &gt;= version(1,2,0)">
+	<setattribute xpath="//mainmenubutton" name="force_hide">false</setattribute>
+    <setattribute xpath="//mainmenubutton//*" name="force_hide">${force_hide}</setattribute>
+	</if>
+</conditional>
+</EFTX>

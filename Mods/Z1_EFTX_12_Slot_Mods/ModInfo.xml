@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="Z1_EFTX_12_Slot_Mods" />
+  <DisplayName value="EFT Extraction 12 Slot Mod" />
+  <Description value="Adds a 12 slot mod section rahter then the 5 slots Vanilla gives" />
+  <Author value="BryanDVS,CloserEx,M14,Stallionsden" />
+  <Version value="2.4.2.5" />
+  <Website value="" />
+</xml>

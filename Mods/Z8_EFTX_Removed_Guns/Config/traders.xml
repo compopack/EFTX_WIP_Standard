@@ -1,0 +1,228 @@
+<EFTX>
+	<conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') ">
+	<append xpath="//trader_item_group[@name='skillMagazines']">
+	<item name="Gunpp19bizonSkillMagazine" count="1,2"/>
+	<item name="GuntokarevmachineSkillMagazine" count="1,2"/>
+	<item name="Gunstar15SkillMagazine" count="1,2"/>
+	<item name="Gunl85a2SkillMagazine" count="1,2"/>	
+	</append>	
+	</if>
+	</conditional>   
+    <conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') and not mod_loaded('EFTX_Pack_Standard') and not mod_loaded('zz_REBIRTH__Core_2_0')">
+	<append xpath="//trader_item_group[@name='EFTXschematicsT1']">
+	<item name="schematicsgriphksturmgriff"/>
+    <item name="schematicsgripmagpulrvg"/>
+    <item name="schematicsgripzenitrk1"/>
+    <item name="schematicsscopeleupolddeltapoint"/>
+    <item name="schematicsscopemonstrumcompact"/>
+    <item name="schematicsscopeokp7reflex"/>
+    <item name="schematicsscopeEOTech553holo"/>
+    <item name="schematicsscopeaimpointAcroP1"/>
+	<item name="schematicsscopeaimpointMicroH2"/>
+	<item name="schematicsscopeaimpointMicroT1"/>
+	<item name="schematicsscopeBelOMOpk06"/>
+	<item name="schematicsscopeburrisfastfire"/>
+	<item name="schematicsscopeSIGromeo4"/>
+	<item name="schematicsscopeRMR"/>
+	<item name="schematicsscopeAimPointCompM4"/>
+    <item name="schematicsmagstanagstd30"/>
+    <item name="schematicssilencertt33makeshift"/>
+    <item name="schematicsmuzzlettlaserdtk"/>
+    <item name="schematicssilencerco46multi"/>
+    <item name="schematicsmuzzlevityazbrakecompensator"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXschematicsT2']">
+	<item name="schematicsbipodrailRexana"/>
+    <item name="schematicsscopeAimPointPro"/>
+	<item name="schematicsmodGunEFTXLaserSight"/>
+    <item name="schematicsscopeaksionEKP818"/>
+    <item name="schematicsscopeElcanSpecterHCO"/>
+    <item name="schematicsscopeLeapersUTG"/>
+    <item name="schematicsscopeSIGRomeo8T"/>
+    <item name="schematicsscopeSRS02"/>
+    <item name="schematicsscopeValdayKrechet"/>
+	<item name="schematicsscopeValdayPK120"/>
+    <item name="schematicsscopeVOMZPiladP1"/>
+    <item name="schematicsscopeVortexRazorAMGUH1"/>
+    <item name="schematicsscopewalthermrsreflex"/>
+    <item name="schematicsscopeWilcoxBossXeHP"/>
+    <item name="schematicsmagstanag556x45pmag40"/>
+    <item name="schematicssilencerco9osprey"/>
+    <item name="schematicssilencergriffinm4sdk"/>
+    <item name="schematicsstockakzenitpt1"/>
+    <item name="schematicsstockar15troym7a1"/>
+    <item name="schematicsstockakzenitpt3"/>
+    <item name="schematicsscopeaimpointAcroP1canted"/>
+	<item name="schematicsscopeaimpointMicroH2canted"/>
+	<item name="schematicsscopeaimpointMicroT1canted"/>
+	<item name="schematicsscopeBelOMOpk06canted"/>
+	<item name="schematicsscopeburrisfastfirecanted"/>
+	<item name="schematicsscopeSIGromeo4canted"/>
+	<item name="schematicsscopeRMRcanted"/>
+	<item name="schematicsscopeleupolddeltapointcanted"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXschematicsT3']">
+	<item name="schematicsmagttcustomdrum75"/>
+    <item name="schematicsstockttmachinecustom"/>
+    <item name="schematicsscopeeotechhhshybrid"/>
+    <item name="schematicsscopeacogta01NSN4x32"/>
+    <item name="schematicsscopeKibaArmsPrism"/>
+    <item name="schematicsscopeSwampFoxPrism"/>
+    <item name="schematicsscopeacogta11D35x"/>
+    <item name="schematicsscopeLeupoldMark4Hamr"/>
+    <item name="schematicsscopeSIGBravo4"/>
+    <item name="schematicsmagstanag556x45pmagd60"/>
+    <item name="schematicsmagstanag556x45sf60"/>
+    <item name="schematicssilencersocomrc2"/>
+    <item name="schematicssilencersigsrdqd"/>
+    <item name="schematicssilencersigsrd9"/>
+    <item name="schematicsscopeSBPMII18x2430mm"/>
+    <item name="schematicsscopeValdayPS320"/>
+    <item name="schematicsmuzzleAR15thunderbeast223cb"/>
+    <item name="schematicsstocka2ar15prsgen2tan"/>
+    <item name="schematicsstockar15hke1"/>  
+	</append>	
+	<append xpath="//trader_item_group[@name='EFTXschematicsT4']">
+	<item name="schematicsscopeNCStarADO"/>
+    <item name="schematicsscopeKMZ1p69Weaver"/>
+    <item name="schematicsgripzenitb25urk1"/>
+    <item name="schematicssilencerthunderbeastultra5"/>
+    <item name="schematicsstocka2ar15prsgen3"/>
+    <item name="schematicsstockar15glcore"/>
+    <item name="schematicsstockar15ergof93pro"/>
+	<item name="schematicsm203grenadelaunchers"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXschematicsT5']">
+	<item name="schematicsscopeElcanSpecterDR"/>
+    <item name="schematicsscopeSBPMII320x5034mm"/>
+	<item name="schematicsscopeSBPMII525x5634mm"/>
+	<item name="schematicsscopeBFTac3014x2430mm"/>				
+	<item name="schematicsscopeEOTVudu16x2430mm"/>
+	<item name="schematicsscopeLeupoldMark4LR30mm"/>				
+	<item name="schematicsscopeMarchTactical30mm"/>								
+	<item name="schematicsscopeSIGTango6T16x2430mm"/>							
+	<item name="schematicsscopeRazorHDGen216x2430mm"/>
+	<item name="schematicsscopeNFATACR735x5634mm"/>
+	<item name="schematicsscopeHensoldtFF416x5634mm"/>
+	<item name="schematicsmagpp19vityazdrum50"/>
+    <item name="schematicsmagstanag556x45sf100"/>
+    <item name="schematicsm203grenadelaunchers"/>
+    <item name="schematicssilencersdnaacmulti"/>
+    <item name="schematicssilencersigsrd762ti"/>
+    <item name="schematicsmuzzle_ar15_ferfrans_muzzle_brake_556x45"/>
+	<item name="schematicsmuzzle_ar15_double_star_carlson_tac_comp_556x45"/>
+	<item name="schematicsmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
+    <item name="schematicsmuzzlesigtwoportbrake"/>
+    <item name="schematicsstockar15b5precision"/>
+    <item name="schematicsstockar15acesocomgen4"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXModsT1']">
+	<item name="modgriphksturmgriff"/>
+    <item name="modgripmagpulrvg"/>
+    <item name="modgripzenitrk1"/>
+    <item name="modscopeleupolddeltapointOld"/>
+	<item name="modscopemonstrumcompactOld"/>
+	<item name="modscopewalthermrsreflexOld"/>
+	<item name="modscopeokp7reflexOld"/>
+	<item name="modscopeEOTech553holoOld"/>
+    <item name="modscopeaimpointAcroP1Old"/>
+	<item name="modscopeaimpointMicroH2Old"/>
+	<item name="modscopeaimpointMicroT1Old"/>
+	<item name="modscopeBelOMOpk06Old"/>
+	<item name="modscopeburrisfastfireOld"/>
+	<item name="modscopeSIGromeo4Old"/>
+	<item name="modscopeRMROld"/>
+	<item name="modscopeAimPointCompM4Old"/>
+    <item name="modmagttcustomdrum75"/>
+    <item name="modmagstanagstd30"/>
+    <item name="modsilencertt33makeshift"/>
+    <item name="modmuzzlettlaserdtk"/>
+    <item name="modsilencerco46multi"/>
+    <item name="modmuzzlevityazbrakecompensator"/>
+    <item name="modstockttmachinecustom"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXModsT2']">
+	<item name="modbipodrailRexana"/>
+    <item name="modscopeAimPointProOld"/>
+	<item name="modGunEFTXLaserSight"/>
+	<item name="modscopeaksionEKP818Old"/>
+    <item name="modscopeElcanSpecterHCOOld"/>
+    <item name="modscopeLeapersUTGOld"/>
+    <item name="modscopeSIGRomeo8TOld"/>
+    <item name="modscopeSRS02Old"/>
+    <item name="modscopeValdayKrechetOld"/>
+	<item name="modmuzzlear15ferfransmuzzlebrake556x45"/>
+	<item name="modscopeValdayPK120Old"/>
+	<item name="modscopeVOMZPiladP1Old"/>
+	<item name="modscopeVortexRazorAMGUH1Old"/>
+	<item name="modscopeWilcoxBossXeHPOld"/>
+    <item name="modmagstanag556x45pmag40"/>
+    <item name="modsilencerco9osprey"/>
+    <item name="modsilencergriffinm4sdk"/>	
+    <item name="modstockakzenitpt1"/>
+    <item name="modstockar15troym7a1"/>
+    <item name="modstockakzenitpt3"/>
+    <item name="modscopeaimpointAcroP1cantedOld"/>
+    <item name="modscopeaimpointMicroH2cantedOld"/>
+    <item name="modscopeaimpointMicroT1cantedOld"/>
+    <item name="modscopeBelOMOpk06cantedOld"/>
+    <item name="modscopeburrisfastfirecantedOld"/>
+    <item name="modscopeleupolddeltapointcantedOld"/>
+    <item name="modscopeSIGromeo4cantedOld"/>
+    <item name="modscopeRMRcantedOld"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXModsT3']">
+	<item name="modscopeeotechhhshybridOld"/>
+    <item name="modscopeacogta01NSN4x32Old"/>
+    <item name="modscopeKibaArmsPrismOld"/>
+    <item name="modmagpp19vityazdrum50"/>
+    <item name="modscopeSwampFoxPrismOld"/>
+    <item name="modscopeValdayPS320Old"/>
+    <item name="modscopeacogta11D35xOld"/>
+	<item name="modscopeLeupoldMark4HamrOld"/>
+	<item name="modscopeSIGBravo4Old"/>
+    <item name="modmuzzlear15doublestarcarlsontaccomp556x45"/>
+    <item name="modmagstanag556x45pmagd60"/>
+	<item name="modmagstanag556x45sf60"/>
+    <item name="modsilencersocomrc2"/>
+	<item name="modscopeElcanSpecterDROld"/>
+    <item name="modsilencersigsrdqd"/>
+	<item name="modsilencersigsrd9"/>
+    <item name="modmuzzleAR15thunderbeast223cb"/>
+    <item name="modstocka2ar15prsgen2tan"/>
+    <item name="modstockar15hke1"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXModsT4']">
+	<item name="modscopeNCStarADOOld"/>
+	<item name="modscopeKMZ1p69WeaverOld"/>
+    <item name="modmuzzlear15alientechgubichmuzzlebrake556x45"/>
+    <item name="modscopeSBPMII18x2430mmOld"/>
+    <item name="modm203grenadelaunchers"/>
+    <item name="modsilencerthunderbeastultra5"/>
+    <item name="modstocka2ar15prsgen3"/>
+    <item name="modstockar15glcore"/>
+	<item name="modstockar15ergof93pro"/>
+	</append>
+	<append xpath="//trader_item_group[@name='EFTXModsT5']">
+	<item name="modscopeSBPMII320x5034mm"/>
+    <item name="modscopeBFTac3014x2430mm"/>		
+	<item name="modscopeSBPMII525x5634mm"/>	
+	<item name="modscopeEOTVudu16x2430mm"/>
+    <item name="modscopeLeupoldMark4LR30mm"/>
+	<item name="modscopeMarchTactical30mm"/>
+	<item name="modscopeSIGTango6T16x2430mm"/>
+	<item name="modscopeRazorHDGen216x2430mm"/>
+	<item name="modscopeHensoldtFF416x5634mm"/>
+	<item name="modscopeNFATACR735x5634mm"/>
+    <item name="modmagstanag556x45sf100"/>
+    <item name="modsilencersdnaacmulti"/>
+    <item name="modsilencersigsrd762ti"/>
+	<item name="modmuzzlesigtwoportbrake"/>
+    <item name="modstockar15b5precision"/>
+	<item name="modstockar15acesocomgen4"/> 
+	</append>
+    </if>
+	</conditional>    
+</EFTX>

@@ -1,0 +1,1584 @@
+<EFTX>
+<append xpath="/items">
+		<!-- *** Food/Drink -->
+		<item name="foodWheatFlour">
+			<property name="Tags" value="food,foodSkill,fitness"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWaterRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="8"/>
+			<property name="CraftingIngredientTime" value="10"/>
+			<property name="SoundPickup" value="cornmeal_grab"/>
+			<property name="SoundPlace" value="cornmeal_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="$waterAmountAdd" value="-8"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodBread">
+			<property name="Tags" value="food,foodSkill,fitness"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="12"/>
+			<!--<property name="UnlockedBy" value="craftingFood"/>-->
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodBeefstew">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedBeefStewSmall.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodBeefstew2">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedBeefStewLarge.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodCannedSaira">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedSaira.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodCondensedMilk">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedMilkCondensed.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6.5"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodHerring">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedHumpback.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodIskra">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovMREgreen.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="125"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodPeas">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedPea.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodMarrowPurree">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedPuree.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodMRE">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovMREyellow.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="125"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodSugar">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovSugar.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodHumpback">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedHumpback.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="10"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodCanTuna">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovcannedSprats.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SoundPickup" value="canfoodsmall_grab"/>
+			<property name="SoundPlace" value="canfoodsmall_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="11"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodArmyCracker">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodArmyCracker.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="10"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="23"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodAlyonka">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodAlyonka.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="4"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="23"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodSlickers">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSlickers.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="4"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="23"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodBeefJerky">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodBeefJerky.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="23"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodInstantNoodles">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodInstantNoodles.prefab"/>
+			<property name="DisplayType" value="foodEft1"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="35"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-3"/>
+				<display_value name="$waterAmountAdd" value="-3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodEmeliaCroutons">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSnackEmelia.prefab"/>
+			<property name="DisplayType" value="foodEft1"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-2"/>
+				<display_value name="$waterAmountAdd" value="-2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodRyeCroutons">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSnackRye.prefab"/>
+			<property name="DisplayType" value="foodEft1"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-2"/>
+				<display_value name="$waterAmountAdd" value="-2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="drinkGreenTea">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkcanGreenIcedTea.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="69"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="megacrush_grab"/>
+			<property name="SoundPlace" value="megacrush_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>		
+		<item name="drinkTarCola">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkcanTarcola.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="69"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="megacrush_grab"/>
+			<property name="SoundPlace" value="megacrush_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkMaxEnergy">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkcanMaxenergy.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="69"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="megacrush_grab"/>
+			<property name="SoundPlace" value="megacrush_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkRatCola">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="drinkRatCola"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkcanRatcola.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="296"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="megacrush_grab"/>
+			<property name="SoundPlace" value="megacrush_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<display_value name="dStaminaRegen" value=".25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRatColaDurationBase" operation="set" value="120"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRatColaDuration" operation="add" value="@$buffRatColaDurationBase"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffEftRatCola"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<display_value name="dRunSpeed" value=".15"/>
+				<display_value name="dDuration" value="120"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkApplejuice">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovjuiceApple.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="70"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkGrandJuice">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovjuiceGrand.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="70"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkVitaJuice">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovjuiceVita.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="70"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkMilk">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkMilk.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="49"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="7"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkPineappleJuice">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkPineappleJuice.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="49"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="7"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		<item name="drinkEWR">
+			<property name="Tags" value="drinks,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterEft1"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkEWR.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="49"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="7"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		
+		<!-- *** Liquor -->
+		<item name="liquorPevkoBeer">
+			<property name="Tags" value="drinks,foodSkill,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovBeer.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="119"/>
+			<property name="UnlockedBy" value="schematicsAlcoholics"/>
+			<property name="DisplayType" value="liquorPevkoBeer"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<requirement name="NotHasBuff" buff="buffLiquorVomit"/>
+					<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="6"/>
+					<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 3">
+				<display_value name="dMeleeDamage" value=".1"/>
+				<display_value name="dAttackSpeed" value=".1"/>
+				<display_value name="dStaminaRegen" value=".1"/>
+				<display_value name="dDamageResist" value=".1"/>
+				<display_value name="dDuration" value="180"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$eftLiquorUsedCount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorPevkoBeerDurationBase" operation="set" value="180"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorPevkoBeerDuration" operation="add" value="@$buffLiquorPevkoBeerDurationBase"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLiquorPevkoBeer"/>
+			</effect_group>
+		</item>
+		<item name="liquorVodka">
+			<property name="Tags" value="drinks,foodSkill,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAlcoholVodka.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="288"/>
+			<property name="UnlockedBy" value="schematicsAlcoholics"/>
+			<property name="DisplayType" value="liquorVodka"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="SoundPickup" value="grandpas_awesome_grab"/>
+			<property name="SoundPlace" value="grandpas_awesome_place"/>
+			<property class="Action0">
+				<requirement name="NotHasBuff" buff="buffLiquorVomit"/>
+					<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="10"/>
+					<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 3">
+				<display_value name="dRangedDamage" value=".1"/>
+				<display_value name="dDamageResist" value=".15"/>
+				<display_value name="dBuffResistance" value=".2"/>
+				<display_value name="dDuration" value="300"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$eftLiquorUsedCount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorVodkaDurationBase" operation="set" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorVodkaDuration" operation="add" value="@$buffLiquorVodkaDurationBase"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLiquorVodka"/>
+			</effect_group>
+		</item>
+		<item name="liquorDanJackiel">
+			<property name="Tags" value="drinks,foodSkill,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAlcoholDanJackiel.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="286"/>
+			<property name="UnlockedBy" value="schematicsAlcoholics"/>
+			<property name="DisplayType" value="liquorVodka"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="SoundPickup" value="grandpas_fergitn_grab"/>
+			<property name="SoundPlace" value="grandpas_fergitn_place"/>
+			<property class="Action0">
+				<requirement name="NotHasBuff" buff="buffLiquorVomit"/>
+					<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="10"/>
+					<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 3">
+				<display_value name="dRangedDamage" value=".15"/>
+				<display_value name="dDamageResist" value=".05"/>
+				<display_value name="dBuffResistance" value=".2"/>
+				<display_value name="dDuration" value="300"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$eftLiquorUsedCount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorDanJackielDurationBase" operation="set" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLiquorDanJackielDuration" operation="add" value="@$buffLiquorDanJackielDurationBase"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLiquorDanJackiel"/>
+			</effect_group>
+		</item>
+		<item name="liquorMoonshine">
+			<property name="Tags" value="drinks,foodSkill,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAlcoholMoonshine.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="UnlockedBy" value="schematicsAlcoholics"/>
+			<!--property name="DisplayType" value="liquorMoonshine"/-->
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="SoundPickup" value="grandpas_moonshine_grab"/>
+			<property name="SoundPlace" value="grandpas_moonshine_place"/>
+			<property class="Action0">
+				<requirement name="NotHasBuff" buff="buffLiquorVomit"/>
+					<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="10"/>
+					<property name="Sound_start" value=""/>
+			</property>
+			<!--effect_group tiered="false" name="Drink Tier 3">
+					<display_value name="dDuration" value="600"/>
+			</effect_group-->
+		</item>
+		<item name="drinkKvass">
+			<property name="Tags" value="drinks,foodSkill,fitness"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovKVASS.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="199"/>
+			<property name="UnlockedBy" value="schematicsAlcoholics"/>
+			<property name="DisplayType" value="waterGoldenrodRedTea"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 3">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+					<display_value name="dStaminaRegen" value=".15"/>
+					<display_value name="dEfficientDigestion" value=".15"/>
+					<display_value name="dDuration" value="360"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="363"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="1083">
+						<requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="1083"/></triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+
+					<display_value name="dCureDysentery" value=".2"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="20"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+		</append>
+		<!-- *** Food/Medics (lootable) -->
+		<conditional>
+    <if cond="mod_loaded('zz_REBIRTH__Core_2_0') and not mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') ">
+	<append xpath="/items">
+	<item name="disassembleAmmoMasterBundle">
+			<property name="CreativeMode" value="None"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="CustomIcon" value="resourcePaper"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Special Items"/>
+			<property name="DescriptionKey" value=""/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+			</property>
+		</item>
+		</append>
+		 </if>
+    </conditional>
+		<append xpath="/items">
+		<item name="resourceCanOfWhiteSalt">
+			<property name="Tags" value="chemicalEftItems"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="10"/>
+			<property name="SoundPickup" value="crucible_grab"/>
+			<property name="SoundPlace" value="crucible_place"/>
+		</item>
+		<item name="resourceSmokedChimneyDrainCleaner">
+			<property name="Tags" value="chemicalEftItems"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="25"/>
+			<property name="SoundPickup" value="puremineralwater_grab"/>
+			<property name="SoundPlace" value="puremineralwater_place"/>
+		</item>
+		
+		<item name="bundleFoodContainer">
+			<property name="Extends" value="disassembleAmmoMasterBundle"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bundleFoodContainer"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="990"/>
+			<property name="DescriptionKey" value="bundleFoodContainerDesc"/>
+			<property name="SoundPickup" value="pumpkin_grab"/>
+			<property name="SoundPlace" value="pumpkin_place"/>
+			<property class="Action0">
+				<property name="Random_item" value="foodVegetableStew,foodSteakAndPotato,foodSpaghetti,foodGumboStew,foodMeatStew,foodHoboStew,foodFishTacos,foodPumpkinCheesecake,foodPumpkinPie,foodBlueberryPie"/>
+				<property name="Random_item_count" value="1-3,1-3,1-3,1-3,1-3,1-3,1-3,1-3,1-3,1-3"/>
+				<property name="Random_count" value="5"/>
+				<property name="Unique_random_only" value="true"/>
+			</property>
+		</item>
+		<item name="schematicsAlcoholics">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="schematicsAlcoholics"/>
+			<property name="Tags" value="schematicsAlcoholics"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="DescriptionKey" value="schematicsAlcoholicsDesc"/>
+			<property name="Unlocks" value="$schematicsAlcoholics_helper"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="liquorPevkoBeer" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="liquorVodka" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="liquorDanJackiel" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="liquorMoonshine" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkKvass" operation="set" value="1"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$schematicsAlcoholics_helper" operation="set" value="1"/>
+			</effect_group>
+		</item>
+</append>
+<!-- ### Consumables -->
+<conditional>
+    <if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
+<set xpath="/items/item[starts-with(@name, 'medicalInjector')]/property[@class='Action0']/property[@name='Delay']/@value">2.25</set>
+</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_Only_Ammo')">
+	<set xpath="/items/item[@name='resourceCanisterWithPurifiedWater']/property[@name='Group']/@value">Science,Medical,TCMedical,Food/Cooking,CFDrink/Cooking</set>
+    <append xpath="/items/item[@name='resourceCanisterWithPurifiedWater']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkSuperWater.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Drink Tier 0/1">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="240"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillDrinksDrunkenCounter" operation="add" value="1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+			</effect_group>
+    </append>
+	</if>
+    </conditional>
+<remove xpath="/items/item[@name='drinkJarBoiledWater']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='drinkJarBoiledWater']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkFilteredWater.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='drinkJarPureMineralWater']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='drinkJarPureMineralWater']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkWaterBottle.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+<conditional>
+    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core_2_0')">
+<remove xpath="/items/item[@name='drugPainkillers']/property[@class='Action0']"></remove>
+<remove xpath="/items/item[@name='drugPainkillers']/property[@name='Meshfile']"></remove>
+    <append xpath="/items/item[@name='drugPainkillers']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAnalgin.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="4"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+ </if>
+    </conditional>
+<remove xpath="/items/item[@name='drugAntibiotics']/property[@class='Action0']"></remove>
+<remove xpath="/items/item[@name='drugAntibiotics']/property[@name='Meshfile']"></remove>
+    <append xpath="/items/item[@name='drugAntibiotics']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAugmentin.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+
+	<remove xpath="/items/item[@name='foodArmyCracker']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodArmyCracker']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodArmyCracker.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="10"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodAlyonka']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodAlyonka']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodAlyonka.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="4"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodBeefJerky']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodBeefJerky']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodBeefJerky.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodInstantNoodles']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodInstantNoodles']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodInstantNoodles.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="6"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodEmeliaCroutons']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodEmeliaCroutons']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSnackEmelia.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodRyeCroutons']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodRyeCroutons']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSnackRye.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='drinkMilk']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='drinkMilk']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkMilk.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="7"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='drinkPineappleJuice']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='drinkPineappleJuice']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovdrinkPineappleJuice.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="7"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+
+<remove xpath="/items/item[@name='foodSlickers']/property[@class='Action0']"></remove>
+    <append xpath="/items/item[@name='foodSlickers']">
+		<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSlickers.prefab"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="4"/>
+				<property name="Sound_start" value=""/>
+			</property>	
+    </append>
+    <append xpath="/items">
+		<item name="foodMayo">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodMayo.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="8"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodOatFlakes">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodOatFlakes.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+		<item name="foodSausage">
+			<property name="Extends" value="foodCanBeef"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovfoodSausage.prefab"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SoundPickup" value="cornbread_grab"/>
+			<property name="SoundPlace" value="cornbread_place"/>
+			<property class="Action0">
+				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="9"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ASkillFoodEatenCounter" operation="add" value="1"/>
+			</effect_group>
+		</item>
+    </append>
+
+	<remove xpath="/items/item[@name='medicalSplint']"></remove>
+	<insertAfter xpath="//item[@name='medicalFirstAidKit']">
+<item name="medicalSplint">
+	<property name="Tags" value="medical"/>
+	<property name="HoldType" value="64"/>
+	<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovAlusplint.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mcloth"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="5"/> <!-- STK loot -->
+	<property name="EconomicValue" value="10"/>
+	<property name="Group" value="Science,Medical,TCMedical"/>
+	<property name="SoundPickup" value="splint_grab"/>
+	<property name="SoundPlace" value="splint_place"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+		<property name="Delay" value="4"/>
+		<property name="Sound_start" value=""/>
+		<requirement name="CVarCompare" cvar="brokenLimbStatus" operation="GTE" value="0"/>
+	</property>
+
+	<effect_group name="Primary Action" tiered="false"> <!-- splint -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLegSprained">
+			<requirement name="HasBuff" buff="buffLegSprained"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffArmSprained">
+			<requirement name="HasBuff" buff="buffArmSprained"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group name="Primary Action" tiered="false"> <!-- splint -->
+		<requirement name="HasBuff" buff="buffLegBroken"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLegSplinted"/>
+	</effect_group>
+	<effect_group name="Primary Action" tiered="false"> <!-- splint -->
+		<requirement name="HasBuff" buff="buffArmBroken"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffArmSplinted"/>
+	</effect_group>
+</item>
+</insertAfter>
+<conditional>
+    <if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core_2_0') and not mod_loaded('zzz_EFTX_Pack_Rebirth')">
+	<remove xpath="/items/item[@name='medicalPlasterCast']"></remove>
+	<insertBefore xpath="//item[@name='medicalBloodBag']">
+<item name="medicalPlasterCast">
+	<property name="Extends" value="medicalSplint"/>
+	<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovSplint.prefab"/>
+	<property name="Tags" value="medical,cast"/>
+	<property name="Group" value="Science,CFMedical,Medical,TCMedical"/>
+	<property name="SoundPickup" value="cast_grab"/>
+	<property name="SoundPlace" value="cast_place"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
+		<property name="Delay" value="4"/>
+		<property name="Sound_start" value=""/>
+		<requirement name="CVarCompare" cvar="brokenLimbStatus" operation="GTE" value="0"/>
+	</property>
+
+	<effect_group name="Primary Action" tiered="false"> <!-- splint -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLegSprained">
+			<requirement name="HasBuff" buff="buffLegSprained"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLegBroken">
+			<requirement name="HasBuff" buff="buffLegBroken"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLegCast">
+			<requirement name="HasBuff" buff="buffLegBroken"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLegCast">
+			<requirement name="HasBuff" buff="buffLegSplinted"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLegCast">
+			<requirement name="HasBuff" buff="buffLegCast"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffArmSprained">
+			<requirement name="HasBuff" buff="buffArmSprained"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffArmBroken">
+			<requirement name="HasBuff" buff="buffArmBroken"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffArmCast">
+			<requirement name="HasBuff" buff="buffArmBroken"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffArmCast">
+			<requirement name="HasBuff" buff="buffArmSplinted"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffArmCast">
+			<requirement name="HasBuff" buff="buffArmCast"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+</insertBefore>
+</if>
+    </conditional>
+<!-- ************************************************************************************************ -->
+<!--						STALLIONS EDITS															  -->
+<!-- ************************************************************************************************ -->
+	        <!-- FOODWHEATFLOUR -->
+            <setattribute xpath="/items/item[@name='foodWheatFlour']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodWheatFlour']/property[@name='EconomicValue']" name="value">90</setattribute>
+            <!-- FOODWHEATFLOUR -->
+            <!-- FOODBREAD -->
+            <setattribute xpath="/items/item[@name='foodBread']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodBread']/property[@name='EconomicValue']" name="value">65</setattribute>
+            <!-- FOODBREAD -->
+            <!-- FOODBEEFSTEW -->
+            <setattribute xpath="/items/item[@name='foodBeefstew']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodBeefstew']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODBEEFSTEW -->
+            <!-- FOODBEEFSTEW2 -->
+            <setattribute xpath="/items/item[@name='foodBeefstew2']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodBeefstew2']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODBEEFSTEW2 -->
+            <!-- FOODCANNEDSAIRA -->
+            <setattribute xpath="/items/item[@name='foodCannedSaira']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodCannedSaira']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODCANNEDSAIRA -->
+            <!-- FOODCONDENSEDMILK -->
+            <setattribute xpath="/items/item[@name='foodCondensedMilk']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodCondensedMilk']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODCONDENSEDMILK -->
+            <!-- FOODHERRING -->
+            <setattribute xpath="/items/item[@name='foodHerring']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodHerring']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODHERRING -->
+            <!-- FOODISKRA -->
+            <setattribute xpath="/items/item[@name='foodIskra']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodIskra']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODISKRA -->
+            <!-- FOODPEAS -->
+            <setattribute xpath="/items/item[@name='foodPeas']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodPeas']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODPEAS -->
+            <!-- FOODMARROWPURREE -->
+            <setattribute xpath="/items/item[@name='foodMarrowPurree']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodMarrowPurree']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODMARROWPURREE -->
+            <!-- FOODMRE -->
+            <setattribute xpath="/items/item[@name='foodMRE']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodMRE']/property[@name='EconomicValue']" name="value">250</setattribute>
+            <!-- FOODMRE -->
+            <!-- FOODSUGAR -->
+            <setattribute xpath="/items/item[@name='foodSugar']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodSugar']/property[@name='EconomicValue']" name="value">50</setattribute>
+            <!-- FOODSUGAR -->
+            <!-- FOODHUMPBACK -->
+            <setattribute xpath="/items/item[@name='foodHumpback']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodHumpback']/property[@name='EconomicValue']" name="value">350</setattribute>
+            <!-- FOODHUMPBACK -->
+            <!-- FOODCANTUNA -->
+            <setattribute xpath="/items/item[@name='foodCanTuna']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodCanTuna']/property[@name='EconomicValue']" name="value">200</setattribute>
+            <!-- FOODCANTUNA -->
+            <!-- FOODARMYCRACKER -->
+            <setattribute xpath="/items/item[@name='foodArmyCracker']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodArmyCracker']/property[@name='EconomicValue']" name="value">275</setattribute>
+            <!-- FOODARMYCRACKER -->
+            <!-- FOODALYONKA -->
+            <setattribute xpath="/items/item[@name='foodAlyonka']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodAlyonka']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODALYONKA -->
+            <!-- FOODSLICKERS -->
+            <setattribute xpath="/items/item[@name='foodSlickers']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodSlickers']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODSLICKERS -->
+            <!-- FOODBEEFJERKY -->
+            <setattribute xpath="/items/item[@name='foodBeefJerky']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodBeefJerky']/property[@name='EconomicValue']" name="value">75</setattribute>
+            <!-- FOODBEEFJERKY -->
+            <!-- FOODINSTANTNOODLES -->
+            <setattribute xpath="/items/item[@name='foodInstantNoodles']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodInstantNoodles']/property[@name='EconomicValue']" name="value">45</setattribute>
+            <!-- FOODINSTANTNOODLES -->
+            <!-- FOODEMELIACROUTONS -->
+            <setattribute xpath="/items/item[@name='foodEmeliaCroutons']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodEmeliaCroutons']/property[@name='EconomicValue']" name="value">65</setattribute>
+            <!-- FOODEMELIACROUTONS -->
+            <!-- FOODRYECROUTONS -->
+            <setattribute xpath="/items/item[@name='foodRyeCroutons']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodRyeCroutons']/property[@name='EconomicValue']" name="value">85</setattribute>
+            <!-- FOODRYECROUTONS -->
+            <!-- DRINKGREENTEA -->
+            <setattribute xpath="/items/item[@name='drinkGreenTea']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkGreenTea']/property[@name='EconomicValue']" name="value">250</setattribute>
+            <!-- DRINKGREENTEA -->
+            <!-- DRINKTARCOLA -->
+            <setattribute xpath="/items/item[@name='drinkTarCola']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkTarCola']/property[@name='EconomicValue']" name="value">200</setattribute>
+            <!-- DRINKTARCOLA -->
+            <!-- DRINKMAXENERGY -->
+            <setattribute xpath="/items/item[@name='drinkMaxEnergy']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkMaxEnergy']/property[@name='EconomicValue']" name="value">275</setattribute>
+            <!-- DRINKMAXENERGY -->
+            <!-- DRINKRATCOLA -->
+            <setattribute xpath="/items/item[@name='drinkRatCola']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkRatCola']/property[@name='EconomicValue']" name="value">175</setattribute>
+            <!-- DRINKRATCOLA -->
+            <!-- DRINKAPPLEJUICE -->
+            <setattribute xpath="/items/item[@name='drinkApplejuice']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkApplejuice']/property[@name='EconomicValue']" name="value">225</setattribute>
+            <!-- DRINKAPPLEJUICE -->
+            <!-- DRINKGRANDJUICE -->
+            <setattribute xpath="/items/item[@name='drinkGrandJuice']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkGrandJuice']/property[@name='EconomicValue']" name="value">275</setattribute>
+            <!-- DRINKGRANDJUICE -->
+            <!-- DRINKVITAJUICE -->
+            <setattribute xpath="/items/item[@name='drinkVitaJuice']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkVitaJuice']/property[@name='EconomicValue']" name="value">300</setattribute>
+            <!-- DRINKVITAJUICE -->
+            <!-- DRINKMILK -->
+            <setattribute xpath="/items/item[@name='drinkMilk']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkMilk']/property[@name='EconomicValue']" name="value">75</setattribute>
+            <!-- DRINKMILK -->
+            <!-- DRINKPINEAPPLEJUICE -->
+            <setattribute xpath="/items/item[@name='drinkPineappleJuice']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkPineappleJuice']/property[@name='EconomicValue']" name="value">375</setattribute>
+            <!-- DRINKPINEAPPLEJUICE -->
+            <!-- DRINKEWR -->
+            <setattribute xpath="/items/item[@name='drinkEWR']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkEWR']/property[@name='EconomicValue']" name="value">245</setattribute>
+            <!-- DRINKEWR -->
+            <!-- LIQUORPEVKOBEER -->
+            <setattribute xpath="/items/item[@name='liquorPevkoBeer']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='liquorPevkoBeer']/property[@name='EconomicValue']" name="value">475</setattribute>
+            <!-- LIQUORPEVKOBEER -->
+            <!-- LIQUORVODKA -->
+            <setattribute xpath="/items/item[@name='liquorVodka']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='liquorVodka']/property[@name='EconomicValue']" name="value">575</setattribute>
+            <!-- LIQUORVODKA -->
+            <!-- LIQUORDANJACKIEL -->
+            <setattribute xpath="/items/item[@name='liquorDanJackiel']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='liquorDanJackiel']/property[@name='EconomicValue']" name="value">775</setattribute>
+            <!-- LIQUORDANJACKIEL -->
+            <!-- LIQUORMOONSHINE -->
+            <setattribute xpath="/items/item[@name='liquorMoonshine']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='liquorMoonshine']/property[@name='EconomicValue']" name="value">475</setattribute>
+            <!-- LIQUORMOONSHINE -->
+            <!-- DRINKKVASS -->
+            <setattribute xpath="/items/item[@name='drinkRatCola']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='drinkRatCola']/property[@name='EconomicValue']" name="value">195</setattribute>
+            <!-- DRINKKVASS -->
+            <!-- RESOURCECANOFWHITESALT -->
+            <setattribute xpath="/items/item[@name='resourceCanOfWhiteSalt']/property[@name='Stacknumber']" name="value">12</setattribute>
+            <setattribute xpath="/items/item[@name='resourceCanOfWhiteSalt']/property[@name='EconomicValue']" name="value">25</setattribute>
+            <!-- RESOURCECANOFWHITESALT -->
+            <!-- RESOURCESMOKEDCHIMNEYDRAINCLEANER -->
+            <setattribute xpath="/items/item[@name='resourceSmokedChimneyDrainCleaner']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='resourceSmokedChimneyDrainCleaner']/property[@name='EconomicValue']" name="value">45</setattribute>
+            <!-- RESOURCESMOKEDCHIMNEYDRAINCLEANER -->
+            <!-- FOODMAYO -->
+            <setattribute xpath="/items/item[@name='foodMayo']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodMayo']/property[@name='EconomicValue']" name="value">55</setattribute>
+            <!-- FOODMAYO -->
+            <!-- FOODOATFLAKES -->
+            <setattribute xpath="/items/item[@name='foodOatFlakes']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodOatFlakes']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODOATFLAKES -->
+            <!-- FOODSAUSAGE -->
+            <setattribute xpath="/items/item[@name='foodSausage']/property[@name='Stacknumber']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='foodSausage']/property[@name='EconomicValue']" name="value">125</setattribute>
+            <!-- FOODSAUSAGE -->
+</EFTX>

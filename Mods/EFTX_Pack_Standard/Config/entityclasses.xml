@@ -1,0 +1,41 @@
+<EFTX>
+<!-- ### Player Changes -->
+	<append xpath="/entity_classes/entity_class[@name='playerMale']">
+			<effect_group>			
+	<!-- *** Difficulty Setting: Remove Less Damage Dealt -->
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.5"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.333"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".2048"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".4926"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>	
+			</effect_group>
+	<!-- *** Less Damage Against Humans To Give Players A Fighting Chance -->
+		<effect_group tiered="false"> <!-- Does this work? -->
+			<requirement name="EntityTagCompare" target="other" tags="player"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.75"/>
+		</effect_group>
+	</append>	
+  
+	<!-- *** Radiated & Feral Zombie: More Damage & Armor Penetration -->
+	<append xpath="/entity_classes/entity_class[contains(@name, 'Feral')]/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".125"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.125"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'Radiated')]/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.25"/>
+	</append>
+	
+	<!-- *** Dismemberment Changes -->
+	<set xpath="//entity_class/property[@name='DismemberMultiplierArms']/@value">1</set>
+	<set xpath="//entity_class/property[@name='DismemberMultiplierLegs']/@value">1</set>
+	<set xpath="//entity_class/property[@name='DismemberMultiplierHead' and @value='.7']/@value">.2</set>
+	<set xpath="//entity_class/property[@name='DismemberMultiplierHead' and @value='.4']/@value">.1</set>
+	
+	<!-- *** Radiated Regen Buffed To Increase Rad Remover Necessity (Feral Wight Too Has A Value In It's Changes Down Below) -->
+	<set xpath="/entity_classes/entity_class[not (@name='zombieSoldierRadiated') and not (@name='zombieBikerRadiated')]/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">48</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">48</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">48</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">96</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">96</set>	
+</EFTX>

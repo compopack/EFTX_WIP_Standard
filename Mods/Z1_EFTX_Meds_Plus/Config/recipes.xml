@@ -1,0 +1,92 @@
+<EFTX>	
+<append xpath="/recipes">
+<!-- ### General New Recipes -->		
+		<!-- *** Medics -->
+		<recipe name="medicalFirstAidBandage" count="1" tags="learnable">
+			<ingredient name="resourcePileOfMeds" count="2"/>
+			<ingredient name="medicalBandage" count="1"/>
+		</recipe>
+		  <recipe name="medicalIFAK" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+            <ingredient name="resourcePileOfMeds" count="4"/>
+            <ingredient name="medicalBandage" count="2"/>
+            <ingredient name="resourceTestosteroneExtract" count="1"/>
+            <ingredient name="resourceSalineSolution" count="2"/>
+        </recipe>
+        <recipe name="medicalIFAK" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+            <ingredient name="medicalBandage" count="2"/>
+            <ingredient name="resourceTestosteroneExtract" count="1"/>
+            <ingredient name="medicalAloeCream" count="2"/>
+            <ingredient name="resourceSalineSolution" count="2"/>
+        </recipe>
+		<recipe name="medicalSalewa" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourcePileOfMeds" count="5"/>
+			<ingredient name="resourceSewingKit" count="4"/>
+			<ingredient name="resourceSalineSolution" count="8"/>
+			<ingredient name="foodHoney" count="4"/>
+		</recipe>
+		
+		<recipe name="medicalCMS" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourcePileOfMeds" count="10"/>
+			<ingredient name="resourceSewingKit" count="10"/>
+			<ingredient name="resourceSalineSolution" count="10"/>
+			<ingredient name="medicalInjectorMorphine" count="4"/>
+			<ingredient name="medicalInjectorAdrenaline" count="10"/>
+		</recipe>
+		
+		<recipe name="medicalSurv12" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourcePileOfMeds" count="5"/>
+			<ingredient name="medicalBandage" count="8"/>
+			<ingredient name="resourceSalineSolution" count="8"/>
+			<ingredient name="medicalInjectorPropitalRegenerativeStim" count="2"/>
+			<ingredient name="medicalInjectorMorphine" count="4"/>
+		</recipe>
+		
+		<!-- *** Injectors -->
+		<recipe name="medicalInjectorAdrenaline" count="1" craft_time="50" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourcePileOfMeds" count="6"/>
+			<ingredient name="resourceBottleOfHydrogenPeroxide" count="10"/>
+			<ingredient name="foodHoney" count="2"/>
+			<ingredient name="resourceSalineSolution" count="12"/>
+			<ingredient name="resourceDisposableSyringe" count="3"/>
+		</recipe>
+		<recipe name="medicalInjectorMorphine" count="1" craft_time="55" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="drugPainkillers" count="13"/>
+			<ingredient name="resourceBottleOfHydrogenPeroxide" count="8"/>
+			<ingredient name="resourceTestosteroneExtract" count="4"/>
+			<ingredient name="resourceSalineSolution" count="6"/>
+			<ingredient name="resourceDisposableSyringe" count="2"/>
+		</recipe>
+		<recipe name="medicalInjectorPerfortran" count="1" craft_time="60" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="medicalBloodBag" count="4"/>
+			<ingredient name="resourceBottleOfHydrogenPeroxide" count="3"/>
+			<ingredient name="resourceTestosteroneExtract" count="1"/>
+			<ingredient name="resourceSalineSolution" count="4"/>
+			<ingredient name="resourceDisposableSyringe" count="2"/>
+		</recipe>
+		<recipe name="medicalInjectorPropitalRegenerativeStim" craft_time="65" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="drugPainkillers" count="5"/>
+			<ingredient name="medicalBloodBag" count="2"/>
+			<ingredient name="resourceTestosteroneExtract" count="1"/>
+			<ingredient name="resourceSalineSolution" count="6"/>
+			<ingredient name="resourceDisposableSyringe" count="3"/>
+		</recipe>
+		<recipe name="medicalInjectorSJ12" count="1" craft_time="70" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceTestosteroneExtract" count="3"/>
+			<ingredient name="resourceBottleOfHydrogenPeroxide" count="4"/>
+			<ingredient name="drinkJarPureMineralWater" count="3"/>
+			<ingredient name="resourceSalineSolution" count="7"/>
+			<ingredient name="resourceDisposableSyringe" count="2"/>
+		</recipe>
+		<recipe name="medicalInjector2A2" count="1" craft_time="75" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceTestosteroneExtract" count="2"/>
+			<ingredient name="resourceBottleOfHydrogenPeroxide" count="4"/>
+			<ingredient name="drinkJarPureMineralWater" count="4"/>
+			<ingredient name="resourceSalineSolution" count="12"/>
+			<ingredient name="resourceDisposableSyringe" count="3"/>
+		</recipe>
+		<recipe name="medicalInjectorMULE" count="1" craft_time="90" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceTestosteroneExtract" count="4"/>
+			<ingredient name="resourceDisposableSyringe" count="3"/>
+		</recipe>	
+</append>
+</EFTX>

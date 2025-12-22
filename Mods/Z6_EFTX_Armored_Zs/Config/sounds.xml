@@ -1,0 +1,96 @@
+<EFTX>	
+	<!-- New Sounds -->
+	<append xpath="/Sounds">
+		<!-- *** Pitch-Changes For Bomber Biker -->
+		<SoundDataNode name="demolitionzexplodewarning2"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+			<AudioClip ClipName="Sounds/Enemies/Demolition_Zombie/demolitionzexplodewarning1"/>
+			<AudioClip ClipName="Sounds/Enemies/Demolition_Zombie/demolitionzexplodewarning2"/>
+			<AudioClip ClipName="Sounds/Enemies/Demolition_Zombie/demolitionzexplodewarning3"/>
+			<AudioClip ClipName="Sounds/Enemies/Demolition_Zombie/demolitionzexplodewarning4"/>
+			<AudioClip ClipName="Sounds/Enemies/Demolition_Zombie/demolitionzexplodewarning5"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="1.2"/>
+			<HighestPitch name="1.3"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+			
+		<SoundDataNode name="zombiemalealertEFT"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert1"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert2"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert3"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert4"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert5"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalealert6"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.79"/>
+			<HighestPitch name="0.89"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+		<SoundDataNode name="zombiemaleattackEFT"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack1"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack2"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack3"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack4"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack5"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack6"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack7"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack8"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack9"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleattack10"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.79"/>
+			<HighestPitch name="0.89"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> </SoundDataNode>
+
+		<SoundDataNode name="zombiemaledeathEFT"> <AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath1"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath2"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath3"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath4"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath5"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath6"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath7"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaledeath8"/>
+			<Channel name="Mouth"/>
+			<Priority name="0"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.79"/>
+			<HighestPitch name="0.89"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+
+		<SoundDataNode name="zombiemalepainEFT"> <AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain1"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain2"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain3"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain4"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain5"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain6"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemalepain7"/>
+			<Channel name="Mouth"/>
+			<Priority name="1"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.79"/>
+			<HighestPitch name="0.89"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> </SoundDataNode>
+
+		<SoundDataNode name="zombiemaleroamEFT"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam1"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam2"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam3"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam4"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam5"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam6"/>
+			<AudioClip ClipName="Sounds/Enemies/Base_Zombie_male/zombiemaleroam7"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.79"/>
+			<HighestPitch name="0.89"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+			</SoundDataNode>		
+	</append>
+</EFTX>

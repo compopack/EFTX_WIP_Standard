@@ -1,0 +1,2375 @@
+<EFTX>
+	<append xpath="//lootprobtemplates">
+	<lootprobtemplate name="veryLowDelayedEft">
+		<loot level="0,10" prob="0"/>
+		<loot level="11,999999" prob=".1"/>		
+	</lootprobtemplate>	
+	<lootprobtemplate name="veryLowDelayedEft1">
+		<loot level="0,20" prob="0"/>
+		<loot level="21,999999" prob=".2"/>		
+	</lootprobtemplate>		
+	<lootprobtemplate name="veryLowDelayedEft2">
+		<loot level="0,35" prob="0"/>
+		<loot level="36,999999" prob=".3"/>		
+	</lootprobtemplate>		
+	<lootprobtemplate name="veryLowDelayedEft3">
+		<loot level="0,50" prob="0"/>
+		<loot level="51,999999" prob=".4"/>		
+	</lootprobtemplate>
+	<lootprobtemplate name="veryLowDelayedEft4">
+		<loot level="0,75" prob="0"/>
+		<loot level="76,999999" prob=".5"/>		
+	</lootprobtemplate>
+	<lootprobtemplate name="veryLowDelayedEft5">
+		<loot level="0,100" prob="0"/>
+		<loot level="101,999999" prob=".6"/>		
+	</lootprobtemplate>
+	<lootprobtemplate name="veryLowDelayedEft6">
+		<loot level="0,150" prob="0"/>
+		<loot level="151,999999" prob=".7"/>		
+	</lootprobtemplate>
+	<lootprobtemplate name="veryLowDelayedEft7">
+		<loot level="0,175" prob="0"/>
+		<loot level="176,999999" prob=".8"/>		
+	</lootprobtemplate>	  
+	<lootprobtemplate name="veryLowDelayedEft8">
+		<loot level="0,200" prob="0"/>
+		<loot level="201,999999" prob=".9"/>		
+	</lootprobtemplate>
+	<lootprobtemplate name="veryLowDelayedEft9">
+		<loot level="0,250" prob="0"/>
+		<loot level="251,999999" prob="1"/>		
+	</lootprobtemplate> 
+	</append>
+		<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+			<lootprobtemplate name="extremelyLow">
+			<loot level="1,999999" prob=".25"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="moreLow">
+			<loot level="1,999999" prob=".28"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="moreMedLow">
+			<loot level="1,999999" prob=".01"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="veryHigh">
+			<loot level="1,999999" prob=".87"/>
+		</lootprobtemplate>
+	</insertBefore>	
+	<insertBefore xpath="//lootprobtemplate[@name='ProbT1']">
+		<lootprobtemplate name="probT1End">
+			<loot level="0,45" prob="1"/>
+			<loot level="46,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT2End">
+			<loot level="0,105" prob="1"/>
+			<loot level="106,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT3End">
+			<loot level="0,165" prob="1"/>
+			<loot level="166,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT4End">
+			<loot level="0,225" prob="1"/>
+			<loot level="226,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT1Start">
+			<loot level="0,45" prob="0"/>
+			<loot level="46,999999" prob="1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT2Start">
+			<loot level="0,105" prob="0"/>
+			<loot level="106,999999" prob="1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT3Start">
+			<loot level="0,165" prob="0"/>
+			<loot level="166,999999" prob="1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT4Start">
+			<loot level="0,225" prob="0"/>
+			<loot level="226,999999" prob="1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT1T2">
+			<loot level="0,105" prob="1"/>
+			<loot level="106,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT2T3">
+			<loot level="105,165" prob="1"/>
+			<loot level="166,999999" prob="0"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="probT3T4">
+			<loot level="165,999999" prob="1"/>
+		</lootprobtemplate>
+	</insertBefore>	
+	<insertAfter xpath="//lootprobtemplates/lootprobtemplate[@name='QuestT3Prob']">
+		<lootprobtemplate name="QuestT4Prob">
+		<loot level="1,3" prob="0"/>
+		<loot level="4" prob="0.75"/>
+		<loot level="5" prob="0.25"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="QuestT5Prob">
+		<loot level="1,4" prob="0"/>
+		<loot level="5" prob="0.75"/>
+		<loot level="6,7" prob="0.25"/>
+	</lootprobtemplate>
+	</insertAfter>
+	<insertAfter xpath="//lootqualitytemplates">
+		<lootqualitytemplates>
+			<lootqualitytemplate name="QLTemplateT4">
+				<qualitytemplate level="0,180" default_quality="1">
+					<loot quality="0" prob="0"/>
+					<loot quality="1" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="181,214" default_quality="1">
+					<loot quality="1" prob=".75"/>
+					<loot quality="2" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="215,224" default_quality="1">
+					<loot quality="1" prob=".5"/>
+					<loot quality="2" prob=".75"/>
+					<loot quality="3" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="225,234" default_quality="1">
+					<loot quality="1" prob=".25"/>
+					<loot quality="2" prob=".5"/>
+					<loot quality="3" prob=".75"/>
+					<loot quality="4" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="235,244" default_quality="1">
+					<loot quality="1" prob=".12"/>
+					<loot quality="2" prob=".25"/>
+					<loot quality="3" prob=".5"/>
+					<loot quality="4" prob=".75"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="245,254" default_quality="1">
+					<loot quality="2" prob=".12"/>
+					<loot quality="3" prob=".25"/>
+					<loot quality="4" prob=".5"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="255,999999" default_quality="1">
+					<loot quality="3" prob=".12"/>
+					<loot quality="4" prob=".25"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+			</lootqualitytemplate>
+			
+			<lootqualitytemplate name="QLTemplateT5">
+				<qualitytemplate level="0,240" default_quality="1">
+					<loot quality="1" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="241,259" default_quality="1">
+					<loot quality="1" prob=".75"/>
+					<loot quality="2" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="260,269" default_quality="1">
+					<loot quality="1" prob=".5"/>
+					<loot quality="2" prob=".75"/>
+					<loot quality="3" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="270,279" default_quality="1">
+					<loot quality="1" prob=".25"/>
+					<loot quality="2" prob=".5"/>
+					<loot quality="3" prob=".75"/>
+					<loot quality="4" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="280,289" default_quality="1">
+					<loot quality="1" prob=".12"/>
+					<loot quality="2" prob=".25"/>
+					<loot quality="3" prob=".5"/>
+					<loot quality="4" prob=".75"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="290,299" default_quality="1">
+					<loot quality="2" prob=".12"/>
+					<loot quality="3" prob=".25"/>
+					<loot quality="4" prob=".5"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+				<qualitytemplate level="300,999999" default_quality="1">
+					<loot quality="3" prob=".12"/>
+					<loot quality="4" prob=".25"/>
+					<loot quality="5" prob="1"/>
+				</qualitytemplate>
+			</lootqualitytemplate>
+		</lootqualitytemplates>
+	</insertAfter>	
+			
+	<insertBefore xpath="//lootgroup[@name='groupWeapons_RangedParts']">
+		<!-- PISTOL CASES -->
+		<lootgroup name="groupguntokarevtt" loot_quality_template="QLTemplateT1">
+			<item name="guntokarevtt" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupguntokarevgold" loot_quality_template="QLTemplateT1">
+			<item name="guntokarevgold" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunpmalphadog" loot_quality_template="QLTemplateT1">
+			<item name="gunpmalphadog" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunstechkin" loot_quality_template="QLTemplateT1">
+			<item name="gunstechkin" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunglock17" loot_quality_template="QLTemplateT1">
+			<item name="gunglock17" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunp226" loot_quality_template="QLTemplateT1">
+			<item name="gunp226" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunm9a3" loot_quality_template="QLTemplateT1">
+			<item name="gunm9a3" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunsr1mp" loot_quality_template="QLTemplateT1">
+			<item name="gunsr1mp" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunusp45tac" loot_quality_template="QLTemplateT1">
+			<item name="gunusp45tac" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunm1911" loot_quality_template="QLTemplateT1">
+			<item name="gunm1911" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunm45" loot_quality_template="QLTemplateT1">
+			<item name="gunm45" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunusp45match" loot_quality_template="QLTemplateT1">
+			<item name="gunusp45match" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunucp" loot_quality_template="QLTemplateT1">
+			<item name="gunucp" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunfiveseven" loot_quality_template="QLTemplateT1">
+			<item name="gunfiveseven" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunglock18c" loot_quality_template="QLTemplateT1">
+			<item name="gunglock18c" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunrsh12" loot_quality_template="QLTemplateT1">
+			<item name="gunrsh12" count="1" quality="1"/>
+			<item name="gundeserteagle" count="1" quality="1"/>
+		</lootgroup>
+<!-- PISTOL CASES -->
+		<lootgroup name="groupEftPistolsCasesT1" loot_quality_template="QLTemplateT1">
+			<item group="groupgunstechkin" count="1" quality="1"/>			
+			<item group="groupgunm9a3" count="1" quality="1"/>			
+			<item group="groupgunm1911" count="1" quality="1"/>			
+			<item group="groupgunusp45match" count="1" quality="1"/>			
+		</lootgroup>
+		<lootgroup name="groupEftPistolsCasesT2" loot_quality_template="QLTemplateT2">
+			<item group="groupguntokarevtt" count="1" quality="2"/>
+			<item group="groupgunfiveseven" count="1" quality="2"/>
+			<item group="groupgunglock17" count="1" quality="2"/>
+			<item group="groupgunp226" count="1" quality="2"/>			
+		</lootgroup>
+		<lootgroup name="groupEftPistolsCasesT3" loot_quality_template="QLTemplateT3">
+			<item group="groupgunm45" count="1" quality="3"/>
+			<item group="groupgunusp45tac" count="1" quality="3"/>
+			<item group="groupgunsr1mp" count="1" quality="3"/>
+			<item group="groupgunucp" count="1" quality="3"/>
+		</lootgroup>
+		<lootgroup name="groupEftPistolsCasesT4" loot_quality_template="QLTemplateT4">
+			<item group="groupgunglock18c" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupEftPistolsCasesT5" loot_quality_template="QLTemplateT5">
+			<item group="groupgunrsh12" count="1" quality="5"/>
+			<item group="groupgunpmalphadog" count="1" quality="5"/>
+			<item group="groupguntokarevgold" count="1" quality="5"/>
+		</lootgroup>		
+<!-- PISTOL CASES -->	
+<!-- BUNDLE	PISTOL CASES -->		
+		<lootgroup name="groupEftPistolCase1">
+			<item name="bundlePistolCaseAPS" count="1"/>
+			<item name="bundlePistolCaseM9A3" count="1"/>
+			<item name="bundlePistolCase1911" count="1"/>			
+			<item name="bundlePistolCaseUSP45M" count="1"/>
+			</lootgroup>
+			<lootgroup name="groupEftPistolCase2">
+			<item name="bundlePistolCaseFS" count="1"/>
+			<item name="bundlePistolCaseTT" count="1"/>
+			<item name="bundlePistolCaseG17" count="1"/>
+			<item name="bundlePistolCaseP226" count="1"/>			
+			</lootgroup>
+			<lootgroup name="groupEftPistolCase3">			
+			<item name="bundlePistolCaseSR1MP" count="1"/>
+			<item name="bundlePistolCaseUSP45T" count="1"/>
+			<item name="bundlePistolCaseM45" count="1"/>	
+			</lootgroup>
+			<lootgroup name="groupEftPistolCase4">
+			<item name="bundlePistolCaseUCP" count="1"/>
+			<item name="bundlePistolCaseG18C" count="1"/>
+			</lootgroup>
+			<lootgroup name="groupEftPistolCase5">
+			<item name="bundlePistolCasePM" count="1"/>
+			<item name="bundlePistolCaseRSH" count="1"/>
+			<item name="bundlePistolCaseGoldenTT" count="1"/>
+		</lootgroup>		
+<!-- BUNDLE	PISTOL CASES -->	
+<!-- CASES -->
+		<lootgroup name="groupgunks23" loot_quality_template="QLTemplateT1">
+			<item name="gunks23" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunrpk16guaranteedmag" loot_quality_template="QLTemplateT1">
+			<item name="gunrpk16" count="1" quality="1"/>
+			<item name="modmag_ak_izhmash_rpk_std_61_sector_762x39_40" count="1"/>
+		</lootgroup>
+		<lootgroup name="groupgunmpxwithmag" loot_quality_template="QLTemplateT1">
+			<item name="gunmpx" count="1" quality="1"/>
+			<item name="modmag_mpx_tti_sig_mag_w_base_pad_9x19_41" count="1"/> 
+			<item name="modmag_pp_19_01_f5mfg_kr9_drum_mag_9x19_50" count="1"/> 
+		</lootgroup>
+		<lootgroup name="groupgunvector45withmag" loot_quality_template="QLTemplateT1">
+			<item name="gunvector45" count="1" quality="1"/>
+			<item name="modmag_glock_sgmt_glock_drum_50_9x19_50" count="1"/>
+		</lootgroup>		
+<!-- CASES -->	
+		<!-- SMGS -->
+		<lootgroup name="groupEFTXSMGST1" loot_quality_template="QLTemplateT1">
+			<item name="gunppsh41" count="1" quality="1"/>
+			<item name="gunpp9klin" count="1" quality="1"/>
+			<item name="gunmp5k" count="1" quality="1"/>
+			<item name="gunmp5" count="1" quality="1"/>
+			<item name="gunuzi" count="1" quality="1"/>
+			<item name="gunpp19vityaz" count="1" quality="1"/>			
+			<item name="gunmp9" count="1" quality="1"/>
+			<item name="gunuziprosmg" count="1" quality="1"/>
+			<item name="gunmp5sd" count="1" quality="1"/>
+			<item name="gunvector9" count="1" quality="1"/>
+			<item name="gunmpx" count="1" quality="1"/>
+			<item name="gunstm9" count="1" quality="1"/>
+			<item name="gunsr2mveresk" count="1" quality="1"/>
+			<item name="gunump45" count="1" quality="1"/>
+			<item name="gunthompson" count="1" quality="1"/>
+			<item name="gunvector45" count="1" quality="1"/>
+			<item name="gunmp7" count="1" quality="1"/>
+			<item name="gunp90" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXSMGST2" loot_quality_template="QLTemplateT2">
+			<item name="gunppsh41" count="1" quality="2"/>
+			<item name="gunpp9klin" count="1" quality="2"/>
+			<item name="gunmp5k" count="1" quality="2"/>
+			<item name="gunmp5" count="1" quality="2"/>
+			<item name="gunuzi" count="1" quality="2"/>
+			<item name="gunpp19vityaz" count="1" quality="2"/>			
+			<item name="gunmp9" count="1" quality="2"/>
+			<item name="gunuziprosmg" count="1" quality="2"/>
+			<item name="gunmp5sd" count="1" quality="2"/>
+			<item name="gunvector9" count="1" quality="2"/>
+			<item name="gunmpx" count="1" quality="2"/>
+			<item name="gunstm9" count="1" quality="2"/>
+			<item name="gunsr2mveresk" count="1" quality="2"/>
+			<item name="gunump45" count="1" quality="2"/>
+			<item name="gunthompson" count="1" quality="2"/>
+			<item name="gunvector45" count="1" quality="2"/>
+			<item name="gunmp7" count="1" quality="2"/>
+			<item name="gunp90" count="1" quality="2"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXSMGST3" loot_quality_template="QLTemplateT3">
+			<item name="gunppsh41" count="1" quality="3"/>
+			<item name="gunpp9klin" count="1" quality="3"/>
+			<item name="gunmp5k" count="1" quality="3"/>
+			<item name="gunmp5" count="1" quality="3"/>
+			<item name="gunuzi" count="1" quality="3"/>
+			<item name="gunpp19vityaz" count="1" quality="3"/>			
+			<item name="gunmp9" count="1" quality="3"/>
+			<item name="gunuziprosmg" count="1" quality="3"/>
+			<item name="gunmp5sd" count="1" quality="3"/>
+			<item name="gunvector9" count="1" quality="3"/>
+			<item name="gunmpx" count="1" quality="3"/>
+			<item name="gunstm9" count="1" quality="3"/>
+			<item name="gunsr2mveresk" count="1" quality="3"/>
+			<item name="gunump45" count="1" quality="3"/>
+			<item name="gunthompson" count="1" quality="3"/>
+			<item name="gunvector45" count="1" quality="3"/>
+			<item name="gunmp7" count="1" quality="3"/>
+			<item name="gunp90" count="1" quality="3"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXSMGST4" loot_quality_template="QLTemplateT4">
+			<item name="gunppsh41" count="1" quality="4"/>
+			<item name="gunpp9klin" count="1" quality="4"/>
+			<item name="gunmp5k" count="1" quality="4"/>
+			<item name="gunmp5" count="1" quality="4"/>
+			<item name="gunuzi" count="1" quality="4"/>
+			<item name="gunpp19vityaz" count="1" quality="4"/>			
+			<item name="gunmp9" count="1" quality="4"/>
+			<item name="gunuziprosmg" count="1" quality="4"/>
+			<item name="gunmp5sd" count="1" quality="4"/>
+			<item name="gunvector9" count="1" quality="4"/>
+			<item name="gunmpx" count="1" quality="4"/>
+			<item name="gunstm9" count="1" quality="4"/>
+			<item name="gunsr2mveresk" count="1" quality="4"/>
+			<item name="gunump45" count="1" quality="4"/>
+			<item name="gunthompson" count="1" quality="4"/>
+			<item name="gunvector45" count="1" quality="4"/>
+			<item name="gunmp7" count="1" quality="4"/>
+			<item name="gunp90" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXSMGST5" loot_quality_template="QLTemplateT5">
+			<item name="gunppsh41" count="1" quality="5"/>
+			<item name="gunpp9klin" count="1" quality="5"/>
+			<item name="gunmp5k" count="1" quality="5"/>
+			<item name="gunmp5" count="1" quality="5"/>
+			<item name="gunuzi" count="1" quality="5"/>
+			<item name="gunpp19vityaz" count="1" quality="5"/>			
+			<item name="gunmp9" count="1" quality="5"/>
+			<item name="gunuziprosmg" count="1" quality="5"/>
+			<item name="gunmp5sd" count="1" quality="5"/>
+			<item name="gunvector9" count="1" quality="5"/>
+			<item name="gunmpx" count="1" quality="5"/>
+			<item name="gunstm9" count="1" quality="5"/>
+			<item name="gunsr2mveresk" count="1" quality="5"/>
+			<item name="gunump45" count="1" quality="5"/>
+			<item name="gunthompson" count="1" quality="5"/>
+			<item name="gunvector45" count="1" quality="5"/>
+			<item name="gunmp7" count="1" quality="5"/>
+			<item name="gunp90" count="1" quality="5"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXSMGST6" loot_quality_template="QLTemplateT6">
+			<item name="gunppsh41" count="1" quality="6"/>
+			<item name="gunpp9klin" count="1" quality="6"/>
+			<item name="gunmp5k" count="1" quality="6"/>
+			<item name="gunmp5" count="1" quality="6"/>
+			<item name="gunuzi" count="1" quality="6"/>
+			<item name="gunpp19vityaz" count="1" quality="6"/>			
+			<item name="gunmp9" count="1" quality="6"/>
+			<item name="gunuziprosmg" count="1" quality="6"/>
+			<item name="gunmp5sd" count="1" quality="6"/>
+			<item name="gunvector9" count="1" quality="6"/>
+			<item name="gunmpx" count="1" quality="6"/>
+			<item name="gunstm9" count="1" quality="6"/>
+			<item name="gunsr2mveresk" count="1" quality="6"/>
+			<item name="gunump45" count="1" quality="6"/>
+			<item name="gunthompson" count="1" quality="6"/>
+			<item name="gunvector45" count="1" quality="6"/>
+			<item name="gunmp7" count="1" quality="6"/>
+			<item name="gunp90" count="1" quality="6"/>
+		</lootgroup>
+<!-- SMGS -->
+<!-- PISTOLS -->
+	<lootgroup name="groupEFTXPistolsT1" quality="1" loot_quality_template="QLTemplateT1">
+			<item name="guntokarevtt" count="1" quality="1"/>
+			<item name="guntokarevgold" count="1" quality="1"/>
+			<item name="gunpmalphadog" count="1" quality="1"/>
+			<item name="gunstechkin" count="1" quality="1"/>
+			<item name="gunglock17" count="1" quality="1"/>
+			<item name="gunp226" count="1" quality="1"/>			
+			<item name="gunm9a3" count="1" quality="1"/>
+			<item name="gunglock18c" count="1" quality="1"/>
+			<item name="gunsr1mp" count="1" quality="1"/>
+			<item name="gunusp45tac" count="1" quality="1"/>
+			<item name="gunm1911" count="1" quality="1"/>
+			<item name="gunm45" count="1" quality="1"/>
+			<item name="gunusp45match" count="1" quality="1"/>
+			<item name="gunucp" count="1" quality="1"/>
+			<item name="gunfiveseven" count="1" quality="1"/>
+			<item name="gundeserteagle" count="1" quality="1"/>
+			<item name="gunrsh12" count="1" quality="1"/>
+	</lootgroup>	
+	<lootgroup name="groupEFTXPistolsT2" quality="1" loot_quality_template="QLTemplateT2">
+			<item name="guntokarevtt" count="1" quality="2"/>
+			<item name="guntokarevgold" count="1" quality="2"/>
+			<item name="gunpmalphadog" count="1" quality="2"/>
+			<item name="gunstechkin" count="1" quality="2"/>
+			<item name="gunglock17" count="1" quality="2"/>
+			<item name="gunp226" count="1" quality="2"/>			
+			<item name="gunm9a3" count="1" quality="2"/>
+			<item name="gunglock18c" count="1" quality="2"/>
+			<item name="gunsr1mp" count="1" quality="2"/>
+			<item name="gunusp45tac" count="1" quality="2"/>
+			<item name="gunm1911" count="1" quality="2"/>
+			<item name="gunm45" count="1" quality="2"/>
+			<item name="gunusp45match" count="1" quality="2"/>
+			<item name="gunucp" count="1" quality="2"/>
+			<item name="gunfiveseven" count="1" quality="2"/>
+			<item name="gundeserteagle" count="1" quality="2"/>
+			<item name="gunrsh12" count="1" quality="2"/>
+	</lootgroup>	
+	<lootgroup name="groupEFTXPistolsT3" quality="1" loot_quality_template="QLTemplateT3">
+			<item name="guntokarevtt" count="1" quality="3"/>
+			<item name="guntokarevgold" count="1" quality="3"/>
+			<item name="gunpmalphadog" count="1" quality="3"/>
+			<item name="gunstechkin" count="1" quality="3"/>
+			<item name="gunglock17" count="1" quality="3"/>
+			<item name="gunp226" count="1" quality="3"/>			
+			<item name="gunm9a3" count="1" quality="3"/>
+			<item name="gunglock18c" count="1" quality="3"/>
+			<item name="gunsr1mp" count="1" quality="3"/>
+			<item name="gunusp45tac" count="1" quality="3"/>
+			<item name="gunm1911" count="1" quality="3"/>
+			<item name="gunm45" count="1" quality="3"/>
+			<item name="gunusp45match" count="1" quality="3"/>
+			<item name="gunucp" count="1" quality="3"/>
+			<item name="gunfiveseven" count="1" quality="3"/>
+			<item name="gundeserteagle" count="1" quality="3"/>
+			<item name="gunrsh12" count="1" quality="3"/>
+	</lootgroup>
+	<lootgroup name="groupEFTXPistolsT4" quality="1" loot_quality_template="QLTemplateT4">
+			<item name="guntokarevtt" count="1" quality="4"/>
+			<item name="guntokarevgold" count="1" quality="4"/>
+			<item name="gunpmalphadog" count="1" quality="4"/>
+			<item name="gunstechkin" count="1" quality="4"/>
+			<item name="gunglock17" count="1" quality="4"/>
+			<item name="gunp226" count="1" quality="4"/>			
+			<item name="gunm9a3" count="1" quality="4"/>
+			<item name="gunglock18c" count="1" quality="4"/>
+			<item name="gunsr1mp" count="1" quality="4"/>
+			<item name="gunusp45tac" count="1" quality="4"/>
+			<item name="gunm1911" count="1" quality="4"/>
+			<item name="gunm45" count="1" quality="4"/>
+			<item name="gunusp45match" count="1" quality="4"/>
+			<item name="gunucp" count="1" quality="4"/>
+			<item name="gunfiveseven" count="1" quality="4"/>
+			<item name="gundeserteagle" count="1" quality="4"/>
+			<item name="gunrsh12" count="1" quality="4"/>
+	</lootgroup>
+	<lootgroup name="groupEFTXPistolsT5" quality="1" loot_quality_template="QLTemplateT5">
+			<item name="guntokarevtt" count="1" quality="5"/>
+			<item name="guntokarevgold" count="1" quality="5"/>
+			<item name="gunpmalphadog" count="1" quality="5"/>
+			<item name="gunstechkin" count="1" quality="5"/>
+			<item name="gunglock17" count="1" quality="5"/>
+			<item name="gunp226" count="1" quality="5"/>			
+			<item name="gunm9a3" count="1" quality="5"/>
+			<item name="gunglock18c" count="1" quality="5"/>
+			<item name="gunsr1mp" count="1" quality="5"/>
+			<item name="gunusp45tac" count="1" quality="5"/>
+			<item name="gunm1911" count="1" quality="5"/>
+			<item name="gunm45" count="1" quality="5"/>
+			<item name="gunusp45match" count="1" quality="5"/>
+			<item name="gunucp" count="1" quality="5"/>
+			<item name="gunfiveseven" count="1" quality="5"/>
+			<item name="gundeserteagle" count="1" quality="5"/>
+			<item name="gunrsh12" count="1" quality="5"/>
+	</lootgroup>
+	<lootgroup name="groupEFTXPistolsT6" quality="1" loot_quality_template="QLTemplateT6">
+			<item name="guntokarevtt" count="1" quality="6"/>
+			<item name="guntokarevgold" count="1" quality="6"/>
+			<item name="gunpmalphadog" count="1" quality="6"/>
+			<item name="gunstechkin" count="1" quality="6"/>
+			<item name="gunglock17" count="1" quality="6"/>
+			<item name="gunp226" count="1" quality="6"/>			
+			<item name="gunm9a3" count="1" quality="6"/>
+			<item name="gunglock18c" count="1" quality="6"/>
+			<item name="gunsr1mp" count="1" quality="6"/>
+			<item name="gunusp45tac" count="1" quality="6"/>
+			<item name="gunm1911" count="1" quality="6"/>
+			<item name="gunm45" count="1" quality="6"/>
+			<item name="gunusp45match" count="1" quality="6"/>
+			<item name="gunucp" count="1" quality="6"/>
+			<item name="gunfiveseven" count="1" quality="6"/>
+			<item name="gundeserteagle" count="1" quality="6"/>
+			<item name="gunrsh12" count="1" quality="6"/>
+	</lootgroup>
+<!-- PISTOLS -->
+<!-- SHOTGUNS -->
+		<lootgroup name="groupEFTXShotgunsT1" loot_quality_template="QLTemplateT1">
+			<item name="gunks23" count="1" quality="1"/>
+			<item name="gunmp43" count="1" quality="1"/>
+			<item name="gunmts255" count="1" quality="1"/>
+			<item name="gunm590" count="1" quality="1"/>
+			<item name="gunm870" count="1" quality="1"/>
+			<item name="gunmp133" count="1" quality="1"/>
+			<item name="gunksg12" count="1" quality="1"/>			
+			<item name="gunmp153" count="1" quality="1"/>
+			<item name="gunm3benelli" count="1" quality="1"/>
+			<item name="gunsaiga12" count="1" quality="1"/>
+			<item name="gunAA12" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXShotgunsT2" loot_quality_template="QLTemplateT2">
+			<item name="gunks23" count="1" quality="2"/>
+			<item name="gunmp43" count="1" quality="2"/>
+			<item name="gunmts255" count="1" quality="2"/>
+			<item name="gunm590" count="1" quality="2"/>
+			<item name="gunm870" count="1" quality="2"/>
+			<item name="gunmp133" count="1" quality="2"/>
+			<item name="gunksg12" count="1" quality="2"/>			
+			<item name="gunmp153" count="1" quality="2"/>
+			<item name="gunm3benelli" count="1" quality="2"/>
+			<item name="gunsaiga12" count="1" quality="2"/>
+			<item name="gunAA12" count="1" quality="2"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXShotgunsT3" loot_quality_template="QLTemplateT3">
+			<item name="gunks23" count="1" quality="3"/>
+			<item name="gunmp43" count="1" quality="3"/>
+			<item name="gunmts255" count="1" quality="3"/>
+			<item name="gunm590" count="1" quality="3"/>
+			<item name="gunm870" count="1" quality="3"/>
+			<item name="gunmp133" count="1" quality="3"/>
+			<item name="gunksg12" count="1" quality="3"/>			
+			<item name="gunmp153" count="1" quality="3"/>
+			<item name="gunm3benelli" count="1" quality="3"/>
+			<item name="gunsaiga12" count="1" quality="3"/>
+			<item name="gunAA12" count="1" quality="3"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXShotgunsT4" loot_quality_template="QLTemplateT4">
+			<item name="gunks23" count="1" quality="4"/>
+			<item name="gunmp43" count="1" quality="4"/>
+			<item name="gunmts255" count="1" quality="4"/>
+			<item name="gunm590" count="1" quality="4"/>
+			<item name="gunm870" count="1" quality="4"/>
+			<item name="gunmp133" count="1" quality="4"/>
+			<item name="gunksg12" count="1" quality="4"/>			
+			<item name="gunmp153" count="1" quality="4"/>
+			<item name="gunm3benelli" count="1" quality="4"/>
+			<item name="gunsaiga12" count="1" quality="4"/>
+			<item name="gunAA12" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXShotgunsT5" loot_quality_template="QLTemplateT5">
+			<item name="gunks23" count="1" quality="5"/>
+			<item name="gunmp43" count="1" quality="5"/>
+			<item name="gunmts255" count="1" quality="5"/>
+			<item name="gunm590" count="1" quality="5"/>
+			<item name="gunm870" count="1" quality="5"/>
+			<item name="gunmp133" count="1" quality="5"/>
+			<item name="gunksg12" count="1" quality="5"/>			
+			<item name="gunmp153" count="1" quality="5"/>
+			<item name="gunm3benelli" count="1" quality="5"/>
+			<item name="gunsaiga12" count="1" quality="5"/>
+			<item name="gunAA12" count="1" quality="5"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXShotgunsT6" loot_quality_template="QLTemplateT6">
+			<item name="gunks23" count="1" quality="6"/>
+			<item name="gunmp43" count="1" quality="6"/>
+			<item name="gunmts255" count="1" quality="6"/>
+			<item name="gunm590" count="1" quality="6"/>
+			<item name="gunm870" count="1" quality="6"/>
+			<item name="gunmp133" count="1" quality="6"/>
+			<item name="gunksg12" count="1" quality="6"/>			
+			<item name="gunmp153" count="1" quality="6"/>
+			<item name="gunm3benelli" count="1" quality="6"/>
+			<item name="gunsaiga12" count="1" quality="6"/>
+			<item name="gunAA12" count="1" quality="6"/>
+		</lootgroup>
+<!-- SHOTGUNS -->
+<!-- RIFLES -->
+		<lootgroup name="groupEFTXRiflesT1" loot_quality_template="QLTemplateT1">
+			<item name="gunadar" count="1" quality="1"/>
+			<item name="gunsks" count="1" quality="1"/>
+			<item name="gunm700" count="1" quality="1"/>
+			<item name="gundvl10" count="1" quality="1"/>
+			<item name="gunt5000" count="1" quality="1"/>
+			<item name="gunFALsa58dmr" count="1" quality="1"/>			
+			<item name="gunm1aEBR" count="1" quality="1"/>
+			<item name="gunrfb" count="1" quality="1"/>
+			<item name="gunsr25" count="1" quality="1"/>
+			<item name="gunrsass" count="1" quality="1"/>
+			<item name="gunhkg28" count="1" quality="1"/>
+			<item name="gunmp18" count="1" quality="1"/>
+			<item name="gunmosin" count="1" quality="1"/>
+			<item name="gunsv98" count="1" quality="1"/>
+			<item name="gunsvt" count="1" quality="1"/>
+			<item name="gunsvd" count="1" quality="1"/>			
+			<item name="gunaxmc" count="1" quality="1"/>
+			<item name="gunswordmk18" count="1" quality="1"/>
+			<item name="gunmxlr" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXRiflesT2" loot_quality_template="QLTemplateT2">
+			<item name="gunadar" count="1" quality="2"/>
+			<item name="gunsks" count="1" quality="2"/>
+			<item name="gunm700" count="1" quality="2"/>
+			<item name="gundvl10" count="1" quality="2"/>
+			<item name="gunt5000" count="1" quality="2"/>
+			<item name="gunFALsa58dmr" count="1" quality="2"/>			
+			<item name="gunm1aEBR" count="1" quality="2"/>
+			<item name="gunrfb" count="1" quality="2"/>
+			<item name="gunsr25" count="1" quality="2"/>
+			<item name="gunrsass" count="1" quality="2"/>
+			<item name="gunhkg28" count="1" quality="2"/>
+			<item name="gunmp18" count="1" quality="2"/>
+			<item name="gunmosin" count="1" quality="2"/>
+			<item name="gunsv98" count="1" quality="2"/>
+			<item name="gunsvt" count="1" quality="2"/>
+			<item name="gunsvd" count="1" quality="2"/>			
+			<item name="gunaxmc" count="1" quality="2"/>
+			<item name="gunswordmk18" count="1" quality="2"/>
+			<item name="gunmxlr" count="1" quality="2"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXRiflesT3" loot_quality_template="QLTemplateT3">
+			<item name="gunadar" count="1" quality="3"/>
+			<item name="gunsks" count="1" quality="3"/>
+			<item name="gunm700" count="1" quality="3"/>
+			<item name="gundvl10" count="1" quality="3"/>
+			<item name="gunt5000" count="1" quality="3"/>
+			<item name="gunFALsa58dmr" count="1" quality="3"/>			
+			<item name="gunm1aEBR" count="1" quality="3"/>
+			<item name="gunrfb" count="1" quality="3"/>
+			<item name="gunsr25" count="1" quality="3"/>
+			<item name="gunrsass" count="1" quality="3"/>
+			<item name="gunhkg28" count="1" quality="3"/>
+			<item name="gunmp18" count="1" quality="3"/>
+			<item name="gunmosin" count="1" quality="3"/>
+			<item name="gunsv98" count="1" quality="3"/>
+			<item name="gunsvt" count="1" quality="3"/>
+			<item name="gunsvd" count="1" quality="3"/>			
+			<item name="gunaxmc" count="1" quality="3"/>
+			<item name="gunswordmk18" count="1" quality="3"/>
+			<item name="gunmxlr" count="1" quality="3"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXRiflesT4" loot_quality_template="QLTemplateT4">
+			<item name="gunadar" count="1" quality="4"/>
+			<item name="gunsks" count="1" quality="4"/>
+			<item name="gunm700" count="1" quality="4"/>
+			<item name="gundvl10" count="1" quality="4"/>
+			<item name="gunt5000" count="1" quality="4"/>
+			<item name="gunFALsa58dmr" count="1" quality="4"/>			
+			<item name="gunm1aEBR" count="1" quality="4"/>
+			<item name="gunrfb" count="1" quality="4"/>
+			<item name="gunsr25" count="1" quality="4"/>
+			<item name="gunrsass" count="1" quality="4"/>
+			<item name="gunhkg28" count="1" quality="4"/>
+			<item name="gunmp18" count="1" quality="4"/>
+			<item name="gunmosin" count="1" quality="4"/>
+			<item name="gunsv98" count="1" quality="4"/>
+			<item name="gunsvt" count="1" quality="4"/>
+			<item name="gunsvd" count="1" quality="4"/>			
+			<item name="gunaxmc" count="1" quality="4"/>
+			<item name="gunswordmk18" count="1" quality="4"/>
+			<item name="gunmxlr" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXRiflesT5" loot_quality_template="QLTemplateT5">
+			<item name="gunadar" count="1" quality="5"/>
+			<item name="gunsks" count="1" quality="5"/>
+			<item name="gunm700" count="1" quality="5"/>
+			<item name="gundvl10" count="1" quality="5"/>
+			<item name="gunt5000" count="1" quality="5"/>
+			<item name="gunFALsa58dmr" count="1" quality="5"/>			
+			<item name="gunm1aEBR" count="1" quality="5"/>
+			<item name="gunrfb" count="1" quality="5"/>
+			<item name="gunsr25" count="1" quality="5"/>
+			<item name="gunrsass" count="1" quality="5"/>
+			<item name="gunhkg28" count="1" quality="5"/>
+			<item name="gunmp18" count="1" quality="5"/>
+			<item name="gunmosin" count="1" quality="5"/>
+			<item name="gunsv98" count="1" quality="5"/>
+			<item name="gunsvt" count="1" quality="5"/>
+			<item name="gunsvd" count="1" quality="5"/>			
+			<item name="gunaxmc" count="1" quality="5"/>
+			<item name="gunswordmk18" count="1" quality="5"/>
+			<item name="gunmxlr" count="1" quality="5"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXRiflesT6" loot_quality_template="QLTemplateT6">
+			<item name="gunadar" count="1" quality="6"/>
+			<item name="gunsks" count="1" quality="6"/>
+			<item name="gunm700" count="1" quality="6"/>
+			<item name="gundvl10" count="1" quality="6"/>
+			<item name="gunt5000" count="1" quality="6"/>
+			<item name="gunFALsa58dmr" count="1" quality="6"/>			
+			<item name="gunm1aEBR" count="1" quality="6"/>
+			<item name="gunrfb" count="1" quality="6"/>
+			<item name="gunsr25" count="1" quality="6"/>
+			<item name="gunrsass" count="1" quality="6"/>
+			<item name="gunhkg28" count="1" quality="6"/>
+			<item name="gunmp18" count="1" quality="6"/>
+			<item name="gunmosin" count="1" quality="6"/>
+			<item name="gunsv98" count="1" quality="6"/>
+			<item name="gunsvt" count="1" quality="6"/>
+			<item name="gunsvd" count="1" quality="6"/>			
+			<item name="gunaxmc" count="1" quality="6"/>
+			<item name="gunswordmk18" count="1" quality="6"/>
+			<item name="gunmxlr" count="1" quality="6"/>
+		</lootgroup>
+<!-- RIFLES -->
+<!-- MACHINE GUNS -->
+		<lootgroup name="groupEFTXMGT1" loot_quality_template="QLTemplateT1">
+			<item name="gunauga3" count="1" quality="1"/>
+			<item name="gung36kv2" count="1" quality="1"/>
+			<item name="gunm4a1" count="1" quality="1"/>
+			<item name="gunm16a4" count="1" quality="1"/>
+			<item name="gunhk416" count="1" quality="1"/>
+			<item name="gunIWItavorx95" count="1" quality="1"/>			
+			<item name="gunIWIcarmel" count="1" quality="1"/>
+			<item name="gunak300velociraptor" count="1" quality="1"/>
+			<item name="gunhoneybadger" count="1" quality="1"/>
+			<item name="gunmcx" count="1" quality="1"/>
+			<item name="gunFALsa58br" count="1" quality="1"/>
+			<item name="gunmdr762" count="1" quality="1"/>
+			<item name="gunscarh" count="1" quality="1"/>
+			<item name="gunhk417" count="1" quality="1"/>
+			<item name="gunm14sass" count="1" quality="1"/>
+			<item name="gunmcxspear" count="1" quality="1"/>			
+			<item name="gunash12" count="1" quality="1"/>
+			<item name="gunrpk16" count="1" quality="1"/>
+			<item name="gunfnminimi" count="1" quality="1"/>
+			<item name="gunrpd" count="1" quality="1"/>
+			<item name="gunm60e6" count="1" quality="1"/>
+			<item name="gunpkp" count="1" quality="1"/>
+			<item name="gunaks74un" count="1" quality="1"/>
+			<item name="gunak74n" count="1" quality="1"/>
+			<item name="gunak74m" count="1" quality="1"/>
+			<item name="gunak12" count="1" quality="1"/>
+			<item name="gunak107" count="1" quality="1"/>
+			<item name="gunakmn" count="1" quality="1"/>
+			<item name="gunak103" count="1" quality="1"/>
+			<item name="gunak109" count="1" quality="1"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="1"/>
+			<item name="gunrd704" count="1" quality="1"/>
+			<item name="gunmk47" count="1" quality="1"/>
+			<item name="gun9a91" count="1" quality="1"/>
+			<item name="gunvss" count="1" quality="1"/>
+			<item name="gunasval" count="1" quality="1"/>
+			<item name="gunfamas" count="1" quality="1"/>
+			<item name="gunm16a1" count="1" quality="1"/>
+			<item name="gunmk12spr" count="1" quality="1"/>
+			<item name="gunnl545" count="1" quality="1"/>
+			<item name="gunmdr556" count="1" quality="1"/>
+			<item name="guntoz106" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMGT2" loot_quality_template="QLTemplateT2">
+			<item name="gunauga3" count="1" quality="2"/>
+			<item name="gung36kv2" count="1" quality="2"/>
+			<item name="gunm4a1" count="1" quality="2"/>
+			<item name="gunm16a4" count="1" quality="2"/>
+			<item name="gunhk416" count="1" quality="2"/>
+			<item name="gunIWItavorx95" count="1" quality="2"/>			
+			<item name="gunIWIcarmel" count="1" quality="2"/>
+			<item name="gunak300velociraptor" count="1" quality="2"/>
+			<item name="gunhoneybadger" count="1" quality="2"/>
+			<item name="gunmcx" count="1" quality="2"/>
+			<item name="gunFALsa58br" count="1" quality="2"/>
+			<item name="gunmdr762" count="1" quality="2"/>
+			<item name="gunscarh" count="1" quality="2"/>
+			<item name="gunhk417" count="1" quality="2"/>
+			<item name="gunm14sass" count="1" quality="2"/>
+			<item name="gunmcxspear" count="1" quality="2"/>			
+			<item name="gunash12" count="1" quality="2"/>
+			<item name="gunrpk16" count="1" quality="2"/>
+			<item name="gunfnminimi" count="1" quality="2"/>
+			<item name="gunrpd" count="1" quality="2"/>
+			<item name="gunm60e6" count="1" quality="2"/>
+			<item name="gunpkp" count="1" quality="2"/>
+			<item name="gunaks74un" count="1" quality="2"/>
+			<item name="gunak74n" count="1" quality="2"/>
+			<item name="gunak74m" count="1" quality="2"/>
+			<item name="gunak12" count="1" quality="2"/>
+			<item name="gunak107" count="1" quality="2"/>
+			<item name="gunakmn" count="1" quality="2"/>
+			<item name="gunak103" count="1" quality="2"/>
+			<item name="gunak109" count="1" quality="2"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="2"/>
+			<item name="gunrd704" count="1" quality="2"/>
+			<item name="gunmk47" count="1" quality="2"/>
+			<item name="gun9a91" count="1" quality="2"/>
+			<item name="gunvss" count="1" quality="2"/>
+			<item name="gunasval" count="1" quality="2"/>
+			<item name="gunfamas" count="1" quality="2"/>
+			<item name="gunm16a1" count="1" quality="2"/>
+			<item name="gunmk12spr" count="1" quality="2"/>
+			<item name="gunnl545" count="1" quality="2"/>
+			<item name="gunmdr556" count="1" quality="2"/>
+			<item name="guntoz106" count="1" quality="2"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMGT3" loot_quality_template="QLTemplateT3">
+			<item name="gunauga3" count="1" quality="3"/>
+			<item name="gung36kv2" count="1" quality="3"/>
+			<item name="gunm4a1" count="1" quality="3"/>
+			<item name="gunm16a4" count="1" quality="3"/>
+			<item name="gunhk416" count="1" quality="3"/>
+			<item name="gunIWItavorx95" count="1" quality="3"/>			
+			<item name="gunIWIcarmel" count="1" quality="3"/>
+			<item name="gunak300velociraptor" count="1" quality="3"/>
+			<item name="gunhoneybadger" count="1" quality="3"/>
+			<item name="gunmcx" count="1" quality="3"/>
+			<item name="gunFALsa58br" count="1" quality="3"/>
+			<item name="gunmdr762" count="1" quality="3"/>
+			<item name="gunscarh" count="1" quality="3"/>
+			<item name="gunhk417" count="1" quality="3"/>
+			<item name="gunm14sass" count="1" quality="3"/>
+			<item name="gunmcxspear" count="1" quality="3"/>			
+			<item name="gunash12" count="1" quality="3"/>
+			<item name="gunrpk16" count="1" quality="3"/>
+			<item name="gunfnminimi" count="1" quality="3"/>
+			<item name="gunrpd" count="1" quality="3"/>
+			<item name="gunm60e6" count="1" quality="3"/>
+			<item name="gunpkp" count="1" quality="3"/>
+			<item name="gunaks74un" count="1" quality="3"/>
+			<item name="gunak74n" count="1" quality="3"/>
+			<item name="gunak74m" count="1" quality="3"/>
+			<item name="gunak12" count="1" quality="3"/>
+			<item name="gunak107" count="1" quality="3"/>
+			<item name="gunakmn" count="1" quality="3"/>
+			<item name="gunak103" count="1" quality="3"/>
+			<item name="gunak109" count="1" quality="3"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="3"/>
+			<item name="gunrd704" count="1" quality="3"/>
+			<item name="gunmk47" count="1" quality="3"/>
+			<item name="gun9a91" count="1" quality="3"/>
+			<item name="gunvss" count="1" quality="3"/>
+			<item name="gunasval" count="1" quality="3"/>
+			<item name="gunfamas" count="1" quality="3"/>
+			<item name="gunm16a1" count="1" quality="3"/>
+			<item name="gunmk12spr" count="1" quality="3"/>
+			<item name="gunnl545" count="1" quality="3"/>
+			<item name="gunmdr556" count="1" quality="3"/>
+			<item name="guntoz106" count="1" quality="3"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMGT4" loot_quality_template="QLTemplateT4">
+			<item name="gunauga3" count="1" quality="4"/>
+			<item name="gung36kv2" count="1" quality="4"/>
+			<item name="gunm4a1" count="1" quality="4"/>
+			<item name="gunm16a4" count="1" quality="4"/>
+			<item name="gunhk416" count="1" quality="4"/>
+			<item name="gunIWItavorx95" count="1" quality="4"/>			
+			<item name="gunIWIcarmel" count="1" quality="4"/>
+			<item name="gunak300velociraptor" count="1" quality="4"/>
+			<item name="gunhoneybadger" count="1" quality="4"/>
+			<item name="gunmcx" count="1" quality="4"/>
+			<item name="gunFALsa58br" count="1" quality="4"/>
+			<item name="gunmdr762" count="1" quality="4"/>
+			<item name="gunscarh" count="1" quality="4"/>
+			<item name="gunhk417" count="1" quality="4"/>
+			<item name="gunm14sass" count="1" quality="4"/>
+			<item name="gunmcxspear" count="1" quality="4"/>			
+			<item name="gunash12" count="1" quality="4"/>
+			<item name="gunrpk16" count="1" quality="4"/>
+			<item name="gunfnminimi" count="1" quality="4"/>
+			<item name="gunrpd" count="1" quality="4"/>
+			<item name="gunm60e6" count="1" quality="4"/>
+			<item name="gunpkp" count="1" quality="4"/>
+			<item name="gunaks74un" count="1" quality="4"/>
+			<item name="gunak74n" count="1" quality="4"/>
+			<item name="gunak74m" count="1" quality="4"/>
+			<item name="gunak12" count="1" quality="4"/>
+			<item name="gunak107" count="1" quality="4"/>
+			<item name="gunakmn" count="1" quality="4"/>
+			<item name="gunak103" count="1" quality="4"/>
+			<item name="gunak109" count="1" quality="4"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="4"/>
+			<item name="gunrd704" count="1" quality="4"/>
+			<item name="gunmk47" count="1" quality="4"/>
+			<item name="gun9a91" count="1" quality="4"/>
+			<item name="gunvss" count="1" quality="4"/>
+			<item name="gunasval" count="1" quality="4"/>
+			<item name="gunfamas" count="1" quality="4"/>
+			<item name="gunm16a1" count="1" quality="4"/>
+			<item name="gunmk12spr" count="1" quality="4"/>
+			<item name="gunnl545" count="1" quality="4"/>
+			<item name="gunmdr556" count="1" quality="4"/>
+			<item name="guntoz106" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMGT5" loot_quality_template="QLTemplateT5">
+			<item name="gunauga3" count="1" quality="5"/>
+			<item name="gung36kv2" count="1" quality="5"/>
+			<item name="gunm4a1" count="1" quality="5"/>
+			<item name="gunm16a4" count="1" quality="5"/>
+			<item name="gunhk416" count="1" quality="5"/>
+			<item name="gunIWItavorx95" count="1" quality="5"/>			
+			<item name="gunIWIcarmel" count="1" quality="5"/>
+			<item name="gunak300velociraptor" count="1" quality="5"/>
+			<item name="gunhoneybadger" count="1" quality="5"/>
+			<item name="gunmcx" count="1" quality="5"/>
+			<item name="gunFALsa58br" count="1" quality="5"/>
+			<item name="gunmdr762" count="1" quality="5"/>
+			<item name="gunscarh" count="1" quality="5"/>
+			<item name="gunhk417" count="1" quality="5"/>
+			<item name="gunm14sass" count="1" quality="5"/>
+			<item name="gunmcxspear" count="1" quality="5"/>			
+			<item name="gunash12" count="1" quality="5"/>
+			<item name="gunrpk16" count="1" quality="5"/>
+			<item name="gunfnminimi" count="1" quality="5"/>
+			<item name="gunrpd" count="1" quality="5"/>
+			<item name="gunm60e6" count="1" quality="5"/>
+			<item name="gunpkp" count="1" quality="5"/>
+			<item name="gunaks74un" count="1" quality="5"/>
+			<item name="gunak74n" count="1" quality="5"/>
+			<item name="gunak74m" count="1" quality="5"/>
+			<item name="gunak12" count="1" quality="5"/>
+			<item name="gunak107" count="1" quality="5"/>
+			<item name="gunakmn" count="1" quality="5"/>
+			<item name="gunak103" count="1" quality="5"/>
+			<item name="gunak109" count="1" quality="5"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="5"/>
+			<item name="gunrd704" count="1" quality="5"/>
+			<item name="gunmk47" count="1" quality="5"/>
+			<item name="gun9a91" count="1" quality="5"/>
+			<item name="gunvss" count="1" quality="5"/>
+			<item name="gunasval" count="1" quality="5"/>
+			<item name="gunfamas" count="1" quality="5"/>
+			<item name="gunm16a1" count="1" quality="5"/>
+			<item name="gunmk12spr" count="1" quality="5"/>
+			<item name="gunnl545" count="1" quality="5"/>
+			<item name="gunmdr556" count="1" quality="5"/>
+			<item name="guntoz106" count="1" quality="5"/>
+		</lootgroup>
+		<lootgroup name="groupEFTXMGT6" loot_quality_template="QLTemplateT6">
+			<item name="gunauga3" count="1" quality="6"/>
+			<item name="gung36kv2" count="1" quality="6"/>
+			<item name="gunm4a1" count="1" quality="6"/>
+			<item name="gunm16a4" count="1" quality="6"/>
+			<item name="gunhk416" count="1" quality="6"/>
+			<item name="gunIWItavorx95" count="1" quality="6"/>			
+			<item name="gunIWIcarmel" count="1" quality="6"/>
+			<item name="gunak300velociraptor" count="1" quality="6"/>
+			<item name="gunhoneybadger" count="1" quality="6"/>
+			<item name="gunmcx" count="1" quality="6"/>
+			<item name="gunFALsa58br" count="1" quality="6"/>
+			<item name="gunmdr762" count="1" quality="6"/>
+			<item name="gunscarh" count="1" quality="6"/>
+			<item name="gunhk417" count="1" quality="6"/>
+			<item name="gunm14sass" count="1" quality="6"/>
+			<item name="gunmcxspear" count="1" quality="6"/>			
+			<item name="gunash12" count="1" quality="6"/>
+			<item name="gunrpk16" count="1" quality="6"/>
+			<item name="gunfnminimi" count="1" quality="6"/>
+			<item name="gunrpd" count="1" quality="6"/>
+			<item name="gunm60e6" count="1" quality="6"/>
+			<item name="gunpkp" count="1" quality="6"/>
+			<item name="gunaks74un" count="1" quality="6"/>
+			<item name="gunak74n" count="1" quality="6"/>
+			<item name="gunak74m" count="1" quality="6"/>
+			<item name="gunak12" count="1" quality="6"/>
+			<item name="gunak107" count="1" quality="6"/>
+			<item name="gunakmn" count="1" quality="6"/>
+			<item name="gunak103" count="1" quality="6"/>
+			<item name="gunak109" count="1" quality="6"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="6"/>
+			<item name="gunrd704" count="1" quality="6"/>
+			<item name="gunmk47" count="1" quality="6"/>
+			<item name="gun9a91" count="1" quality="6"/>
+			<item name="gunvss" count="1" quality="6"/>
+			<item name="gunasval" count="1" quality="6"/>
+			<item name="gunfamas" count="1" quality="6"/>
+			<item name="gunm16a1" count="1" quality="6"/>
+			<item name="gunmk12spr" count="1" quality="6"/>
+			<item name="gunnl545" count="1" quality="6"/>
+			<item name="gunmdr556" count="1" quality="6"/>
+			<item name="guntoz106" count="1" quality="6"/>
+		</lootgroup>
+<!-- MACHINE GUNS -->		
+<!-- ALL WEAPONS -->
+		<lootgroup name="groupWeaponsT1" loot_quality_template="QLTemplateT1">
+			<item name="gunmp18" count="1" quality="1"/>
+			<item name="gunppsh41" count="1" quality="1"/>
+			<item name="gunpp9klin" count="1" quality="1"/>
+			<item name="gunmp5k" count="1" quality="1"/>
+			<item name="gunmp43" count="1" quality="1"/>
+			<item name="gunmts255" count="1" quality="1"/>			
+			<item name="gunstechkin" count="1" quality="1"/>
+			<item name="gunm9a3" count="1" quality="1"/>
+			<item name="gunm1911" count="1" quality="1"/>
+			<item name="gunusp45match" count="1" quality="1"/>
+		</lootgroup>
+		<lootgroup name="groupWeaponsT2" loot_quality_template="QLTemplateT2">
+			<item name="guntokarevtt" count="1" quality="2"/>
+			<item name="gunfiveseven" count="1" quality="2"/> 
+			<item name="gunglock17" count="1" quality="2"/>
+			<item name="gunp226" count="1" quality="2"/>			
+			<item name="gunadar" count="1" quality="2"/>
+			<item name="gunak300velociraptor" count="1" quality="2"/> 
+			<item name="gunm700" count="1" quality="2"/>
+			<item name="gunaks74un" count="1" quality="2"/>
+			<item name="gunak74n" count="1" quality="2"/>
+			<item name="gunmosin" count="1" quality="2"/>
+			<item name="gun9a91" count="1" quality="2"/>
+			<item name="gunm590" count="1" quality="2"/>
+			<item name="gunm870" count="1" quality="2"/>
+			<item name="gunmp133" count="1" quality="2"/>
+			<item name="gunksg12" count="1" quality="2"/>
+			<item name="gunsks" count="1" quality="2"/>
+			<item name="gunakmn" count="1" quality="2"/>
+			<item name="gunmp5" count="1" quality="2"/>
+			<item name="gunuzi" count="1" quality="2"/>
+			<item name="gunpp19vityaz" count="1" quality="2"/>
+			<item name="gunump45" count="1" quality="2"/>	
+			<item name="gunmxlr" count="1" quality="2"/>
+			<item name="gunnl545" count="1" quality="2"/>	
+			<item name="guntoz106" count="1" quality="2"/>	
+		</lootgroup>
+		<lootgroup name="groupWeaponsT3" loot_quality_template="QLTemplateT3">
+			<item name="gunm45" count="1" quality="3"/>
+			<item name="gunusp45tac" count="1" quality="3"/>
+			<item name="gunsr1mp" count="1" quality="3"/>
+			<item name="gundeserteagle" count="1" quality="3"/>			
+			<item name="gunauga3" count="1" quality="3"/>
+			<item name="gung36kv2" count="1" quality="3"/>
+			<item name="gunm4a1" count="1" quality="3"/>
+			<item name="gunm16a4" count="1" quality="3"/>
+			<item name="gunhoneybadger" count="1" quality="3"/>
+			<item name="gundvl10" count="1" quality="3"/> 
+			<item name="gunt5000" count="1" quality="3"/>
+			<item name="gunm16a1" count="1" quality="3"/>
+			<item name="gunFALsa58dmr" count="1" quality="3"/>
+			<item name="gunm1aEBR" count="1" quality="3"/>
+			<item name="gunrfb" count="1" quality="3"/>
+			<item name="gunFALsa58br" count="1" quality="3"/>
+			<item name="gunmdr762" count="1" quality="3"/>
+			<item name="gunsv98" count="1" quality="3"/>
+			<item name="gunsvt" count="1" quality="3"/>
+			<item name="gunsvd" count="1" quality="3"/> 
+			<item name="gunak74m" count="1" quality="3"/>
+			<item name="gunak103" count="1" quality="3"/>
+			<item name="gunvss" count="1" quality="3"/>
+			<item name="gunthompson" count="1" quality="3"/>
+			<item name="gunmp9" count="1" quality="3"/>
+			<item name="gunuziprosmg" count="1" quality="3"/>
+			<item name="gunmp5sd" count="1" quality="3"/>
+			<item name="gunmp7" count="1" quality="3"/> 
+			<item name="gunp90" count="1" quality="3"/> 
+			<item name="gunsr2mveresk" count="1" quality="3"/> 
+			<item name="gunks23" count="1" quality="3"/> 		
+			<item name="gunmp153" count="1" quality="3"/>
+			<item name="gunm3benelli" count="1" quality="3"/>
+			<item name="gunmk12spr" count="1" quality="3"/>			
+		</lootgroup>
+		<lootgroup name="groupWeaponsT4" loot_quality_template="QLTemplateT4">
+			<item name="gunglock18c" count="1" quality="4"/>	
+			<item name="gunmcx" count="1" quality="4"/>
+			<item name="gunhk416" count="1" quality="4"/>
+			<item name="gunIWItavorx95" count="1" quality="4"/>
+			<item name="gunIWIcarmel" count="1" quality="4"/>
+			<item name="gunsr25" count="1" quality="4"/>
+			<item name="gunrsass" count="1" quality="4"/>
+			<item name="gunhkg28" count="1" quality="4"/>
+			<item name="gunscarh" count="1" quality="4"/>
+			<item name="gunhk417" count="1" quality="4"/>
+			<item name="gunash12"  count="1" quality="4"/> 
+			<item name="gunrpk16" count="1" quality="4"/>
+			<item name="gunak12" count="1" quality="4"/>
+			<item name="gunak107" count="1" quality="4"/>
+			<item name="gunrpd" count="1" quality="4"/>
+			<item name="gunak109" count="1" quality="4"/>
+			<item name="gunrd704" count="1" quality="4"/>
+			<item name="gunmk47" count="1" quality="4"/>
+			<item name="gunasval" count="1" quality="4"/>
+			<item name="gunaxmc" count="1" quality="4"/> 
+			<item name="gunsaiga12" count="1" quality="4"/>
+			<item name="gunAA12" count="1" quality="4"/>
+			<item name="gunvector9" count="1" quality="4"/>
+			<item name="gunstm9" count="1" quality="4"/>
+			<item name="gunTheAKGuyAK50" count="1" quality="4"/>
+			<item name="gunmdr556" count="1" quality="4"/>
+		</lootgroup>
+		<lootgroup name="groupWeaponsT5" loot_quality_template="QLTemplateT5">
+			<item name="guntokarevgold" count="1" quality="5"/>
+			<item name="gunpmalphadog" count="1" quality="5"/>
+			<item name="gunrsh12" count="1" quality="5"/> 			
+			<item name="gunm14sass" count="1" quality="5"/>
+			<item name="gunmcxspear" count="1" quality="5"/>
+			<item name="gunfnminimi" count="1" quality="5"/> 
+			<item name="gunm60e6" count="1" quality="5"/> 
+			<item name="gunpkp" count="1" quality="5"/> 
+			<item name="gunswordmk18" count="1" quality="5"/> 
+		</lootgroup>		
+		<lootgroup name="groupSpecialGuns" loot_quality_template="QLTemplateT1">
+			<item name="gunfn40gl" count="1" quality="1"/>
+			<item name="gundvl10" count="1" quality="1"/>
+			<item name="gunsvd" count="1" quality="1"/>
+			<item name="gunmp7" count="1" quality="1"/>
+			<item name="gunp90" count="1" quality="1"/>
+			<item name="gunsr2mveresk" count="1" quality="1"/>
+			<item name="gunks23" count="1" quality="1"/>
+			<item name="gunchinalake" count="1" quality="1"/>
+			<item name="gunrpd" count="1" quality="1"/>
+			<item name="gunaxmc" count="1" quality="1"/>
+			<item name="gunm32a1mgl" count="1" quality="1"/>
+			<item name="gunfnminimi" count="1" quality="1"/>
+			<item name="gunm60e6" count="1" quality="1"/>
+			<item name="gunpkp" count="1" quality="1"/>
+		</lootgroup>		
+<!-- ALL WEAPONS -->
+<!-- SCHEMATICS -->
+		<lootgroup name="EFTXModSchemsT1">
+		<item name="schematicHelmetLight"/>
+		<item name="schematictactickitSKSTAPCO"/>
+		<item name="schematictactickitDSARPD"/>
+		<item name="schematicscopePU3_5x"/>
+		<item name="schematicscopeaimpointAcroP1"/>
+		<item name="schematicscopeaimpointMicroH2"/>
+		<item name="schematicscopeaimpointMicroT1"/>
+		<item name="schematicscopeBelOMOpk06"/>
+		<item name="schematicscopeburrisfastfire"/>
+		<item name="schematicscopeSIGromeo4"/>
+		<item name="schematicscopeRMR"/>
+		<item name="schematicscopeleupolddeltapoint"/>
+		<item name="schematicscopeAimPointCompM4"/>
+		<item name="schematicscopewalthermrsreflex"/>
+		<item name="schematicscopeEOTech553holo"/>
+		<item name="schematicscopeBelOMOPSO1M2"/>
+		<item name="schematicscopemonstrumcompact"/>
+		<item name="schematicsmag_ppsh_zis_std_762x25_71"/>
+		<item name="schematicmag_tt_custom_drum_762x25_75"/>
+		<item name="schematicmag_pm_custom_9x18pm_84"/>
+		<item name="schematicmag_kedr_custom_9x18pm_75"/>
+		<item name="schematicmag_glock_glock_big_stick_9x19_33"/>
+		<item name="schematicsilencer_tt_custom_noname_762x25tt"/>
+		<item name="schematicsilencer_stechkin_aps_std_9x18pm"/>
+		<item name="schematicsilencer_pp9_klin_custom_9x18pm"/>
+		<item name="schematicsilencer_mount_silencerco_hybrid_46_multi"/>
+		<item name="schematicsilencer_sr1mp_tochmash_sr1mp_std_9x21"/>
+		<item name="schematicsilencer_hk_ucp_46x30"/>
+		<item name="schematicsilencer_57_gemtech_sfn_57_57x28"/>
+		<item name="schematicmodstock_stechkin_wire"/>
+		<item name="schematicstock_glock_fab_defence_glr_17"/>
+		<item name="schematicstock_mp5k_pdw_stock"/>
+		</lootgroup>
+		<lootgroup name="EFTXModSchemsT2">
+		<item name="schematicHelmetLight2"/>
+		<item name="schematicuziiwiverticalgriprailed"/>
+		<item name="schematicallhksturmgriffassaultgrip"/>
+		<item name="schematicscopeaimpointAcroP1_backup"/>
+		<item name="schematicscopeaimpointMicroH2_backup"/>
+		<item name="schematicscopeaimpointMicroT1_backup"/>
+		<item name="schematicscopeBelOMOpk06_backup"/>
+		<item name="schematicscopeburrisfastfire_backup"/>
+		<item name="schematicscopeSIGromeo4_backup"/>
+		<item name="schematicscopeRMR_backup"/>
+		<item name="schematicscopeleupolddeltapoint_backup"/>
+		<item name="schematicscopeAimPointPro"/>
+		<item name="schematicscopeaksionEKP818"/>
+		<item name="schematicscopeaksionEKP1s03"/>
+		<item name="schematicscopeaksionEKP802"/>
+		<item name="schematicscopeBelOMOdovetailPKAA"/>
+		<item name="schematicscopeElcanSpecterHCO"/>
+		<item name="schematicscopeLeapersUTG"/>
+		<item name="schematicscopeNPZPK1"/>
+		<item name="schematicscopeOKP7dovetail"/>
+		<item name="schematicscopeSIGRomeo8T"/>
+		<item name="schematicscopeSRS02"/>
+		<item name="schematicscopeValdayKrechet"/>
+		<item name="schematicscopeValdayPK120"/>
+		<item name="schematicscopeVOMZPiladP1"/>
+		<item name="schematicscopeVortexRazorAMGUH1"/>
+		<item name="schematicscopeWilcoxBossXeHP"/>
+		<item name="schematicscopeokp7reflex"/>
+		<item name="schematicscopeFNP90ringreflex"/>
+		<item name="schematicmag_sks_promag_aalvx35_762x39_35"/>
+		<item name="schematicmag_870_remington_magazine_extension_12g_10"/>
+		<item name="schematicsilencer_all_silencerco_osprey_9_9x19"/>
+		<item name="schematicsilencer_glock_fischer_development_fd917_9x19"/>
+		<item name="schematicsilencer_base_silencerco_omega_45k_1143x23"/>
+		<item name="schematicsilencer_ump_bt_ump_45_1143x23"/>
+		<item name="schematicsilencer_ak74_spectehnika_tgpa_545x39"/>
+		<item name="schematicmuzzle_mosin_tacfire_tanker_style_762x54r"/>
+		<item name="schematicsilencer_mosin_bramit_std_762x54r"/>
+		<item name="schematicsilencer_sdqd_griffin_m4sd_k_silencer_556x45"/>
+		<item name="schematicmuzzle_ar15_ferfrans_muzzle_brake_556x45"/>
+		<item name="schematicmuzzle_12g_remington_tactical_12"/>
+		<item name="schematicstock_mp5_hk_a2_std"/>
+		<item name="schematicstock_ak_zenit_pt_1"/>
+		<item name="schematicstock_ar15_double_star_ace_socom_gen_4"/>
+		<item name="schematicstock_ar15_ergo_f93_pro_stock"/>
+		<item name="schematicstock_ar15_magpul_ubr_gen2"/>
+		<item name="schematicstock_ar15_strike_industries_viper_pdw_stock"/>
+		<item name="schematicstock_ar15_troy_m7a1_pdw"/>
+		<item name="schematicstock_iwi_carmel_ergo_stock"/>
+		<item name="schematicNightVision"/>	
+		</lootgroup>
+		<lootgroup name="EFTXModSchemsT3">
+		<item name="schematicHelmetLight3"/>
+		<item name="schematictacticalANPEQ15"/>
+		<item name="schematicscopeaimpointAcroP1canted"/>
+		<item name="schematicscopeaimpointMicroH2canted"/>
+		<item name="schematicscopeaimpointMicroT1canted"/>
+		<item name="schematicscopeBelOMOpk06canted"/>
+		<item name="schematicscopeburrisfastfirecanted"/>
+		<item name="schematicscopeSIGromeo4canted"/>
+		<item name="schematicscopeRMRcanted"/>
+		<item name="schematicscopeleupolddeltapointcanted"/>
+		<item name="schematictacticalFlashlightSurefireX400"/>
+		<item name="schematictacticalFlashlightZenit2U"/>
+		<item name="schematictacticalFlashlightArmyTekPredator"/>
+		<item name="schematictacticalFlashlightUltraFire"/>
+		<item name="schematictacticalFlashlightWMX200"/>
+		<item name="schematicatlasv8bt10"/>
+		<item name="schematicar15coltm20340x46"/>
+		<item name="schematicaktozgp2540vog"/>
+		<item name="schematicforegripallmagpulrvg"/>
+		<item name="schematicforegripallzenitrk1"/>
+		<item name="schematicscopeElcanSpecterDR"/>
+		<item name="schematicscopeG36HensoldtCarryHandle3x"/>
+		<item name="schematicscopeKibaArmsPrism"/>
+		<item name="schematicscopeNPZ1p78"/>
+		<item name="schematicscopeNPZ1p29"/>
+		<item name="schematicscopeSwampFoxPrism"/>
+		<item name="schematicscopeeotechhhshybrid"/>
+		<item name="schematicscopeacogta01NSN4x32"/>
+		<item name="schematicscopeacogta11D35x"/>
+		<item name="schematicscopeLeupoldMark4Hamr"/>
+		<item name="schematicscopeSIGBravo4"/>
+		<item name="schematicscopeValdayPS320"/>
+		<item name="schematicmag_pp_19_01_f5mfg_kr9_drum_mag_9x19_50"/>
+		<item name="schematicmag_sr2m_custom_taped_9x21_60"/>
+		<item name="schematicmag_uzi_iwi_9x19_50"/>
+		<item name="schematicmag_mp5_x_products_x_5_9x19_50"/>
+		<item name="schematicmag_glock_sgmt_glock_drum_50_9x19_50"/>
+		<item name="schematicmag_ump45_omnitech_casket_45acp_50"/>
+		<item name="schematicmag_ak74_izhmash_6L18_545x39_45"/>
+		<item name="schematicmag_ak_izhmash_rpk_std_61_sector_762x39_40"/>
+		<item name="schematicmag_ak_x_products_x_47_drum_762x39_50"/>
+		<item name="schematicmag_ar10_xmag_762x51_35"/>
+		<item name="schematicmag_fal_ds_arms_fal_sa58_762x51_30"/>
+		<item name="schematicmag_svd_izhmash_svd_std_762x54_20"/>
+		<item name="schematicmag_aug_steyr_std_556x45_42"/>
+		<item name="schematicmag_stanag_magpul_pmag_gen_m3_556x45_40"/>
+		<item name="schematicmag_ak_molot_mag_223_556x45_45"/>
+		<item name="schematicmag_vss_tochmash_vss_val_9x39_30"/>
+		<item name="schematicmag_m3_benelli_std_12g_7"/>
+		<item name="schematicmag_m3_tonisystem_magazine_extension_12g_13"/>	
+		<item name="schematicmag_mr153_izhmeh_12g_8"/>
+		<item name="schematicsilencer_all_sig_srd_9_9x19"/>
+		<item name="schematicsilencer_uzi_pro_smg_custom_9x19"/>
+		<item name="schematicsilencer_sr2m_tochmash_suppressor_9x21"/>
+		<item name="schematicsilencer_mp7_bt_rotex_2_46x30"/>
+		<item name="schematicsilencer_p90_fn_p90_attenuator_57x28"/>
+		<item name="schematicmuzzle_ak_hexagon_reactor_muzzle_brake_545x39"/>
+		<item name="schematicsilencer_hex_hexagon_wafflemaker_suppressor_545x39"/>
+		<item name="schematicsilencer_sv98_izhmash_silencer_std_762x54"/>
+		<item name="schematicmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/>
+		<item name="schematicmuzzle_svd_izhmash_svd_s_std_762x54"/>
+		<item name="schematicsilencer_base_rotor43_svd_dtk_762x54"/>
+		<item name="schematicsilencer_socom_surefire_socom556_rc2_556x45"/>
+		<item name="schematicmuzzle_ar15_double_star_carlson_tac_comp_556x45"/>
+		<item name="schematicmuzzle_ar10_15_thunder_beast_muzzle_brake"/>
+		<item name="schematicsilencer_tbac_thunder_beast_ultra_5"/>
+		<item name="schematicmuzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51"/>
+		<item name="schematicsilencer_12g_hexagon_12k"/>
+		<item name="schematicmuzzle_12g_red_heat_gk_02_12g"/>
+		<item name="schematicstock_p90_damage_industries_butt_pad"/>	
+		<item name="schematicstock_ak_zenit_pt_3"/>
+		<item name="schematicstock_ak_hera_arms_cqr47"/>
+		<item name="schematicstock_fal_magpul_prs_2"/>
+		<item name="schematicNightVision2"/>				
+		</lootgroup>
+		<lootgroup name="EFTXModSchemsT4">
+		<item name="schematicforegripallzenitb25urk1"/>
+		<item name="schematicscopeSBPMII18x2430mm"/>
+		<item name="schematicscopeNCStarADO"/>
+		<item name="schematicscopeKMZ1p69Weaver"/>
+		<item name="schematicscopeKMZ1p69Dovetail"/>
+		<item name="schematicmag_uzi_beta_cmag_9x19_100"/>
+		<item name="schematicmag_glock_beta_cmag_9x19_100"/>
+		<item name="schematicmag_mpx_tti_sig_mag_w_base_pad_9x19_41"/>
+		<item name="schematicmag_mpx_f5_mpx_drum_9x19_50"/>
+		<item name="schematicmag_ump45_custom_cmag_45acp_100"/>
+		<item name="schematicmag_thompson_m1921a_drum_45acp_100"/>
+		<item name="schematicmag_kriss_vector_omnitech_v50_45acp_50"/>
+		<item name="schematicmag_glock_beta_cmag_45acp_100"/>
+		<item name="schematicmag_mp7_custom_box_46x30_90"/>
+		<item name="schematicmag_p90_custom_zaku_drum_57x28_100"/>
+		<item name="schematicmag_p90_custom_zaku_drum_57x28_135"/>
+		<item name="schematicmag_p90_custom_zaku_drum_57x28_200"/>
+		<item name="schematicmag_ak74_izhmash_6L31_545x39_60"/>
+		<item name="schematicmag_sks_kci_drum_762x39_75"/>
+		<item name="schematicmag_ak_molot_rpk_drum_762x39_75"/>
+		<item name="schematicmag_fal_x_products_x_fal_762x51_50"/>	
+		<item name="schematicmag_m14_x_products_drum_magazine_m14_762x51_50"/>
+		<item name="schematicmag_ar10_x_products_x_25_drum_762x51_50"/>
+		<item name="schematicmag_svd_makeshift_drum_762x54R_55"/>
+		<item name="schematicmag_aug_magpul_pmag_d_60_556x45_60"/>
+		<item name="schematicmag_stanag_magpul_pmag_d_60_556x45_60"/>
+		<item name="schematicmag_stanag_surefire_mag5_556x45_60"/>
+		<item name="schematicmag_vss_tochmash_vss_val_9x39_45"/>
+		<item name="schematicmag_ash12_ckib_127x55_40"/>
+		<item name="schematicmag_saiga12_maxrounds_powermag_20_12x76_20"/>
+		<item name="schematicmag_aa12_mps_aa12_drum_mag_12g_20"/>
+		<item name="schematicsilencer_mpx_ronin_12_inch_supressor_9x19"/>
+		<item name="schematicmuzzle_ak74_srvv_mbr_jet_545_545x39"/>
+		<item name="schematicmuzzle_ak_zenit_dtk1_762x39_545x39"/>
+		<item name="schematicsilencer_hexagon_ak_762x39and545x39"/>
+		<item name="schematicsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>			
+		<item name="schematicmuzzle_ash12_ckib_ash12_std_127x55"/>
+		<item name="schematicsilencer_ash12_ckib_ash12_std_127x55"/>
+		<item name="schematicmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
+		<item name="schematicmuzzle_ar10_kac_qdc_muzzle_brake_kit_762x51"/>
+		<item name="schematicsilencer_qdc_kac_prs_qdc_762x51"/>
+		<item name="schematicsilencer_bt_g28_sd_762x51"/>
+		<item name="schematicsilencer_clutchlok_sig_slx68_mg_qd_suppressor_68x51"/>
+		<item name="schematicsilencer_base_sig_srd_762_qd_762x51"/>
+		<item name="schematicsilencer_all_sig_srd_ti_762_762x51"/>
+		<item name="schematicsilencer_base_silencerco_salvo_12g"/>
+		<item name="schematicmuzzle_saiga12_css_monster_caw_large_12g"/>
+		<item name="schematicstock_ak_magpul_zhukov_s"/>
+		<item name="schematicstock_a2_ar15_magpul_prs_gen3"/>
+		<item name="schematicstock_ar15_b5_precision"/>
+		<item name="schematicstock_ar15_cmmg_ripstock_micro"/>
+		<item name="schematicstock_ar15_dd_enhanced_collapsible_buttstock"/>
+		<item name="schematicstock_ar15_fab_defense_gl_core"/>
+		<item name="schematicstock_ar15_fab_defense_gl_shock"/>
+		<item name="schematicstock_ar15_fab_defense_glr_16_s"/>	
+		<item name="schematicstock_ar15_high_standart_m4ss"/>
+		<item name="schematicstock_ar15_hk_e1"/>
+		<item name="schematicstock_ar15_hk_slim_line"/>
+		<item name="schematicstock_ar15_kriss_defiance_ds150"/>
+		<item name="schematicstock_ar15_magpul_moe_carbine"/>
+		<item name="schematicstock_ar15_magpul_moe_sl_k_carbine_ct"/>
+		<item name="schematicstock_ar15_mft_bus"/>
+		<item name="schematicstock_ar15_sb_tactical_sba3"/>
+		<item name="schematicstock_ar15_strike_industries_viper_mod_1"/>
+		<item name="schematicstock_ar15_vltor_emod"/>
+		<item name="schematicstock_sig_mpx_brace"/>
+		<item name="schematicstock_sig_mpx_maxim_defence_cqb_stock"/>
+		<item name="schematicstock_mk17_vltor_vss_11"/>
+		<item name="schematicstock_ar15_colt_n1"/>
+		<item name="schematicstock_ar15_magpul_acs_carbine"/>
+		<item name="schematicNightVision3"/>	
+		</lootgroup>
+
+		<lootgroup name="EFTXModSchemsT5">		
+		<item name="schematicscopeSBPMII320x5034mm"/>
+		<item name="schematicscopeSBPMII525x5634mm"/>
+		<item name="schematicscopeBFTac3014x2430mm"/>
+		<item name="schematicscopeEOTVudu16x2430mm"/>
+		<item name="schematicscopeLeupoldMark4LR30mm"/>
+		<item name="schematicscopeMarchTactical30mm"/>
+		<item name="schematicscopeSIGTango6T16x2430mm"/>
+		<item name="schematicscopeRazorHDGen216x2430mm"/>
+		<item name="schematicscopeNFATACR735x5634mm"/>
+		<item name="schematicmag_aa12_drum_mag_12g_32"/>
+		<item name="schematicscopeHensoldtFF416x5634mm"/>
+		<item name="schematicmag_ak_izhmash_rpk16_drum_545x39_95"/>
+		<item name="schematicmag_ak_steel_drum_762x39_100"/>
+		<item name="schematicmag_rpd_custom_box_762x39_200"/>
+		<item name="schematicmag_mk17_scar_h_cmag_100"/>
+		<item name="schematicmag_m14_beta_cmag_762x51_100"/>
+		<item name="schematicmag_m60_custom_welded_tribox_762x51_250"/>
+		<item name="schematicmag_pk_custom_box_762x54r_200"/>
+		<item name="schematicmag_stanag_surefire_mag5_556x45_100"/>
+		<item name="schematicmag_ash12_ckib_127x55_60"/>
+		<item name="schematicmag_sword_mk18_pmag_338lm_20"/>
+		<item name="schematicmuzzle_pk_zenit_dtk_1p_762x54r"/>
+		<item name="schematicsilencer_aac_sdn_6_multi"/>
+		<item name="schematicmuzzle_ar10_lantac_dgn762b_muzzle_brake_762x51"/>
+		<item name="schematicmuzzle_base_sig_two_port_brake_762x51"/>
+		<item name="schematicmuzzle_all_accuracy_international_tactical_muzzle_brake_86x70"/>
+		<item name="schematicsilencer_ai_accuracy_international_tactical_sound_moderator_86x70"/>
+		<item name="schematicstock_ak_hexagon_kocherga_red"/>
+		<item name="schematicstock_ak_promag_archangel_opfor_aa47"/>	
+		<item name="schematicstock_ak_izhmash_ak_evo"/>
+		<item name="schematicstock_sig_mpx_mcx_early_type"/>
+		<item name="schematicstock_sig_mpx_pmm_ulss"/>
+		<item name="schematicstock_sig_telescoping_stock"/>
+		<item name="schematicstock_sig_thin_folding_stock"/>
+		<item name="schematicstock_pk_zenit_pt2_classic"/>
+		<item name="schematicstock_sig_magpul_ucs"/>
+		</lootgroup>
+<!-- SCHEMATICS -->
+<!-- SKILL MAGAZINES -->
+				<lootgroup name="groupModEftSkillMagazinesSmg" >
+				<item name="SMGSSkillMagazine" count="1"/>
+				</lootgroup>
+				<lootgroup name="groupModEftSkillMagazinesPistols" >
+				<item name="PistolsSkillMagazine" count="1"/>				
+				</lootgroup>
+				<lootgroup name="groupModEftSkillMagazinesShotguns" >							
+				<item name="ShotgunsSkillMagazine" count="1"/>						
+				</lootgroup>
+				<lootgroup name="groupModEftSkillMagazinesRifles" >
+				<item name="RiflesSkillMagazine" count="1"/>
+				</lootgroup>
+				<lootgroup name="groupModEftSkillMagazinesMachineGuns" >
+				<item name="MachinegunsSkillMagazine" count="1"/>
+				</lootgroup>
+<!-- GUN ATTACHMENTS -->		
+		<lootgroup name="EFTXModsT1">
+			<item name="modArmorHelmetLight"/>
+			<item name="modtactickitSKSTAPCO"/>
+			<item name="modtactickitDSARPD"/>
+			<item name="modscopePU3_5x"/>
+			<item name="modscopeaimpointAcroP1"/>
+			<item name="modscopeaimpointMicroH2"/>
+			<item name="modscopeaimpointMicroT1"/>
+			<item name="modscopeBelOMOpk06"/>
+			<item name="modscopeburrisfastfire"/>
+			<item name="modscopeSIGromeo4"/>
+			<item name="modscopeRMR"/>
+			<item name="modscopeleupolddeltapoint"/>
+			<item name="modscopeAimPointCompM4"/>
+			<item name="modscopewalthermrsreflex"/>
+			<item name="modscopeEOTech553holo"/>
+			<item name="modscopeBelOMOPSO1M2"/>
+			<item name="modscopemonstrumcompact"/>			
+			<item name="modmag_pm_custom_9x18pm_84"/>
+			<item name="modmag_kedr_custom_9x18pm_75"/>
+			<item name="modmag_glock_glock_big_stick_9x19_33"/>
+			<item name="modsilencer_tt_custom_noname_762x25tt"/>
+			<item name="modsilencer_stechkin_aps_std_9x18pm"/>
+			<item name="modsilencer_pp9_klin_custom_9x18pm"/>
+			<item name="modsilencer_mount_silencerco_hybrid_46_multi"/>
+			<item name="modsilencer_sr1mp_tochmash_sr1mp_std_9x21"/>
+			<item name="modsilencer_hk_ucp_46x30"/>
+			<item name="modsilencer_57_gemtech_sfn_57_57x28"/>
+			<item name="modstock_stechkin_wire"/>
+			<item name="modstock_glock_fab_defence_glr_17"/>
+			<item name="modstock_mp5k_pdw_stock"/>
+			</lootgroup>
+			<lootgroup name="EFTXModsT2">	
+			<item name="modArmorHelmetLight2"/>	
+			<item name="modArmorNightVision"/>
+			<item name="modhandguard_uzi_iwi_vertical_grip_railed"/>
+			<item name="modforegrip_all_hk_sturmgriff_assault_grip"/>
+			<item name="modscopeaimpointAcroP1_backup"/>
+			<item name="modscopeaimpointMicroH2_backup"/>
+			<item name="modscopeaimpointMicroT1_backup"/>
+			<item name="modscopeBelOMOpk06_backup"/>
+			<item name="modscopeburrisfastfire_backup"/>
+			<item name="modscopeSIGromeo4_backup"/>
+			<item name="modscopeRMR_backup"/>
+			<item name="modscopeleupolddeltapoint_backup"/>
+			<item name="modscopeAimPointPro"/>
+			<item name="modscopeaksionEKP818"/>
+			<item name="modscopeaksionEKP1s03"/>
+			<item name="modscopeaksionEKP802"/>
+			<item name="modscopeBelOMOdovetailPKAA"/>
+			<item name="modscopeElcanSpecterHCO"/>
+			<item name="modscopeLeapersUTG"/>
+			<item name="modscopeNPZPK1"/>
+			<item name="modscopeOKP7dovetail"/>
+			<item name="modscopeSIGRomeo8T"/>
+			<item name="modscopeSRS02"/>
+			<item name="modscopeValdayKrechet"/>
+			<item name="modscopeValdayPK120"/>
+			<item name="modscopeVOMZPiladP1"/>
+			<item name="modscopeVortexRazorAMGUH1"/>
+			<item name="modscopeWilcoxBossXeHP"/>
+			<item name="modscopeokp7reflex"/>
+			<item name="modscopeFNP90ringreflex"/>
+			<item name="modmag_sks_promag_aalvx35_762x39_35"/>
+			<item name="modmag_870_remington_magazine_extension_12g_10"/>
+			<item name="modsilencer_all_silencerco_osprey_9_9x19"/>
+			<item name="modsilencer_glock_fischer_development_fd917_9x19"/>
+			<item name="modsilencer_base_silencerco_omega_45k_1143x23"/>
+			<item name="modsilencer_ump_bt_ump_45_1143x23"/>
+			<item name="modsilencer_ak74_spectehnika_tgpa_545x39"/>
+			<item name="modmuzzle_mosin_tacfire_tanker_style_762x54r"/>
+			<item name="modsilencer_mosin_bramit_std_762x54r"/>
+			<item name="modsilencer_sdqd_griffin_m4sd_k_silencer_556x45"/>
+			<item name="modmuzzle_ar15_ferfrans_muzzle_brake_556x45"/>
+			<item name="modmuzzle_12g_remington_tactical_12"/>
+			<item name="modstock_mp5_hk_a2_std"/>
+			<item name="modstock_ak_zenit_pt_1"/>
+			<item name="modstock_ar15_double_star_ace_socom_gen_4"/>
+			<item name="modstock_ar15_ergo_f93_pro_stock"/>
+			<item name="modstock_ar15_magpul_ubr_gen2"/>
+			<item name="modstock_ar15_strike_industries_viper_pdw_stock"/>
+			<item name="modstock_ar15_troy_m7a1_pdw"/>
+			<item name="modstock_iwi_carmel_ergo_stock"/>
+			</lootgroup>		
+			<lootgroup name="EFTXModsT3">		
+			<item name="modArmorHelmetLight3"/>	
+			<item name="modArmorNightVision2"/>
+			<item name="modtacticalANPEQ15"/>
+			<item name="modtacticalFlashlightSurefireX400"/>
+			<item name="modtacticalFlashlightZenit2U"/>
+			<item name="modmag_ppsh_zis_std_762x25_71"/>
+			<item name="modmag_tt_custom_drum_762x25_75"/>
+			<item name="modtacticalFlashlightArmyTekPredator"/>
+			<item name="modtacticalFlashlightUltraFire"/>
+			<item name="modtacticalFlashlightWMX200"/>
+			<item name="modforegrip_all_magpul_rvg"/>
+			<item name="modscopeaimpointAcroP1canted"/>
+			<item name="modscopeaimpointMicroH2canted"/>
+			<item name="modscopeaimpointMicroT1canted"/>
+			<item name="modscopeBelOMOpk06canted"/>
+			<item name="modscopeburrisfastfirecanted"/>
+			<item name="modscopeSIGromeo4canted"/>
+			<item name="modscopeRMRcanted"/>
+			<item name="modscopeleupolddeltapointcanted"/>
+			<item name="modscopeElcanSpecterDR"/>
+			<item name="modscopeG36HensoldtCarryHandle3x"/>
+			<item name="modscopeKibaArmsPrism"/>
+			<item name="modscopeNPZ1p78"/>
+			<item name="modscopeNPZ1p29"/>
+			<item name="modscopeSwampFoxPrism"/>
+			<item name="modscopeeotechhhshybrid"/>
+			<item name="modscopeacogta01NSN4x32"/>
+			<item name="modscopeacogta11D35x"/>
+			<item name="modscopeLeupoldMark4Hamr"/>
+			<item name="modscopeSIGBravo4"/>
+			<item name="modscopeValdayPS320"/>
+			<item name="modmag_pp_19_01_f5mfg_kr9_drum_mag_9x19_50"/>
+			<item name="modmag_sr2m_custom_taped_9x21_60"/>
+			<item name="modmag_uzi_iwi_9x19_50"/>
+			<item name="modmag_mp5_x_products_x_5_9x19_50"/>
+			<item name="modmag_glock_sgmt_glock_drum_50_9x19_50"/>
+			<item name="modmag_ump45_omnitech_casket_45acp_50"/>
+			<item name="modmag_mp7_hk_std_46x30_40"/>
+			<item name="modmag_ak74_izhmash_6L18_545x39_45"/>
+			<item name="modmag_ak_izhmash_rpk_std_61_sector_762x39_40"/>
+			<item name="modmag_ak_x_products_x_47_drum_762x39_50"/>
+			<item name="modmag_ar10_xmag_762x51_35"/>
+			<item name="modmag_fal_ds_arms_fal_sa58_762x51_30"/>
+			<item name="modmag_svd_izhmash_svd_std_762x54_20"/>
+			<item name="modmag_aug_steyr_std_556x45_42"/>
+			<item name="modmag_stanag_magpul_pmag_gen_m3_556x45_40"/>
+			<item name="modmag_ak_molot_mag_223_556x45_45"/>
+			<item name="modmag_vss_tochmash_vss_val_9x39_30"/>
+			<item name="modmag_m3_benelli_std_12g_7"/>
+			<item name="modmag_m3_tonisystem_magazine_extension_12g_13"/>
+			<item name="modmag_mr153_izhmeh_12g_8"/>
+			<item name="modsilencer_all_sig_srd_9_9x19"/>
+			<item name="modsilencer_uzi_pro_smg_custom_9x19"/>
+			<item name="modsilencer_sr2m_tochmash_suppressor_9x21"/>
+			<item name="modsilencer_mp7_bt_rotex_2_46x30"/>
+			<item name="modsilencer_p90_fn_p90_attenuator_57x28"/>
+			<item name="modmuzzle_ak_hexagon_reactor_muzzle_brake_545x39"/>
+			<item name="modsilencer_hex_hexagon_wafflemaker_suppressor_545x39"/>
+			<item name="modsilencer_sv98_izhmash_silencer_std_762x54"/>
+			<item name="modmuzzle_sv_98_srw_dtk_jet_mk2_762x54r"/>
+			<item name="modmuzzle_svd_izhmash_svd_s_std_762x54"/>
+			<item name="modsilencer_base_rotor43_svd_dtk_762x54"/>
+			<item name="modsilencer_socom_surefire_socom556_rc2_556x45"/>
+			<item name="modmuzzle_ar15_double_star_carlson_tac_comp_556x45"/>
+			<item name="modmuzzle_ar10_15_thunder_beast_muzzle_brake"/>
+			<item name="modsilencer_tbac_thunder_beast_ultra_5"/>
+			<item name="modmuzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51"/>
+			<item name="modsilencer_12g_hexagon_12k"/>
+			<item name="modmuzzle_12g_red_heat_gk_02_12g"/>
+			<item name="modstock_p90_damage_industries_butt_pad"/>
+			<item name="modstock_ak_zenit_pt_3"/>
+			<item name="modstock_ak_hera_arms_cqr47"/>
+			<item name="modstock_fal_magpul_prs_2"/>
+			</lootgroup>					
+			<lootgroup name="EFTXModsT4">
+			<item name="modArmorNightVision3"/>
+			<item name="modbipod_all_atlas_v8_bt10"/>
+			<item name="modlauncher_ar15_colt_m203_40x46_model"/>
+			<item name="modlauncher_ak_toz_gp25_40_vog"/>
+			<item name="modforegrip_all_zenit_rk_1"/>
+			<item name="modforegrip_all_zenit_b25u_rk_1"/>
+			<item name="modscopeSBPMII18x2430mm"/>
+			<item name="modscopeNCStarADO"/>
+			<item name="modscopeKMZ1p69Weaver"/>
+			<item name="modscopeKMZ1p69Dovetail"/>
+			<item name="modmag_uzi_beta_cmag_9x19_100"/>
+			<item name="modmag_glock_beta_cmag_9x19_100"/>
+			<item name="modmag_mpx_tti_sig_mag_w_base_pad_9x19_41"/>
+			<item name="modmag_mpx_f5_mpx_drum_9x19_50"/>
+			<item name="modmag_ump45_custom_cmag_45acp_100"/>
+			<item name="modmag_thompson_m1921a_drum_45acp_100"/>
+			<item name="modmag_kriss_vector_omnitech_v50_45acp_50"/>
+			<item name="modmag_glock_beta_cmag_45acp_100"/>
+			<item name="modmag_mp7_custom_box_46x30_90"/>
+			<item name="modmag_p90_custom_zaku_drum_57x28_100"/>
+			<item name="modmag_p90_custom_zaku_drum_57x28_135"/>
+			<item name="modmag_p90_custom_zaku_drum_57x28_200"/>
+			<item name="modmag_ak74_izhmash_6L31_545x39_60"/>
+			<item name="modmag_sks_kci_drum_762x39_75"/>
+			<item name="modmag_ak_molot_rpk_drum_762x39_75"/>
+			<item name="modmag_fal_x_products_x_fal_762x51_50"/>
+			<item name="modmag_m14_x_products_drum_magazine_m14_762x51_50"/>
+			<item name="modmag_ar10_x_products_x_25_drum_762x51_50"/>
+			<item name="modmag_svd_makeshift_drum_762x54R_55"/>
+			<item name="modmag_aug_magpul_pmag_d_60_556x45_60"/>
+			<item name="modmag_stanag_magpul_pmag_d_60_556x45_60"/>
+			<item name="modmag_stanag_surefire_mag5_556x45_60"/>
+			<item name="modmag_vss_tochmash_vss_val_9x39_45"/>
+			<item name="modmag_ash12_ckib_127x55_40"/>
+			<item name="modmag_saiga12_maxrounds_powermag_20_12x76_20"/>
+			<item name="modmag_aa12_mps_aa12_drum_mag_12g_20"/>
+			<item name="modsilencer_mpx_ronin_12_inch_supressor_9x19"/>
+			<item name="modmuzzle_ak74_srvv_mbr_jet_545_545x39"/>
+			<item name="modmuzzle_ak_zenit_dtk1_762x39_545x39"/>
+			<item name="modsilencer_hexagon_ak_762x39and545x39"/>
+			<item name="modsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>			
+			<item name="modmuzzle_ash12_ckib_ash12_std_127x55"/>
+			<item name="modsilencer_ash12_ckib_ash12_std_127x55"/>
+			<item name="modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
+			<item name="modmuzzle_ar10_kac_qdc_muzzle_brake_kit_762x51"/>
+			<item name="modsilencer_qdc_kac_prs_qdc_762x51"/>
+			<item name="modsilencer_bt_g28_sd_762x51"/>
+			<item name="modsilencer_clutchlok_sig_slx68_mg_qd_suppressor_68x51"/>
+			<item name="modsilencer_base_sig_srd_762_qd_762x51"/>
+			<item name="modsilencer_all_sig_srd_ti_762_762x51"/>
+			<item name="modsilencer_base_silencerco_salvo_12g"/>
+			<item name="modmuzzle_saiga12_css_monster_caw_large_12g"/>
+			<item name="modstock_ak_magpul_zhukov_s"/>
+			<item name="modstock_a2_ar15_magpul_prs_gen3"/>
+			<item name="modstock_ar15_b5_precision"/>
+			<item name="modstock_ar15_cmmg_ripstock_micro"/>
+			<item name="modstock_ar15_dd_enhanced_collapsible_buttstock"/>
+			<item name="modstock_ar15_fab_defense_gl_core"/>
+			<item name="modstock_ar15_fab_defense_gl_shock"/>
+			<item name="modstock_ar15_fab_defense_glr_16_s"/>
+			<item name="modstock_ar15_high_standart_m4ss"/>
+			<item name="modstock_ar15_hk_e1"/>
+			<item name="modstock_ar15_hk_slim_line"/>
+			<item name="modstock_ar15_kriss_defiance_ds150"/>
+			<item name="modstock_ar15_lmt_sopmod"/>
+			<item name="modstock_ar15_magpul_moe_carbine"/>
+			<item name="modstock_ar15_magpul_moe_sl_k_carbine_ct"/>
+			<item name="modstock_ar15_mft_bus"/>
+			<item name="modstock_ar15_sb_tactical_sba3"/>
+			<item name="modstock_ar15_strike_industries_viper_mod_1"/>
+			<item name="modstock_ar15_vltor_emod"/>
+			<item name="modstock_sig_mpx_brace"/>
+			<item name="modstock_sig_mpx_maxim_defence_cqb_stock"/>
+			<item name="modstock_mk17_vltor_vss_11"/>
+			</lootgroup>
+			<lootgroup name="EFTXModsT5">
+			<item name="modscopeSBPMII320x5034mm"/>
+			<item name="modscopeSBPMII525x5634mm"/>
+			<item name="modscopeBFTac3014x2430mm"/>
+			<item name="modscopeEOTVudu16x2430mm"/>
+			<item name="modscopeLeupoldMark4LR30mm"/>
+			<item name="modscopeMarchTactical30mm"/>
+			<item name="modscopeSIGTango6T16x2430mm"/>
+			<item name="modscopeRazorHDGen216x2430mm"/>
+			<item name="modscopeNFATACR735x5634mm"/>
+			<item name="modscopeHensoldtFF416x5634mm"/>
+			<item name="modmag_ak_izhmash_rpk16_drum_545x39_95"/>
+			<item name="modmag_ak_steel_drum_762x39_100"/>
+			<item name="modmag_rpd_custom_box_762x39_200"/>
+			<item name="modmag_mk17_scar_h_cmag_100"/>
+			<item name="modmag_m14_beta_cmag_762x51_100"/>
+			<item name="modmag_m60_custom_welded_tribox_762x51_250"/>
+			<item name="modmag_pk_custom_box_762x54r_200"/>
+			<item name="modmag_stanag_surefire_mag5_556x45_100"/>
+			<item name="modmag_ash12_ckib_127x55_60"/>
+			<item name="modmag_sword_mk18_pmag_338lm_20"/>
+			<item name="modmuzzle_pk_zenit_dtk_1p_762x54r"/>
+			<item name="modsilencer_aac_sdn_6_multi"/>
+			<item name="modmuzzle_ar10_lantac_dgn762b_muzzle_brake_762x51"/>
+			<item name="modmuzzle_base_sig_two_port_brake_762x51"/>
+			<item name="modmuzzle_all_accuracy_international_tactical_muzzle_brake_86x70"/>
+			<item name="modsilencer_ai_accuracy_international_tactical_sound_moderator_86x70"/>
+			<item name="modstock_ak_hexagon_kocherga_red"/>
+			<item name="modstock_ak_promag_archangel_opfor_aa47"/>
+			<item name="modstock_ak_izhmash_ak_evo"/>
+			<item name="modstock_sig_mpx_mcx_early_type"/>
+			<item name="modstock_sig_mpx_pmm_ulss"/>
+			<item name="modstock_sig_telescoping_stock"/>
+			<item name="modstock_sig_thin_folding_stock"/>
+			<item name="modstock_pk_zenit_pt2_classic"/>
+			</lootgroup>	
+<!-- GUN ATTACHMENTS -->
+<!-- ************************************************************************************ -->
+		<lootgroup name="groupEftxPistols">
+	<item group="groupEFTXPistolsT1"/>
+	<item group="groupEFTXPistolsT2"/>
+	<item group="groupEFTXPistolsT3"/>
+	<item group="groupEFTXPistolsT4"/>
+	<item group="groupEFTXPistolsT5"/>
+	<item group="groupEFTXPistolsT6"/>
+	</lootgroup>
+	<lootgroup name="groupEftxSMGS">
+	<item group="groupEFTXSMGST1"/>
+	<item group="groupEFTXSMGST2"/>
+	<item group="groupEFTXSMGST3"/>
+	<item group="groupEFTXSMGST4"/>
+	<item group="groupEFTXSMGST5"/>
+	<item group="groupEFTXSMGST6"/>
+	</lootgroup>
+	<lootgroup name="groupEftxSHOTGUNS">
+	<item group="groupEFTXShotgunsT1"/>
+	<item group="groupEFTXShotgunsT2"/>
+	<item group="groupEFTXShotgunsT3"/>
+	<item group="groupEFTXShotgunsT4"/>
+	<item group="groupEFTXShotgunsT5"/>
+	<item group="groupEFTXShotgunsT6"/>
+	</lootgroup>
+	<lootgroup name="groupEftxRIFLES">
+	<item group="groupEFTXRiflesT1"/>
+	<item group="groupEFTXRiflesT2"/>
+	<item group="groupEFTXRiflesT3"/>
+	<item group="groupEFTXRiflesT4"/>
+	<item group="groupEFTXRiflesT5"/>
+	<item group="groupEFTXRiflesT6"/>
+	</lootgroup>
+	<lootgroup name="groupEftxMG">
+	<item group="groupEFTXMGT1"/>
+	<item group="groupEFTXMGT2"/>
+	<item group="groupEFTXMGT3"/>
+	<item group="groupEFTXMGT4"/>
+	<item group="groupEFTXMGT5"/>
+	<item group="groupEFTXMGT6"/>
+	</lootgroup>
+
+		<lootgroup name="groupEftxGunsT1" loot_quality_template="QLTemplateT1">
+            <item group="groupEFTXPistolsT1" count="0,1" quality="1" loot_prob_template="veryLowDelayedEft0" force_prob="true"/>
+            <item group="groupEFTXSMGST1" count="0,1" quality="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+            <item group="groupEFTXShotgunsT1" count="0,1" quality="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+            <item group="groupEFTXRiflesT1" count="0,1" quality="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+            <item group="groupEFTXMGT1" count="0,1" quality="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+        </lootgroup>
+        <lootgroup name="groupEftxGunsT2" loot_quality_template="QLTemplateT2">
+		    <item group="groupEFTXPistolsT2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+            <item group="groupEFTXSMGST2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		    <item group="groupEFTXShotgunsT2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		    <item group="groupEFTXRiflesT2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+		    <item group="groupEFTXMGT2" count="0,1" quality="2" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>		
+        </lootgroup>
+        <lootgroup name="groupEftxGunsT3" loot_quality_template="QLTemplateT3">
+		    <item group="groupEFTXPistolsT3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+		    <item group="groupEFTXSMGST3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+            <item group="groupEFTXShotgunsT3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+            <item group="groupEFTXRiflesT3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>
+            <item group="groupEFTXMGT3" count="0,1" quality="3" loot_prob_template="veryLowDelayedEft6" force_prob="true"/>
+         </lootgroup>       
+        <lootgroup name="groupEftxGunsT4" loot_quality_template="QLTemplateT4">
+		    <item group="groupEFTXPistolsT4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+            <item group="groupEFTXSMGST4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>		
+		    <item group="groupEFTXShotgunsT4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>
+            <item group="groupEFTXRiflesT4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft6" force_prob="true"/>
+            <item group="groupEFTXMGT4" count="0,1" quality="4" loot_prob_template="veryLowDelayedEft7" force_prob="true"/>
+        </lootgroup>        
+        <lootgroup name="groupEftxGunsT5" loot_quality_template="QLTemplateT5">
+		    <item group="groupEFTXPistolsT5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+            <item group="groupEFTXSMGST5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>
+            <item group="groupEFTXShotgunsT5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft6" force_prob="true"/>		
+		    <item group="groupEFTXRiflesT5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft7" force_prob="true"/>
+		    <item group="groupEFTXMGT5" count="0,1" quality="5" loot_prob_template="veryLowDelayedEft8" force_prob="true"/>
+            </lootgroup>
+        <lootgroup name="groupEftxGunsT6" loot_quality_template="QLTemplateT6">
+		    <item group="groupEFTXPistolsT6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft5" force_prob="true"/>
+		    <item group="groupEFTXSMGST6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft6" force_prob="true"/>
+            <item group="groupEFTXShotgunsT6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft7" force_prob="true"/>
+		    <item group="groupEFTXRiflesT6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft8" force_prob="true"/>		
+		    <item group="groupEFTXMGT6" count="0,1" quality="6" loot_prob_template="veryLowDelayedEft9" force_prob="true"/>    
+    </lootgroup>
+<!-- ************************************************************************************ -->
+<!-- PISTOL CASES -->	
+		<lootgroup name="groupEftPistolsCases" loot_quality_template="QLTemplateT1">
+			<item group="groupEftPistolsCasesT1" count="1"/>
+			<item group="groupEftPistolsCasesT2" count="1"/>
+			<item group="groupEftPistolsCasesT3" count="1"/>
+			<item group="groupEftPistolsCasesT4" count="1"/>
+			<item group="groupEftPistolsCasesT5"  count="1"/>
+		</lootgroup>
+	<!-- PISTOL CASES -->	
+	<!-- CASES -->
+		<lootgroup name="groupEftCases" loot_quality_template="QLTemplateT1">
+				<item group="groupgunks23" count="1"/>
+				<item group="groupgunrpk16guaranteedmag" count="1"/>
+				<item group="groupgunmpxwithmag" count="1"/>
+				<item group="groupgunvector45withmag" count="1"/>
+			</lootgroup>
+	<!-- CASES -->	
+	<lootgroup name="groupModEFTXLauncherSchematics" >
+				<item name="schematicar15coltm20340x46" count="1" loot_prob_template="low"/>
+				<item name="schematicaktozgp2540vog" count="1" loot_prob_template="low"/>
+	</lootgroup>
+	<!-- MODS ALL -->
+	<lootgroup name="groupEftModsT1" loot_quality_template="QLTemplateT1">
+			<item group="EFTXModsT1"  count="1"/>
+	</lootgroup>
+	<lootgroup name="groupEftModsT2" loot_quality_template="QLTemplateT2">
+			<item group="EFTXModsT2" count="1"/>
+	</lootgroup>
+	<lootgroup name="groupEftModsT3" loot_quality_template="QLTemplateT3">
+			<item group="EFTXModsT3" count="1"/>
+	</lootgroup>
+	<lootgroup name="groupEftModsT4" loot_quality_template="QLTemplateT4">
+			<item group="EFTXModsT4" count="1"/>
+	</lootgroup>
+	<lootgroup name="groupEftModsT5" loot_quality_template="QLTemplateT5">
+			<item group="EFTXModsT5" count="1"/>
+	</lootgroup>		
+	<!-- MODS ALL -->
+		<!-- MAGAZINES-->
+		<lootgroup name="groupModEftSkillMagazinesAll">
+				<item group="groupModEftSkillMagazinesPistols" count="1"/>			
+				<item group="groupModEftSkillMagazinesSmg" count="1"/>								
+				<item group="groupModEftSkillMagazinesShotguns" count="1"/>				
+				<item group="groupModEftSkillMagazinesRifles" count="1"/>
+				<item group="groupModEftSkillMagazinesMachineGuns" count="1"/>		
+		</lootgroup>
+<!-- MAGAZINES-->
+<!-- MOD SCHEMATICS  -->					
+		<lootgroup name="groupModEFTXAllSchematics" >
+				<item group="EFTXModSchemsT1" count="1" loot_prob_template="low"/>
+				<item group="EFTXModSchemsT2" count="1" loot_prob_template="low"/>
+				<item group="EFTXModSchemsT3" count="1" loot_prob_template="low"/>
+				<item group="EFTXModSchemsT4" count="1" loot_prob_template="low"/>
+				<item group="EFTXModSchemsT5" count="1" loot_prob_template="low"/>		
+				</lootgroup>				
+		<!-- MOD SCHEMATICS  -->		
+	</insertBefore>
+<!-- ************************************************************************************ -->
+<!-- ************************************************************************************ -->
+<append xpath="//lootgroup[@name='groupMailbox01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medHigh"/>	
+			<item group="groupModEFTXAllSchematics" count="0,1" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupMilitaryBooks']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medHigh"/>	
+			<item group="groupModEFTXAllSchematics" count="0,1" loot_prob_template="low"/>
+</append>
+<append xpath="//lootgroup[@name='groupBookPile01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+			<item group="groupModEFTXAllSchematics" count="0,1" loot_prob_template="low"/>
+</append>		
+<append xpath="//lootgroup[@name='groupCrackabookShelves01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+			<item group="groupModEFTXAllSchematics" count="0,1" loot_prob_template="low"/>
+</append>			
+			<append xpath="//lootgroup[@name='groupBookcase01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+			<item group="groupModEFTXAllSchematics" count="0,1" loot_prob_template="low"/>
+</append>
+<insertAfter xpath="//lootgroup[@name='groupLargeWeaponBag']">			
+<lootgroup name="groupGunRack_01">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+			<item group="groupEftxGunsT1" count="1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT2" count="1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT3" count="1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT4" count="1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT5" count="1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT6" count="1" loot_prob_template="low"/>
+</lootgroup>			
+</insertAfter>	
+<append xpath="//lootgroup[@name='groupGunRack']">
+			<item group="groupGunRack_01" count="0,1" loot_prob_template="low"/>	
+</append>	
+<insertBefore xpath="//lootgroup[@name='groupQuestT1SkillMagazineBundle']">	
+<lootgroup name="groupQuestEftSkillMagazineBundle_01"  loot_quality_template="QLTemplateT1">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medLow"/>
+</lootgroup>
+</insertBefore>
+<append xpath="//lootgroup[@name='groupQuestT1SkillMagazineBundle']">
+			<item group="groupQuestEftSkillMagazineBundle_01" count="1,2" loot_prob_template="medLow"/>	
+</append>
+<insertAfter xpath="//lootgroup[@name='schematicsModsAndGeneralT2']">
+		<lootgroup name="schematicsEFTModsAndGeneralT3" >
+			<item group="EFTXModSchemsT1" count="1" loot_prob_template="low"/>
+			<item group="EFTXModSchemsT2" count="1" loot_prob_template="low"/>
+			<item group="EFTXModSchemsT3" count="1" loot_prob_template="low"/>				
+			<item group="EFTXModSchemsT4" count="1" loot_prob_template="low"/>				
+			<item group="EFTXModSchemsT5" count="1" loot_prob_template="low"/>
+			<item name="RocketsandLaunchersSkillMagazine" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		</lootgroup>
+</insertAfter>
+<append xpath="//lootgroup[@name='schematicsModsAndGeneralRare']">
+			<item group="schematicsEFTModsAndGeneralT3" count="1"/>			
+</append>
+<!-- ************************************************************************************ -->
+<!-- ************************************************************************************ -->	
+	
+	<append xpath="//lootgroup[@name='skillMagazines']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+	</append>
+	<append xpath="//lootgroup[@name='booksAllScaled']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+	</append>		
+	
+	<append xpath="//lootgroup[@name='groupScrapCommon']">
+		<item name="resourceWD40" count="1,4" loot_prob_template="low"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>
+		<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+	</append>	
+	
+	<append xpath="//lootgroup[@name='groupCraftingUncommon']">
+		<item name="resourceWD40" count="1,4" loot_prob_template="low"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>	
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupChem01']">
+		<item name="resourceWD40" count="1,4" loot_prob_template="veryLow"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>		
+	</append>				
+		
+		<append xpath="//lootgroup[@name='groupFoodTrashUncommon']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>
+		</append>
+	
+		<append xpath="//lootgroup[@name='groupToilet01']">	
+			<item group="groupEftxPistols" count="0,1"/>
+		</append>		
+<!-- ************************************************************************************ -->
+<!-- ************************************************************************************ -->
+<append xpath="//lootgroup[@name='groupPurse01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medLow"/>
+</append>
+<!-- ************************************************************************************ -->
+<!-- ************************************************************************************ -->
+<append xpath="//lootgroup[@name='groupCars01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>	
+</append>
+<!-- ************************************************************************************ -->
+<!-- ************************************************************************************ -->
+	<append xpath="//lootgroup[@name='groupSmallSafeLoot01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medLow"/>
+			<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+	</append>
+	<insertBefore xpath="//lootgroup[@name='groupGunSafeSecure']">
+	<lootgroup name="groupGunSafeSecure_01" quality="1" loot_quality_template="QLTemplateT1">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+			<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>	
+			<item name="RocketsandLaunchersSkillMagazine" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</lootgroup>
+	</insertBefore>
+	<append xpath="//lootgroup[@name='groupGunSafeSecure']">
+		<item group="groupGunSafeSecure_01" count="1"  quality="1"/>
+	</append>	
+	<!-- T1 Chest -->
+	<append xpath="//lootgroup[@name='groupAmmoPileSmall']">
+			<item group="groupModEftSkillMagazinesAll" count="1,2" loot_prob_template="low"/>	
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAmmoPileMed']">
+			<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>			
+	</append>
+	<append xpath="//lootgroup[@name='groupAmmoPileLarge']">
+			<item group="groupModEftSkillMagazinesAll" count="1,4" loot_prob_template="low" />
+			<item name="resourceWeaponParts" count="1,2" loot_prob_template="low"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupReinforcedChestT1_01']">
+		<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>	
+		<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+		<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+		<item group="groupEftxGunsT1" count="1"/>
+	</append>
+	<!-- T2 Chest -->
+	<append xpath="//lootgroup[@name='groupReinforcedChestT2_01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>		
+			<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT2" count="1"/>
+	</append>		
+	<!-- T3 Chest -->	
+	<append xpath="//lootgroup[@name='groupReinforcedChestT3_01']">
+				<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+				<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+				<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+				<item group="groupEftxGunsT3" count="1"/>
+	</append>	
+	<!-- T4 Chest -->
+	<append xpath="//lootgroup[@name='groupHardenedChestT4_01']">		
+		<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+		<item name="resourceWeaponRepairKit" count="1,2" loot_prob_template="low"/>
+		<item name="resourceWeaponParts" count="1,2" loot_prob_template="low"/>
+		<item group="groupEftxGunsT4" count="1"/>
+	</append>	
+	<!-- T5 Chest -->
+	<append xpath="//lootgroup[@name='groupHardenedChestT5_01']">
+		<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+		<item name="resourceWeaponRepairKit" count="1,2" loot_prob_template="low"/>
+		<item name="resourceWeaponParts" count="1,2" loot_prob_template="low"/>
+		<item group="groupEftxGunsT5"/>
+		<item group="groupEftxGunsT6" count="1"/>
+	</append>	
+	<!-- Small Weapon Bag -->
+	<append xpath="//lootgroup[@name='groupWeaponsHighMedLow']">		
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="medLow"/>		
+			<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</append>
+	<!-- Large Weapon Bag -->
+	<!-- Small Ammo Pile -->
+	<append xpath="//lootgroup[@name='groupSmallAmmoLowHigh']">	
+		<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>
+	</append>
+	<!-- Medium Ammo Pile -->
+	<append xpath="//lootgroup[@name='groupWeaponsMedMedMed']">	
+		<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>
+	</append>
+	<!-- Large Ammo Pile -->
+	<append xpath="//lootgroup[@name='groupAmmoLarge']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>	
+	</append>
+	<!-- Army Truck -->
+	<append xpath="//lootgroup[@name='groupArmyTruck01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+			<item name="resourceWeaponRepairKit" count="1,2" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</append>		
+	<!-- Police Car Bonus -->
+	<append xpath="//lootgroup[@name='groupPoliceCarBonus01']"> <!-- Lockpicked -->
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+			<item name="resourceWeaponRepairKit" count="1,2" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+			<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</append>			
+	<!-- Foot Locker Military -->
+	<append xpath="//lootgroup[@name='groupMilitaryFootlocker01']"> 
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+			<item name="resourceWeaponRepairKit" count="1,2" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="medLow"/>
+	</append>	
+	<append xpath="//lootgroup[@name='groupMilitaryFootlocker02']"> 
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+	</append>	
+	<!-- Shotgun Messiah Crate -->
+	<append xpath="//lootgroup[@name='groupShotgunMessiahCrate01']">
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
+			<item name="resourceWeaponRepairKit" count="1" loot_prob_template="low"/>
+			<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+			<item name="RocketsandLaunchersSkillMagazine" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</append>		
+				
+	<!-- Hidden Stash / Buried Weapon Chest -->
+	<append xpath="//lootgroup[@name='groupHiddenStash01']">
+		<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>
+		<item name="resourceWeaponRepairKit" count="1" loot_prob_template="low"/>
+		<item name="resourceWeaponParts" count="1" loot_prob_template="low"/>
+		<item name="RocketsandLaunchersSkillMagazine" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		<item group="groupEftxGunsT1"/>
+			<item group="groupEftxGunsT2"/>
+			<item group="groupEftxGunsT3"/>
+			<item group="groupEftxGunsT4"/>
+			<item group="groupEftxGunsT5"/>
+			<item group="groupEftxGunsT6"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupBuriedWeaponChest01']">
+		<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>	
+		<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+		<item name="resourceWeaponParts" count="0,1" loot_prob_template="low"/>
+		<item name="RocketsandLaunchersSkillMagazine" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+		<item group="groupEftxGunsT1"/>
+		<item group="groupEftxGunsT2"/>
+		<item group="groupEftxGunsT3"/>
+		<item group="groupEftxGunsT4"/>
+		<item group="groupEftxGunsT5"/>
+		<item group="groupEftxGunsT6"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupBackpacks01']">
+				<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>		
+				<item name="resourceWeaponParts" count="0,1" loot_prob_template="veryLow"/>				
+	</append>
+	<append xpath="//lootgroup[@name='groupBackpacks02']">
+				<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>	
+	</append>	
+	<append xpath="//lootgroup[@name='groupLocker01']">
+				<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>
+				</append>		
+	
+	<append xpath="//lootgroup[@name='groupDesks01']">
+				<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="low"/>
+	</append>		
+	<!-- Zombie-Loot -->
+	<append xpath="//lootgroup[@name='groupZpackReg01']">
+			<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>			
+	</append>
+	<append xpath="//lootgroup[@name='groupZpackStrong01']">
+			<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>
+			<item name="resourceWeaponParts" count="1" loot_prob_template="low"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupZpackBoss01']">
+			<item group="groupModEftSkillMagazinesAll" count="1,3" loot_prob_template="med"/>
+			<item name="resourceWeaponRepairKit" count="1" loot_prob_template="low"/>
+	</append>		
+	
+	<!-- *** LootContainer -->			
+	<append xpath="//lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
+		<item group="groupModEftSkillMagazinesAll" count="2"/>	
+	</append>
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">
+			<item name="gunppsh41" loot_prob_template="QuestT1Prob"/>
+			<item name="gunpp9klin" loot_prob_template="QuestT1Prob"/>
+			<item name="gunmp5k" loot_prob_template="QuestT1Prob"/>
+			<item name="gunmp43" loot_prob_template="QuestT1Prob"/>
+			<item name="gunmosin" loot_prob_template="QuestT1Prob"/>
+			<item name="gunt5000" loot_prob_template="QuestT1Prob"/>
+			<item name="gunm700" loot_prob_template="QuestT1Prob"/>
+			<item name="gunmp18" loot_prob_template="QuestT1Prob"/>
+			<item name="gunstechkin" loot_prob_template="QuestT1Prob"/>
+			<item name="gunm9a3" loot_prob_template="QuestT1Prob"/>
+			<item name="gunfiveseven" loot_prob_template="QuestT1Prob"/>	
+			<item name="gunadar" loot_prob_template="QuestT1Prob"/>	
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']">
+			<item name="gunaks74un" loot_prob_template="QuestT2Prob"/>
+			<item name="gunak74n" loot_prob_template="QuestT2Prob"/>
+			<item name="gunm590" loot_prob_template="QuestT2Prob"/>
+			<item name="gunm870" loot_prob_template="QuestT2Prob"/>
+			<item name="gunmp133" loot_prob_template="QuestT2Prob"/>
+			<item name="gunakmn" loot_prob_template="QuestT2Prob"/>
+			<item name="gunmp5" loot_prob_template="QuestT2Prob"/>
+			<item name="gunpp19vityaz" loot_prob_template="QuestT2Prob"/>
+			<item name="gunsr2mveresk" loot_prob_template="QuestT2Prob"/>
+			<item name="gunump45" loot_prob_template="QuestT2Prob"/>
+			<item name="gunsv98" loot_prob_template="QuestT2Prob"/>
+			<item name="gundvl10" loot_prob_template="QuestT2Prob"/>
+			<item name="gunsvt" loot_prob_template="QuestT2Prob"/>
+			<item name="gun9a91" loot_prob_template="QuestT2Prob"/>
+			<item name="gunuzi" loot_prob_template="QuestT2Prob"/>
+			<item name="gunnl545" loot_prob_template="QuestT2Prob"/>
+			<item name="guntokarevtt" loot_prob_template="QuestT2Prob"/>
+			<item name="gunmxlr" loot_prob_template="QuestT2Prob"/>
+			<item name="gunp226" loot_prob_template="QuestT2Prob"/>
+			<item name="gunsr1mp" loot_prob_template="QuestT2Prob"/>
+			<item name="gunucp" loot_prob_template="QuestT2Prob"/>
+			<item name="gunusp45match" loot_prob_template="QuestT2Prob"/>
+			<item name="gunrpk16" loot_prob_template="QuestT2Prob"/>
+			<item name="gunmpx" loot_prob_template="QuestT2Prob"/>
+			<item name="gunsks" loot_prob_template="QuestT2Prob"/>
+			<item name="gunak300velociraptor" loot_prob_template="QuestT2Prob"/>
+		</append>
+		<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">
+			<item name="gunm4a1" loot_prob_template="QuestT3Prob"/>
+			<item name="gunfamas" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm16a1" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmk12spr" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm16a4" loot_prob_template="QuestT3Prob"/>
+			<item name="gunauga3" loot_prob_template="QuestT3Prob"/>
+			<item name="gunrpd" loot_prob_template="QuestT3Prob"/>
+			<item name="gunak74m" loot_prob_template="QuestT3Prob"/>			
+			<item name="gunsvd" loot_prob_template="QuestT3Prob"/>
+			<item name="gunfn40gl" loot_prob_template="QuestT3Prob"/>
+			<item name="gunthompson" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmp9" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmp5sd" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmp7" loot_prob_template="QuestT3Prob"/>
+			<item name="gunp90" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmp153" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm3benelli" loot_prob_template="QuestT3Prob"/>
+			<item name="gunsaiga12" loot_prob_template="QuestT3Prob"/>
+			<item name="gunAA12" loot_prob_template="QuestT3Prob"/>
+			<item name="gunksg12" loot_prob_template="QuestT3Prob"/>
+			<item name="gunFALsa58br" loot_prob_template="QuestT3Prob"/>
+			<item name="gunFALsa58dmr" loot_prob_template="QuestT3Prob"/>
+			<item name="gunrfb" loot_prob_template="QuestT3Prob"/>
+			<item name="gunasval" loot_prob_template="QuestT3Prob"/>
+			<item name="gunvss" loot_prob_template="QuestT3Prob"/>
+			<item name="gunuziprosmg" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm1911" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm45" loot_prob_template="QuestT3Prob"/>
+			<item name="gundeserteagle" loot_prob_template="QuestT3Prob"/>
+			<item name="gunks23" loot_prob_template="QuestT3Prob"/>
+			<item name="gunvector45" loot_prob_template="QuestT3Prob"/>
+			<item name="gunhoneybadger" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmdr762" loot_prob_template="QuestT3Prob"/>
+			<item name="gunash12" loot_prob_template="QuestT3Prob"/>
+			<item name="gunpkp" loot_prob_template="QuestT3Prob"/>
+			<item name="gunak12" loot_prob_template="QuestT3Prob"/>
+			<item name="gunak107" loot_prob_template="QuestT3Prob"/>
+			<item name="gunscarh" loot_prob_template="QuestT3Prob"/>
+			<item name="gunhk417" loot_prob_template="QuestT3Prob"/>
+			<item name="gunvector9" loot_prob_template="QuestT3Prob"/>
+			<item name="gunstm9" loot_prob_template="QuestT3Prob"/>
+			<item name="gunchinalake" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm1aEBR" loot_prob_template="QuestT3Prob"/>
+			<item name="gunsr25" loot_prob_template="QuestT3Prob"/>
+			<item name="gung36kv2" loot_prob_template="QuestT3Prob"/>
+			<item name="gunglock17" loot_prob_template="QuestT3Prob"/>
+			<item name="gunusp45tac" loot_prob_template="QuestT3Prob"/>
+			<item name="gunrsh12" loot_prob_template="QuestT3Prob"/>	
+			<item name="gunhk416" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmcx" loot_prob_template="QuestT3Prob"/>
+			<item name="gunrd704" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmk47" loot_prob_template="QuestT3Prob"/>
+			<item name="gunfnminimi" loot_prob_template="QuestT3Prob"/>
+			<item name="gunhkg28" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm14sass" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm60e6" loot_prob_template="QuestT3Prob"/>
+			<item name="gunmcxspear" loot_prob_template="QuestT3Prob"/>
+			<item name="gunrsass" loot_prob_template="QuestT3Prob"/>
+			<item name="gunm32a1mgl" loot_prob_template="QuestT3Prob"/>
+			<item name="gunaxmc" loot_prob_template="QuestT3Prob"/>
+			<item name="gunswordmk18" loot_prob_template="QuestT3Prob"/>
+			<item name="guntokarevgold" loot_prob_template="QuestT3Prob"/>
+			<item name="gunpmalphadog" loot_prob_template="QuestT3Prob"/>
+			<item name="gunglock18c" loot_prob_template="QuestT3Prob"/>
+			<item name="gunak103" loot_prob_template="QuestT3Prob"/>
+			<item name="gunak109" loot_prob_template="QuestT3Prob"/>
+			<item name="gunTheAKGuyAK50" loot_prob_template="QuestT3Prob"/>
+			<item name="modArmorNightVision" loot_prob_template="QuestT3Prob"/>
+			<item name="modArmorNightVision2" loot_prob_template="QuestT3Prob"/>
+			<item name="modArmorNightVision3" loot_prob_template="QuestT3Prob"/>
+	</append>	
+	 <append xpath="//lootgroup[@name='groupQuestMedical']">
+		<item group="groupModEftSkillMagazinesAll" count="1,3" />
+	</append>	
+	<append xpath="//lootgroup[@name='groupQuestMods']">		
+		<item group="groupEftModsT1" count="1" loot_prob_template="QuestT1Prob"/>
+		<item group="groupEftModsT2" count="1" loot_prob_template="QuestT2Prob"/>
+		<item group="groupEftModsT3" count="1" loot_prob_template="QuestT3Prob"/>
+		<item group="groupEftModsT4" count="1" loot_prob_template="QuestT4Prob"/>
+		<item group="groupEftModsT5" count="1" loot_prob_template="QuestT5Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupQuestT1RangedMods']">
+		<item group="groupWeaponsT1" count="1" loot_prob_template="QuestT1Prob"/>
+		<item group="groupEftPistolCase1" count="1" loot_prob_template="QuestT1Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupQuestT2RangedMods']">
+		<item group="groupWeaponsT2" count="1" loot_prob_template="QuestT2Prob"/>
+		<item group="groupEftPistolCase2" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="bundleWeaponsCaseT2_1" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="bundleWeaponsCaseT2_2" count="1" loot_prob_template="QuestT2Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupQuestT3RangedMods']">
+		<item group="groupWeaponsT3" count="1" loot_prob_template="QuestT3Prob"/>
+		<item group="groupEftPistolCase3" count="1" loot_prob_template="QuestT3Prob"/>
+	</append>
+	<insertAfter xpath="//lootgroup[@name='groupQuestT3RangedMods']">
+	<lootgroup name="groupQuestT4RangedMods">
+		<item group="groupWeaponsT4" count="1" loot_prob_template="QuestT4Prob"/>
+		<item group="groupEftPistolCase4" count="1" loot_prob_template="QuestT4Prob"/>
+	</lootgroup>
+	<lootgroup name="groupQuestT5RangedMods">
+		<item group="groupWeaponsT5" count="1" loot_prob_template="QuestT5Prob"/>
+		<item group="groupEftPistolCase5" count="1" loot_prob_template="QuestT5Prob"/>
+	</lootgroup>
+	</insertAfter>
+	
+	<append xpath="//lootgroup[@name='groupAirDropT1Bundles']">
+		<item group="groupEftPistolCase1" count="1" loot_prob_template="QuestT1Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAirDropT2Bundles']">
+		<item group="groupEftPistolCase2" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="bundleWeaponsCaseT2_1" count="1" loot_prob_template="QuestT2Prob"/>
+		<item name="bundleWeaponsCaseT2_2" count="1" loot_prob_template="QuestT2Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAirDropT3Bundles']">
+		<item group="groupEftPistolCase3" count="1" loot_prob_template="QuestT3Prob"/>
+	</append>	
+	<append xpath="//lootgroup[@name='groupAirDropT4Bundles']">
+		<item group="groupQuestT4RangedMods" count="1" loot_prob_template="QuestT4Prob"/>
+		<item group="groupEftPistolCase4" count="1" loot_prob_template="QuestT4Prob"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupAirDropT5Bundles']">
+		<item group="groupQuestT5RangedMods" count="1" loot_prob_template="QuestT5Prob"/>
+		<item group="groupEftPistolCase5" count="1" loot_prob_template="QuestT5Prob"/>
+		</append>
+<conditional>
+	<if cond="not mod_loaded('FNS_Loot_All_the_Things_Persistent_Containers_Variant')">
+	<append xpath="/lootcontainers">
+	<lootgroup name="EFTXArmyPallets">
+	<item group="groupModAllScaled" count="1" loot_prob_template="low"/>
+	<item group="groupWeaponModsScaled" count="1" loot_prob_template="low"/>
+	<item group="groupArmorModsScaled" count="1" loot_prob_template="low"/>
+	<item group="groupMilitaryBooks" count="1" loot_prob_template="low"/>
+	<item group="groupMilitaryFootlocker" count="1" loot_prob_template="low"/>
+	</lootgroup>	
+	</append>
+	<append xpath="/lootcontainers">
+	<lootcontainer name="EFTXMilitaryPallet" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack"   open_time="1" loot_quality_template="qualBaseTemplate">
+			<item group="EFTXArmyPallets" count="1" />
+			<item group="groupEftModsT1" count="1" loot_prob_template="veryLowDelayedEft"/>
+			<item group="groupEftModsT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+			<item group="groupEftModsT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupEftModsT4" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+			<item group="groupEftModsT5" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>
+	</lootcontainer>
+	</append>	
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('FNS_Loot_All_the_Things_Persistent_Containers_Variant')">
+	<append xpath="//lootgroup[@name='groupAmmoMunitions']">
+	<item group="groupEftModsT1" count="1" loot_prob_template="veryLowDelayedEft" force_prob="true"/>
+	<item group="groupEftModsT2" count="1" loot_prob_template="veryLowDelayedEft1" force_prob="true"/>
+	<item group="groupEftModsT3" count="1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+	<item group="groupEftModsT4" count="1" loot_prob_template="veryLowDelayedEft3" force_prob="true"/>
+	<item group="groupEftModsT5" count="1" loot_prob_template="veryLowDelayedEft4" force_prob="true"/>	
+	</append>		
+	</if>
+</conditional>
+</EFTX>

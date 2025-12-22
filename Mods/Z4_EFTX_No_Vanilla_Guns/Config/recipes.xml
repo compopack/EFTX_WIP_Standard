@@ -1,0 +1,39 @@
+<EFTX>	
+	<remove xpath="//recipe[@name='gunHandgunT0PipePistol']"/>
+	<remove xpath="//recipe[@name='gunHandgunT1Pistol']"/>
+	<remove xpath="//recipe[@name='gunHandgunT2Magnum44']"/>
+	<remove xpath="//recipe[@name='gunHandgunT3DesertVulture']"/>
+	<remove xpath="//recipe[@name='gunHandgunT3SMG5']"/>
+	<remove xpath="//recipe[@name='gunShotgunT0PipeShotgun']"/>
+	<remove xpath="//recipe[@name='gunShotgunT1DoubleBarrel']"/>
+	<remove xpath="//recipe[@name='gunShotgunT2PumpShotgun']"/>
+	<remove xpath="//recipe[@name='gunShotgunT3AutoShotgun']"/>
+	<remove xpath="//recipe[@name='gunRifleT0PipeRifle']"/>
+	<remove xpath="//recipe[@name='gunRifleT1HuntingRifle']"/>
+	<remove xpath="//recipe[@name='gunRifleT2LeverActionRifle']"/>
+	<remove xpath="//recipe[@name='gunRifleT3SniperRifle']"/>
+	<remove xpath="//recipe[@name='gunMGT0PipeMachineGun']"/>
+	<remove xpath="//recipe[@name='gunMGT1AK47']"/>
+	<remove xpath="//recipe[@name='gunMGT2TacticalAR']"/>
+	<remove xpath="//recipe[@name='gunMGT3M60']"/>	
+	<remove xpath="//recipe[@name='gunExplosivesT3RocketLauncher']"/>		
+
+	<remove xpath="//recipe[@name='modGunBipod']"/>
+	<remove xpath="//recipe[@name='modGunChoke']"/>
+	<remove xpath="//recipe[@name='modGunDuckbill']"/>
+	<remove xpath="//recipe[@name='modGunForegrip']"/>
+	<remove xpath="//recipe[@name='modGunMagazineExtender']"/>
+	<remove xpath="//recipe[@name='modGunMuzzleBrake']"/>
+	<remove xpath="//recipe[@name='modGunTriggerGroupSemi']"/>
+	<remove xpath="//recipe[@name='modShotgunSawedOffBarrel']"/>
+	<remove xpath="//recipe[@name='modGunBarrelExtender']"/>
+	<remove xpath="//recipe[@name='modGunRetractingStock']"/>
+	<remove xpath="//recipe[@name='modGunSoundSuppressorSilencer']"/>
+	<remove xpath="//recipe[@name='modGunTriggerGroupBurst3']"/>
+	<remove xpath="//recipe[@name='modGunShotgunTubeExtenderMagazine']"/>
+	<remove xpath="//recipe[@name='modGunScopeLarge']"/>
+	<remove xpath="//recipe[@name='modGunTriggerGroupAutomatic']"/>
+	<remove xpath="//recipe[@name='modGunDrumMagazineExtender']"/>
+
+	
+</EFTX>

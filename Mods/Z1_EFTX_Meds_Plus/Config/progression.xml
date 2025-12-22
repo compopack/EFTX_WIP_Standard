@@ -1,0 +1,295 @@
+<EFTX>
+<append xpath="/progression/skills" >
+	<skill name="skillEFTXMedical" parent="attFortitude" name_key="EFTX Medical" desc_key="Find more Eftx Meds" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+	</append>
+<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingDoctorMedicalJournals" max_level="120" parent="attCrafting" name_key="craftingDoctorMedicalJournalsName" desc_key="craftingDoctorMedicalJournalsDesc" long_desc_key="craftingDoctorMedicalJournalsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="medicalIFAK" name_key="medicalIFAK" has_quality="false" unlock_level="30">
+                <unlock_entry item="medicalIFAK" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalSalewa" name_key="medicalSalewa" has_quality="false" unlock_level="60">
+                <unlock_entry item="medicalSalewa" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalCMS" name_key="medicalCMS" has_quality="false" unlock_level="90">
+               <unlock_entry item="medicalCMS" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalSurv12" name_key="medicalSurv12" has_quality="false" unlock_level="120">
+                <unlock_entry item="medicalSurv12" unlock_tier="1" />
+            </display_entry>			
+						
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,120" value="1" tags="medicalIFAK"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,120" value="1" tags="medicalSalewa"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,120" value="1" tags="medicalCMS"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,120" value="1" tags="medicalSurv12"/>
+				</effect_group>
+        </crafting_skill>
+		
+		<crafting_skill name="craftingBooksOfASurgeon" max_level="175" parent="attCrafting" name_key="craftingBooksOfASurgeonName" desc_key="craftingBooksOfASurgeonDesc" long_desc_key="craftingBooksOfASurgeonLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="medicalInjectorAdrenaline,medicalInjectorMorphine" name_key="Adrenaline Morphine Injector" has_quality="false" unlock_level="50">
+                <unlock_entry item="medicalInjectorAdrenaline" unlock_tier="1" />
+				<unlock_entry item="medicalInjectorMorphine" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalInjectorPerfortran,medicalInjectorPropitalRegenerativeStim" name_key="Perfortan Propitol Injector" has_quality="false" unlock_level="100">
+                <unlock_entry item="medicalInjectorPerfortran" unlock_tier="1" />
+				<unlock_entry item="medicalInjectorPropitalRegenerativeStim" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalInjectorSJ12" name_key="SJ12 Injector" has_quality="false" unlock_level="125">
+                <unlock_entry item="medicalInjectorSJ12" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="medicalInjector2A2" name_key="2A2 Injector" has_quality="false" unlock_level="150">
+                <unlock_entry item="medicalInjector2A2" unlock_tier="1" />
+            </display_entry>			
+			<display_entry icon="medicalInjectorMULE" name_key="MULE Injector" has_quality="false" unlock_level="175">
+                <unlock_entry item="medicalInjectorMULE" unlock_tier="1" />
+            </display_entry>
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,175" value="1" tags="medicalInjectorAdrenaline,medicalInjectorMorphine"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,175" value="1" tags="medicalInjectorPerfortran,medicalInjectorPropitalRegenerativeStim"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,175" value="1" tags="medicalInjectorSJ12"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="150,175" value="1" tags="medicalInjector2A2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="175,175" value="1" tags="medicalInjectorMULE"/>
+				</effect_group>
+        </crafting_skill>
+</append>
+<append xpath="/progression/perks" >
+	<!-- *** Adrenaline Rush -->
+		<perk name="perkAdrenalineRush" max_level="4" parent="skillFortitudeSurvival" name_key="perkAdrenalineRushName" desc_key="perkAdrenalineRushDesc" icon="combatInjectorIcon">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+		
+			<!-- Less Saline Craft At Max Perk -->
+			<effect_group>
+				<passive_effect name="CraftingTier" operation="base_set" level="0,4" value="0,4" tags="medicalInjectorAdrenaline,medicalInjectorMorphine,medicalInjectorPerfortran,medicalInjectorPropitalRegenerativeStim,medicalInjectorSJ12,medicalInjector2A2"/>
+			</effect_group>
+			
+			<!-- Stronger Adrenaline Rush Effects -->
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="1"/>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush2">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="20"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="20"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirements compare_type="or">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="25"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>
+				</requirements>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush2">
+						<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="1"/>
+					</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="2"/>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="30"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush2">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="30"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="35"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="30"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirements compare_type="or">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="35"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="30"/>
+				</requirements>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush2">
+						<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="2"/>
+					</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="3"/>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="40"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush2">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="40"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="45"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="40"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirements compare_type="or">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="45"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="40"/>
+				</requirements>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush2">
+						<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="3"/>
+					</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="4"/>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="50"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffAdrenalineRush2">
+					<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
+					<requirement name="!HasBuff" buff="buffMorphineInjector"/>
+					<requirement name="!HasBuff" buff="buffPerfotoranInjector"/>
+					<requirement name="!HasBuff" buff="buffPropitalInjector"/>
+					<requirement name="!HasBuff" buff="buffTrimadolInjector"/>
+					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					<requirement name="!HasBuff" buff="medicalInjectorMULE"/>
+					<requirement name="!HasBuff" buff="buffEftBadTrip"/>
+					<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="50"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="60"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="50"/>
+				</triggered_effect>
+				<!--triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush2">         doesn't work
+					<requirements compare_type="or">
+						<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="60"/>
+						<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="50"/>
+					</requirements>
+				</triggered_effect-->
+			</effect_group>
+			<effect_group>
+				<requirements compare_type="or">
+					<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="60"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="50"/>
+				</requirements>
+					<triggered_effect trigger="onSelfProgressionUpdate" action="RemoveBuff" buff="buffAdrenalineRush2">
+						<requirement name="ProgressionLevel" progression_name="perkAdrenalineRush" operation="Equals" value="4"/>
+					</triggered_effect>
+			</effect_group>
+			
+			<effect_group>
+				<effect_description level="1" desc_key="NONE" long_desc_key="perkAdrenalineRush1LongDesc" desc_base="Critical Damage"/>
+				<effect_description level="2" desc_key="NONE" long_desc_key="perkAdrenalineRush2LongDesc" desc_base="Hot Red"/>
+				<effect_description level="3" desc_key="NONE" long_desc_key="perkAdrenalineRush3LongDesc" desc_base="Pupils Expanded"/>
+				<effect_description level="4" desc_key="NONE" long_desc_key="perkAdrenalineRush4LongDesc" desc_base="Mad Rush"/>
+			</effect_group>
+		</perk>
+<!-- MEDICAL -->
+		<!-- MEDICAL JOURNALS -->
+		<perk name="perkDoctorJournals" parent="skillEFTXMedical" max_level="5"  name_key="Doctor Journals" desc_key="Find more Doctor Journals in the world" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="6" desc_key="reqFortitudeLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="8" desc_key="reqFortitudeLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Doctor Journals crafting skill with each perk rank up to crafting skill 25 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxdoctormedicaljournalsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingDoctorMedicalJournals" operation="LT" value="25"/>
+			</passive_effect>
+			<!-- Once Doctor Journals crafting skill reaches 25, set the probability bonus of finding Doctor Journals crafting skill to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxdoctormedicaljournalsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingDoctorMedicalJournals" operation="Equals" value="25"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkDoctorJournalsRank1Desc" long_desc_key="Find more Doctor Journals books"/>
+			<effect_description level="2" desc_key="perkDoctorJournalsRank2Desc" long_desc_key="Find the Doctor Journals Books"/>
+			<effect_description level="3" desc_key="perkDoctorJournalsRank3Desc" long_desc_key="Find even more Doctor Journals books"/>
+			<effect_description level="4" desc_key="perkDoctorJournalsRank4Desc" long_desc_key="You want more Doctor Journals books"/>
+			<effect_description level="5" desc_key="perkDoctorJournalsRank5Desc" long_desc_key="Mass Doctor Journals book find"/>
+			</effect_group>
+		</perk>			
+		<!-- MEDICAL JOURNALS -->
+		<!-- SURGEON BOOKS -->
+		<perk name="perkSurgeonsBooks" parent="skillEFTXMedical" max_level="5"  name_key="Surgeons Books" desc_key="Find more Surgeons Books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="6" desc_key="reqFortitudeLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="8" desc_key="reqFortitudeLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Stocks crafting skill Surgeons Books with each perk rank up to crafting skill 80 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxbooksofasurgeonCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingBooksOfASurgeon" operation="LT" value="80"/>
+			</passive_effect>
+			<!-- Once Doctor Surgeons Books crafting skill reaches 80, set the probability bonus of finding Stocks crafting skill Surgeons Books to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxbooksofasurgeonCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingBooksOfASurgeon" operation="Equals" value="80"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkSurgeonsBooksRank1Desc" long_desc_key="Find more Surgeons books"/>
+			<effect_description level="2" desc_key="perkSurgeonsBooksRank2Desc" long_desc_key="Find the Surgeons books"/>
+			<effect_description level="3" desc_key="perkSurgeonsBooksRank3Desc" long_desc_key="Find even more Surgeons books"/>
+			<effect_description level="4" desc_key="perkSurgeonsBooksRank4Desc" long_desc_key="You want more Surgeons books"/>
+			<effect_description level="5" desc_key="perkSurgeonsBooksRank5Desc" long_desc_key="Mass Surgeons book find"/>
+			</effect_group>
+		</perk>			
+		<!-- SURGEON BOOKS -->
+		<!-- MEDICAL -->
+</append>
+
+</EFTX>

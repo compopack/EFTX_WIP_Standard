@@ -1,0 +1,1070 @@
+<EFTX>
+<!-- ### General Zombie Changes (sound ragdolling, walktypes, detection, random values, ... -->
+	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">		
+		<effect_group>
+	<!-- *** Less Damage Against Non-Vital Body-Parts -->
+			<passive_effect name="InternalDamageModifier" operation="perc_add" value="-.5" tags="arms,legs"/>
+			
+	<!-- *** Difficulty Setting Death: One Shot -->
+			<!-- <passive_effect name="EntityDamage" operation="perc_add" value="999999"><requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect> -->
+		</effect_group>
+		
+		<effect_group>
+	<!-- *** Slows Down Player On Hit -->
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffEftHitSlowDown">
+				<requirement name="!EntityTagCompare" tags="feral,radiated,zombieDemolition"/>
+				<requirement name="EntityTagCompare" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffEftHitSlowDownFeral">
+				<requirement name="!EntityTagCompare" tags="radiated"/>
+				<requirement name="EntityTagCompare" tags="feral,zombieDemolition"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffEftHitSlowDownRad">
+				<requirement name="!EntityTagCompare" tags="zombieDemolition"/>
+				<requirement name="EntityTagCompare" tags="radiated"/>
+			</triggered_effect>
+		</effect_group>
+	</append>
+	<set xpath="/entity_classes/entity_class[starts-with(@name,'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">1800</set>
+	
+	<!-- ### Zombie Stat Changes -->
+	<!-- *** Tags -->
+	<!-- FEMALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieArlene']/property[@name='Tags']/@value">,femaleZombie,zombieArlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='Tags']/@value">,femaleZombie,zombieArlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieArlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieArleneCharged']/property[@name='Tags']/@value">,charged,zombieArlene</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieMarlene']/property[@name='Tags']/@value">,femaleZombie,zombieMarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='Tags']/@value">,femaleZombie,zombieMarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieMarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMarleneCharged']/property[@name='Tags']/@value">,charged,femaleZombie,zombieMarlene</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombiePartyGirl']/property[@name='Tags']/@value">,femaleZombie,zombiePartyGirl</append>
+	<append xpath="/entity_classes/entity_class[@name='zombiePartyGirlFeral']/property[@name='Tags']/@value">,femaleZombie,zombiePartyGirl</append>
+	<append xpath="/entity_classes/entity_class[@name='zombiePartyGirlRadiated']/property[@name='Tags']/@value">,femaleZombie,zombiePartyGirl</append>
+	<append xpath="/entity_classes/entity_class[@name='zombiePartyGirlCharged']/property[@name='Tags']/@value">,charged,femaleZombie,zombiePartyGirl</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieNurse']/property[@name='Tags']/@value">,femaleZombie,zombieNurse</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='Tags']/@value">,femaleZombie,zombieNurse</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieNurseRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieNurse</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieNurseCharged']/property[@name='Tags']/@value">,charged,femaleZombie,zombieNurse</append>
+	<!-- FEMALES -->
+	<!-- MALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieJoe']/property[@name='Tags']/@value">,zombieJoe</append>	
+	<append xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='Tags']/@value">,zombieJoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='Tags']/@value">,zombieJoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJoeCharged']/property[@name='Tags']/@value">,charged,zombieJoe</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieSteve']/property[@name='Tags']/@value">,zombieSteve</append>	
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='Tags']/@value">,zombieSteve</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='Tags']/@value">,zombieSteve</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveCharged']/property[@name='Tags']/@value">,charged,zombieSteve</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieTomClark']/property[@name='Tags']/@value">,zombieTomClark</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieTomClarkFeral']/property[@name='Tags']/@value">,zombieTomClark</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieTomClarkRadiated']/property[@name='Tags']/@value">,zombieTomClark</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieTomClarkCharged']/property[@name='Tags']/@value">,charged,zombieTomClark</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessMan']/property[@name='Tags']/@value">,zombieBusinessMan</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='Tags']/@value">,zombieBusinessMan</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessManRadiated']/property[@name='Tags']/@value">,zombieBusinessMan</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessManCharged']/property[@name='Tags']/@value">,charged,zombieBusinessMan</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessManInfernal']/property[@name='Tags']/@value">,infernal,zombieBusinessMan</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieBurnt']/property[@name='Tags']/@value">,zombieBurnt</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBurntFeral']/property[@name='Tags']/@value">,zombieBurnt</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBurntRadiated']/property[@name='Tags']/@value">,zombieBurnt</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBurntCharged']/property[@name='Tags']/@value">,charged,zombieBurnt</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBurntInfernal']/property[@name='Tags']/@value">,infernal,zombieBurnt</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieRancher']/property[@name='Tags']/@value">,zombieRancher</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRancherFeral']/property[@name='Tags']/@value">,zombieRancher</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRancherRadiated']/property[@name='Tags']/@value">,zombieRancher</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRancherCharged']/property[@name='Tags']/@value">,charged,zombieRancher</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRancherInfernal']/property[@name='Tags']/@value">,infernal,zombieRancher</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieChuck']/property[@name='Tags']/@value">,zombieChuck</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='Tags']/@value">,zombieChuck</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieChuckRadiated']/property[@name='Tags']/@value">,zombieChuck</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieChuckCharged']/property[@name='Tags']/@value">,charged,zombieChuck</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieChuckInfernal']/property[@name='Tags']/@value">,infernal,zombieChuck</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieSpider']/property[@name='Tags']/@value">,zombieSpider</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='Tags']/@value">,zombieSpider</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='Tags']/@value">,zombieSpider</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSpiderCharged']/property[@name='Tags']/@value">,charged,zombieSpider</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSpiderInfernal']/property[@name='Tags']/@value">,infernal,zombieSpider</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieBoe']/property[@name='Tags']/@value">,zombieBoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBoeFeral']/property[@name='Tags']/@value">,zombieBoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='Tags']/@value">,zombieBoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBoeCharged']/property[@name='Tags']/@value">,charged,zombieBoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBoeInfernal']/property[@name='Tags']/@value">,infernal,zombieBoe</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']/property[@name='Tags']/@value">,zombieMaleHazmat</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMaleHazmatFeral']/property[@name='Tags']/@value">,zombieMaleHazmat</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMaleHazmatRadiated']/property[@name='Tags']/@value">,zombieMaleHazmat</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMaleHazmatCharged']/property[@name='Tags']/@value">,charged,zombieMaleHazmat</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMaleHazmatInfernal']/property[@name='Tags']/@value">,infernal,zombieMaleHazmat</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitor']/property[@name='Tags']/@value">,zombieJanitor</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']/property[@name='Tags']/@value">,zombieJanitor</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']/property[@name='Tags']/@value">,zombieJanitor</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorCharged']/property[@name='Tags']/@value">,charged,zombieJanitor</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJanitorInfernal']/property[@name='Tags']/@value">,infernal,zombieJanitor</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieInmate']/property[@name='Tags']/@value">,zombieInmate</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieInmateFeral']/property[@name='Tags']/@value">,zombieInmate</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieInmateRadiated']/property[@name='Tags']/@value">,zombieInmate</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieInmateCharged']/property[@name='Tags']/@value">,charged,zombieInmate</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieInmateInfernal']/property[@name='Tags']/@value">,infernal,zombieInmate</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='Tags']/@value">,zombieMoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='Tags']/@value">,zombieMoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='Tags']/@value">,zombieMoe</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMoeInfernal']/property[@name='Tags']/@value">,infernal,zombieMoe</append>
+	<!-- MALES -->
+	<!-- FEMALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieLab']/property[@name='Tags']/@value">,femaleZombie,zombieLab</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='Tags']/@value">,femaleZombie,zombieLab</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieLab</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLabCharged']/property[@name='Tags']/@value">,charged,zombieLab</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieDarlene']/property[@name='Tags']/@value">,femaleZombie,zombieDarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='Tags']/@value">,femaleZombie,zombieDarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieDarleneRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieDarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieDarleneCharged']/property[@name='Tags']/@value">,charged,zombieDarlene</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieDarleneInfernal']/property[@name='Tags']/@value">,infernal,zombieDarlene</append>
+	<!-- FEMALES -->
+	<!-- MALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieYo']/property[@name='Tags']/@value">,zombieYo</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='Tags']/@value">,zombieYo</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='Tags']/@value">,zombieYo</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieYoCharged']/property[@name='Tags']/@value">,charged,zombieYo</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieYoInfernal']/property[@name='Tags']/@value">,infernal,zombieYo</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']/property[@name='Tags']/@value">,zombieUtilityWorker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='Tags']/@value">,zombieUtilityWorker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']/property[@name='Tags']/@value">,zombieUtilityWorker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerCharged']/property[@name='Tags']/@value">,charged,zombieUtilityWorker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerInfernal']/property[@name='Tags']/@value">,infernal,zombieUtilityWorker</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='Tags']/@value">,zombieBiker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='Tags']/@value">,zombieBiker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='Tags']/@value">,zombieBiker</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerInfernal']/property[@name='Tags']/@value">,infernal,zombieBiker</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieLumberjack']/property[@name='Tags']/@value">,zombieLumberjack</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLumberjackFeral']/property[@name='Tags']/@value">,zombieLumberjack</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLumberjackRadiated']/property[@name='Tags']/@value">,zombieLumberjack</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieLumberjackInfernal']/property[@name='Tags']/@value">,infernal,zombieLumberjack</append>
+	<!-- MALES -->
+	<!-- FEMALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFat']/property[@name='Tags']/@value">,femaleZombie,zombieFemaleFat</append>	
+	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='Tags']/@value">,femaleZombie,zombieFemaleFat</append>	
+	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='Tags']/@value">,femaleZombie,zombieFemaleFat</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFatInfernal']/property[@name='Tags']/@value">,infernal,zombieFemaleFat</append>
+	<!-- FEMALES -->
+	<!-- MALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='Tags']/@value">,zombieFatHawaiian</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='Tags']/@value">,zombieFatHawaiian</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']/property[@name='Tags']/@value">,zombieFatHawaiian</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianInfernal']/property[@name='Tags']/@value">,infernal,zombieFatHawaiian</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieBowler']/property[@name='Tags']/@value">,zombieBowler</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBowlerFeral']/property[@name='Tags']/@value">,zombieBowler</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBowlerRadiated']/property[@name='Tags']/@value">,zombieBowler</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBowlerInfernal']/property[@name='Tags']/@value">,infernal,zombieBowler</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Tags']/@value">,zombieFatCop</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='Tags']/@value">,zombieFatCop</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='Tags']/@value">,zombieFatCop</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieFatCopInfernal']/property[@name='Tags']/@value">,infernal,zombieFatCop</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='Tags']/@value">,zombieSkateboarder</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='Tags']/@value">,zombieSkateboarder</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='Tags']/@value">,zombieSkateboarder</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSkateboarderCharged']/property[@name='Tags']/@value">,charged,zombieSkateboarder</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSkateboarderInfernal']/property[@name='Tags']/@value">,infernal,zombieSkateboarder</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldier']/property[@name='Tags']/@value">,zombieSoldier</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='Tags']/@value">,zombieSoldier</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='Tags']/@value">,zombieSoldier</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierInfernal']/property[@name='Tags']/@value">,infernal,zombieSoldier</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Tags']/@value">,zombieWightFeral</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='Tags']/@value">,zombieWightFeral</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieWightCharged']/property[@name='Tags']/@value">,charged,zombieWightFeral</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieWightInfernal']/property[@name='Tags']/@value">,infernal,zombieWightFeral</append>
+	<!-- MALES -->
+	<!-- FEMALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieScreamer']/property[@name='Tags']/@value">,zombieScreamer</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']/property[@name='Tags']/@value">,zombieScreamer</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='Tags']/@value">,zombieScreamer</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieScreamerCharged']/property[@name='Tags']/@value">,charged,zombieScreamer</append>
+	<!-- FEMALES -->
+	<!-- MALES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieMutated']/property[@name='Tags']/@value">,zombieMutated</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMutatedFeral']/property[@name='Tags']/@value">,zombieMutated</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/property[@name='Tags']/@value">,zombieMutated</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMutatedCharged']/property[@name='Tags']/@value">,charged,zombieMutated</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMutatedInfernal']/property[@name='Tags']/@value">,infernal,zombieMutated</append>
+
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']/property[@name='Tags']/@value">,zombieSteveCrawler</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='Tags']/@value">,zombieSteveCrawler</append>
+	<!-- MALES -->	
+	<!-- *** Soldiers -->
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldier']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieSoldier,armoredNoFaceshield</append>
+	<conditional>
+	<if cond="mod_loaded('EFTX_Pack_Slow_Progress') or mod_loaded('EFTX_Pack_Standard') and not mod_loaded('not_zz_REBIRTH__Core')">
+	<remove xpath="/entity_classes/entity_class[@name='zombieSoldier']/effect_group[(@name='Base Effects')]/passive_effect[@name='PhysicalDamageResist']"></remove> <!-- Armor Changes: Now In Buff -->
+	</if>
+	</conditional>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldier']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieSoldier,feral,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieSoldier,feral,radiated,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>	
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierInfernal']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieSoldier,feral,radiated,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSoldierInfernal']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<!-- *** Biker -->
+	<append xpath="/entity_classes/entity_class[starts-with(@name, 'zombieBiker')]">
+		<property name="SoundRandom" value="zombiemaleroamEFT"/>
+		<property name="SoundAlert" value="zombiemaleroamEFT"/>
+		<property name="SoundHurt" value="zombiemalepainEFT"/>
+		<property name="SoundDeath" value="zombiemaledeathEFT"/>
+		<property name="SoundAttack" value="zombiemaleattackEFT"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBiker']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieBiker,armoredNoFaceshield</append>
+	<remove xpath="/entity_classes/entity_class[@name='zombieBiker']/effect_group[(@name='Base Effects')]/passive_effect[@name='PhysicalDamageResist']"></remove> <!-- Armor Changes: Now In Buff -->
+	<append xpath="/entity_classes/entity_class[@name='zombieBiker']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieBiker,feral,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerFeral']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieBiker,feral,radiated,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerInfernal']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieBiker,feral,radiated,armoredNoFaceshield</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBikerInfernal']">
+		<property name="KnockdownKneelDamageThreshold" value="0"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	
+	<!-- *** Demolitioner (Radiated Version Removed, Because TFP Removed The Particles In 1.0) -->
+	<append xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[(@name='Tags')]/@value">entity,zombie,walker,zombieDemolition,boss,armoredNoFaceshield</append>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='PainResistPerHit']/@value">0</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.RadiusEntities']/@value">14</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='ExplodeDelay']/@value">4</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.EntityDamage']/@value">800</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">8000</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='ExperienceGain']/@value">5000</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[(@name='Base Effects')]/passive_effect[@name='HealthMax']/@value">1440</set>
+	<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[(@name='StompsSpikes')]"></remove>
+	<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[(@name='Base Effects')]/passive_effect[@name='PhysicalDamageResist']"></remove> <!-- Armor Changes: Now In Buff -->
+	<append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
+		<property name="MoveSpeedAggro" value=".85, 1.35"/>
+		<property name="DismemberMultiplierHead" value=".1"/><property name="DismemberMultiplierArms" value=".25"/><property name="DismemberMultiplierLegs" value=".25"/>
+		<property name="Explosion.Buff" value="buffBurningMolotov"/>
+		<property name="KnockdownKneelDamageThreshold" value=".1"/>
+		<property name="KnockdownProneDamageThreshold" value="0"/>
+	</append>
+	
+	<append xpath="/entity_classes">
+		<!-- *** Mutated Loot Goblin -->
+		<entity_class name="zombieMutatedLootGob" extends="zombieMutated">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,feral,zombieMutated,lootGoblin"/>
+			<property name="Mesh" value="@:Entities/Zombies/Mutated/ZMutatedFeral.prefab"/>
+			<property name="SizeScale" value="1.1"/>
+			<property name="HandItem" value="meleeHandzombieMutatedFeral"/>
+			<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value="1"/><property name="DismemberMultiplierLegs" value="1"/>
+			<property name="PainResistPerHit" value=".7"/>
+			<property name="MoveSpeedAggro" value=".42, 1.25"/>
+			<property name="ExperienceGain" value="1500"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGobMutated"/>
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffMutatedDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="960"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffMutatedDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="EntityLootContainerLootGobMutated">
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Mesh" value="@:Entities/LootContainers/munitionsBox_01Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="LootListOnDeath" value="zombieLootGobBagMutated"/>
+			<property name="Faction" value="none"/>
+			<property name="SizeScale" value=".9"/>
+		</entity_class>	
+		
+		<!-- *** Soldier Loot Goblin -->
+		<entity_class name="zombieSoldierLootGob" extends="zombieSoldier">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,feral,zombieSoldier,armoredNoFaceshield,lootGoblin"/>
+			<property name="Mesh" value="@:Entities/Zombies/Soldier/ZSoldierFeral.prefab"/>
+			<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value="1"/><property name="DismemberMultiplierLegs" value="1"/>
+			<property name="PainResistPerHit" value=".8"/>
+			<property name="MoveSpeedAggro" value="0.75, 1.5"/>
+			<property name="JumpMaxDistance" value="4.6, 5"/>
+			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="ExperienceGain" value="1500"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGob"/>
+			<property name="KnockdownKneelDamageThreshold" value="0"/>
+			<property name="KnockdownProneDamageThreshold" value="0"/>
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffSoldierDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="330"/>
+				<!--passive_effect name="PhysicalDamageResist" operation="base_set" value="80"/-->
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffSoldierDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="EntityLootContainerLootGob">
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Mesh" value="@:Entities/LootContainers/weapon_bags_largePrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1800"/>
+			<property name="LootListOnDeath" value="zombieSoldierLootGobBag"/>
+			<property name="Faction" value="none"/>
+			<property name="SizeScale" value="1"/>
+		</entity_class>
+		
+		
+		<!-- *** Biker Bomber -->
+		<entity_class name="zombieBikerBomber" extends="zombieBikerFeral">
+			<property name="Class" value="EntityZombieCop"/>
+			<property name="SoundRandom" value="zombiemaleroamEFT"/>
+			<property name="SoundAlert" value="zombiemaleroamEFT"/>
+			<property name="SoundHurt" value="zombiemalepainEFT"/>
+			<property name="SoundDeath" value="zombiemaledeathEFT"/>
+			<property name="SoundAttack" value="zombiemaleattackEFT"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,feral,zombieBiker,armoredNoFaceshield"/>
+			<property name="Mesh" value="@:Entities/Zombies/Biker/ZBikerFeral.prefab"/>
+			<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value="1"/><property name="DismemberMultiplierLegs" value="1"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="MoveSpeedAggro" value="0.5, 1"/>
+			<property name="JumpMaxDistance" value="4.6, 5"/>
+			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="ExperienceGain" value="1500"/>
+			<property name="LootDropProb" value=".03"/>
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBikerDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="330"/>
+				<!--passive_effect name="PhysicalDamageResist" operation="base_set" value="80"/-->
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBikerDeco"/>
+				
+				<!--triggered_effect trigger="onOtherAttackedSelf" action="Explode" blast_power="1000" block_damage="550" block_radius="6" entity_damage="250" entity_radius="6" damage_type="Special"><requirement name="HitLocation" body_parts="Torso"/></triggered_effect>
+				<triggered_effect trigger="onOtherAttackedSelf" action="ModifyStats" stat="Health" operation="set" value="0"><requirement name="HitLocation" body_parts="Torso"/></triggered_effect-->
+			</effect_group>
+			<property name="ExplodeDelay" value="2.9"/>
+			<property name="ExplodeHealthThreshold" value=".75"/>
+			<property name="SoundExplodeWarn" value="demolitionzexplodewarning2"/>
+			<property name="Explosion.ParticleIndex" value="14"/>
+			<property name="Explosion.RadiusBlocks" value="6"/>
+			<property name="Explosion.RadiusEntities" value="6"/>
+			<property name="Explosion.BlockDamage" value="550"/>
+			<property name="Explosion.EntityDamage" value="250"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+		</entity_class>
+		
+		
+		<!-- *** Lumberjack Axe (Normal/Feral) -->
+		<entity_class name="zombieLumberjackAxe" extends="zombieLumberjack">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,zombieLumberjack"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerLootLumber1"/>
+		  <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffLumberjackDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="480"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLumberjackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieLumberjackFeralAxe" extends="zombieLumberjack">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,feral,zombieLumberjack"/>
+			<property name="Mesh" value="@:Entities/Zombies/Lumberjack/ZLumberjackFeral.prefab"/>
+			<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value="1"/><property name="DismemberMultiplierLegs" value="1"/>
+			<property name="PainResistPerHit" value=".7"/>
+			<property name="MoveSpeedAggro" value="0.45, 1.3"/>
+			<property name="JumpMaxDistance" value="1.8, 2.5"/>
+			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="ExperienceGain" value="1200"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerLootLumber1"/>
+		  <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffLumberjackDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="640"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffLumberjackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="EntityLootContainerLootLumber1">
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Mesh" value="@:Other/Items/Weapons/Melee/Axe/fireaxe_ironPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="LootListOnDeath" value="zombieLootLumberjack"/>
+			<property name="Faction" value="none"/>
+			<property name="SizeScale" value="1"/>
+		</entity_class>
+		
+
+		<!-- *** Demolition Loot Goblin -->
+		<entity_class name="zombieDemolitionLootGob" extends="zombieDemolition">
+			<property name="Tags" value="entity,zombie,walker,zombieDemolition,boss,armoredNoFaceshield,lootGoblin"/>
+			<property name="MoveSpeedAggro" value="0.75, 1.5"/>
+			<property name="JumpMaxDistance" value="4.6, 5"/>
+			<property name="ExperienceGain" value="3600"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerLootGobDemo"/>
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffDemoDeco"/>
+				<passive_effect name="HealthMax" operation="base_set" value="2160"/>
+				<!--passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/-->
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffDemoDeco"/>
+				<!--passive_effect name="ExplosionIncomingDamage" operation="perc_add" value="-0.9"/--> <!-- Add this to normal demo too | After playtesting: don't. This is too OP -->
+			</effect_group>
+		</entity_class>
+		<entity_class name="EntityLootContainerLootGobDemo">
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Mesh" value="@:Entities/LootContainers/tier5LootChestPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="LootListOnDeath" value="zombieLootGobBagDemo"/>
+			<property name="Faction" value="none"/>
+			<property name="SizeScale" value=".85"/>
+		</entity_class>
+		
+		<entity_class name="zombieDemolitionGiant" extends="zombieDemolition">
+			<property name="Tags" value="entity,zombie,walker,zombieDemolition,boss"/>
+			<property name="MoveSpeedAggro" value="0.75, 1.5"/>
+			<property name="JumpMaxDistance" value="4.6, 5"/>
+			<property name="ExperienceGain" value="100000"/>
+			<property name="SizeScale" value="2"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="20000"/>
+			</effect_group>
+		</entity_class>
+		
+		<!-- *** Backpacker -->
+		<entity_class name="zombieJoeBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieJoe"/>
+			<property name="Mesh" value="@:Entities/Zombies/Joe/ZJoe.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Joe/Materials/HD_Joe2.mat,@:Entities/Zombies/Joe/Materials/HD_Joe3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Joe/Dismemberment/Blade/Head;Joe/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Joe/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Joe/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Joe/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Joe/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Joe/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Joe/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieJoe -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieSteveBackpacker" extends="zombieTemplateShort">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SizeScale" value="0.95"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieSteve"/>
+			<property name="Mesh" value="@:Entities/Zombies/Steve/ZSteve.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Steve/Materials/HD_Steve2.mat,@:Entities/Zombies/Steve/Materials/HD_Steve3.mat,@:Entities/Zombies/Steve/Materials/HD_Steve4.mat,@:Entities/Zombies/Steve/Materials/HD_Steve5.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="6"/>
+			<property name="Mass" value="160"/>
+			<property name="RootMotion" value="true"/>
+
+			<!-- Dismemberment -->
+			<!-- Must match gore dismemberment tags -->
+			<!-- Values for paths point to the AssetBundles Dismemberment folder -->
+
+			<property name ="DismemberTag_L_HeadGore" value="Steve/Dismemberment/Blade/Head;Steve/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Steve/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Steve/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Steve/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Steve/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Steve/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Steve/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieSteve -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieTomClarkBackpacker" extends="zombieTemplateShort">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SizeScale" value="0.95"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieTomClark"/>
+			<property name="Mesh" value="@:Entities/Zombies/TomClark/ZTomClark.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/TomClark/Materials/HD_TomClark2.mat,@:Entities/Zombies/TomClark/Materials/HD_TomClark3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="6"/>
+			<property name="Mass" value="160"/>
+			<property name="RootMotion" value="true"/>			
+
+			<property name ="DismemberTag_L_HeadGore" value="Tomclark/Dismemberment/Blade/Head;Tomclark/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Tomclark/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Tomclark/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Tomclark/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Tomclark/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Tomclark/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Tomclark/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieTomClark -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieBusinessManBackpacker" extends="zombieTemplateShort">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieBusinessMan"/>
+			<property name="Mesh" value="@:Entities/Zombies/Suit/ZSuit.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Suit/Materials/HD_SuitZ2.mat,@:Entities/Zombies/Suit/Materials/HD_SuitZ3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="160"/>
+			<property name="RootMotion" value="true"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Suit/Dismemberment/Blade/Head;Suit/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Suit/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true+sol=true+soltarget=leftforearmroll+solscale=.5,.95,.95"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Suit/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true+sol=true+solscale=0.725,1,1"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="Suit/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Suit/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true+sol=true+soltarget=rightforearmroll+solscale=.5,.95,.95"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Suit/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true+sol=true"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="Suit/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+			<!-- Gameplay zombieBusinessMan -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- slim, regular -->
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieBoeBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,3"/>
+			<property name="SizeScale" value="1.08"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieBoe"/>
+			<property name="SoundRandom" value="zombiemale2roam"/>
+			<property name="SoundAlert" value="zombiemale2alert"/>
+			<property name="SoundAttack" value="zombiemale2attack"/>
+			<property name="SoundHurt" value="zombiemale2pain"/>
+			<property name="SoundDeath" value="zombiemale2death"/>
+			<property name="SoundSense" value="zombiemale2sense"/>
+			<property name="Mesh" value="@:Entities/Zombies/Boe/ZBoe.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Boe/Materials/HD_Boe2.mat,@:Entities/Zombies/Boe/Materials/HD_Boe3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+
+			<property name ="DismemberTag_L_HeadGore" value="Boe/Dismemberment/Blade/Head;Boe/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Boe/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Boe/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Boe/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Boe/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Boe/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Boe/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieBoe -->
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>			
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieJanitorBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieJanitor"/>
+			<property name="Mesh" value="@:Entities/Zombies/Mechanic/ZMechanic.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Mechanic/Materials/HD_MechanicZ2.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Mechanic/Dismemberment/Blade/Head;Mechanic/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Mechanic/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Mechanic/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Mechanic/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Mechanic/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Mechanic/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Mechanic/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieJanitor -->
+			<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+				</effect_group>
+		</entity_class>
+		<entity_class name="zombieMoeBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="SizeScale" value="1.08"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieMoe"/>
+			<property name="Mesh" value="@:Entities/Zombies/Moe/ZMoe.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Moe/Materials/HD_Moe2.mat,@:Entities/Zombies/Moe/Materials/HD_Moe3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="1"/>
+			<property name="Mass" value="210"/>
+			<property name="Weight" value="70"/>
+			<property name="PushFactor" value="20"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+
+			<property name="SoundRandom" value="zombiemale2roam"/>
+			<property name="SoundAlert" value="zombiemale2alert"/>
+			<property name="SoundSense" value="zombiemale2sense"/>
+			<property name="SoundHurt" value="zombiemale2pain"/>
+			<property name="SoundDeath" value="zombiemale2death"/>
+			<property name="SoundAttack" value="zombiemale2attack"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Moe/Dismemberment/Blade/Head;Moe/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Moe/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Moe/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="Moe/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Moe/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Moe/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="Moe/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+			<!-- Gameplay zombieMoe -->
+			<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+				</effect_group>
+			</entity_class>
+			<entity_class name="zombieYoBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SizeScale" value="1.02"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieYo"/>
+			<property name="Mesh" value="@:Entities/Zombies/Yo/ZYo.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Yo/Materials/HD_Yo2.mat,@:Entities/Zombies/Yo/Materials/HD_Yo3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Yo/Dismemberment/Blade/Head;Yo/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Yo/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Yo/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="Yo/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Yo/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Yo/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="Yo/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+			<!-- Gameplay zombieYo -->
+			<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+				</effect_group>
+			</entity_class>
+			<entity_class name="zombieUtilityWorkerBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieUtilityWorker"/>
+			<property name="SoundRandom" value="zombiemale2roam"/>
+			<property name="SoundAlert" value="zombiemale2alert"/>
+			<property name="SoundAttack" value="zombiemale2attack"/>
+			<property name="SoundHurt" value="zombiemale2pain"/>
+			<property name="SoundDeath" value="zombiemale2death"/>
+			<property name="SoundSense" value="zombiemale2sense"/>
+			<property name="Mesh" value="@:Entities/Zombies/Worker/ZWorker.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Worker/Materials/HD_Worker2.mat,@:Entities/Zombies/Worker/Materials/HD_Worker3.mat"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="6"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="AINoiseSeekDist" value="4"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Worker/Dismemberment/Blade/Head;Worker/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Worker/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Worker/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="Worker/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Worker/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Worker/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="Worker/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+			<!-- Gameplay zombieUtilityWorker -->
+			<property name="HandItem" value="meleeHandZombieWorker"/>
+				<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+				</effect_group>
+			</entity_class>
+			<entity_class name="zombieSkateboarderBackpacker" extends="zombieBoe">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieSkateboarder"/>
+			<property name="Mesh" value="@:Entities/Zombies/Thug/ZThug.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Thug/Materials/HD_Thug2.mat,@:Entities/Zombies/Thug/Materials/HD_Thug3.mat"/>
+			
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemalealert"/>
+			<property name="SoundAttack" value="zombiemaleattack"/>
+			<property name="SoundHurt" value="zombiemalepain"/>
+			<property name="SoundDeath" value="zombiemaledeath"/>
+			<property name="SoundSense" value="zombiemalesense"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpack"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Thug/Dismemberment/Blade/Head;Thug/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Thug/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Thug/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="Thug/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Thug/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Thug/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="Thug/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+			<!-- Gameplay zombieSkateboarder -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Fit -->
+			<property name="ExperienceGain" value="400"/><!-- XP Fit -->
+
+			<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDeco"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDeco"/>
+				</effect_group>
+			</entity_class>
+			<entity_class name="zombieArleneBackpacker" extends="zombieTemplateShort">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="SizeScale" value="0.9"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,femaleZombie,zombieArlene"/>
+			<property name="Mesh" value="@:Entities/Zombies/Arlene/ZArlene.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Arlene/Materials/HD_Arlene2.mat,@:Entities/Zombies/Arlene/Materials/HD_Arlene3.mat"/>
+
+			<property name="SoundRandom" value="zombiefemaleroam"/>
+			<property name="SoundAlert" value="zombiefemalealert"/>
+			<property name="SoundAttack" value="zombiefemaleattack"/>
+			<property name="SoundHurt" value="zombiefemalepain"/>
+			<property name="SoundDeath" value="zombiefemaledeath"/>
+			<property name="SoundSense" value="zombiefemalesense"/>
+			<property name="SoundStepType" value="barestep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="3"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="AIPathCostScale" value=".4, .4"/>
+			<property name="NavObjectHeadOffset" value="0,-0.15,0"/>
+			<property name="DanceType" value="2"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+
+			<!--Dismemberment -->
+
+			<property name ="DismemberTag_L_HeadGore" value="Arlene/Dismemberment/Blade/Head;Arlene/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Arlene/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Arlene/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Arlene/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Arlene/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Arlene/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Arlene/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieArlene -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->			
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDecoF"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDecoF"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieMarleneBackpacker" extends="zombieTemplateShort">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,3"/>
+			<property name="SizeScale" value="0.97"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,femaleZombie,zombieMarlene"/>
+			<property name="Mesh" value="@:Entities/Zombies/Marlene/ZMarlene.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Marlene/Materials/HD_Marlene2.mat,@:Entities/Zombies/Marlene/Materials/HD_Marlene3.mat"/>
+
+			<property name="SoundRandom" value="zombiefemale2roam"/>
+			<property name="SoundAlert" value="zombiefemale2alert"/>
+			<property name="SoundAttack" value="zombiefemale2attack"/>
+			<property name="SoundHurt" value="zombiefemale2pain"/>
+			<property name="SoundDeath" value="zombiefemale2death"/>
+			<property name="SoundSense" value="zombiefemale2sense"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="DanceType" value="2"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Marlene/Dismemberment/Blade/Head;Marlene/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Marlene/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Marlene/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Marlene/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Marlene/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Marlene/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Marlene/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieMarlene -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->			
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDecoF"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDecoF"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombiePartyGirlBackpacker" extends="zombieTemplateSlimFemale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SizeScale" value="0.99"/>
+			<property name="SoundStepType" value="heelstep"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,femaleZombie,zombiePartyGirl"/>
+			<property name="Mesh" value="@:Entities/Zombies/CocktailWaitress/ZCocktailWaitress.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/CocktailWaitress/Materials/HD_CocktailWaitress2.mat,@:Entities/Zombies/CocktailWaitress/Materials/HD_CocktailWaitress3.mat"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Cocktailwaitress/Dismemberment/Blade/Head;Cocktailwaitress/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Cocktailwaitress/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Cocktailwaitress/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Cocktailwaitress/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Cocktailwaitress/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Cocktailwaitress/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Cocktailwaitress/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombiePartyGirl -->
+			<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthFit"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDecoF"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDecoF"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieDarleneBackpacker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SizeScale" value="0.98"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,femaleZombie,zombieDarlene"/>
+			<property name="Mesh" value="@:Entities/Zombies/Darlene/ZDarlene.prefab"/>
+			<property name="AltMats" value="@:Entities/Zombies/Darlene/Materials/HD_Darlene2.mat,@:Entities/Zombies/Darlene/Materials/HD_Darlene3.mat"/>
+			
+			<property name="SoundRandom" value="zombiefemale2roam"/>
+			<property name="SoundAlert" value="zombiefemale2alert"/>
+			<property name="SoundAttack" value="zombiefemale2attack"/>
+			<property name="SoundHurt" value="zombiefemale2pain"/>
+			<property name="SoundDeath" value="zombiefemale2death"/>
+			<property name="SoundSense" value="zombiefemale2sense"/>
+			<property name="SoundStepType" value="barestep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="3"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="DanceType" value="2"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBackpackF"/>
+
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value="Darlene/Dismemberment/Blade/Head;Darlene/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true+ico=true;type=blunt+target=neck+atp=true+ico=true"/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value="Darlene/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value="Darlene/Dismemberment/Blade/LeftLowerLeg" data="type=blade+target=leftleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value="Darlene/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value="Darlene/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value="Darlene/Dismemberment/Blade/RightLowerLeg" data="type=blade+target=rightleg+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value="Darlene/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value="linked" data="DismemberTag_L_LeftLowerLegGore"/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value="linked" data="DismemberTag_L_RightLowerLegGore"/>
+
+			<!-- Gameplay zombieDarlene -->
+			<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+					<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBackpackDecoF"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBackpackDecoF"/>
+				</effect_group>
+			</entity_class>			
+			
+			<entity_class name="EntityLootContainerBackpack">
+				<property name="Class" value="EntityLootContainer"/>
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Mesh" value="@:Entities/LootContainers/backpack01Prefab.prefab"/>
+				<property name="ModelType" value="Custom"/>
+				<property name="Prefab" value="Backpack"/>
+				<property name="Parent" value="Backpack"/>
+				<property name="IsEnemyEntity" value="false"/>
+				<property name="TimeStayAfterDeath" value="3600"/>
+				<property name="LootListOnDeath" value="zombieBackpack"/>
+				<property name="Faction" value="none"/>
+				<property name="SizeScale" value=".8"/>
+			</entity_class>
+			<entity_class name="EntityLootContainerBackpackF">
+				<property name="Class" value="EntityLootContainer"/>
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Mesh" value="@:Entities/LootContainers/backpack03Prefab.prefab"/>
+				<property name="ModelType" value="Custom"/>
+				<property name="Prefab" value="Backpack"/>
+				<property name="Parent" value="Backpack"/>
+				<property name="IsEnemyEntity" value="false"/>
+				<property name="TimeStayAfterDeath" value="3600"/>
+				<property name="LootListOnDeath" value="zombieBackpack"/>
+				<property name="Faction" value="none"/>
+				<property name="SizeScale" value=".8"/>
+			</entity_class>
+	</append>
+		<!-- ### Random Armor -->
+	
+	<append xpath="/entity_classes/entity_class[(contains(@name, 'zombieSteve') or contains(@name, 'zombieTomClark') 
+	or contains(@name, 'zombieBoe') or contains(@name, 'zombieJanitor') or contains(@name, 'zombieInmate') or contains(@name, 'zombieYo') or contains(@name, 'zombieDemolition') or contains(@name, 'zombieWight') or contains(@name, 'zombieSkate') and not (contains(@name, 'zombieSteveCrawler')))]">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="eftZombieRandomArmorHead,eftZombieRandomArmorBody"/>
+		</effect_group>
+	</append>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'zombieJoe') or contains(@name, 'zombieUtilityWorker')]">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="eftZombieRandomArmorBody"/>
+		</effect_group>
+	</append>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'zombieBusinessMan') or contains(@name, 'zombieSoldier') or contains(@name, 'zombieBiker')]">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="eftZombieRandomArmorHead"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/entity_classes">
+		<!-- *** Lumberjack KS-23 -->
+		<entity_class name="EntityLootContainerLootLumber2">
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Mesh" value="#@modfolder(EFTX_Pack_Core):Resources/ks23.unity3d?guntarkovks23.prefab"/> <!-- Falling Trough Map ? -->
+			<!--property name="Mesh" value="@:Other/Items/Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab"/-->
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="LootListOnDeath" value="zombieLootGobBagDemo"/>
+			<property name="Faction" value="none"/>
+		</entity_class>
+	</append>
+</EFTX>
