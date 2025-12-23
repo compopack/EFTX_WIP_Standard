@@ -1,4 +1,4 @@
-<configs>
+<EFTX>	<!-- STANDARD -->
 		<!-- ### Item Modifiers -->
 
 	<append xpath="/buffs">
@@ -810,4 +810,4 @@
 		</buff>
 	</append>
 		
-</configs>
+</EFTX>

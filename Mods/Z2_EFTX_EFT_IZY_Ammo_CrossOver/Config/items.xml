@@ -4924,23 +4924,48 @@
     <append xpath="//item[starts-with(@name,'ammoShotgun')]/effect_group">
                 <passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
     </append>
-	
-	<!--  Allows EFT guns to use Izayo ammo  -->
-	<append xpath="//item[@name='ammoShotgunShellDragoBreath']/effect_group">
-                <passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
-		</append> 
-		<append xpath="//item[@name='ammo762mmExplosiveFragmentations']/effect_group[@name='ammo762mmBulletBall']">
-                <passive_effect name="MaxRange" operation="base_set" value="500" tags="perkDeadEye,perkMachineGunner"/>
-		</append>
-	
-    <append xpath="//item[starts-with(@name,'ammo556')]/effect_group">
-                <passive_effect name="MaxRange" operation="base_set" value="500" tags="perkDeadEye,perkMachineGunner"/>
-    </append>
-    <append xpath="//item[starts-with(@name,'ammo45')]/effect_group">
-                <passive_effect name="MaxRange" operation="base_set" value="200" tags="perkGunslinger"/>
-    </append>	
 	</if>
 	</conditional>
+	<conditional>
+			<if cond="mod_loaded('EFTX_Pack_Standard') or mod_loaded('EFTX_Pack_Slow_Progress') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('IZY_RMP_556pack') and mod_loaded('IZY_RMP_SG') and mod_loaded('IZY_RMP_762pack')">
+			<!--  Allows EFT guns to use Izayo ammo  -->
+				<append xpath="//item[@name='ammoShotgunShellDragoBreath']/effect_group">
+				<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
+				</append> 
+				<append xpath="//item[@name='ammo762mmExplosiveFragmentations']/effect_group[@name='ammo762mmBulletBall']">
+				<passive_effect name="MaxRange" operation="base_set" value="500" tags="perkDeadEye,perkMachineGunner"/>
+				</append>
+				<append xpath="//item[@name='ammoShotgunShellPremium']/effect_group">
+          		<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
+				</append> 			
+				<append xpath="//item[starts-with(@name,'ammo556')]/effect_group">
+				<passive_effect name="MaxRange" operation="base_set" value="500" tags="perkDeadEye,perkMachineGunner"/>
+				</append>
+				<append xpath="//item[starts-with(@name,'ammo45')]/effect_group">
+				<passive_effect name="MaxRange" operation="base_set" value="200" tags="perkGunslinger"/>
+				</append>
+				</if>
+				</conditional>
+				<conditional>
+				<if cond="mod_loaded('Z6_EFTX_Armored_Zs') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('IZY_RMP_556pack') and mod_loaded('IZY_RMP_SG') and mod_loaded('IZY_RMP_762pack')">
+				<remove xpath="/items/item[@name='ammo556mmBulletBall']/effect_group[@name='ammo762mmBulletBall']/passive_effect[@name='TargetArmor']"></remove>
+				<remove xpath="/items/item[@name='ammo556mmBulletBall']/effect_group[@name='ammo762mmBulletBall']/display_value[@name='dTargetArmor']"></remove>
+				<remove xpath="/items/item[@name='ammo556mmBulletBall']/effect_group[@name='ammo762mmBulletBall']/passive_effect[@name='EntityPenetrationCount']"></remove>
+				<remove xpath="/items/item[@name='ammo556mmBulletBall']/effect_group[@name='ammo762mmBulletBall']/display_value[@name='dTargetPenetration']"></remove>
+				<remove xpath="/items/item[@name='ammo556mmHIpower']/effect_group[@name='ammo762mmBulletBall']/passive_effect[@name='TargetArmor']"></remove>
+				<remove xpath="/items/item[@name='ammo556mmHIpower']/effect_group[@name='ammo762mmBulletBall']/display_value[@name='dTargetArmor']"></remove>
+
+				<append xpath="/items/item[@name='ammo45ACPArmorpiecing']/effect_group[@name='perkPenetrator']">
+				<display_value name="dTargetArmorDMG" value="81"/>
+				<display_value name="dTargetArmorPEN" value="30"/>
+				</append>
+
+				<append xpath="/items/item[@name='ammo45ACPEnhanced']/effect_group[@name='perkPenetrator']">
+				<display_value name="dTargetArmorDMG" value="110"/>
+				<display_value name="dTargetArmorPEN" value="55"/>
+				</append>
+				</if>
+				</conditional>	
 	
 	
 	
