@@ -6664,9 +6664,7 @@
 			<display_value name="DegradationPerUse" value=".05,.10"/>
 			<display_value name="dDegradationPerUse" value=".05,.10"/>
 			</append>
-			</if>
-			</conditional>
-            <!-- AMMOEFT4053VOG25 -->
+			<!-- AMMOEFT4053VOG25 -->
             <!-- ammoEft9340pg7vl -->
 			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft9340pg7vl']/property[@name='DisplayType']" name="value">ammoLauncher</setattribute>

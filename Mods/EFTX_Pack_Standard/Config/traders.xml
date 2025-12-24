@@ -143,11 +143,7 @@
 		<trader_item_group name="EFTXschematicsT3">
 		<item name="schematicHelmetLight3"/>
 		<item name="schematictacticalANPEQ15"/>
-		<item name="schematictacticalFlashlightSurefireX400"/>
-		<item name="schematictacticalFlashlightZenit2U"/>
-		<item name="schematictacticalFlashlightArmyTekPredator"/>
-		<item name="schematictacticalFlashlightUltraFire"/>
-		<item name="schematictacticalFlashlightWMX200"/>
+		<item name="schematicmount_shotgun_shell_holder"/>
 		<item name="schematicscopeaimpointAcroP1canted"/>
 		<item name="schematicscopeaimpointMicroH2canted"/>
 		<item name="schematicscopeaimpointMicroT1canted"/>
@@ -156,6 +152,11 @@
 		<item name="schematicscopeSIGromeo4canted"/>
 		<item name="schematicscopeRMRcanted"/>
 		<item name="schematicscopeleupolddeltapointcanted"/>
+		<item name="schematictacticalFlashlightSurefireX400"/>
+		<item name="schematictacticalFlashlightZenit2U"/>
+		<item name="schematictacticalFlashlightArmyTekPredator"/>
+		<item name="schematictacticalFlashlightUltraFire"/>
+		<item name="schematictacticalFlashlightWMX200"/>
 		<item name="schematicatlasv8bt10"/>
 		<item name="schematicar15coltm20340x46"/>
 		<item name="schematicaktozgp2540vog"/>
@@ -214,7 +215,10 @@
 		<item name="schematicstock_ak_zenit_pt_3"/>
 		<item name="schematicstock_ak_hera_arms_cqr47"/>
 		<item name="schematicstock_fal_magpul_prs_2"/>
-		<item name="schematicNightVision2"/>
+		<item name="schematicNightVision2"/>	
+		<item name="schematictacticalFlashlightSurefireXC1"/>
+		<item name="schematictacticalNCStarBlueLaser"/>		
+		<item name="schematictacticalHolosunLS321"/>
 		</trader_item_group>
 		<trader_item_group name="EFTXschematicsT4">
 		<item name="schematicforegripallzenitb25urk1"/>
@@ -252,7 +256,7 @@
 		<item name="schematicmuzzle_ak74_srvv_mbr_jet_545_545x39"/>
 		<item name="schematicmuzzle_ak_zenit_dtk1_762x39_545x39"/>
 		<item name="schematicsilencer_hexagon_ak_762x39and545x39"/>
-		<item name="schematicsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>	
+		<item name="schematicsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>			
 		<item name="schematicmuzzle_ash12_ckib_ash12_std_127x55"/>
 		<item name="schematicsilencer_ash12_ckib_ash12_std_127x55"/>
 		<item name="schematicmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
@@ -285,6 +289,8 @@
 		<item name="schematicstock_sig_mpx_brace"/>
 		<item name="schematicstock_sig_mpx_maxim_defence_cqb_stock"/>
 		<item name="schematicstock_mk17_vltor_vss_11"/>
+		<item name="schematicstock_ar15_colt_n1"/>
+		<item name="schematicstock_ar15_magpul_acs_carbine"/>		
 		<item name="schematicNightVision3"/>	
 		</trader_item_group>
 		<trader_item_group name="EFTXschematicsT5">		
@@ -297,6 +303,7 @@
 		<item name="schematicscopeSIGTango6T16x2430mm"/>
 		<item name="schematicscopeRazorHDGen216x2430mm"/>
 		<item name="schematicscopeNFATACR735x5634mm"/>
+		<item name="schematicmag_aa12_drum_mag_12g_32"/>
 		<item name="schematicscopeHensoldtFF416x5634mm"/>
 		<item name="schematicmag_ak_izhmash_rpk16_drum_545x39_95"/>
 		<item name="schematicmag_ak_steel_drum_762x39_100"/>
@@ -321,7 +328,8 @@
 		<item name="schematicstock_sig_mpx_pmm_ulss"/>
 		<item name="schematicstock_sig_telescoping_stock"/>
 		<item name="schematicstock_sig_thin_folding_stock"/>
-		<item name="schematicstock_pk_zenit_pt2_classic"/>			
+		<item name="schematicstock_pk_zenit_pt2_classic"/>
+		<item name="schematicstock_sig_magpul_ucs"/>			
 		</trader_item_group>
 		</insertBefore>
 		
@@ -343,7 +351,7 @@
 			<item name="modscopewalthermrsreflex"/>
 			<item name="modscopeEOTech553holo"/>
 			<item name="modscopeBelOMOPSO1M2"/>
-			<item name="modscopemonstrumcompact"/>			
+			<item name="modscopemonstrumcompact"/>						
 			<item name="modmag_pm_custom_9x18pm_84"/>
 			<item name="modmag_kedr_custom_9x18pm_75"/>
 			<item name="modmag_glock_glock_big_stick_9x19_33"/>
@@ -362,7 +370,7 @@
 			<item name="modArmorHelmetLight2"/>	
 			<item name="modArmorNightVision"/>
 			<item name="modhandguard_uzi_iwi_vertical_grip_railed"/>
-			<item name="modforegrip_all_hk_sturmgriff_assault_grip"/>
+			<item name="modforegrip_all_hk_sturmgriff_assault_grip"/>			
 			<item name="modscopeaimpointAcroP1_backup"/>
 			<item name="modscopeaimpointMicroH2_backup"/>
 			<item name="modscopeaimpointMicroT1_backup"/>
@@ -415,13 +423,17 @@
 			<item name="modArmorNightVision2"/>
 			<item name="modtacticalANPEQ15"/>
 			<item name="modtacticalFlashlightSurefireX400"/>
+			<item name="modmount_shotgun_shell_holder"/>
+			<item name="modtacticalHolosunLS321"/>
+			<item name="modtacticalFlashlightSurefireXC1"/>
+			<item name="modtacticalNCStarBlueLaser"/>
 			<item name="modtacticalFlashlightZenit2U"/>
+			<item name="modmag_ppsh_zis_std_762x25_71"/>
+			<item name="modmag_tt_custom_drum_762x25_75"/>
 			<item name="modtacticalFlashlightArmyTekPredator"/>
 			<item name="modtacticalFlashlightUltraFire"/>
 			<item name="modtacticalFlashlightWMX200"/>
 			<item name="modforegrip_all_magpul_rvg"/>
-			<item name="modmag_ppsh_zis_std_762x25_71"/>
-			<item name="modmag_tt_custom_drum_762x25_75"/>
 			<item name="modscopeaimpointAcroP1canted"/>
 			<item name="modscopeaimpointMicroH2canted"/>
 			<item name="modscopeaimpointMicroT1canted"/>
@@ -526,7 +538,7 @@
 			<item name="modmuzzle_ak74_srvv_mbr_jet_545_545x39"/>
 			<item name="modmuzzle_ak_zenit_dtk1_762x39_545x39"/>
 			<item name="modsilencer_hexagon_ak_762x39and545x39"/>
-			<item name="modsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>
+			<item name="modsilencer_ak12_izhmash_ak12_supressor_std_545x39"/>			
 			<item name="modmuzzle_ash12_ckib_ash12_std_127x55"/>
 			<item name="modsilencer_ash12_ckib_ash12_std_127x55"/>
 			<item name="modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
@@ -560,6 +572,8 @@
 			<item name="modstock_sig_mpx_brace"/>
 			<item name="modstock_sig_mpx_maxim_defence_cqb_stock"/>
 			<item name="modstock_mk17_vltor_vss_11"/>
+			<item name="modstock_ar15_colt_n1"/>
+			<item name="modstock_ar15_magpul_acs_carbine"/>
 			</trader_item_group>
 			<trader_item_group name="EFTXModsT5">
 			<item name="modscopeSBPMII320x5034mm"/>
@@ -595,7 +609,9 @@
 			<item name="modstock_sig_mpx_pmm_ulss"/>
 			<item name="modstock_sig_telescoping_stock"/>
 			<item name="modstock_sig_thin_folding_stock"/>
-			<item name="modstock_pk_zenit_pt2_classic"/>
+			<item name="modstock_pk_zenit_pt2_classic"/>			
+			<item name="modmag_aa12_drum_mag_12g_32"/>
+			<item name="modstock_sig_magpul_ucs"/>
 			</trader_item_group>
 	</insertBefore>
 	<append xpath="/traders/trader_info[@id='8']/trader_items[1][@count='all']">

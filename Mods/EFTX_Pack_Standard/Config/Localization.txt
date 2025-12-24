@@ -301,36 +301,85 @@ modscopePU3_5x,"[09FF00]PU 3.5x Scope[-]"
 modscopePU3_5xDesc,"Weight: [FFFFFF]0.440kg[-]\n\nCompatibility: Mosin Nagant," SVT-40"
 modscopeaimpointAcroP1,"[09FF00]Aimpoint ACRO P-1 Reflex Sight[-]"
 modscopeaimpointAcroP1Desc,"Weight: [FFFFFF]0.130kg[-]\n\nCompatibility: most firearms"
+modscopeaimpointAcroP1_backup,"[09FF00]Aimpoint ACRO P-1 reflex sight (backup)[-]
+modscopeaimpointAcroP1_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeaimpointAcroP1canted,"[09FF00]Aimpoint ACRO P-1 reflex sight (Canted)[-]
 modscopeaimpointAcroP1cantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeaimpointMicroH2,"[09FF00]Aimpoint Micro H2 Reflex Sight[-]"
 modscopeaimpointMicroH2Desc,"Weight: [FFFFFF]0.109kg[-]\n\nCompatibility: most firearms"
+modscopeaimpointMicroH2_backup,"[09FF00]Aimpoint Micro H-2 reflex sight (backup)[-]
+modscopeaimpointMicroH2_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeaimpointMicroH2canted,"[09FF00]Aimpoint Micro H-2 reflex sight (Canted)[-]
 modscopeaimpointMicroH2cantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
+
 modscopeaimpointMicroT1,"[09FF00]Aimpoint Micro T1 Reflex Sight[-]"
 modscopeaimpointMicroT1Desc,"Weight: [FFFFFF]0.099kg[-]\n\nCompatibility: most firearms"
+modscopeaimpointMicroT1_backup,"[09FF00]Aimpoint Micro T-1 reflex sight (backup)[-]
+modscopeaimpointMicroT1_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeaimpointMicroT1canted,"[09FF00]Aimpoint Micro T-1 reflex sight (Canted)[-]
 modscopeaimpointMicroT1cantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeBelOMmodscopeBelOMOpk06,"[09FF00]BelOMO PK-06 Reflex Sight[-]"
 modscopeBelOMOpk06Desc,"Weight: [FFFFFF]0.090kg[-]\n\nCompatibility: most firearms"Opk06
+modscopeBelOMOpk06_backup,"[09FF00]BelOMO PK-06 reflex sight (backup)[-]
+modscopeBelOMOpk06_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeBelOMOpk06canted,"[09FF00]BelOMO PK-06 reflex sight (Canted)[-]
 modscopeBelOMOpk06cantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeburrisfastfire,"[09FF00]Burris Fastfire Reflex 3 Sight[-]"
 modscopeburrisfastfireDesc,"Weight: [FFFFFF]0.042kg[-]\n\nCompatibility: most firearms"
+modscopeburrisfastfire_backup,"[09FF00]Burris FastFire 3 reflex sight (backup)[-]
+modscopeburrisfastfire_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeburrisfastfirecanted,"[09FF00]Burris FastFire 3 reflex sight (Canted)[-]
 modscopeburrisfastfirecantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeSIGromeo4,"[09FF00]SIG SAUER ROMEO 4 Reflex Sight[-]"
 modscopeSIGromeo4Desc,"Weight: [FFFFFF]0.104kg[-]\n\nCompatibility: most firearms"
+modscopeSIGromeo4_backup,"[09FF00]SIG Sauer ROMEO4 reflex sight (backup)[-]
+modscopeSIGromeo4_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeSIGromeo4canted,"[09FF00]SIG Sauer ROMEO4 reflex sight (Canted)[-]
 modscopeSIGromeo4cantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeRMR,"[09FF00]Trijicon RMR Reflex Sight[-]"
 modscopeRMRDesc,"Weight: [FFFFFF]0.042kg[-]\n\nCompatibility: most firearms"
+modscopeRMR_backup,"[09FF00]Trijicon RMR reflex sight (backup)[-]
+modscopeRMR_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeRMRcanted,"[09FF00]Trijicon RMR reflex sight (Canted)[-]
 modscopeRMRcantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
 modscopeleupolddeltapoint,"[09FF00]Leupold DeltaPoint Reflex Sight[-]"
 modscopeleupolddeltapointDesc,"Weight: [FFFFFF]0.098kg[-]\n\nCompatibility: most firearms"
+modscopeleupolddeltapoint_backup,"[09FF00]Leupold DeltaPoint reflex sight (backup)[-]
+modscopeleupolddeltapoint_backupDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
 modscopeleupolddeltapointcanted,"[09FF00]Leupold DeltaPoint reflex sight (Canted)[-]
 modscopeleupolddeltapointcantedDesc,"Same optic," mounted on a back-up offset sight mount for quick close-range target acquisition.\n\nUse the Light Source ([D3CE1D][action:permanent:ToggleFlashlight][action:local:ToggleFlashlight][-]) action to switch sights."
+
+modtacticalHolosunLS321,"[09FF00]LS 321 Tactical Holosun[-]"
+modtacticalHolosunLS321Desc,"[-]\n\nCompatibility: TBA"
+
+modtacticalNCStarBlueLaser,"[09FF00]NC Blue Laser[-]"
+modtacticalNCStarBlueLaserDesc,"[-]\n\nCompatibility: TBA"
+
+modtacticalFlashlightSurefireXC1,"[09FF00]XC1 Surefire Flashlight[-]"
+modtacticalFlashlightSurefireXC1Desc,"[-]\n\nCompatibility: TBA"
+
+modmount_shotgun_shell_holder,"[09FF00]Shotgun Shell Holder Mount[-]"
+modmount_shotgun_shell_holderDesc,"[-]\n\nCompatibility: TBA"
+
+modmag_aa12_drum_mag_12g_32,"[09FF00]AA12 12g 32 Drum Mag[-]"
+modmag_aa12_drum_mag_12g_32Desc,"[-]\n\nCompatibility: AA12"
+
+modstock_ar15_colt_n1,"[09FF00]AR15 N1 Colt Stock[-]"
+modstock_ar15_colt_n1Desc,"[-]\n\nCompatibility: TBA"
+
+modstock_ar15_magpul_acs_carbine,"[09FF00]AR15 ACS Carbine Stock[-]"
+modstock_ar15_magpul_acs_carbineDesc,"[-]\n\nCompatibility: TBA"
+
+modstock_sig_magpul_ucs,"[09FF00]UCS Sig Magpul Stock[-]"
+modstock_sig_magpul_ucsDesc,"[-]\n\nCompatibility: TBA"
+
 modscopeAimPointCompM4,"[09FF00]AimPoint CompM4 Reflex Sight[-]"
 modscopeAimPointCompM4Desc,"Weight: [FFFFFF]0.445kg[-]\n\nCompatibility: most firearms"
 modscopeAimPointPro,"[09FF00]AimPoint PRO Reflex Sight[-]"
@@ -1077,6 +1126,13 @@ craftinggunm870,"m870"
 craftinggunm870Name,"m870"
 craftinggunm870Desc,"Reading [DECEA3]m870[-] enables you to craft m870."
 craftinggunm870LongDesc,"Long Desc"
+
+Guntoz106SkillMagazine,"toz 106 Magazine"
+Guntoz106SkillMagazineDesc,"Crafting a toz 106\nImproves toz 106 weapon crafting skill"
+craftingguntoz 106,"toz 106"
+craftingguntoz 106Name,"toz 106"
+craftingguntoz 106Desc,"Reading [DECEA3]toz 106[-] enables you to craft toz 106 Sawn Off Shotgun."
+craftingguntoz 106LongDesc,"Long Desc"
 
 Gunksg12SkillMagazine,"ksg12 Magazine"
 Gunksg12SkillMagazineDesc,"Crafting a ksg12\nImproves ksg12 weapon crafting skill"
@@ -1869,6 +1925,13 @@ perkM590Rank4Desc,"M590 T4"
 perkM590Rank5Desc,"M590 T5"
 perkM590Rank6Desc,"M590 T6"
 
+perkToz106Rank1Desc,"Toz106 T1"
+perkToz106Rank2Desc,"Toz106 T2"
+perkToz106Rank3Desc,"Toz106 T3"
+perkToz106Rank4Desc,"Toz106 T4"
+perkToz106Rank5Desc,"Toz106 T5"
+perkToz106Rank6Desc,"Toz106 T6"
+
 perkM870Rank1Desc,"M870 T1"
 perkM870Rank2Desc,"M870 T2"
 perkM870Rank3Desc,"M870 T3"
@@ -2316,6 +2379,76 @@ perkAK50Rank3Desc,"AK50 T3"
 perkAK50Rank4Desc,"AK50 T4"
 perkAK50Rank5Desc,"AK50 T5"
 perkAK50Rank6Desc,"AK50 T6"
+
+perkmp133Rank1Desc,"mp133 T1"
+perkmp133Rank2Desc,"mp133 T2"
+perkmp133Rank3Desc,"mp133 T3"
+perkmp133Rank4Desc,"mp133 T4"
+perkmp133Rank5Desc,"mp133 T5"
+perkmp133Rank6Desc,"mp133 T6"
+
+perkmxlrRank1Desc,"mxlr T1"
+perkmxlrRank2Desc,"mxlr T2"
+perkmxlrRank3Desc,"mxlr T3"
+perkmxlrRank4Desc,"mxlr T4"
+perkmxlrRank5Desc,"mxlr T5"
+perkmxlrRank6Desc,"mxlr T6"
+
+perkm16a1Rank1Desc,"m16a1 T1"
+perkm16a1Rank2Desc,"m16a1 T2"
+perkm16a1Rank3Desc,"m16a1 T3"
+perkm16a1Rank4Desc,"m16a1 T4"
+perkm16a1Rank5Desc,"m16a1 T5"
+perkm16a1Rank6Desc,"m16a1 T6"
+
+perkmk12sprRank1Desc,"mk12spr T1"
+perkmk12sprRank2Desc,"mk12spr T2"
+perkmk12sprRank3Desc,"mk12spr T3"
+perkmk12sprRank4Desc,"mk12spr T4"
+perkmk12sprRank5Desc,"mk12spr T5"
+perkmk12sprRank6Desc,"mk12spr T6"
+
+perknl545Rank1Desc,"nl545 T1"
+perknl545Rank2Desc,"nl545 T2"
+perknl545Rank3Desc,"nl545 T3"
+perknl545Rank4Desc,"nl545 T4"
+perknl545Rank5Desc,"nl545 T5"
+perknl545Rank6Desc,"nl545 T6"
+
+Gunnl545SkillMagazine,"nl545 Magazine"
+Gunnl545SkillMagazineDesc,"Crafting a nl545\nImproves nl545 weapon crafting skill"
+craftinggunnl545,"nl545"
+craftinggunnl545Name,"nl545"
+craftinggunnl545Desc,"Reading [DECEA3]nl545[-] enables you to craft nl545 Sawn Off Shotgun."
+craftinggunnl545LongDesc,"Long Desc"
+
+Gunmk12sprSkillMagazine,"mk12spr Magazine"
+Gunmk12sprSkillMagazineDesc,"Crafting a mk12spr\nImproves mk12spr weapon crafting skill"
+craftinggunmk12spr,"mk12spr"
+craftinggunmk12sprName,"mk12spr"
+craftinggunmk12sprDesc,"Reading [DECEA3]mk12spr[-] enables you to craft mk12spr Sawn Off Shotgun."
+craftinggunmk12sprLongDesc,"Long Desc"
+
+Gunm16a1SkillMagazine,"m16a1 Magazine"
+Gunm16a1SkillMagazineDesc,"Crafting a m16a1\nImproves m16a1 weapon crafting skill"
+craftinggunm16a1,"m16a1"
+craftinggunm16a1Name,"m16a1"
+craftinggunm16a1Desc,"Reading [DECEA3]m16a1[-] enables you to craft m16a1 Sawn Off Shotgun."
+craftinggunm16a1LongDesc,"Long Desc"
+
+GunmxlrSkillMagazine,"mxlr Magazine"
+GunmxlrSkillMagazineDesc,"Crafting a mxlr\nImproves mxlr weapon crafting skill"
+craftinggunmxlr,"mxlr"
+craftinggunmxlrName,"mxlr"
+craftinggunmxlrDesc,"Reading [DECEA3]mxlr[-] enables you to craft mxlr Sawn Off Shotgun."
+craftinggunmxlrLongDesc,"Long Desc"
+
+Gunmp133SkillMagazine,"mp133 Magazine"
+Gunmp133SkillMagazineDesc,"Crafting a mp133\nImproves mp133 weapon crafting skill"
+craftinggunmp133,"mp133"
+craftinggunmp133Name,"mp133"
+craftinggunmp133Desc,"Reading [DECEA3]mp133[-] enables you to craft mp133 Sawn Off Shotgun."
+craftinggunmp133LongDesc,"Long Desc"
 
 perkEFTXSMGSRank1Desc,"Bloody Galah"
 perkEFTXSMGSRank2Desc,"Stupid Peacock"
@@ -3024,6 +3157,39 @@ schematicscopeKMZ1p69Weaver,"[004CFF]KMZ 1P69 3-10x Scope Weaver[-] Schematic"
 schematicscopeKMZ1p69WeaverDesc,"Reading this allows you to craft the KMZ 1P69 3-10x Scope Weaver Attachment:"
 schematicscopeKMZ1p69Dovetail,"[004CFF]KMZ 1P69 3-10x Scope Dovetail[-] Schematic"
 schematicscopeKMZ1p69DovetailDesc,"Reading this allows you to craft the KMZ 1P69 3-10x Scope Dovetail Attachment:"
+
+schematictacticalHolosunLS321,"[004CFF]LS 321 Tactical Holoscope[-] Schematic"
+schematictacticalHolosunLS321Desc,"Reading this allows you to craft the LS 321 Tactical Holoscope:"
+schematictacticalNCStarBlueLaser,"[004CFF]NC Star Blue Laser[-] Schematic"
+schematictacticalNCStarBlueLaserDesc,"Reading this allows you to craft the NC Star Blue Laser:"
+schematictacticalFlashlightSurefireXC1,"[004CFF]XC1 SureFire Flashlight[-] Schematic"
+schematictacticalFlashlightSurefireXC1Desc,"Reading this allows you to craft the XC1 SureFire Flashlight:"
+schematicmount_shotgun_shell_holder,"[004CFF]Shotgun Shell Mount Holder[-] Schematic"
+schematicmount_shotgun_shell_holderDesc,"Reading this allows you to craft the Shotgun Shell Mount Holder:"
+schematicmag_aa12_drum_mag_12g_32,"[004CFF]AA12 12g 32 Drum Mag[-] Schematic"
+schematicmag_aa12_drum_mag_12g_32Desc,"Reading this allows you to craft the AA12 12g 32 Drum Mag:"
+schematicstock_ar15_colt_n1,"[004CFF]AR15 Colt N1 Stock[-] Schematic"
+schematicstock_ar15_colt_n1Desc,"Reading this allows you to craft the AR15 Colt N1 Stock:"
+schematicstock_ar15_magpul_acs_carbine,"[004CFF]AR15 ACS Stock Carbine[-] Schematic"
+schematicstock_ar15_magpul_acs_carbineDesc,"Reading this allows you to craft the AR15 ACS Stock Carbine:"
+schematicstock_sig_magpul_ucs,"[004CFF]UCS Sig Magpul Stock[-] Schematic"
+schematicstock_sig_magpul_ucsDesc,"Reading this allows you to craft the UCS Sig Magpul Stock:"
+schematicscopeaimpointAcroP1_backup,"[004CFF]Aimpoint ACRO P-1 Reflex Sight(Backup)[-] Schematic"
+schematicscopeaimpointAcroP1_backupDesc,"Reading this allows you to craft the Aimpoint ACRO P-1 Reflex Sight(Backup):"
+schematicscopeaimpointMicroH2_backup,"[004CFF]Aimpoint Micro H-2 reflex sight (Backup)[-] Schematic"
+schematicscopeaimpointMicroH2_backupDesc,"Reading this allows you to craft the Aimpoint Micro H-2 reflex sight (Backup):"
+schematicscopeaimpointMicroT1_backup,"[004CFF]Aimpoint Micro T-1 reflex sight(Backup)[-] Schematic"
+schematicscopeaimpointMicroT1_backupDesc,"Reading this allows you to craft the Aimpoint Micro T-1 reflex sight(Backup):"
+schematicscopeBelOMOpk06_backup,"[004CFF]BelOMO PK-06 reflex sight(Backup)[-] Schematic"
+schematicscopeBelOMOpk06_backupDesc,"Reading this allows you to craft the BelOMO PK-06 reflex sight(Backup):"
+schematicscopeburrisfastfire_backup,"[004CFF]Burris FastFire 3 reflex sight(Backup)[-] Schematic"
+schematicscopeburrisfastfire_backupDesc,"Reading this allows you to craft the Burris FastFire 3 reflex sight(Backup):"
+schematicscopeSIGromeo4_backup,"[004CFF]SIG Sauer ROMEO4 reflex sight(Backup)[-] Schematic"
+schematicscopeSIGromeo4_backupDesc,"Reading this allows you to craft the SIG Sauer ROMEO4 reflex sight(Backup):"
+schematicscopeRMR_backup,"[004CFF]Trijicon RMR reflex sight(Backup)[-] Schematic"
+schematicscopeRMR_backupDesc,"Reading this allows you to craft the Aimpoint ACRO P-1 Reflex Sight(Backup):"
+schematicscopeleupolddeltapoint_backup,"[004CFF]Leupold DeltaPoint reflex sight(Backup)[-] Schematic"
+schematicscopeleupolddeltapoint_backupDesc,"Reading this allows you to craft the Leupold DeltaPoint reflex sight(Backup):"
 
 schematicsmag_ppsh_zis_std_762x25_71,"PPSh 71-Round Magazine[-] Schematic"
 schematicsmag_ppsh_zis_std_762x25_71Desc,"Reading this allows you to craft the PPSh 71-Round Magazine Attachment"
