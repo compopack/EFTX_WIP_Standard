@@ -1050,9 +1050,7 @@
 			<display_value name="DegradationPerUse" value=".01,.05"/>
 			<display_value name="dDegradationPerUse" value=".01,.05"/>
 			</append>
-			</if>
-			</conditional>
-            <!-- AMMOEFT4046381 -->
+			<!-- AMMOEFT4046381 -->
             <!-- AMMOEFT4046576 -->
 			<setattribute xpath="/items/item[@name='ammoEft4046576']/property[@name='Tags']" name="value">ammo,perkDemolitionsExpert</setattribute>
 			<setattribute xpath="/items/item[@name='ammoEft4046576']/property[@name='Meshfile']" name="value">#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?patron_40x46_M576.prefab</setattribute>
