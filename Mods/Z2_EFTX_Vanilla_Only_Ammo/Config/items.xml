@@ -954,7 +954,8 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft4053vog25" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft4046576" operation="set" value="1"/> 	
     </append>
-	
+	</if>
+	</conditional>
 <!-- ************************************************************************************************ -->
 <!--						STALLIONS EDITS															  -->
 <!-- ************************************************************************************************ -->

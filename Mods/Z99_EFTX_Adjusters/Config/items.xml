@@ -625,7 +625,7 @@ ALL FOOD ADDONS
 			</if>
 			</conditional>
 			<conditional>
-			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') ">
+			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo') ">
             <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
             <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='EconomicValue']" name="value">10</setattribute>
             <!-- *********************************************************************************************************************************************** -->
@@ -659,7 +659,7 @@ ALL FOOD ADDONS
         </if>
     </conditional>
     <conditional>
-        <if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') ">
+        <if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
             <!-- AMMOEFT54539 -->
             <setattribute xpath="/items/item[@name='ammoEft54539']/property[@name='Stacknumber']" name="value">350</setattribute>
             <setattribute xpath="/items/item[@name='ammoEft54539']/property[@name='EconomicValue']" name="value">10</setattribute>
@@ -1152,7 +1152,7 @@ ALL FOOD ADDONS
 			</if>
 			</conditional>
 			<conditional>
-			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') ">
+			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo)">
             <!-- GRENADEIMPACTRGN -->
             <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='Stacknumber']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='EconomicValue']" name="value">1250</setattribute>
@@ -1168,27 +1168,7 @@ ALL FOOD ADDONS
             <setattribute xpath="/items/item[@name='GrenadeM67']/effect_group/display_value[@name='dExEntityDamage']" name="value">1000</setattribute>
             <!-- GRENADEM67 -->	
         </if>
-    </conditional>
-    <conditional>
-		<if cond="mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') or mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo') ">
-           <!-- AMMOEFT50BMGSLAP -->
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/property[@name='Stacknumber']" name="value">50</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/property[@name='EconomicValue']" name="value">35</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">120</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">125</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">55</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGSlap']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">55</setattribute>
-            <!-- AMMOEFT50BMGSLAP -->
-            <!-- AMMOEFT50BMGHP -->
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/property[@name='Stacknumber']" name="value">50</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/property[@name='EconomicValue']" name="value">35</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">110</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">150</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">50</setattribute>
-            <setattribute xpath="/items/item[@name='ammoEft50BMGHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">50</setattribute>
-            <!-- AMMOEFT50BMGHP --> 
-        </if>
-    </conditional>
+    </conditional>    
     <!-- FOOD ADDONS -->
     <conditional>
         <if cond="mod_loaded('Z3_EFTX_Food')">
