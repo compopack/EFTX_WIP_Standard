@@ -1152,7 +1152,7 @@ ALL FOOD ADDONS
 			</if>
 			</conditional>
 			<conditional>
-			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo)">
+			<if cond="mod_loaded('Z2_EFTX_Both_Ammo') or mod_loaded('Z2_EFTX_EFT_IZY_Ammo_CrossOver') or mod_loaded('Z2_EFTX_EFT_Only_Ammo') and not mod_loaded('Z2_EFTX_Vanilla_Only_Ammo') and not mod_loaded('Z2_EFTX_Uses_IZY_Vanilla_Ammo')">
             <!-- GRENADEIMPACTRGN -->
             <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='Stacknumber']" name="value">25</setattribute>
             <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='EconomicValue']" name="value">1250</setattribute>
